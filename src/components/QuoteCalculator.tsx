@@ -18,7 +18,7 @@ const MAX_DIM = 300;
 const MIN_PRICE = 15; // Prezzo minimo per un preventivo
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
 const API_URL = process.env.NODE_ENV === 'development' 
-  ? 'http://159.65.197.192:3001/api/slice'
+  ? 'https://api.3dmakes.ch/api/slice'
   : 'https://api.3dmakes.ch/api/slice';
 const USER_PANEL_URL = "/dashboard"; // URL base della dashboard
 const LOGIN_URL = "/login"; // URL della pagina di login
@@ -56,7 +56,6 @@ const QuoteCalculator = () => {
   const [quality, setQuality] = useState<string>("0.2");
   const [material, setMaterial] = useState<string>("pla");
   const [infill, setInfill] = useState<string>("20"); // Percentuale di riempimento
-  const [hollowed, setHollowed] = useState<string>("no"); // Opzione hollowed per SLA
   
   // Costo per 1 pezzo
   const [singlePrice, setSinglePrice] = useState<number | null>(null);
@@ -65,6 +64,11 @@ const QuoteCalculator = () => {
   const [materialCost, setMaterialCost] = useState<number | null>(null);
   const [electricityCost, setElectricityCost] = useState<number | null>(null);
   const [depreciationCost, setDepreciationCost] = useState<number | null>(null);
+  const [laborCost, setLaborCost] = useState<number | null>(null);
+  const [failureCost, setFailureCost] = useState<number | null>(null);
+  const [totalCost, setTotalCost] = useState<number | null>(null);
+  const [discountApplied, setDiscountApplied] = useState<number | null>(null);
+  const [profit, setProfit] = useState<number | null>(null);
   
   // Dimensioni
   const [modelDims, setModelDims] = useState<{ x: number; y: number; z: number } | null>(null);
@@ -87,84 +91,29 @@ const QuoteCalculator = () => {
   const [preventivoDone, setPreventivoDone] = useState<boolean>(false);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false);
 
-  // Opzioni tipo di stampa
+  // Solo FDM per ora
   const PRINT_TYPES = [
-    { id: "fdm", label: t('calculator.printTypes.fdm') },
-    { id: "sla", label: t('calculator.printTypes.sla') },
-    { id: "laser", label: t('calculator.printTypes.laser') }
+    { id: "fdm", label: t('calculator.printTypes.fdm') }
   ];
   
-  // Materiali
-  const MATERIALS = {
-    fdm: [
-      { id: "pla", label: t('calculator.materials.pla.label'), desc: t('calculator.materials.pla.desc') },
-      { id: "petg", label: t('calculator.materials.petg.label'), desc: t('calculator.materials.petg.desc') },
-      { id: "abs", label: t('calculator.materials.abs.label'), desc: t('calculator.materials.abs.desc') },
-      { id: "tpu", label: t('calculator.materials.tpu.label'), desc: t('calculator.materials.tpu.desc') },
-      { id: "petg_cf", label: t('calculator.materials.petg_cf.label'), desc: t('calculator.materials.petg_cf.desc') },
-      { id: "pc", label: t('calculator.materials.pc.label'), desc: t('calculator.materials.pc.desc') },
-      { id: "nylon", label: t('calculator.materials.nylon.label'), desc: t('calculator.materials.nylon.desc') }
-    ],
-    sla: [
-      { id: "standard", label: t('calculator.materials.standard.label'), desc: t('calculator.materials.standard.desc') },
-      { id: "tough", label: t('calculator.materials.tough.label'), desc: t('calculator.materials.tough.desc') },
-      { id: "flexible", label: t('calculator.materials.flexible.label'), desc: t('calculator.materials.flexible.desc') },
-      { id: "dental", label: t('calculator.materials.dental.label'), desc: t('calculator.materials.dental.desc') }
-    ],
-    laser: [
-      // Materiali per taglio
-      { id: "wood_1mm", label: t('calculator.materials.wood_1mm.label'), desc: t('calculator.materials.wood_1mm.desc') },
-      { id: "wood_2mm", label: t('calculator.materials.wood_2mm.label'), desc: t('calculator.materials.wood_2mm.desc') },
-      { id: "wood_3mm", label: t('calculator.materials.wood_3mm.label'), desc: t('calculator.materials.wood_3mm.desc') },
-      { id: "wood_4mm", label: t('calculator.materials.wood_4mm.label'), desc: t('calculator.materials.wood_4mm.desc') },
-      { id: "wood_5mm", label: t('calculator.materials.wood_5mm.label'), desc: t('calculator.materials.wood_5mm.desc') },
-      { id: "wood_6mm", label: t('calculator.materials.wood_6mm.label'), desc: t('calculator.materials.wood_6mm.desc') },
-      { id: "wood_7mm", label: t('calculator.materials.wood_7mm.label'), desc: t('calculator.materials.wood_7mm.desc') },
-      { id: "wood_8mm", label: t('calculator.materials.wood_8mm.label'), desc: t('calculator.materials.wood_8mm.desc') },
-      { id: "wood_9mm", label: t('calculator.materials.wood_9mm.label'), desc: t('calculator.materials.wood_9mm.desc') },
-      { id: "wood_10mm", label: t('calculator.materials.wood_10mm.label'), desc: t('calculator.materials.wood_10mm.desc') },
-      { id: "mdf_1mm", label: t('calculator.materials.mdf_1mm.label'), desc: t('calculator.materials.mdf_1mm.desc') },
-      { id: "mdf_2mm", label: t('calculator.materials.mdf_2mm.label'), desc: t('calculator.materials.mdf_2mm.desc') },
-      { id: "mdf_3mm", label: t('calculator.materials.mdf_3mm.label'), desc: t('calculator.materials.mdf_3mm.desc') },
-      { id: "mdf_4mm", label: t('calculator.materials.mdf_4mm.label'), desc: t('calculator.materials.mdf_4mm.desc') },
-      { id: "mdf_5mm", label: t('calculator.materials.mdf_5mm.label'), desc: t('calculator.materials.mdf_5mm.desc') },
-      { id: "mdf_6mm", label: t('calculator.materials.mdf_6mm.label'), desc: t('calculator.materials.mdf_6mm.desc') },
-      { id: "mdf_7mm", label: t('calculator.materials.mdf_7mm.label'), desc: t('calculator.materials.mdf_7mm.desc') },
-      { id: "mdf_8mm", label: t('calculator.materials.mdf_8mm.label'), desc: t('calculator.materials.mdf_8mm.desc') },
-      { id: "mdf_9mm", label: t('calculator.materials.mdf_9mm.label'), desc: t('calculator.materials.mdf_9mm.desc') },
-      { id: "mdf_10mm", label: t('calculator.materials.mdf_10mm.label'), desc: t('calculator.materials.mdf_10mm.desc') },
-      { id: "acrylic_opaque", label: t('calculator.materials.acrylic_opaque.label'), desc: t('calculator.materials.acrylic_opaque.desc') },
-      { id: "cardboard", label: t('calculator.materials.cardboard.label'), desc: t('calculator.materials.cardboard.desc') },
-      { id: "leather", label: t('calculator.materials.leather.label'), desc: t('calculator.materials.leather.desc') },
-      { id: "fabric", label: t('calculator.materials.fabric.label'), desc: t('calculator.materials.fabric.desc') },
-      // Materiali specifici per incisione
-      { id: "acrylic_transparent", label: t('calculator.materials.acrylic_transparent.label'), desc: t('calculator.materials.acrylic_transparent.desc') },
-      { id: "cork", label: t('calculator.materials.cork.label'), desc: t('calculator.materials.cork.desc') },
-      { id: "slate", label: t('calculator.materials.slate.label'), desc: t('calculator.materials.slate.desc') }
-    ]
-  };
+  // Solo materiali FDM
+  const MATERIALS = [
+    { id: "pla", label: t('calculator.materials.pla.label'), desc: t('calculator.materials.pla.desc') },
+    { id: "petg", label: t('calculator.materials.petg.label'), desc: t('calculator.materials.petg.desc') },
+    { id: "abs", label: t('calculator.materials.abs.label'), desc: t('calculator.materials.abs.desc') },
+    { id: "tpu", label: t('calculator.materials.tpu.label'), desc: t('calculator.materials.tpu.desc') },
+    { id: "petg_cf", label: t('calculator.materials.petg_cf.label'), desc: t('calculator.materials.petg_cf.desc') },
+    { id: "pc", label: t('calculator.materials.pc.label'), desc: t('calculator.materials.pc.desc') },
+    { id: "nylon", label: t('calculator.materials.nylon.label'), desc: t('calculator.materials.nylon.desc') }
+  ];
   
-  // Opzioni qualità
-  const QUALITY_OPTIONS = {
-    fdm: [
-      { id: "0.3", label: t('calculator.qualities.fdm.0.3.label'), desc: t('calculator.qualities.fdm.0.3.desc') },
-      { id: "0.2", label: t('calculator.qualities.fdm.0.2.label'), desc: t('calculator.qualities.fdm.0.2.desc') },
-      { id: "0.1", label: t('calculator.qualities.fdm.0.1.label'), desc: t('calculator.qualities.fdm.0.1.desc') },
-      { id: "0.05", label: t('calculator.qualities.fdm.0.05.label'), desc: t('calculator.qualities.fdm.0.05.desc') }
-    ],
-    sla: [
-      { id: "100", label: t('calculator.qualities.sla.100.label'), desc: t('calculator.qualities.sla.100.desc') },
-      { id: "50", label: t('calculator.qualities.sla.50.label'), desc: t('calculator.qualities.sla.50.desc') },
-      { id: "25", label: t('calculator.qualities.sla.25.label'), desc: t('calculator.qualities.sla.25.desc') },
-      { id: "10", label: t('calculator.qualities.sla.10.label'), desc: t('calculator.qualities.sla.10.desc') }
-    ],
-    laser: [
-      { id: "cutting", label: t('calculator.qualities.laser.cutting.label'), desc: t('calculator.qualities.laser.cutting.desc') },
-      { id: "engraving_light", label: t('calculator.qualities.laser.engraving_light.label'), desc: t('calculator.qualities.laser.engraving_light.desc') },
-      { id: "engraving_deep", label: t('calculator.qualities.laser.engraving_deep.label'), desc: t('calculator.qualities.laser.engraving_deep.desc') },
-      { id: "cutting_engraving", label: t('calculator.qualities.laser.cutting_engraving.label'), desc: t('calculator.qualities.laser.cutting_engraving.desc') }
-    ]
-  };
+  // Solo qualità FDM
+  const QUALITY_OPTIONS = [
+    { id: "0.3", label: t('calculator.qualities.fdm.0.3.label'), desc: t('calculator.qualities.fdm.0.3.desc') },
+    { id: "0.2", label: t('calculator.qualities.fdm.0.2.label'), desc: t('calculator.qualities.fdm.0.2.desc') },
+    { id: "0.1", label: t('calculator.qualities.fdm.0.1.label'), desc: t('calculator.qualities.fdm.0.1.desc') },
+    { id: "0.05", label: t('calculator.qualities.fdm.0.05.label'), desc: t('calculator.qualities.fdm.0.05.desc') }
+  ];
 
   // Materiali filtrati per processo laser
   const getFilteredLaserMaterials = () => {
@@ -215,13 +164,6 @@ const QuoteCalculator = () => {
     { id: "50", label: "50" },
     { id: "100", label: "100" }
   ];
-  
-  // Opzioni hollowed (solo per SLA)
-  const HOLLOWED_OPTIONS = [
-    { id: "no", label: t('calculator.hollowed.no.label'), desc: t('calculator.hollowed.no.desc') },
-    { id: "vuoto", label: t('calculator.hollowed.vuoto.label'), desc: t('calculator.hollowed.vuoto.desc') },
-    { id: "riempimento", label: t('calculator.hollowed.riempimento.label'), desc: t('calculator.hollowed.riempimento.desc') }
-  ];
 
   // Al caricamento, verifica se l'utente è loggato usando currentUser
   useEffect(() => {
@@ -258,16 +200,11 @@ const QuoteCalculator = () => {
       
     const ext = f.name.split(".").pop()?.toLowerCase() ?? "";
     
-    // Formati supportati per tipo di stampa
-    const supportedFormats = {
-      fdm: ["stl", "obj", "3mf"],
-      sla: ["stl", "obj", "3mf"],
-      laser: ["svg", "dxf", "ai", "pdf"]
-    };
+    // Solo formati FDM supportati
+    const supportedFormats = ["stl", "obj", "3mf"];
     
-    if (!supportedFormats[printType as keyof typeof supportedFormats]?.includes(ext)) {
-      const formats = supportedFormats[printType as keyof typeof supportedFormats]?.join(", ").toUpperCase();
-      setError(t('calculator.unsupportedFormatForType', { formats, printType: printType.toUpperCase() }));
+    if (!supportedFormats.includes(ext)) {
+      setError(t('calculator.unsupportedFormat', { formats: "STL, OBJ, 3MF" }));
       setIsLoading(false);
       return;
     }
@@ -488,32 +425,9 @@ const QuoteCalculator = () => {
     if (printType === "fdm") {
       setQuality("0.2");  // Default per FDM
       setMaterial("pla");  // Default per FDM
-      setHollowed("no");   // FDM non usa hollowed
-    } else if (printType === "sla") {
-      setQuality("50");  // Default per SLA (50 micron)
-      setMaterial("standard");  // Default per SLA
-      setHollowed("no");   // Default per SLA
-    } else if (printType === "laser") {
-      setQuality("cutting");  // Default per Laser
-      setMaterial("wood_3mm");  // Default per Laser
-      setHollowed("no");   // Laser non usa hollowed
     }
   }, [printType]);
 
-  // Aggiorna il materiale quando cambia il processo laser
-  useEffect(() => {
-    if (printType === 'laser') {
-      const filteredMaterials = getFilteredLaserMaterials();
-      // Se il materiale attuale non è disponibile per il processo selezionato, cambialo
-      if (!filteredMaterials.find(mat => mat.id === material)) {
-        if (quality === "cutting") {
-          setMaterial("wood_3mm"); // Default per taglio
-        } else if (quality.includes("engraving")) {
-          setMaterial("wood_3mm"); // Default per incisione
-        }
-      }
-    }
-  }, [printType, quality, material]);
 
   // Handler invio al server
   const handleCalculate = useCallback(async () => {
@@ -538,14 +452,11 @@ const QuoteCalculator = () => {
       formData.append("material", material);
       formData.append("infill", infill);
       formData.append("supports", "false"); // Default per ora
+      formData.append("quantity", quantity.toString());
+      formData.append("printType", printType);
       formData.append("rotation_x", modelOrientation.x.toString());
       formData.append("rotation_y", modelOrientation.y.toString());
       formData.append("rotation_z", modelOrientation.z.toString());
-      
-      // Aggiungi hollowed solo per SLA
-      if (printType === 'sla') {
-        formData.append("hollowed", hollowed);
-      }
       
       // Aggiungi informazioni utente se loggato
       if (currentUser) {
@@ -583,17 +494,25 @@ const QuoteCalculator = () => {
       // Completa il progresso da 90 a 100
       await completeProgress();
 
-      // Aggiorna i dati del preventivo con la nuova struttura API
+      // Aggiorna i dati del preventivo con la nuova struttura API completa
       const analysis = data.analysis;
+      const detailedCalc = data.detailedCalculation;
+      
       setPrintTime(`${analysis.printTime} min`);
       
-      // Calcola il prezzo usando i dati dall'API
-      const sp = analysis.estimatedCost || Math.max(MIN_PRICE, 15);
+      // Usa il prezzo finale per pezzo dal calcolo dettagliato
+      const sp = detailedCalc.prezzoFinalePezzo || Math.max(MIN_PRICE, 15);
       
-      // Setta i costi dettagliati se disponibili
-      if (analysis.materialCost) setMaterialCost(analysis.materialCost);
-      if (analysis.printTimeCost) setElectricityCost(analysis.printTimeCost);
-      if (analysis.baseCost) setDepreciationCost(analysis.baseCost);
+      // Setta i costi dettagliati dal calcolo completo
+      if (detailedCalc.costoMateriale) setMaterialCost(detailedCalc.costoMateriale);
+      if (detailedCalc.costoElettricita) setElectricityCost(detailedCalc.costoElettricita);
+      if (detailedCalc.costoAmmortamento) setDepreciationCost(detailedCalc.costoAmmortamento);
+      if (detailedCalc.costoLavoro) setLaborCost(detailedCalc.costoLavoro);
+      if (detailedCalc.failureCost) setFailureCost(detailedCalc.failureCost);
+      if (detailedCalc.totaleConFailure) setTotalCost(detailedCalc.totaleConFailure);
+      if (detailedCalc.scontoApplicabile) setDiscountApplied(detailedCalc.scontoApplicabile);
+      if (detailedCalc.profittoTotale) setProfit(detailedCalc.profittoTotale);
+      
       setSinglePrice(sp);
       
       // Imposta lo stato che indica che il preventivo è stato calcolato
@@ -601,7 +520,7 @@ const QuoteCalculator = () => {
           
           toast({
             title: "Preventivo calcolato!",
-        description: `Il preventivo stimato per la tua stampa 3D è di ${sp.toFixed(2)} CHF`,
+            description: `Prezzo per pezzo: ${sp.toFixed(2)} CHF | Totale ${quantity} pezzi: ${detailedCalc.prezzoFinaleTotale.toFixed(2)} CHF | Sconto: ${detailedCalc.scontoApplicabile}%`,
             variant: "default",
           });
 
@@ -618,7 +537,7 @@ const QuoteCalculator = () => {
       setIsProcessing(false);
       setUploadProgress(0);
     }
-  }, [file, quality, material, infill, printType, modelOrientation, calculateSinglePrice, toast, currentUser, hollowed]);
+  }, [file, quality, material, infill, printType, modelOrientation, calculateSinglePrice, toast, currentUser]);
 
   // Funzione per gestire il processo di creazione ordine
   const handleCreateOrder = () => {
@@ -650,15 +569,7 @@ const QuoteCalculator = () => {
     params.append('quantity', quantity.toString());
     params.append('printType', printType);
     params.append('quality', quality);
-    
-    if (printType === 'fdm') {
-      params.append('infill', infill);
-    }
-    
-    // Aggiungi hollowed per SLA
-    if (printType === 'sla') {
-      params.append('hollowed', hollowed);
-    }
+    params.append('infill', infill);
     
     // Aggiungi il prezzo stimato
     params.append('price', totalPrice?.toString() || '0');
@@ -727,9 +638,6 @@ const QuoteCalculator = () => {
     }
   };
 
-  const handleTabChange = (value: string) => {
-    setPrintType(value);
-  };
 
   return (
     <div className="space-y-8 px-0 max-w-full mx-auto">
@@ -846,36 +754,27 @@ const QuoteCalculator = () => {
             
             {/* Print Settings Section con tab sempre visibili */}
             <div>
-              <Tabs value={printType} onValueChange={handleTabChange} className="w-full">
-                <TabsList className="grid w-full grid-cols-3 mb-4">
-                  <TabsTrigger value="fdm">{t('calculator.printTypes.fdm')}</TabsTrigger>
-                  <TabsTrigger value="sla">{t('calculator.printTypes.sla')}</TabsTrigger>
-                  <TabsTrigger value="laser">{t('calculator.printTypes.laser')}</TabsTrigger>
-                </TabsList>
-                  
-                <div className="space-y-6">
-                  {/* Qualità di stampa/lavorazione */}
-                      <div>
-                    <Label className="block mb-2">
-                      {printType === 'laser' ? t('calculator.selectProcessType') : t('calculator.selectQuality')}
-                    </Label>
-                    <Select 
-                      value={quality} 
-                      onValueChange={setQuality}
-                    >
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder={printType === 'laser' ? t('calculator.selectProcessType') : t('calculator.selectQuality')} />
-                          </SelectTrigger>
-                          <SelectContent>
-                        {QUALITY_OPTIONS[printType as keyof typeof QUALITY_OPTIONS].map(option => (
-                          <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                    <p className="text-sm text-gray-500 mt-2">
-                      {QUALITY_OPTIONS[printType as keyof typeof QUALITY_OPTIONS].find(q => q.id === quality)?.desc}
-                    </p>
-                    </div>
+              <div className="space-y-6">
+                {/* Qualità di stampa */}
+                <div>
+                  <Label className="block mb-2">{t('calculator.selectQuality')}</Label>
+                  <Select 
+                    value={quality} 
+                    onValueChange={setQuality}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder={t('calculator.selectQuality')} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {QUALITY_OPTIONS.map(option => (
+                        <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <p className="text-sm text-gray-500 mt-2">
+                    {QUALITY_OPTIONS.find(q => q.id === quality)?.desc}
+                  </p>
+                </div>
                   
                   {/* Materiale */}
                       <div>
@@ -888,41 +787,17 @@ const QuoteCalculator = () => {
                             <SelectValue placeholder={t('calculator.material')} />
                           </SelectTrigger>
                           <SelectContent>
-                        {(printType === 'laser' ? getFilteredLaserMaterials() : MATERIALS[printType as keyof typeof MATERIALS]).map(mat => (
+                        {MATERIALS.map(mat => (
                           <SelectItem key={mat.id} value={mat.id}>{mat.label}</SelectItem>
                             ))}
                           </SelectContent>
                         </Select>
                     <p className="text-sm text-gray-500 mt-2">
-                      {(printType === 'laser' ? getFilteredLaserMaterials() : MATERIALS[printType as keyof typeof MATERIALS]).find(m => m.id === material)?.desc}
+                      {MATERIALS.find(m => m.id === material)?.desc}
                     </p>
                     </div>
                     
-                  {/* Hollowed (solo per SLA) */}
-                  {printType === 'sla' && (
-                    <div>
-                      <Label className="block mb-2">Hollowed</Label>
-                      <Select 
-                        value={hollowed} 
-                        onValueChange={setHollowed}
-                      >
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Hollowed" />
-                            </SelectTrigger>
-                            <SelectContent>
-                          {HOLLOWED_OPTIONS.map(option => (
-                            <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                      <p className="text-sm text-gray-500 mt-2">
-                        {HOLLOWED_OPTIONS.find(h => h.id === hollowed)?.desc}
-                      </p>
-                    </div>
-                  )}
-                    
-                  {/* Riempimento (solo per FDM) */}
-                  {printType === 'fdm' && (
+                    {/* Infill */}
                     <div>
                       <Label className="block mb-2">{t('calculator.infill')}</Label>
                       <Select 
@@ -941,23 +816,7 @@ const QuoteCalculator = () => {
                       <p className="text-sm text-gray-500 mt-2">
                         Percentuale di riempimento interno del modello
                       </p>
-                      </div>
-                  )}
-
-                  {/* Info aggiuntive per Laser */}
-                  {printType === 'laser' && (
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <h4 className="font-semibold text-blue-900 mb-2">
-                        {t('calculator.laserInfo.title')}
-                      </h4>
-                      <ul className="text-sm text-blue-800 space-y-1">
-                        <li>• {t('calculator.laserInfo.workArea')}</li>
-                        <li>• {t('calculator.laserInfo.precision')}</li>
-                        <li>• {t('calculator.laserInfo.fileFormats')}</li>
-                        <li>• {t('calculator.laserInfo.delivery')}</li>
-                      </ul>
                     </div>
-                  )}
 
                   {/* Quantità */}
                   <div>
@@ -1007,7 +866,6 @@ const QuoteCalculator = () => {
                     </Button>
                   )}
                 </div>
-              </Tabs>
               
               {/* Errore */}
               {error && (
