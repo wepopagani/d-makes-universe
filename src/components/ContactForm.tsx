@@ -58,7 +58,7 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Informazioni di contatto */}
           <div className="space-y-8">
             <div>
@@ -204,7 +204,7 @@ const ContactForm = () => {
                   <Input id="bot-field" name="bot-field" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">{t('contact.form.name')} *</Label>
                     <Input 

@@ -51,51 +51,51 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="mt-20 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div className="mt-20 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 text-center">
                     <div className="animate-fade-in" style={{ animationDelay: "200ms" }}>
                       <CounterAnimation
                         end={5}
                         suffix="+"
                         duration={1500}
-                        className="font-display text-3xl font-bold text-brand-accent mb-1"
+                        className="font-display text-2xl md:text-3xl font-bold text-brand-accent mb-1"
                       />
-                      <p className="text-gray-300">{t('hero.stats.experience')}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{t('hero.stats.experience')}</p>
                     </div>
                     <div className="animate-fade-in" style={{ animationDelay: "300ms" }}>
                       <CounterAnimation
                         end={100}
                         suffix="+"
                         duration={1500}
-                        className="font-display text-3xl font-bold text-brand-accent mb-1"
+                        className="font-display text-2xl md:text-3xl font-bold text-brand-accent mb-1"
                       />
-                      <p className="text-gray-300">{t('hero.stats.projects')}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{t('hero.stats.projects')}</p>
                     </div>
                     <div className="animate-fade-in" style={{ animationDelay: "400ms" }}>
                       <CounterAnimation
                         end={25}
                         suffix="+"
                         duration={1500}
-                        className="font-display text-3xl font-bold text-brand-accent mb-1"
+                        className="font-display text-2xl md:text-3xl font-bold text-brand-accent mb-1"
                       />
-                      <p className="text-gray-300">Km di filamento impiegati</p>
+                      <p className="text-gray-300 text-sm md:text-base">Km di filamento impiegati</p>
                     </div>
                     <div className="animate-fade-in" style={{ animationDelay: "500ms" }}>
                       <CounterAnimation
                         end={100}
                         suffix="%"
                         duration={1500}
-                        className="font-display text-3xl font-bold text-brand-accent mb-1"
+                        className="font-display text-2xl md:text-3xl font-bold text-brand-accent mb-1"
                       />
-                      <p className="text-gray-300">{t('hero.stats.precision')}</p>
+                      <p className="text-gray-300 text-sm md:text-base">{t('hero.stats.precision')}</p>
                     </div>
                     <div className="animate-fade-in" style={{ animationDelay: "600ms" }}>
                       <CounterAnimation
                         end={5000}
                         suffix="+"
                         duration={1500}
-                        className="font-display text-3xl font-bold text-brand-accent mb-1"
+                        className="font-display text-2xl md:text-3xl font-bold text-brand-accent mb-1"
                       />
-                      <p className="text-gray-300">Caffè consumati</p>
+                      <p className="text-gray-300 text-sm md:text-base">Caffè consumati</p>
                     </div>
         </div>
       </div>

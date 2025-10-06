@@ -139,4 +139,57 @@
   background-color: #E4DDD4;
 }
 
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container-custom {
+    @apply px-3;
+  }
+  
+  .heading-1 {
+    @apply text-3xl;
+  }
+  
+  .heading-2 {
+    @apply text-2xl;
+  }
+  
+  .heading-3 {
+    @apply text-xl;
+  }
+  
+  .body-text {
+    @apply text-sm;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 300px;
+  }
+  
+  .flip-card-inner {
+    height: 300px;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    height: 300px;
+  }
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
        }

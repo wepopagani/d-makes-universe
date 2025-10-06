@@ -15,22 +15,22 @@ const AboutSection = () => {
     
     const names = ["MARCO", "MATTEO", "ALESSANDRO", "MANUEL", "ALESSANDRO"];
     
-    // Posizioni iniziali sparse
+    // Posizioni iniziali sparse - responsive
     const initialPositions = [
-      { x: 100, y: 120 },  // MARCO
-      { x: 350, y: 80 },   // MATTEO - spostato più a sinistra
-      { x: 150, y: 200 },  // ALESSANDRO
-      { x: 380, y: 180 },  // MANUEL - spostato più a sinistra
-      { x: 300, y: 40 }    // ALESSANDRO
+      { x: '25%', y: '40%' },  // MARCO
+      { x: '70%', y: '25%' },  // MATTEO
+      { x: '35%', y: '70%' },  // ALESSANDRO
+      { x: '75%', y: '60%' },  // MANUEL
+      { x: '60%', y: '10%' }   // ALESSANDRO
     ];
     
-    // Posizioni finali unite sulla sinistra (colonna ordinata)
+    // Posizioni finali unite sulla sinistra (colonna ordinata) - responsive
     const finalPositions = [
-      { x: 0, y: 50 },   // MARCO
-      { x: 0, y: 90 },   // MATTEO
-      { x: 0, y: 130 },  // ALESSANDRO
-      { x: 0, y: 170 },  // MANUEL
-      { x: 0, y: 210 }   // ALESSANDRO
+      { x: '5%', y: '15%' },   // MARCO
+      { x: '5%', y: '30%' },   // MATTEO
+      { x: '5%', y: '45%' },   // ALESSANDRO
+      { x: '5%', y: '60%' },   // MANUEL
+      { x: '5%', y: '75%' }    // ALESSANDRO
     ];
     
     useEffect(() => {
@@ -87,10 +87,8 @@ const AboutSection = () => {
       <div className="mb-8 flex justify-center">
         <div 
           ref={containerRef}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden w-full max-w-4xl h-48 md:h-72"
           style={{
-            width: '800px',
-            height: '280px',
             background: 'transparent'
           }}
         >
@@ -105,10 +103,10 @@ const AboutSection = () => {
                   isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
                 style={{
-                  left: `${currentPos.x}px`,
-                  top: `${currentPos.y}px`,
+                  left: currentPos.x,
+                  top: currentPos.y,
                   transform: !isVisible ? 'scale(0)' : 'scale(1)',
-                  fontSize: '36px',
+                  fontSize: 'clamp(20px, 4vw, 36px)',
                   fontFamily: 'Gotham Black, Arial Black, sans-serif',
                   fontWeight: '900',
                   color: isUnited ? '#009FE3' : '#000000',

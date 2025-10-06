@@ -38,20 +38,20 @@ const ServiceCard = ({ title, description, icon, link, imageUrl }: ServiceCardPr
   return (
     <Link to={link} className="block h-full">
       <div className="group relative bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl overflow-hidden border border-gray-100 cursor-pointer h-full flex flex-col">
-        <div className="h-48 overflow-hidden flex-shrink-0">
+        <div className="h-48 overflow-hidden flex-shrink-0 flex items-center justify-center bg-gray-50">
           <img 
             src={imageUrl} 
             alt={title} 
             className={getImageClasses()}
           />
         </div>
-        <div className="p-6 flex flex-col flex-grow">
+        <div className="p-6 flex flex-col flex-grow min-h-[200px]">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-brand-accent/10 text-brand-accent mb-4 flex-shrink-0">
             {icon}
           </div>
-          <h3 className="text-xl font-semibold mb-3 flex-shrink-0">{title}</h3>
-          <p className="text-brand-gray mb-5 flex-grow">{description}</p>
-          <Button variant="outline" className="pointer-events-none flex-shrink-0">
+          <h3 className="text-xl font-semibold mb-3 flex-shrink-0 line-clamp-2">{title}</h3>
+          <p className="text-brand-gray mb-5 flex-grow line-clamp-4">{description}</p>
+          <Button variant="outline" className="pointer-events-none flex-shrink-0 mt-auto">
             Scopri di più
           </Button>
         </div>

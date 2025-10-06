@@ -26,7 +26,7 @@ const Index = () => {
         <MissionSection />
         <section className="bg-white py-16 md:py-24">
           <div className="container-custom">
-            <div className="flex justify-center items-center gap-8">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
               <div className="max-w-2xl w-full">
                 <video 
                   src="/tony si sdraia.mp4" 
@@ -72,13 +72,13 @@ const Index = () => {
                 <img 
                   src="/hai idea.png" 
                   alt="Hai Idea"
-                  className="w-full h-auto max-w-3xl mx-auto scale-75"
+                  className="w-full h-auto max-w-3xl mx-auto scale-75 md:scale-100"
                   onError={(e) => {
                     e.currentTarget.src = "https://placehold.co/1000x400/d1d5db/333333?text=Hai+Idea";
                   }}
                 />
               </div>
-              <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 font-semibold px-12 py-5 text-xl scale-140">
+              <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 font-semibold px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl scale-100 md:scale-140">
                 <Link to="/calculator">Richiedi Preventivo</Link>
               </Button>
             </div>

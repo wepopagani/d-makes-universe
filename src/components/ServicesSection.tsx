@@ -134,9 +134,9 @@ const ServicesSection = () => {
         
         {/* Riquadri SLM e SLS centrati */}
         <div className="flex justify-center items-center mt-8">
-          <div className="flex gap-8 justify-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
             {services.slice(6).map((service, index) => (
-              <div key={index + 6} className="w-full max-w-sm flex-shrink-0">
+              <div key={index + 6} className="w-full max-w-sm mx-auto">
                 <ServiceCard {...service} />
               </div>
             ))}
