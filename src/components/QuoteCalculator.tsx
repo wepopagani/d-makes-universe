@@ -17,9 +17,7 @@ const MIN_DIM = 2;
 const MAX_DIM = 300;
 const MIN_PRICE = 15; // Prezzo minimo per un preventivo
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
-const API_URL = process.env.NODE_ENV === 'development' 
-  ? 'https://gmbh-specially-judgment-rolled.trycloudflare.com/api/slice'
-  : 'https://gmbh-specially-judgment-rolled.trycloudflare.com/api/slice';
+const API_URL = 'http://62.167.134.94:3000/api/slice';
 const USER_PANEL_URL = "/dashboard"; // URL base della dashboard
 const LOGIN_URL = "/login"; // URL della pagina di login
 const REGISTER_URL = "/register"; // URL della pagina di registrazione
