@@ -1,0 +1,329 @@
+{
+  "nav": {
+    "about": "À propos",
+    "mission": "Mission",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "requestQuote": "Demander devis",
+    "clientArea": "Espace client",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Nous transformons vos idées en",
+    "titleHighlight": "objets réels",
+    "subtitle": "Spécialistes de l'impression 3D, nous offrons des solutions de prototypage rapide et de production de haute qualité avec les technologies FDM et SLA.",
+    "discoverServices": "Découvrir nos services",
+    "requestQuote": "Demander un devis",
+    "stats": {
+      "experience": "Années d'expérience",
+      "projects": "Projets réalisés",
+      "clients": "Clients satisfaits",
+      "precision": "Précision garantie"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nos solutions 3D",
+    "description": "Nous offrons une gamme complète de services d'impression 3D, de numérisation et de prototypage pour transformer vos idées en objets réels avec précision et qualité professionnelle.",
+    "seeAll": "Découvrir tous nos services",
+    "readyToRealize": "Prêt à réaliser votre projet?",
+    "contactToday": "Contactez-nous aujourd'hui pour discuter de votre projet d'impression 3D et recevoir un devis personnalisé.",
+    "calculateQuote": "Calculer un devis",
+    "heroTitle": "Nos Services",
+    "heroSubtitle": "Solutions complètes d'impression 3D, numérisation et prototypage pour transformer vos idées en réalité.",
+    "characteristics": "Caractéristiques",
+    "availableMaterials": "Matériaux disponibles",
+    "applications": "Applications",
+    "ourProcess": "Notre processus",
+    "requestQuote": "Demander un devis",
+    "fdm": {
+      "title": "Impression 3D FDM",
+      "description": "La technologie Fused Deposition Modeling (FDM) est idéale pour la production de prototypes fonctionnels et de pièces résistantes. Nous utilisons des imprimantes 3D professionnelles pour garantir la qualité et précision maximales.",
+      "features": [
+        "Large gamme de matériaux disponibles (PLA, ABS, PETG, TPU, Nylon, etc.)",
+        "Dimensions d'impression jusqu'à 300x300x300mm",
+        "Résolution jusqu'à 100 microns par couche",
+        "Idéal pour prototypes fonctionnels, pièces mécaniques et petites séries",
+        "Délais de livraison rapides et prix compétitifs"
+      ],
+      "materials": [
+        {
+          "name": "PLA",
+          "features": "Écologique, facile à imprimer, rigide",
+          "applications": "Prototypes, objets décoratifs, outils"
+        },
+        {
+          "name": "ABS",
+          "features": "Résistant à la chaleur, robuste, usinable",
+          "applications": "Pièces mécaniques, composants fonctionnels"
+        },
+        {
+          "name": "PETG",
+          "features": "Résistant, flexible, imperméable",
+          "applications": "Contenants, pièces exposées aux contraintes"
+        },
+        {
+          "name": "TPU",
+          "features": "Flexible, élastique, résistant à l'usure",
+          "applications": "Joints, poignées, pièces flexibles"
+        }
+      ]
+    },
+    "sla": {
+      "title": "Impression 3D SLA",
+      "description": "La technologie Stéréolithographie (SLA) utilise la photopolymérisation pour créer des objets avec des détails incroyablement précis et des surfaces lisses. Parfaite pour modèles détaillés, bijouterie et applications médicales.",
+      "features": [
+        "Résolution ultra-fine jusqu'à 10 microns pour détails incroyablement précis",
+        "Surfaces lisses nécessitant post-production minimale",
+        "Variété de résines spéciales pour applications spécifiques",
+        "Idéal pour prototypes esthétiques, modèles de présentation et composants de précision",
+        "Excellent pour production de pièces transparentes ou avec détails minutieux"
+      ],
+      "materials": [
+        {
+          "name": "Résine standard",
+          "features": "Détails précis, surface lisse",
+          "applications": "Prototypes esthétiques, modèles de présentation"
+        },
+        {
+          "name": "Résine résistante",
+          "features": "Durable, résistant aux chocs",
+          "applications": "Pièces fonctionnelles, composants mécaniques"
+        },
+        {
+          "name": "Résine transparente",
+          "features": "Haute transparence, polissable",
+          "applications": "Prototypes transparents, composants optiques"
+        }
+      ]
+    },
+    "laser": {
+      "title": "Découpe Laser",
+      "description": "Notre technologie de gravure et découpe laser offre une solution avancée pour créer des projets détaillés et personnalisés. Grâce à un système de mouvement CoreXY haute vitesse et un laser puissant de 22W avec point ultra-fin, nous garantissons gravures et découpes précises sur large gamme de matériaux.",
+      "features": [
+        "Précision: Mouvement avec précision de 0,01 mm pour détails nets",
+        "Vitesse: Jusqu'à 600 mm/s, pour optimiser temps de production",
+        "Point laser ultra-fin: Pour gravures de précision maximale",
+        "Système CoreXY: Technologie avancée pour mouvements rapides et précis",
+        "Zone de travail: 400 × 415 mm pour projets de diverses tailles",
+        "Matériaux compatibles: Bois, acrylique, cuir, tissus, papier et autres"
+      ],
+      "applications": [
+        {
+          "name": "Personnalisation",
+          "description": "Personnalisation d'objets et gadgets avec gravures précises et détaillées."
+        },
+        {
+          "name": "Prototypage",
+          "description": "Création de prototypes et modèles architecturaux avec découpes nettes et précises."
+        },
+        {
+          "name": "Décorations",
+          "description": "Réalisation de décorations et articles artisanaux sur mesure pour tous besoins."
+        }
+      ]
+    },
+    "largePrint": {
+      "title": "Réparation Imprimantes 3D",
+      "description": "Service complet de réparation et maintenance pour imprimantes 3D de toutes marques et modèles. Notre équipe de techniciens spécialisés diagnostique et résout les problèmes mécaniques, électroniques et de calibration.",
+      "features": [
+        "Diagnostic complet des composants mécaniques et électroniques",
+        "Réparations spécialisées d'extrudeurs et plateaux d'impression",
+        "Calibration précise des axes et nivellement du plateau",
+        "Maintenance préventive et garantie 6 mois"
+      ],
+      "applications": [
+        {
+          "name": "Imprimantes FDM",
+          "description": "Réparation d'imprimantes à filament avec problèmes d'extrusion."
+        },
+        {
+          "name": "Imprimantes SLA",
+          "description": "Maintenance d'imprimantes à résine et calibration écran."
+        }
+      ]
+    },
+    "scanning": {
+      "title": "Numérisation 3D",
+      "description": "Service de numérisation 3D professionnelle pour reverse engineering, préservation d'objets et développement de produits avec précision élevée.",
+      "features": [
+        "Précision jusqu'à 0,1mm selon taille et complexité de l'objet",
+        "Capture de géométrie et informations de texture",
+        "Idéal pour reverse engineering et développement produit",
+        "Numérisation d'objets de diverses tailles"
+      ],
+      "applications": [
+        {
+          "name": "Reverse engineering",
+          "description": "Numérisation pour reconstruire et améliorer objets existants."
+        },
+        {
+          "name": "Préservation",
+          "description": "Conservation numérique d'objets historiques ou précieux."
+        }
+      ]
+    },
+    "prototyping": {
+      "title": "Prototypage",
+      "description": "Service complet de prototypage rapide des idées aux objets réels avec support technique complet et conseil personnalisé.",
+      "features": [
+        "Prototypage rapide en 24-48 heures",
+        "Support technique complet du concept à la production",
+        "Conseil pour optimisation design et sélection matériaux",
+        "Test et validation fonctionnelle et esthétique"
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Analyse concept",
+          "description": "Définition exigences techniques et fonctionnelles."
+        },
+        {
+          "step": 2,
+          "title": "Modélisation CAD",
+          "description": "Création modèle 3D optimisé pour impression."
+        },
+        {
+          "step": 3,
+          "title": "Prototype",
+          "description": "Impression prototype avec technologies appropriées."
+        },
+        {
+          "step": 4,
+          "title": "Test et validation",
+          "description": "Validation fonctionnelle et esthétique du prototype."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Notre passion pour l'innovation et la technologie 3D",
+    "heroSubtitle": "Une équipe d'experts passionnés en impression 3D, dédiée à transformer vos idées en réalité.",
+    "description": "Nous sommes une équipe de spécialistes de l'impression 3D avec des années d'expérience dans le secteur. Notre mission est de transformer vos idées en réalité grâce à des technologies avancées et un service de qualité supérieure.",
+    "ourStory": "Notre Histoire",
+    "fromDreamToReality": "Du rêve à la réalité",
+    "storyParagraph1": "3DMAKES est née en 2024 de l'intuition de Marco Pagani, 20 ans avec une forte passion pour l'informatique, particulièrement l'impression 3D. Partant d'une petite pièce avec deux imprimantes 3D, l'entreprise a grandi pour devenir une réalité établie dans le secteur de la fabrication additive.",
+    "storyParagraph2": "Notre mission a toujours été claire : rendre la technologie d'impression 3D accessible à tous, des grandes entreprises aux petits artisans, des designers aux particuliers passionnés de technologie.",
+    "storyParagraph3": "Aujourd'hui, avec une équipe de professionnels qualifiés et un parc de machines de pointe, nous offrons un service complet d'impression 3D, numérisation, conception et conseil, en gardant toujours au centre les valeurs de qualité, innovation et attention au client.",
+    "ourValues": "Nos Valeurs",
+    "whatGuidesUs": "Ce qui nous guide chaque jour",
+    "valuesDescription": "Nous croyons fermement en quelques principes fondamentaux qui guident chaque aspect de notre travail et notre relation avec les clients.",
+    "sustainabilityTitle": "Durabilité",
+    "sustainabilityDescription": "Nous nous engageons à réduire l'impact environnemental de nos processus de production. Nous utilisons des matériaux éco-durables quand possible et optimisons nos productions pour minimiser les déchets.",
+    "ourTeam": "Notre Équipe",
+    "meetOurExperts": "Rencontrez nos experts",
+    "teamDescription": "Une équipe de professionnels passionnés et hautement qualifiés prêts à transformer vos idées en réalité concrète.",
+    "whereWeAre": "Où Nous Sommes",
+    "howToReachUs": "Comment Nous Rejoindre",
+    "ourAddress": "Notre Adresse",
+    "values": {
+      "innovation": "Innovation",
+      "innovationDescription": "Nous recherchons constamment les solutions les plus innovantes pour offrir à nos clients des résultats de pointe. Nous investissons dans les technologies de dernière génération et mettons continuellement à jour nos compétences.",
+      "quality": "Qualité",
+      "qualityDescription": "La qualité est au centre de tout ce que nous faisons. Nous utilisons uniquement des matériaux sélectionnés et des processus de production rigoureux pour garantir que chaque pièce que nous produisons répond aux plus hauts standards de qualité.",
+      "precision": "Précision",
+      "service": "Service"
+    }
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "subtitle": "Rendre la technologie d'impression 3D accessible à tous et promouvoir son adoption dans chaque secteur.",
+    "description": "Notre mission est de rendre la technologie d'impression 3D accessible à tous, en offrant des services de haute qualité à des prix compétitifs.",
+    "ourGoal": "Notre Objectif",
+    "revolutionTitle": "Révolutionner le monde de la production avec l'impression 3D",
+    "paragraph1": "Chez 3DMAKES, nous croyons que l'impression 3D représente une révolution technologique destinée à transformer radicalement la façon dont nous concevons, concevons et produisons les objets qui nous entourent.",
+    "paragraph2": "Notre mission est de mener cette révolution, en rendant la technologie d'impression 3D accessible et compréhensible au plus grand nombre de personnes possible : des professionnels aux entreprises, des étudiants aux simples passionnés.",
+    "democratize": "Démocratiser l'accès aux technologies d'impression 3D",
+    "ourCommitments": "Nos Engagements",
+    "howWeRealize": "Comment nous réalisons notre mission",
+    "commitmentDescription": "Nous nous engageons chaque jour à diffuser la connaissance et l'utilisation de l'impression 3D à travers diverses initiatives et approches.",
+    "ourVision": "Notre Vision",
+    "visionTitle": "Un avenir où l'impression 3D fait partie de la vie quotidienne",
+    "visionParagraph1": "Nous imaginons un avenir où l'impression 3D ne sera plus une technologie de niche, mais une partie intégrante des processus de production de chaque entreprise et de la vie quotidienne de chacun d'entre nous.",
+    "visionParagraph2": "Un monde où les objets sont produits sur demande, réduisant les déchets et l'impact environnemental, où la personnalisation est la norme et non l'exception, où les distances géographiques ne représentent plus un obstacle à la production.",
+    "visionParagraph3": "C'est la vision qui nous guide chaque jour et qui nous pousse à innover constamment, à explorer de nouvelles possibilités et à partager nos connaissances avec le monde.",
+    "discoverVision": "Découvrez comment nous réalisons cette vision",
+    "eventsWorkshops": "Événements et Ateliers",
+    "learnWithUs": "Apprenez avec nous la technologie du futur"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Prêt pour votre prochain projet? Parlons-en ensemble",
+    "helpRealizeIdeas": "Nous sommes là pour vous aider à réaliser vos idées. Contactez-nous pour discuter de votre projet ou recevoir plus d'informations sur nos services.",
+    "contactInfo": "Informations de contact",
+    "fullAddress": "Via Cantonale 15\n6918 Figino, Suisse",
+    "sendMessage": "Envoyer un message",
+    "form": {
+      "name": "Nom",
+      "surname": "Prénom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer message",
+      "description": "Remplissez le formulaire et nous répondrons dans les 24 heures",
+      "namePlaceholder": "Votre nom",
+      "surnamePlaceholder": "Votre prénom",
+      "emailPlaceholder": "votre-email@exemple.com",
+      "phonePlaceholder": "+41 XX XXX XX XX",
+      "subjectPlaceholder": "De quoi souhaitez-vous parler?",
+      "messagePlaceholder": "Décrivez votre projet ou demande...",
+      "services": {
+        "fdm": "Impression 3D FDM",
+        "sla": "Impression 3D SLA",
+        "laser": "Découpe Laser",
+        "largePrint": "Réparation Imprimantes 3D",
+        "scanning": "Numérisation 3D",
+        "prototyping": "Prototypage",
+        "other": "Autre"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Restez à jour avec les dernières innovations et études de cas dans le monde de l'impression 3D et du prototypage industriel.",
+    "readMore": "Lire plus",
+    "publishedOn": "Publié le",
+    "by": "par",
+    "projectInMind": "Vous avez un projet en tête?",
+    "contactDescription": "Contactez-nous pour une consultation gratuite et découvrez comment nous pouvons donner vie à vos idées.",
+    "categories": {
+      "innovation": "Innovation",
+      "technology": "Technologie",
+      "casestudy": "Étude de cas",
+      "tutorial": "Tutoriel"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Réponses aux questions les plus courantes sur nos services",
+    "fdmMaterials": "Quels matériaux offrez-vous pour l'impression 3D?",
+    "fdmMaterialsAnswer": "Nous offrons une large gamme de matériaux incluant PLA, PETG, ABS, TPU, Nylon et filaments renforcés fibre de carbone. Pour applications haute précision, nous offrons aussi services d'impression résine.",
+    "deliveryTimes": "Combien de temps prend une commande d'impression 3D?",
+    "deliveryTimesAnswer": "Les délais dépendent de divers facteurs comme taille, complexité et quantité des pièces. Commandes standard complétées en 2-5 jours ouvrables. Services urgents disponibles pour projets prioritaires.",
+    "maxSize": "Quelle est la taille maximum d'impression?",
+    "maxSizeAnswer": "Nos imprimantes FDM peuvent réaliser pièces jusqu'à 350×350×400mm en une pièce. Objets plus grands peuvent être imprimés en sections et assemblés.",
+    "scanningPrecision": "Quelle est la précision de votre service de numérisation 3D?",
+    "scanningPrecisionAnswer": "Nos scanners professionnels atteignent précision jusqu'à 0,1mm selon taille et complexité de l'objet. Nous pouvons capturer géométrie et informations texture.",
+    "priceCalculation": "Comment calculez-vous les prix?",
+    "priceCalculationAnswer": "Prix basés sur volume matériau, temps impression et complexité. Facteurs incluent type matériau, paramètres qualité et exigences post-traitement. Utilisez notre calculateur en ligne pour devis instantanés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "discoverMore": "Découvrir plus"
+  },
+  "footer": {
+    "description": "Nous transformons vos idées en objets réels grâce à la technologie d'impression 3D.",
+    "quickLinks": "Liens rapides",
+    "servicesTitle": "Services",
+    "contactTitle": "Nous contacter",
+    "calculateQuote": "Calculer devis",
+    "copyright": "Tous droits réservés"
+  }
+} 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form - 3DMakes</title>
+</head>
+<body>
+  <!-- Questo file aiuta Netlify a riconoscere il form di contatto -->
+  <form name="contact" netlify netlify-honeypot="bot-field" action="/contact-success" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+    <select name="service">
+      <option value="">Seleziona un servizio</option>
+      <option value="stampa-3d-fdm">Stampa 3D FDM</option>
+      <option value="stampa-3d-sla">Stampa 3D SLA</option>
+      <option value="taglio-laser">Taglio Laser</option>
+      <option value="riparazione-stampanti-3d">Riparazione Stampanti 3D</option>
+      <option value="scansione-3d">Scansione 3D</option>
+      <option value="prototipazione">Prototipazione</option>
+      <option value="altro">Altro</option>
+    </select>
+  </form>
+</body>
+</html> 

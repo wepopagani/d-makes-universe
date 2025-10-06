@@ -1,0 +1,66 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Funzione per verificare se l'utente è admin
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'info@3dmakes.ch';
+    }
+    
+    // Regola di base: gli admin hanno accesso completo a tutto
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Utenti normali hanno accesso solo ai propri dati
+    match /users/{userId} {
+      allow read: if request.auth != null && (request.auth.uid == userId || isAdmin());
+      allow write: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+    
+    // Accesso ai progetti
+    match /projects/{projectId} {
+      allow read: if request.auth != null && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+      allow write: if request.auth != null && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+      
+      // Per i nuovi progetti
+      allow create: if request.auth != null;
+    }
+    
+    // Accesso ai file
+    match /files/{fileId} {
+      allow read: if request.auth != null && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+      allow write: if request.auth != null && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+      
+      // Per i nuovi file
+      allow create: if request.auth != null;
+    }
+    
+    // Accesso ai messaggi
+    match /messages/{messageId} {
+      allow read: if request.auth != null && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+      allow create: if request.auth != null;
+      allow update, delete: if isAdmin();
+    }
+    
+    // Accesso ai passaporti degli animali - COMPLETAMENTE PUBBLICO
+    match /petPassports/{passportId} {
+      // Lettura pubblica per tutti (per NFC)
+      allow read: if true;
+      // Scrittura pubblica per creazione (per registrazione)
+      allow create: if true;
+      // Solo admin possono modificare ed eliminare
+      allow update, delete: if isAdmin();
+    }
+  }
+} 

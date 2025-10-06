@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony - Passaporto Digitale | 3DMAKES</title>
+    <meta name="description" content="Passaporto digitale di Tony - Pastore Tedesco">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+        :root {
+            --primary-color: hsl(216, 71%, 20%);
+            --accent-color: hsl(217, 90%, 62%);
+            --background: hsl(210, 40%, 98%);
+            --white: #ffffff;
+            --text-primary: hsl(222, 47%, 11%);
+            --text-muted: hsl(215, 16%, 47%);
+            --border-color: hsl(214, 32%, 91%);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--background) 0%, hsl(210, 40%, 95%) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .passport-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .passport-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 12px;
+        }
+        
+        .passport-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+        
+        .passport-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .public-badge {
+            font-size: 0.75rem;
+            color: #10b981;
+            margin-top: 8px;
+        }
+        
+        .passport-content {
+            padding: 30px;
+        }
+        
+        .pet-photo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pet-photo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--text-muted);
+            font-size: 3rem;
+        }
+        
+        .pet-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .pet-breed {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .info-section {
+            margin: 25px 0;
+        }
+        
+        .info-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: var(--background);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .info-icon {
+            font-size: 1.3rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+            color: var(--accent-color);
+        }
+        
+        .info-text {
+            flex: 1;
+            font-size: 1rem;
+        }
+        
+        .actions-section {
+            margin-top: 30px;
+            display: grid;
+            gap: 15px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-call {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        .btn-map {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+        }
+        
+        .btn-vcard {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+            color: white;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgb(0 0 0 / 0.2);
+        }
+        
+        .btn-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .found-animal {
+            margin-top: 24px;
+            padding: 16px;
+            background: #ecfdf5;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+        }
+        
+        .found-title {
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 8px;
+        }
+        
+        .found-text {
+            font-size: 0.875rem;
+            color: #047857;
+        }
+        
+        .passport-footer {
+            background: var(--background);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .passport-container {
+                border-radius: 15px;
+            }
+            
+            .passport-header {
+                padding: 20px;
+            }
+            
+            .passport-title {
+                font-size: 1.5rem;
+            }
+            
+            .passport-content {
+                padding: 20px;
+            }
+            
+            .pet-name {
+                font-size: 1.8rem;
+            }
+            
+            .actions-section {
+                gap: 12px;
+            }
+            
+            .action-btn {
+                padding: 12px 15px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="passport-container">
+        <!-- Header -->
+        <div class="passport-header">
+            <div class="logo">3DM</div>
+            <h1 class="passport-title">Passaporto Digitale</h1>
+            <p class="passport-subtitle">Animale Domestico</p>
+            <p class="public-badge">🌐 Accesso Pubblico</p>
+        </div>
+        
+        <!-- Content -->
+        <div class="passport-content">
+            <!-- Pet Photo and Name -->
+            <div class="pet-photo-section">
+                <div class="pet-photo-placeholder">🐕</div>
+                <h2 class="pet-name">Tony</h2>
+                <p class="pet-breed">Pastore Tedesco</p>
+            </div>
+            
+            <!-- Owner Information -->
+            <div class="info-section">
+                <h3 class="info-title">👤 Informazioni Proprietario</h3>
+                
+                <div class="info-item">
+                    <span class="info-icon">👨‍💼</span>
+                    <span class="info-text">Marco Pagani</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <span class="info-text">+41 79 123 45 67</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <span class="info-text">Via Example 123, 6918Lugano, Svizzera</span>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="actions-section">
+                <a href="tel:+41791234567" class="action-btn btn-call">
+                    <span class="btn-icon">📞</span>
+                    Chiama Proprietario
+                </a>
+                
+                <a href="https://www.google.com/maps/search/?api=1&query=Via+Example+123%2C+6814+Lugano%2C+Svizzera" target="_blank" class="action-btn btn-map">
+                    <span class="btn-icon">📍</span>
+                    Apri Indirizzo
+                </a>
+                
+                <button class="action-btn btn-vcard" onclick="downloadVCard()">
+                    <span class="btn-icon">💾</span>
+                    Scarica Contatto
+                </button>
+            </div>
+            
+            <!-- Found Animal Section -->
+            <div class="found-animal">
+                <h4 class="found-title">🐾 Hai trovato questo animale?</h4>
+                <p class="found-text">
+                    Contatta il proprietario usando i pulsanti sopra. Ogni aiuto è prezioso per riunire l'animale con la sua famiglia!
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="passport-footer">
+            <p class="footer-text">
+                Powered by <strong>3DMAKES</strong> | 
+                <a href="https://3dmakes.ch" style="color: var(--accent-color); text-decoration: none;">3dmakes.ch</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Genera e scarica vCard
+        function downloadVCard() {
+            const vcardContent = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:Pagani;Marco;;;',
+                'FN:Marco Pagani',
+                'TEL;TYPE=CELL:+41791234567',
+                'ADR:;;Via Example 123, 6918Lugano, Svizzera;;;;',
+                'NOTE:Proprietario di Tony (Pastore Tedesco)',
+                'END:VCARD'
+            ].join('\r\n');
+            
+            const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'tony_marco_contatto.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        }
+        
+        console.log('🎯 Passaporto statico caricato per Tony - Pastore Tedesco');
+    </script>
+</body>
+</html> 

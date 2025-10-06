@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna - Passaporto Digitale | 3DMAKES</title>
+    <meta name="description" content="Passaporto digitale per Luna - Border Collie">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <!-- Parametri modificabili -->
+    <script id="pet-data" type="application/json">
+    {
+        "animalName": "Luna",
+        "breed": "Border Collie",
+        "ownerName": "Elena Bianchi",
+        "phone": "+41765432109",
+        "address": "Via Lugano 45, 6900 Lugano, Svizzera",
+        "petPhoto": "/images/placeholder.svg",
+        "vcardFilename": "luna_elena_contatto.vcf"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: hsl(216, 71%, 20%);
+            --accent-color: hsl(217, 90%, 62%);
+            --background: hsl(210, 40%, 98%);
+            --white: #ffffff;
+            --text-primary: hsl(222, 47%, 11%);
+            --text-muted: hsl(215, 16%, 47%);
+            --border-color: hsl(214, 32%, 91%);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--background) 0%, hsl(210, 40%, 95%) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .passport-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .passport-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 12px;
+        }
+        
+        .passport-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+        
+        .passport-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .passport-content {
+            padding: 30px;
+        }
+        
+        .pet-photo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pet-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .pet-photo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--text-muted);
+            font-size: 3rem;
+        }
+        
+        .pet-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .pet-breed {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .info-section {
+            margin: 25px 0;
+        }
+        
+        .info-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: var(--background);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .info-icon {
+            font-size: 1.3rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+            color: var(--accent-color);
+        }
+        
+        .info-text {
+            flex: 1;
+            font-size: 1rem;
+        }
+        
+        .actions-section {
+            margin-top: 30px;
+            display: grid;
+            gap: 15px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-call {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        .btn-map {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+        }
+        
+        .btn-vcard {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+            color: white;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgb(0 0 0 / 0.2);
+        }
+        
+        .btn-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .passport-footer {
+            background: var(--background);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .passport-container {
+                border-radius: 15px;
+            }
+            
+            .passport-header {
+                padding: 20px;
+            }
+            
+            .passport-title {
+                font-size: 1.5rem;
+            }
+            
+            .passport-content {
+                padding: 20px;
+            }
+            
+            .pet-name {
+                font-size: 1.8rem;
+            }
+            
+            .actions-section {
+                gap: 12px;
+            }
+            
+            .action-btn {
+                padding: 12px 15px;
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Accessibilità per anziani */
+        @media (min-width: 601px) {
+            .info-text {
+                font-size: 1.1rem;
+            }
+            
+            .action-btn {
+                font-size: 1.1rem;
+                padding: 16px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="passport-container">
+        <!-- Header -->
+        <div class="passport-header">
+            <div class="logo">3DM</div>
+            <h1 class="passport-title">Passaporto Digitale</h1>
+            <p class="passport-subtitle">Animale Domestico</p>
+        </div>
+        
+        <!-- Content -->
+        <div class="passport-content">
+            <!-- Pet Photo and Name -->
+            <div class="pet-photo-section">
+                <div id="pet-photo-container">
+                    <div class="pet-photo-placeholder">🐕</div>
+                </div>
+                <h2 class="pet-name" id="pet-name">Luna</h2>
+                <p class="pet-breed" id="pet-breed">Border Collie</p>
+            </div>
+            
+            <!-- Owner Information -->
+            <div class="info-section">
+                <h3 class="info-title">👤 Informazioni Proprietario</h3>
+                
+                <div class="info-item">
+                    <span class="info-icon">👨‍💼</span>
+                    <span class="info-text" id="owner-name">Elena Bianchi</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <span class="info-text" id="owner-phone">+41 76 543 21 09</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <span class="info-text" id="owner-address">Via Lugano 45, 6900 Lugano, Svizzera</span>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="actions-section">
+                <a href="#" class="action-btn btn-call" id="call-btn">
+                    <span class="btn-icon">📞</span>
+                    Chiama Proprietario
+                </a>
+                
+                <a href="#" class="action-btn btn-map" id="map-btn">
+                    <span class="btn-icon">📍</span>
+                    Apri Indirizzo
+                </a>
+                
+                <button class="action-btn btn-vcard" id="vcard-btn">
+                    <span class="btn-icon">💾</span>
+                    Scarica Contatto
+                </button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="passport-footer">
+            <p class="footer-text">
+                Powered by <strong>3DMAKES</strong> | 
+                <a href="https://3dmakes.ch" style="color: var(--accent-color); text-decoration: none;">3dmakes.ch</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Carica i dati dal JSON
+        function loadPetData() {
+            const dataScript = document.getElementById('pet-data');
+            const data = JSON.parse(dataScript.textContent);
+            
+            // Aggiorna elementi della pagina
+            document.getElementById('pet-name').textContent = data.animalName;
+            document.getElementById('pet-breed').textContent = data.breed;
+            document.getElementById('owner-name').textContent = data.ownerName;
+            document.getElementById('owner-phone').textContent = data.phone;
+            document.getElementById('owner-address').textContent = data.address;
+            
+            // Gestisci foto pet
+            const photoContainer = document.getElementById('pet-photo-container');
+            if (data.petPhoto && data.petPhoto.trim() !== '') {
+                photoContainer.innerHTML = `<img src="${data.petPhoto}" alt="${data.animalName}" class="pet-photo">`;
+            }
+            
+            // Configura link di azione
+            document.getElementById('call-btn').href = `tel:${data.phone}`;
+            
+            // Link Google Maps
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.address)}`;
+            document.getElementById('map-btn').href = mapsUrl;
+            
+            // Configura download vCard
+            document.getElementById('vcard-btn').onclick = function() {
+                downloadVCard(data);
+            };
+            
+            // Aggiorna meta tag title
+            document.title = `${data.animalName} - Passaporto Digitale | 3DMAKES`;
+        }
+        
+        // Genera e scarica vCard
+        function downloadVCard(data) {
+            // Separa nome e cognome (assume "Nome Cognome")
+            const nameParts = data.ownerName.trim().split(' ');
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.slice(1).join(' ') || '';
+            
+            // Genera contenuto vCard
+            const vcardContent = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                `N:${lastName};${firstName};;;`,
+                `FN:${data.ownerName}`,
+                `TEL;TYPE=CELL:${data.phone}`,
+                `ADR:;;${data.address};;;;`,
+                `NOTE:Proprietario di ${data.animalName} (${data.breed})`,
+                'END:VCARD'
+            ].join('\r\n');
+            
+            // Crea e scarica file
+            const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = data.vcardFilename || `${data.animalName.toLowerCase().replace(/\s+/g, '_')}_contatto.vcf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        }
+        
+        // Inizializza la pagina
+        document.addEventListener('DOMContentLoaded', loadPetData);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1161 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "mission": "Mission",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "requestQuote": "Request Quote",
+    "clientArea": "Client Area",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "We transform your ideas into",
+    "titleHighlight": "real objects",
+    "subtitle": "3D printing specialists, we offer rapid prototyping solutions and high-quality production with FDM and SLA technologies.",
+    "discoverServices": "Discover Services",
+    "requestQuote": "Request Quote",
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Completed projects",
+      "clients": "Satisfied clients",
+      "precision": "Guaranteed precision"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Our 3D solutions",
+    "description": "We offer a complete range of 3D printing, scanning and prototyping services to transform your ideas into real objects with precision and professional quality.",
+    "seeAll": "Discover all our services",
+    "readyToRealize": "Ready to realize your project?",
+    "contactToday": "Contact us today to discuss your 3D printing project and receive a personalized quote.",
+    "calculateQuote": "Calculate a quote",
+    "heroTitle": "Our Services",
+    "heroSubtitle": "Complete 3D printing, scanning and prototyping solutions to transform your ideas into reality.",
+    "characteristics": "Features",
+    "availableMaterials": "Available Materials",
+    "applications": "Applications",
+    "ourProcess": "Our Process",
+    "requestQuote": "Request a Quote",
+    "fdm": {
+      "title": "FDM 3D Printing",
+      "description": "Fused Deposition Modeling (FDM) technology is ideal for producing functional prototypes and durable parts. We use professional 3D printers to ensure maximum quality and precision.",
+      "features": [
+        "Wide range of available materials (PLA, ABS, PETG, TPU, Nylon, etc.)",
+        "Print dimensions up to 300x300x300mm",
+        "Resolution up to 100 microns per layer", 
+        "Ideal for functional prototypes, mechanical parts and small production runs",
+        "Fast delivery times and competitive prices"
+      ],
+      "materials": [
+        {
+          "name": "PLA",
+          "features": "Eco-friendly, easy to print, rigid",
+          "applications": "Prototypes, decorative objects, tools"
+        },
+        {
+          "name": "ABS", 
+          "features": "Heat resistant, robust, machinable",
+          "applications": "Mechanical parts, functional components"
+        },
+        {
+          "name": "PETG",
+          "features": "Resistant, flexible, waterproof", 
+          "applications": "Containers, parts exposed to stress"
+        },
+        {
+          "name": "PETG-CF",
+          "features": "Resistant, lightweight, durable",
+          "applications": "Mechanical parts, functional components with carbon fiber"
+        },
+        {
+          "name": "TPU",
+          "features": "Flexible, elastic, wear resistant",
+          "applications": "Gaskets, grips, flexible parts"
+        },
+        {
+          "name": "Nylon",
+          "features": "Resistant, flexible, waterproof",
+          "applications": "Containers, parts exposed to stress"
+        },
+        {
+          "name": "Polycarbonate",
+          "features": "Resistant, durable, lightweight",
+          "applications": "Mechanical parts, functional components"
+        },
+        {
+          "name": "Nylon-CF", 
+          "features": "Durable, resistant, lightweight",
+          "applications": "Mechanical parts, functional components with carbon fiber"
+        }
+      ]
+    },
+    "sla": {
+      "title": "SLA 3D Printing", 
+      "description": "Stereolithography (SLA) technology uses photopolymerization to create objects with incredibly precise details and smooth surfaces. Perfect for detailed models, jewelry and medical applications.",
+      "features": [
+        "Ultra-fine resolution up to 10 microns for incredibly precise details",
+        "Smooth surfaces requiring minimal post-production",
+        "Variety of special resins for specific applications",
+        "Ideal for aesthetic prototypes, presentation models and precision components",
+        "Excellent for producing transparent parts or with minute details"
+      ],
+      "materials": [
+        {
+          "name": "Standard resin",
+          "features": "Precise details, smooth surface",
+          "applications": "Aesthetic prototypes, presentation models"
+        },
+        {
+          "name": "Tough resin",
+          "features": "Durable, impact resistant",
+          "applications": "Functional parts, mechanical components"
+        },
+        {
+          "name": "Clear resin",
+          "features": "High transparency, polishable",
+          "applications": "Transparent prototypes, optical components"
+        },
+        {
+          "name": "Dental resin",
+          "features": "Biocompatible, certified",
+          "applications": "Dental models, surgical guides"
+        }
+      ]
+    },
+    "laser": {
+      "title": "Laser Cutting",
+      "description": "Our laser engraving and cutting technology offers an advanced solution for creating detailed and personalized projects. Thanks to a high-speed CoreXY movement system and a powerful 22W laser with an ultra-fine point, we guarantee precise engravings and cuts on a wide range of materials. The 400 × 415 mm work area allows handling projects of different sizes while always maintaining high quality.",
+      "features": [
+        "Precision: Movement with 0.01 mm accuracy for sharp details",
+        "Speed: Up to 600 mm/s, optimizing production times",
+        "Ultra-fine laser point: For maximum precision engravings",
+        "CoreXY system: Advanced technology for fast and accurate movements",
+        "Work area: 400 × 415 mm for various project sizes",
+        "Compatible materials: Wood, acrylic, leather, fabrics, paper, and other materials"
+      ],
+      "applications": [
+        {
+          "name": "Personalization",
+          "description": "Personalization of objects and gadgets with precise and detailed engravings."
+        },
+        {
+          "name": "Prototyping",
+          "description": "Creation of prototypes and architectural models with clean and precise cuts."
+        },
+        {
+          "name": "Decorations",
+          "description": "Creation of decorations and handcrafted items tailored to every need."
+        },
+        {
+          "name": "Modeling",
+          "description": "Production of elements for modeling and hobbies with millimetric details."
+        }
+      ]
+    },
+    "largePrint": {
+      "title": "Large Format Printing",
+      "description": "We offer a professional large format printing service, ideal for producing technical drawings, presentations, posters and maps. We use a thermal inkjet printer with resolution up to 2400 × 1200 dpi, ensuring high-quality prints with vivid colors and precise details. The ability to handle media up to 609 mm wide allows the creation of large-scale projects.",
+      "features": [
+        "Resolution: Up to 2400 × 1200 dpi for sharp images and readable text",
+        "Supported formats: Sheets and rolls up to 609 mm wide, including A1, A2, A3 and A4 formats",
+        "Technology: Thermal inkjet printer for professional quality",
+        "Compatible materials: Plain, coated, photographic, adhesive paper and other special media",
+        "Speed: Fast printing with reduced production times to meet deadlines",
+        "Quality: Vivid colors and precise details for professional results"
+      ],
+      "applications": [
+        {
+          "name": "Technical Projects",
+          "description": "Printing of architectural and engineering projects with millimetric precision."
+        },
+        {
+          "name": "Promotional Materials",
+          "description": "Creation of posters and promotional materials with high visual impact."
+        },
+        {
+          "name": "Cartography",
+          "description": "Creation of detailed maps and floor plans for professional use."
+        },
+        {
+          "name": "Presentations",
+          "description": "Production of visual presentations for high-level events and conferences."
+        }
+      ]
+    },
+    "scanning": {
+      "title": "3D Scanning",
+      "description": "Our 3D scanning services allow digitizing physical objects with millimetric precision, creating detailed 3D models ready for processing, modification or printing.",
+      "features": [
+        "Professional high-definition 3D scanners",
+        "Precision up to 0.1mm to capture every detail",
+        "Advanced point cloud processing",
+        "Conversion to different file formats (STL, OBJ, STEP, etc.)",
+        "Ideal for reverse engineering, documentation, digital preservation"
+      ],
+      "applications": [
+        {
+          "name": "Reverse Engineering",
+          "description": "We recreate parts no longer in production or difficult to find."
+        },
+        {
+          "name": "Quality Control",
+          "description": "We compare the produced piece with the original CAD model."
+        },
+        {
+          "name": "Digital Preservation",
+          "description": "We digitally preserve objects of historical or artistic value."
+        },
+        {
+          "name": "Customization",
+          "description": "Acquisition of organic shapes to create custom products."
+        }
+      ]
+    },
+    "prototyping": {
+      "title": "Prototyping",
+      "description": "We transform your ideas into functional prototypes quickly. From the conceptual phase to physical realization, we support you in every phase of the product development process.",
+      "features": [
+        "Design consulting for prototype optimization",
+        "Rapid iteration to perfect the design",
+        "Functional testing and concept validation",
+        "Small pre-production series production",
+        "Complete support from sketch to final product"
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Concept & Design",
+          "description": "We define the prototype specifications together and develop the 3D model."
+        },
+        {
+          "step": 2,
+          "title": "Material & technology selection",
+          "description": "We choose the materials and printing technology best suited to your needs."
+        },
+        {
+          "step": 3,
+          "title": "Prototype production",
+          "description": "We create the prototype with the most appropriate technologies."
+        },
+        {
+          "step": 4,
+          "title": "Testing & Validation",
+          "description": "We test the prototype to verify its functionality and adherence to specifications."
+        },
+        {
+          "step": 5,
+          "title": "Iteration & Refinement",
+          "description": "We refine the design based on feedback and tests performed."
+        }
+      ]
+    },
+    "design": {
+      "title": "Design",
+      "description": "CAD design services to optimize your models for 3D printing."
+    },
+    "postProcessing": {
+      "title": "Post-processing",
+      "description": "Finishing, painting and assembly for professional results."
+    },
+    "qualityControl": {
+      "title": "Quality Control",
+      "description": "We compare the produced piece with the original CAD model."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our passion for innovation and 3D technology",
+    "description": "We are a team of 3D printing specialists with years of experience in the industry. Our mission is to transform your ideas into reality through advanced technologies and superior quality service.",
+    "heroSubtitle": "A team of passionate 3D printing experts, dedicated to transforming your ideas into reality.",
+    "ourStory": "Our Story",
+    "fromDreamToReality": "From dream to reality",
+    "storyParagraph1": "3DMAKES was born in 2024 from the intuition of Marco Pagani, 20 years old with a strong passion for computer science, particularly 3D printing. Starting from a small room with two 3D printers, the company has grown to become an established reality in the additive manufacturing sector.",
+    "storyParagraph2": "Our mission has always been clear: to make 3D printing technology accessible to everyone, from large companies to small artisans, from designers to technology enthusiasts.",
+    "storyParagraph3": "Today, with a team of qualified professionals and cutting-edge equipment, we offer a complete service of 3D printing, scanning, design and consulting, always keeping quality, innovation and customer care at the center.",
+    "ourValues": "Our Values",
+    "whatGuidesUs": "What guides us every day",
+    "valuesDescription": "We firmly believe in some fundamental principles that guide every aspect of our work and our relationship with customers.",
+    "sustainabilityTitle": "Sustainability",
+    "sustainabilityDescription": "We are committed to reducing the environmental impact of our production processes. We use sustainable materials where possible and optimize our productions to minimize waste.",
+    "ourTeam": "Our Team",
+    "meetOurExperts": "Meet our experts",
+    "teamDescription": "A team of passionate and highly qualified professionals ready to transform your ideas into concrete reality.",
+    "whereWeAre": "Where We Are",
+    "howToReachUs": "How to Reach Us",
+    "locationDescription": "We are easily accessible in the center of Lugano. Come visit us to discuss your project or to see our 3D printing processes up close.",
+    "ourAddress": "Our Address",
+    "values": {
+      "innovation": "Innovation",
+      "innovationDescription": "We constantly seek the most innovative solutions to offer our customers cutting-edge results. We invest in the latest generation technologies and continuously update our skills.",
+      "quality": "Quality",
+      "qualityDescription": "Quality is at the center of everything we do. We use only selected materials and rigorous production processes to ensure that every piece we produce meets the highest quality standards.",
+      "precision": "Precision",
+      "service": "Service"
+    },
+    "team": {
+      "marco": {
+        "name": "Marco Pagani",
+        "role": "Founder",
+        "bio": "Computer scientist passionate about 3D printing, always looking for innovative solutions for his company"
+      },
+      {
+      "matteo": "Matteo Verdicchio",
+      "role": "Technician & 3D Designer", 
+      "bio": "Specialized in 3D modeling and print optimization"
+      },
+      "manuel": {
+        "name": "Manuel Gösteris",
+        "role": "Marketing",
+        "bio": "Takes care of customer relationships and the consulting process"
+      },
+      "alessandro": {
+        "name": "Luganoo Genovesi",
+        "role": "Technician & 3D Designer",
+        "bio": "Specialized in 3D modeling and print optimization"
+      },
+      "alessandro1": {
+        "name": "Luganoo Belino",
+        "role": "Technician & 3D Designer",
+        "bio": "Specialized in 3D modeling and print optimization"
+      },
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "subtitle": "Making 3D printing technology accessible to everyone and promoting its adoption in every sector.",
+    "description": "Our mission is to make 3D printing technology accessible to everyone, offering high-quality services at competitive prices.",
+    "ourGoal": "Our Goal",
+    "revolutionTitle": "Revolutionizing the world of production with 3D printing",
+    "paragraph1": "At 3DMAKES, we believe that 3D printing represents a technological revolution destined to radically transform the way we conceive, design and produce the objects around us.",
+    "paragraph2": "Our mission is to lead this revolution, making 3D printing technology accessible and understandable to as many people as possible: from professionals to companies, from students to simple enthusiasts.",
+    "democratize": "Democratize access to 3D printing technologies",
+    "ourCommitments": "Our Commitments",
+    "howWeRealize": "How we realize our mission",
+    "commitmentDescription": "We are committed every day to spreading knowledge and use of 3D printing through various initiatives and approaches.",
+    "ourVision": "Our Vision",
+    "visionTitle": "A future where 3D printing is part of everyday life",
+    "visionParagraph1": "We imagine a future where 3D printing will no longer be a niche technology, but an integral part of the production processes of every company and the daily life of each of us.",
+    "visionParagraph2": "A world where objects are produced on demand, reducing waste and environmental impact, where customization is the norm and not the exception, where geographical distances no longer represent an obstacle to production.",
+    "visionParagraph3": "This is the vision that guides us every day and that drives us to constantly innovate, to explore new possibilities and to share our knowledge with the world.",
+    "discoverVision": "Discover how we realize this vision",
+    "eventsWorkshops": "Events and Workshops",
+    "learnWithUs": "Learn the technology of the future with us",
+    "eventsDescription": "We regularly organize training events and practical workshops to bring more and more people closer to the world of 3D printing.",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "yearly": "Yearly",
+    "forBeginners": "For beginners",
+    "intermediateLevel": "Intermediate level",
+    "advancedLevel": "Advanced level",
+    "introWorkshop": "Introductory 3D printing workshop",
+    "introWorkshopDesc": "A practical 3-hour workshop to discover the fundamentals of 3D printing, from modeling to final printing.",
+    "discoverDates": "Discover dates",
+    "advancedCourse": "Advanced 3D modeling course",
+    "advancedCourseDesc": "A complete 5-lesson course to deepen 3D modeling techniques with professional software.",
+    "enrollCourse": "Enroll in course",
+    "masterclass": "Professional 3D printing masterclass",
+    "masterclassDesc": "An intensive 2-day masterclass for professionals who want to master advanced techniques.",
+    "waitingList": "Waiting list",
+    "knowledge": {
+      "title": "Knowledge dissemination",
+      "description": "We organize workshops, webinars and training courses to spread knowledge of 3D printing and its potential applications."
+    },
+    "innovation": {
+      "title": "Accessible innovation",
+      "description": "We are committed to making 3D printing technologies accessible to everyone, offering competitive prices and scalable solutions."
+    },
+    "sustainability": {
+      "title": "Environmental sustainability",
+      "description": "We promote the use of eco-sustainable materials and production processes with low environmental impact to contribute to a greener future."
+    },
+    "community": {
+      "title": "Collaboration and community",
+      "description": "We believe in the power of collaboration and sharing. We work to build a community of enthusiasts and 3D printing professionals."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready for your next project? Let's talk about it together",
+    "messageSentSuccess": "Message sent successfully!",
+    "thankYouMessage": "Thank you for contacting us. We will respond as soon as possible.",
+    "sendAnotherMessage": "Send another message",
+    "helpRealizeIdeas": "We are here to help you realize your ideas. Contact us to discuss your project or to receive more information about our services.",
+    "contactInfo": "Contact information",
+    "chatWithUs": "Chat with us",
+    "fullAddress": "Via Industria 1, 2nd floor\n6918Lugano, Switzerland",
+    "mondayFriday": "Monday - Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "sendMessage": "Send a message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Message",
+      "service": "Service",
+      "selectService": "Select a service",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "surname": "Surname",
+      "subject": "Subject",
+      "serviceOfInterest": "Service of interest",
+      "description": "Fill out the form and we will respond within 24 hours",
+      "botFieldLabel": "Don't fill this field if you are human:",
+      "namePlaceholder": "Your name",
+      "surnamePlaceholder": "Your surname",
+      "emailPlaceholder": "your-email@example.com",
+      "phonePlaceholder": "+41 XX XXX XX XX",
+      "subjectPlaceholder": "What would you like to talk about?",
+      "messagePlaceholder": "Describe your project or request...",
+      "services": {
+        "fdm": "FDM 3D Printing",
+        "sla": "SLA 3D Printing",
+        "laser": "Laser Cutting",
+        "largePrint": "Large Format Printing",
+        "scanning": "3D Scanning",
+        "prototyping": "Prototyping",
+        "other": "Other"
+      }
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Opening hours",
+      "byPublicTransport": "By public transport: Reachable with bus lines 2, 3 and 4, \"Centro\" stop."
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "surname": "Surname",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Login successful!",
+    "registerSuccess": "Registration completed successfully!",
+    "loginError": "Login error",
+    "registerError": "Registration error",
+    "tooManyAttempts": "Too many failed attempts. Try again later.",
+    "emailInUse": "Email already in use. Try logging in.",
+    "invalidEmail": "Invalid email format.",
+    "registrationComplete": "Registration complete",
+    "accountCreated": "Your account has been created successfully.",
+    "confirmPasswordError": "Passwords do not match",
+    "passwordMinLength": "Password must contain at least 6 characters",
+    "requiredFields": "Name, surname and email are required",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "resetPassword": "Reset password",
+    "resetPasswordTitle": "Reset your password",
+    "resetPasswordDesc": "Enter your email to receive instructions to reset your password",
+    "sendResetEmail": "Send reset email",
+    "resetEmailSent": "Reset email sent",
+    "resetEmailSentDesc": "Check your email for instructions on how to reset your password",
+    "loginWithGoogle": "Sign in with Google",
+    "registerWithGoogle": "Sign up with Google",
+    "backToLogin": "Back to login"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "projects": "My Projects",
+    "orders": "My Orders",
+    "messages": "Messages",
+    "profile": "Profile",
+    "files": "Files",
+    "newProject": "New Project",
+    "newOrder": "New Order",
+    "viewAll": "View All"
+  },
+  "projects": {
+    "title": "Projects",
+    "newProject": "New Project",
+    "projectDetails": "Project Details",
+    "projectCreated": "Project created",
+    "projectCreatedSuccess": "Your project has been created successfully.",
+    "projectNotFound": "Project not found",
+    "status": "Status",
+    "created": "Created",
+    "updated": "Updated",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe your project...",
+    "descriptionUpdated": "Description updated",
+    "descriptionUpdatedSuccess": "The project description has been updated successfully.",
+    "files": "Files",
+    "notes": "Notes",
+    "notesAdditional": "Additional notes",
+    "notesPlaceholder": "Additional notes or instructions...",
+    "notesUpdated": "Notes updated",
+    "notesUpdatedSuccess": "The project notes have been updated successfully.",
+    "noDescription": "No description available.",
+    "noNotes": "No notes available.",
+    "actions": "Actions",
+    "selectStatus": "Select a status",
+    "fileUploaded": "File uploaded",
+    "fileUploadedSuccess": "The file has been uploaded successfully.",
+    "filesUploaded": "Files uploaded",
+    "unableToLoadFiles": "Unable to load your files: ",
+    "insertNewName": "Enter the new name",
+    "insertProjectDescription": "Enter the project description",
+    "insertProjectNotes": "Enter the project notes",
+    "uploadFiles": "Upload Files",
+    "nameUpdated": "Name updated",
+    "nameUpdatedSuccess": "The order name has been updated successfully.",
+    "statusUpdated": "Status updated",
+    "updating": "Updating...",
+    "updateStatus": "Update Status",
+    "updatePayment": "Update Payment",
+    "notSpecified": "Not specified"
+  },
+  "orders": {
+    "title": "Orders",
+    "newOrder": "New Order",
+    "orderDetails": "Order Details",
+    "orderNumber": "Order Number",
+    "status": "Status",
+    "total": "Total",
+    "created": "Created",
+    "delivery": "Delivery",
+    "payment": "Payment",
+    "paymentUpdated": "Payment updated",
+    "selectPaymentStatus": "Select payment status",
+    "quoteAccepted": "Quote accepted",
+    "quoteAcceptedSuccess": "You have accepted the quote. Your order has been confirmed.",
+    "quoteRejected": "Quote rejected",
+    "quoteRejectedSuccess": "You have rejected the quote.",
+    "noPermissionToView": "You don't have permission to view this order",
+    "errorLoadingDetails": "An error occurred while loading order details",
+    "errorAcceptingQuote": "An error occurred while accepting the quote",
+    "errorRejectingQuote": "An error occurred while rejecting the quote",
+    "projectOrders": "Project Orders",
+    "manageProjectOrders": "Manage orders for this project",
+    "client": "Client",
+    "noOrdersFound": "No orders found",
+    "noOrdersDescription": "You haven't created any orders for this project yet.",
+    "createNewOrder": "Create new order",
+    "createOrderDescription": "Create a new order for project",
+    "itemsToPrint": "Items to print",
+    "stlFile": "STL File",
+    "color": "Color",
+    "resolution": "Resolution",
+    "priceCHF": "Price (CHF)",
+    "noStlFiles": "No STL files available for this project.",
+    "addProductionNotes": "Add production notes",
+    "createOrder": "Create Order",
+    "orderCreated": "Order created",
+    "orderCreatedSuccess": "Order created successfully",
+    "errorCreatingOrder": "An error occurred while creating the order",
+    "missingDataError": "Missing data for order creation"
+  },
+  "payment": {
+    "title": "Payment Method",
+    "selectMethod": "Select Payment Method",
+    "choosePayment": "Choose how you want to pay for your order of",
+    "twint": "Twint",
+    "twintDescription": "Pay with the Twint app using QR code",
+    "card": "Credit/Debit Card",
+    "cardDescription": "Card payment via SumUp",
+    "pickup": "Payment on Pickup",
+    "pickupDescription": "Pay in cash or card when picking up",
+    "twintPayment": "Twint Payment",
+    "scanQR": "Scan the QR code with the Twint app to pay",
+    "qrCode": "Twint QR Code",
+    "amount": "Amount",
+    "howToPay": "How to pay:",
+    "step1": "1. Open the Twint app on your phone",
+    "step2": "2. Select \"Scan QR\"",
+    "step3": "3. Frame the QR code above",
+    "step4": "4. Confirm the payment of",
+    "cancel": "Cancel",
+    "paidWithTwint": "I paid with Twint",
+    "confirming": "Confirming...",
+    "twintConfirmed": "Twint payment confirmed",
+    "twintSuccess": "Twint payment has been successfully registered.",
+    "cardPayment": "Card payment",
+    "sumupImplementing": "SumUp functionality under implementation. Contact support to proceed.",
+    "pickupSelected": "Payment on pickup selected",
+    "pickupSuccess": "You can pay in cash or card when picking up.",
+    "error": "An error occurred while selecting the payment method.",
+    "paymentMethod": "Payment Method",
+    "preferredPaymentMethod": "Preferred Payment Method"
+  },
+  "calculator": {
+    "title": "Quote Calculator",
+    "subtitle": "Get an instant quote for your project",
+    "uploadFile": "Upload File",
+    "dragDrop": "Drag your STL file here or click to select",
+    "selectPrintType": "Select print type",
+    "selectQuality": "Select quality",
+    "quantity": "Quantity",
+    "calculate": "Calculate quote",
+    "recalculate": "Recalculate quote",
+    "calculating": "Calculating...",
+    "result": "Result",
+    "price": "Price",
+    "deliveryTime": "Delivery time",
+    "material": "Material",
+    "volume": "Volume",
+    "howItWorks": "Our calculator uses an algorithm that considers various factors such as object dimensions, chosen material, print quality and quantity to provide a quick cost estimate.",
+    "accuracy": "The generated quote is an indicative estimate that may vary by ±15% from the final cost. Accuracy depends on object complexity, specific characteristics and any required post-processing.",
+    "fileFormats": "We accept the most common file formats for 3D printing, including STL, OBJ, STEP and 3MF. If you have a different format, contact us to verify if we can process it or to receive conversion support.",
+    "deliveryTimes": "Delivery times vary based on object complexity, chosen material and quantity. For standard prints, average times are 3-5 working days, while more complex projects may require 7-10 days.",
+    "modelModification": "Yes, we offer 3D file optimization and modification services. If your model needs corrections, minimum thicknesses, supports or other modifications to ensure successful printing, we can intervene to optimize it.",
+    "fileUploaded": "File uploaded!",
+    "fileUploadedSuccess": "The file {fileName} has been uploaded successfully.",
+    "fileTooBig": "File too large (max {maxSize}MB). For larger files, contact us.",
+    "unsupportedFormat": "Unsupported file format. Use STL, OBJ or 3MF.",
+    "unsupportedFormatForType": "Unsupported file format for {printType}. Use: {formats}.",
+    "laserInfo": {
+      "title": "Laser Information",
+      "workArea": "Work area: 400 × 415 mm",
+      "precision": "Precision: 0.01 mm",
+      "fileFormats": "Formats: SVG, DXF, AI, PDF",
+      "delivery": "Delivery: 2-4 working days"
+    },
+    "printTypes": {
+      "fdm": "FDM (Filament printing)",
+      "sla": "SLA (Resin)",
+      "laser": "Laser (Engraving/Cutting)"
+    },
+    "materials": {
+      "pla": {
+        "label": "PLA",
+        "desc": "Standard biodegradable plastic, economical and easy to print."
+      },
+      "petg": {
+        "label": "PETG", 
+        "desc": "More resistant than PLA, suitable for mechanical parts and outdoor use."
+      },
+      "abs": {
+        "label": "ABS",
+        "desc": "Impact and heat resistant, ideal for functional components."
+      },
+      "tpu": {
+        "label": "TPU",
+        "desc": "Flexible material, perfect for parts requiring elasticity."
+      },
+      "petg_cf": {
+        "label": "PETG CF",
+        "desc": "PETG reinforced with carbon fiber, more rigid and resistant."
+      },
+      "pc": {
+        "label": "PC",
+        "desc": "Polycarbonate, exceptional mechanical and thermal resistance."
+      },
+      "nylon": {
+        "label": "Nylon",
+        "desc": "High strength and durability, ideal for mechanical parts."
+      },
+      "standard": {
+        "label": "Standard Resin",
+        "desc": "Standard resin for detailed models"
+      },
+      "tough": {
+        "label": "Tough Resin",
+        "desc": "High-strength resin for functional parts"
+      },
+      "flexible": {
+        "label": "Flexible Resin",
+        "desc": "Elastic resin for parts requiring flexibility"
+      },
+      "dental": {
+        "label": "Dental Resin",
+        "desc": "Biocompatible resin for dental applications"
+      },
+      "wood_1mm": {
+        "label": "Wood 1mm",
+        "desc": "Thin birch plywood, for delicate projects"
+      },
+      "wood_2mm": {
+        "label": "Wood 2mm",
+        "desc": "Fine birch plywood, ideal for details"
+      },
+      "wood_3mm": {
+        "label": "Wood 3mm",
+        "desc": "Birch plywood, ideal for precise engravings and cuts"
+      },
+      "wood_4mm": {
+        "label": "Wood 4mm",
+        "desc": "Medium birch plywood, versatile for many uses"
+      },
+      "wood_5mm": {
+        "label": "Wood 5mm",
+        "desc": "Robust birch plywood, for medium structure projects"
+      },
+      "wood_6mm": {
+        "label": "Wood 6mm", 
+        "desc": "Thick birch plywood, for structural projects"
+      },
+      "wood_7mm": {
+        "label": "Wood 7mm",
+        "desc": "Resistant birch plywood, for robust projects"
+      },
+      "wood_8mm": {
+        "label": "Wood 8mm",
+        "desc": "Very thick birch plywood, high resistance"
+      },
+      "wood_9mm": {
+        "label": "Wood 9mm",
+        "desc": "Extra thick birch plywood, for heavy loads"
+      },
+      "wood_10mm": {
+        "label": "Wood 10mm",
+        "desc": "Maximum thickness birch plywood, maximum resistance"
+      },
+      "mdf_1mm": {
+        "label": "MDF 1mm",
+        "desc": "Thin wood fiber, for precision work"
+      },
+      "mdf_2mm": {
+        "label": "MDF 2mm",
+        "desc": "Fine wood fiber, smooth surface for details"
+      },
+      "mdf_3mm": {
+        "label": "MDF 3mm",
+        "desc": "Wood fiber, uniform surface for detailed engravings"
+      },
+      "mdf_4mm": {
+        "label": "MDF 4mm",
+        "desc": "Medium wood fiber, versatile and uniform"
+      },
+      "mdf_5mm": {
+        "label": "MDF 5mm",
+        "desc": "Robust wood fiber, for medium structure projects"
+      },
+      "mdf_6mm": {
+        "label": "MDF 6mm",
+        "desc": "Thick wood fiber, resistant and versatile"
+      },
+      "mdf_7mm": {
+        "label": "MDF 7mm",
+        "desc": "Resistant wood fiber, for robust projects"
+      },
+      "mdf_8mm": {
+        "label": "MDF 8mm",
+        "desc": "Very thick wood fiber, high resistance"
+      },
+      "mdf_9mm": {
+        "label": "MDF 9mm",
+        "desc": "Extra thick wood fiber, for heavy loads"
+      },
+      "mdf_10mm": {
+        "label": "MDF 10mm",
+        "desc": "Maximum thickness wood fiber, maximum resistance"
+      },
+      "acrylic_opaque": {
+        "label": "Acrylic Opaque",
+        "desc": "Colored non-transparent, for cutting and engraving"
+      },
+      "acrylic_transparent": {
+        "label": "Acrylic Transparent",
+        "desc": "Crystal clear transparent, engraving only"
+      },
+      "cork": {
+        "label": "Cork",
+        "desc": "Natural and sustainable, perfect for engravings"
+      },
+      "slate": {
+        "label": "Slate",
+        "desc": "Natural stone, elegant for personalized engravings"
+      },
+      "cardboard": {
+        "label": "Cardboard",
+        "desc": "Economical, perfect for prototypes and temporary models"
+      },
+      "leather": {
+        "label": "Leather",
+        "desc": "Natural leather, for accessories and personalizations"
+      },
+      "fabric": {
+        "label": "Fabric",
+        "desc": "Natural and synthetic fabrics, for decorations and applications"
+      }
+    },
+    "qualities": {
+      "fdm": {
+        "0.3": {
+          "label": "Draft (0.3mm)",
+          "desc": "Fast printing, visible print layers, economical."
+        },
+        "0.2": {
+          "label": "Standard (0.2mm)",
+          "desc": "Balance between quality and speed, for general use."
+        },
+        "0.1": {
+          "label": "High (0.1mm)",
+          "desc": "More detail, less visible layers, slower."
+        },
+        "0.05": {
+          "label": "Ultra High (0.05mm)",
+          "desc": "Maximum possible quality, very long times."
+        }
+      },
+      "sla": {
+        "100": {
+          "label": "Fast (100μm)",
+          "desc": "Rapid printing, good general quality."
+        },
+        "50": {
+          "label": "Standard (50μm)",
+          "desc": "Standard quality for most applications."
+        },
+        "25": {
+          "label": "High (25μm)",
+          "desc": "High quality with finer details."
+        },
+        "10": {
+          "label": "Ultra (10μm)",
+          "desc": "Maximum possible quality, perfect for tiny details."
+        }
+      },
+      "laser": {
+        "cutting": {
+          "label": "Cutting Only",
+          "desc": "Clean and precise material cutting, sealed edges"
+        },
+        "engraving_light": {
+          "label": "Light Engraving",
+          "desc": "Surface engraving, ideal for texts and decorations"
+        },
+        "engraving_deep": {
+          "label": "Deep Engraving",
+          "desc": "Marked engraving, for three-dimensional effects"
+        },
+        "cutting_engraving": {
+          "label": "Cutting + Engraving",
+          "desc": "Combination of cutting and engraving in the same project"
+        }
+      }
+    },
+    "hollowed": {
+      "no": {
+        "label": "No",
+        "desc": "Complete solid print"
+      },
+      "vuoto": {
+        "label": "Yes hollow",
+        "desc": "Hollow print inside to save resin"
+      },
+      "riempimento": {
+        "label": "Yes with filling",
+        "desc": "Hollow print with internal supports"
+      }
+    },
+    "processing": "Processing...",
+    "infill": "Infill",
+    "selectProcessType": "Select process type",
+    "costBreakdown": "Cost Breakdown",
+    "materialCost": "Material Cost",
+    "electricityCost": "Electricity Cost",
+    "depreciationCost": "Depreciation",
+    "discount": "Discount",
+    "totalCost": "Total Cost",
+    "pricePerPiece": "Price per piece",
+    "loginToOrder": "Login to order",
+    "registerToOrder": "Register to order",
+    "minOrderError": "The minimum price for an order is {minPrice}€. Increase the quantity or contact us for smaller orders.",
+    "estimatedQuote": "Estimated quote:",
+    "singlePieceCost": "The cost per single piece is lower, but a minimum of {minPrice} CHF per order applies.",
+    "goToProfile": "Go to profile",
+    "aiCalculator": "💡 Automatic AI Calculator",
+    "aiCalculatorDesc": "This is an automatic AI calculator that is constantly learning to provide increasingly precise price indications. The generated price is relative and may vary based on automatic file arrangement, optimal print settings and other technical factors.",
+    "howItWorksTitle": "How it works",
+    "step1Title": "Upload your 3D model",
+    "step1Desc": "Upload your 3D file in STL, OBJ or 3MF format. Our viewer will show you a preview and automatically detect dimensions.",
+    "step2Title": "Select print settings",
+    "step2Desc": "Choose between FDM or SLA printing, select quality, material and infill percentage based on your needs.",
+    "step3Title": "Get an automatic AI estimate",
+    "step3Desc": "Our AI algorithm will automatically calculate an indicative estimate based on dimensions, material and quality. This is only a preliminary estimate.",
+    "step4Title": "For a precise quote",
+    "step4Desc": "Access the Client Area, upload the desired file and request a quote. In less than 24 hours you will receive the precise offer that you can accept or reject."
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "projects": "Projects",
+    "users": "Users",
+    "orders": "Orders",
+    "settings": "Settings",
+    "analytics": "Analytics",
+    "backToProjects": "Back to Projects",
+    "databaseSeeding": "Database Seeding",
+    "databasePopulated": "Database populated successfully",
+    "sampleDataCreated": "Sample data has been created in the database.",
+    "errorSeeding": "Error during database seeding:",
+    "errorSeedingDescription": "An error occurred during database seeding."
+  },
+  "userPanel": {
+    "title": "User Panel",
+    "welcome": "Welcome to your personal panel",
+    "profile": "Profile",
+    "myProjects": "My Projects",
+    "myOrders": "My Orders",
+    "messages": "Messages",
+    "settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "open": "Open",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "send": "Send",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "settings": "Settings",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "other": "Other",
+    "more": "More",
+    "less": "Less",
+    "show": "Show",
+    "hide": "Hide",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "discoverMore": "Discover more"
+  },
+  "status": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "inProgress": "In progress",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "draft": "Draft",
+    "published": "Published",
+    "planning": "Planning"
+  },
+  "quality": {
+    "draft": "Draft",
+    "normal": "Normal",
+    "high": "High",
+    "ultra": "Ultra"
+  },
+  "printType": {
+    "fdm": "FDM",
+    "sla": "SLA"
+  },
+  "footer": {
+    "description": "We transform your ideas into real objects through 3D printing technology.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact Us",
+    "calculateQuote": "Calculate Quote",
+    "copyright": "All rights reserved"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions about our services",
+    "howItWorks": "How does the calculator work?",
+    "accuracy": "How accurate is the generated quote?",
+    "fileFormats": "What file formats do you accept for 3D printing?",
+    "deliveryTimes": "How long does a 3D printing order take?",
+    "modelModification": "Is it possible to modify my 3D model before printing?",
+    "pricing": "Pricing",
+    "quality": "Quality",
+    "fdmMaterials": "What materials do you offer for 3D printing?",
+    "fdmMaterialsAnswer": "We offer a wide range of materials including PLA, PETG, ABS, TPU, Nylon and carbon fiber reinforced filaments. For high precision applications, we also offer resin printing services.",
+    "deliveryTimesAnswer": "Delivery times depend on various factors such as size, complexity and quantity of parts. Standard orders are completed in 2-5 working days. Rush services are available for priority projects.",
+    "maxSize": "What is the maximum print size?",
+    "maxSizeAnswer": "Our FDM printers can produce parts up to 350×350×400mm in a single piece. Larger objects can be printed in sections and assembled.",
+    "scanningPrecision": "What is the precision of your 3D scanning service?",
+    "scanningPrecisionAnswer": "Our professional scanners achieve precision up to 0.1mm based on object size and complexity. We can capture both geometry and texture information.",
+    "largeObjects": "Can you scan large objects?",
+    "largeObjectsAnswer": "Yes, we can scan objects of various sizes. For large objects, we use multiple scans that are then combined into a single 3D model.",
+    "priceCalculation": "How do you calculate prices?",
+    "priceCalculationAnswer": "Prices are based on material volume, print time and complexity. Factors include material type, quality settings and post-processing requirements. Use our online calculator for instant quotes.",
+    "bulkDiscounts": "Do you offer discounts for bulk orders?",
+    "bulkDiscountsAnswer": "Yes, we offer discounts for bulk orders. 5+ pieces receive a 10% discount, and 10+ pieces receive a 15% discount. Contact us for custom quotes on large orders.",
+    "qualityControl": "What quality control measures do you adopt?",
+    "qualityControlAnswer": "Every print undergoes rigorous quality control, including dimensional verification and visual inspection. We provide test prints for critical applications and maintain strict quality control standards.",
+    "designAssistance": "Do you provide design assistance?",
+    "designAssistanceAnswer": "Yes, our team can help optimize designs for 3D printing, suggest appropriate materials and provide technical consulting throughout the project."
+  },
+  "search": {
+    "title": "Search 3D Models",
+    "findModels": "Find Printable 3D Models",
+    "description": "Use our search engine to find 3D models ready for printing from online public collections",
+    "instructions": "Enter the name of the object you are looking for, for example \"vase\", \"smartphone stand\" or \"decoration\""
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Stay updated with the latest innovations and case studies in the world of 3D printing and industrial prototyping.",
+    "readMore": "Read more",
+    "publishedOn": "Published on",
+    "by": "by",
+    "author": "Author",
+    "technicalDetails": "Technical Details",
+    "challenges": "Challenges",
+    "benefits": "Benefits",
+    "relatedPosts": "Related Posts",
+    "projectInMind": "Have a project in mind?",
+    "contactDescription": "Contact us for a free consultation and discover how we can bring your ideas to life.",
+    "noPostsFound": "No posts found",
+    "allArticles": "All articles",
+    "noArticlesFound": "No articles found",
+    "articlesCategory": "Articles in {{category}}",
+    "moreServicesTitle": "Discover more about our services",
+    "moreServicesDescription": "Want to know more? Explore our services or contact us for a personalized consultation.",
+    "categories": {
+      "innovation": "Innovation",
+      "technology": "Technology",
+      "casestudy": "Case Study",
+      "tutorial": "Tutorial"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
+  },
+  "firebaseTest": {
+    "developerNotes": "Developer notes",
+    "firestoreRules": "Firestore rules allow all authenticated users to read documents, but only modify their own.",
+    "adminEmail": "Only the admin email (info@3dmakes.ch) can write anywhere.",
+    "storageRules": "Storage rules allow users to upload and manage their own files.",
+    "authStatus": "Authentication Status",
+    "currentAuthState": "Current authentication state",
+    "displayName": "Display name",
+    "emailVerified": "Email verified",
+    "notAuthenticated": "Not authenticated",
+    "firestoreData": "Firestore Data",
+    "userDataFromFirestore": "User data from Firestore",
+    "noUserData": "No user data available"
+  },
+  "blogPosts": {
+    "dental": {
+      "title": "3D Printing in Dental Technology",
+      "excerpt": "Exploring how additive manufacturing is revolutionizing traditional production methods in the dental sector."
+    },
+    "petBowls": {
+      "title": "Customizable Pet Bowls",
+      "excerpt": "Collection of bowls and accessories for pets made with 3D printing in selected materials to ensure safety and practicality."
+    },
+    "horseshoe": {
+      "title": "TPU Cushions for Equine Horseshoes",
+      "excerpt": "Custom 3D printed TPU cushions for horse horseshoes, designed to reduce joint stress and improve grip."
+    },
+    "nfcGadgets": {
+      "title": "Smart NFC Corporate Gadgets",
+      "excerpt": "Smart corporate gadgets with integrated NFC technology for modern business networking and digital interaction."
+    },
+    "restaurant": {
+      "title": "Restaurant Accessories Collection",
+      "excerpt": "Innovative and customizable accessories for restaurants, designed to improve dining experience and operational efficiency."
+    },
+    "mechanical": {
+      "title": "Custom Mechanical Components",
+      "excerpt": "High-precision mechanical components printed in PETG with reinforced infill for specific industrial applications."
+    },
+    "prosthetics": {
+      "title": "Custom Medical Prosthetics",
+      "excerpt": "Custom prosthetic devices printed with biocompatible materials for individual patient needs."
+    },
+    "how3dWorks": {
+      "title": "How 3D printing really works: complete guide",
+      "excerpt": "A detailed explanation of 3D printing operating principles, from the most common technologies to usable materials."
+    },
+    "materials": {
+      "title": "The best materials for 3D printing in 2023",
+      "excerpt": "Comparison between PLA, ABS, PETG and resins: characteristics, advantages and ideal applications for each printing material."
+    },
+    "rapidPrototyping": {
+      "title": "Rapid prototyping: accelerating product development",
+      "excerpt": "How 3D printing is revolutionizing the product development process through rapid and iterative prototyping."
+    },
+    "creativeApplications": {
+      "title": "Creative applications of 3D printing in design",
+      "excerpt": "Exploring the infinite creative possibilities offered by 3D printing in the field of design and furnishing."
+    },
+    "printerComparison": {
+      "title": "The best 3D printers for professional use",
+      "excerpt": "Comparative analysis of the best professional 3D printers currently on the market: specifications, prices and performance."
+    }
+  },
+  "userFiles": {
+    "title": "{{userName}}'s Files",
+    "description": "View files uploaded by the user",
+    "uploadedFiles": "Uploaded files",
+    "viewUploadedFiles": "View files uploaded by the user",
+    "noFiles": "No files",
+    "noFilesDescription": "This user has not uploaded any files yet.",
+    "userNotFound": "User not found",
+    "unableToLoadData": "Unable to load user data",
+    "backToUserList": "Back to user list",
+    "totalFiles": "Total: {{count}} files",
+    "fileTypes": {
+      "image": "Image",
+      "model3d": "3D Model",
+      "document": "Document"
+    },
+    "table": {
+      "fileName": "File name",
+      "type": "Type",
+      "uploadDate": "Upload date",
+      "actions": "Actions"
+    },
+    "actions": {
+      "download": "Download",
+      "preview": "Preview"
+    }
+  },
+  "contactSuccess": {
+    "thankYouDetailed": "Thank you for contacting us! We have received your message and will respond within 24 business hours.",
+    "backToHome": "Back to Homepage",
+    "discoverServices": "Discover Services",
+    "howToFindUs": "Meanwhile, here's how you can find us",
+    "urgentContact": "If you have urgency or prefer to contact us directly, here are all our contacts.",
+    "contacts": "Contacts",
+    "hours": "Hours",
+    "schedule": "Mon-Fri: 9:00-18:00\nSat: 9:00-13:00",
+    "whatHappensNow": "What happens now?",
+    "step1Title": "We receive the message",
+    "step1Description": "Your message arrives directly to our mailbox",
+    "step2Title": "We analyze the request",
+    "step2Description": "Our experts evaluate the project and prepare a detailed response",
+    "step3Title": "We contact you",
+    "step3Description": "Within 24 hours you will receive our response with quote and details",
+    "exploreServices": "Explore our services",
+    "fdmDescription": "Functional prototypes and resistant parts with wide range of materials",
+    "slaDescription": "Precise details and smooth surfaces with specialized resins",
+    "laserDescription": "Precision engravings and cuts with 22W laser and CoreXY technology",
+    "largePrintDescription": "Technical projects and posters up to 609mm width",
+    "scanningDescription": "Precise digitization for reverse engineering and preservation",
+    "prototypingDescription": "From ideas to real objects with complete support"
+  },
+  "selectProcessType": "Select process type",
+  "laserInfo": {
+    "title": "Laser Information",
+    "workArea": "Work area: 400 × 415 mm",
+    "precision": "Precision: 0.01 mm",
+    "fileFormats": "Formats: SVG, DXF, AI, PDF",
+    "delivery": "Delivery: 2-4 working days"
+  }
+} 

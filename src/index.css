@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Gotham Font - usando Montserrat come alternativa simile */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 216 71% 20%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 90% 62%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Applica il font Gotham (Montserrat) a tutti gli elementi */
+  * {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container px-4 md:px-6 max-w-7xl mx-auto;
+  }
+  
+  .heading-1 {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply font-display text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  
+  .heading-3 {
+    @apply font-display text-2xl md:text-3xl font-bold;
+  }
+  
+  .body-text {
+    @apply text-base md:text-lg text-brand-gray;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-24;
+  }
+
+  /* Animazione Flip Card per il riquadro Innovazione */
+  .flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+    height: 350px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+         .flip-card-back {
+           transform: rotateY(180deg);
+         }
+
+        /* Classe per ingrandire l'immagine SLA del 15% e alzarla del 3% */
+        .sla-image-larger {
+          transform: scale(1.15) translateY(-3%);
+        }
+
+            /* Classe per rimpicciolire l'immagine Laser del 15% e abbassarla del 5% */
+            .laser-image-smaller {
+              transform: scale(0.85) translateY(5%);
+            }
+
+        /* Classe per rimpicciolire l'immagine Riparazione del 20% */
+        .repair-image-smaller {
+          transform: scale(0.8);
+        }
+
+/* Classe per rimpicciolire l'immagine Scan del 15% */
+.scan-image-smaller {
+  transform: scale(0.85);
+}
+
+/* Custom background color for consistency */
+.bg-custom-beige {
+  background-color: #E4DDD4;
+}
+
+       }

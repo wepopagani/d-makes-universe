@@ -1,0 +1,28 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.3dmakes.ch/sitemap.xml
+
+# Specific crawl directives for better SEO
+Crawl-delay: 1
+
+# Allow access to all resources
+Allow: /services
+Allow: /calculator
+Allow: /about
+Allow: /mission
+Allow: /blog
+Allow: /contact

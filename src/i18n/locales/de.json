@@ -1,0 +1,329 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "mission": "Mission",
+    "services": "Dienstleistungen",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "requestQuote": "Angebot anfordern",
+    "clientArea": "Kundenbereich",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Wir verwandeln Ihre Ideen in",
+    "titleHighlight": "reale Objekte",
+    "subtitle": "3D-Druck-Spezialisten bieten wir Rapid-Prototyping-Lösungen und hochwertige Produktion mit FDM- und SLA-Technologien.",
+    "discoverServices": "Dienstleistungen entdecken",
+    "requestQuote": "Angebot anfordern",
+    "stats": {
+      "experience": "Jahre Erfahrung",
+      "projects": "Abgeschlossene Projekte",
+      "clients": "Zufriedene Kunden",
+      "precision": "Garantierte Präzision"
+    }
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Unsere 3D-Lösungen",
+    "description": "Wir bieten ein komplettes Spektrum an 3D-Druck-, Scan- und Prototyping-Dienstleistungen, um Ihre Ideen mit Präzision und professioneller Qualität in reale Objekte zu verwandeln.",
+    "seeAll": "Alle unsere Dienstleistungen entdecken",
+    "readyToRealize": "Bereit, Ihr Projekt zu realisieren?",
+    "contactToday": "Kontaktieren Sie uns heute, um Ihr 3D-Druck-Projekt zu besprechen und ein personalisiertes Angebot zu erhalten.",
+    "calculateQuote": "Angebot berechnen",
+    "heroTitle": "Unsere Dienstleistungen",
+    "heroSubtitle": "Komplette 3D-Druck-, Scan- und Prototyping-Lösungen, um Ihre Ideen in die Realität umzusetzen.",
+    "characteristics": "Eigenschaften",
+    "availableMaterials": "Verfügbare Materialien",
+    "applications": "Anwendungen",
+    "ourProcess": "Unser Prozess",
+    "requestQuote": "Angebot anfordern",
+    "fdm": {
+      "title": "FDM 3D-Druck",
+      "description": "Die Fused Deposition Modeling (FDM) Technologie ist ideal für die Produktion funktionaler Prototypen und widerstandsfähiger Teile. Wir verwenden professionelle 3D-Drucker für maximale Qualität und Präzision.",
+      "features": [
+        "Breite Palette verfügbarer Materialien (PLA, ABS, PETG, TPU, Nylon, etc.)",
+        "Druckdimensionen bis zu 300x300x300mm",
+        "Auflösung bis zu 100 Mikron pro Schicht",
+        "Ideal für funktionale Prototypen, mechanische Teile und kleine Produktionsserien",
+        "Schnelle Lieferzeiten und wettbewerbsfähige Preise"
+      ],
+      "materials": [
+        {
+          "name": "PLA",
+          "features": "Umweltfreundlich, leicht zu drucken, starr",
+          "applications": "Prototypen, dekorative Objekte, Werkzeuge"
+        },
+        {
+          "name": "ABS",
+          "features": "Hitzebeständig, robust, bearbeitbar",
+          "applications": "Mechanische Teile, funktionale Komponenten"
+        },
+        {
+          "name": "PETG",
+          "features": "Widerstandsfähig, flexibel, wasserdicht",
+          "applications": "Behälter, belastungsausgesetzte Teile"
+        },
+        {
+          "name": "TPU",
+          "features": "Flexibel, elastisch, verschleißfest",
+          "applications": "Dichtungen, Griffe, flexible Teile"
+        }
+      ]
+    },
+    "sla": {
+      "title": "SLA 3D-Druck",
+      "description": "Die Stereolithographie (SLA) Technologie nutzt Photopolymerisation, um Objekte mit unglaublich präzisen Details und glatten Oberflächen zu erstellen. Perfekt für detaillierte Modelle, Schmuck und medizinische Anwendungen.",
+      "features": [
+        "Ultra-feine Auflösung bis zu 10 Mikron für unglaublich präzise Details",
+        "Glatte Oberflächen mit minimaler Nachbearbeitung",
+        "Vielfalt spezieller Harze für spezifische Anwendungen",
+        "Ideal für ästhetische Prototypen, Präsentationsmodelle und Präzisionskomponenten",
+        "Exzellent für Herstellung transparenter Teile oder mit winzigen Details"
+      ],
+      "materials": [
+        {
+          "name": "Standard-Harz",
+          "features": "Präzise Details, glatte Oberfläche",
+          "applications": "Ästhetische Prototypen, Präsentationsmodelle"
+        },
+        {
+          "name": "Zähes Harz",
+          "features": "Langlebig, stoßfest",
+          "applications": "Funktionale Teile, mechanische Komponenten"
+        },
+        {
+          "name": "Transparentes Harz",
+          "features": "Hohe Transparenz, polierbar",
+          "applications": "Transparente Prototypen, optische Komponenten"
+        }
+      ]
+    },
+    "laser": {
+      "title": "Laserschneiden",
+      "description": "Unsere Laser-Gravur- und Schneidtechnologie bietet eine fortschrittliche Lösung für detaillierte und personalisierte Projekte. Mit einem hochgeschwindigkeits CoreXY-Bewegungssystem und einem leistungsstarken 22W-Laser mit ultra-feinem Punkt garantieren wir präzise Gravuren und Schnitte auf breitem Materialspektrum.",
+      "features": [
+        "Präzision: Bewegung mit 0,01 mm Genauigkeit für scharfe Details",
+        "Geschwindigkeit: Bis zu 600 mm/s zur Optimierung der Produktionszeiten",
+        "Ultra-feiner Laserpunkt: Für maximale Präzisionsgravuren",
+        "CoreXY-System: Fortschrittliche Technologie für schnelle und präzise Bewegungen",
+        "Arbeitsbereich: 400 × 415 mm für Projekte verschiedener Größen",
+        "Kompatible Materialien: Holz, Acryl, Leder, Stoffe, Papier und andere"
+      ],
+      "applications": [
+        {
+          "name": "Personalisierung",
+          "description": "Personalisierung von Objekten und Gadgets mit präzisen und detaillierten Gravuren."
+        },
+        {
+          "name": "Prototyping",
+          "description": "Erstellung von Prototypen und Architekturmodellen mit sauberen und präzisen Schnitten."
+        },
+        {
+          "name": "Dekorationen",
+          "description": "Herstellung von Dekorationen und handwerklichen Artikeln maßgeschneidert für jeden Bedarf."
+        }
+      ]
+    },
+    "largePrint": {
+      "title": "3D-Drucker Reparatur",
+      "description": "Umfassender Reparatur- und Wartungsservice für 3D-Drucker aller Marken und Modelle. Unser Team spezialisierter Techniker diagnostiziert und löst mechanische, elektronische und Kalibrierungsprobleme.",
+      "features": [
+        "Vollständige Diagnose mechanischer und elektronischer Komponenten",
+        "Spezialisierte Reparaturen von Extrudern und Druckbetten",
+        "Präzise Kalibrierung der Achsen und Bettnivellierung",
+        "Vorbeugende Wartung und 6 Monate Garantie"
+      ],
+      "applications": [
+        {
+          "name": "FDM-Drucker",
+          "description": "Reparatur von Filamentdruckern mit Extrusionsproblemen."
+        },
+        {
+          "name": "SLA-Drucker",
+          "description": "Wartung von Harzdruckern und Bildschirmkalibrierung."
+        }
+      ]
+    },
+    "scanning": {
+      "title": "3D-Scanning",
+      "description": "Professioneller 3D-Scanning-Service für Reverse Engineering, Objektkonservierung und Produktentwicklung mit hoher Präzision.",
+      "features": [
+        "Präzision bis zu 0,1mm je nach Objektgröße und Komplexität",
+        "Erfassung von Geometrie und Texturinformationen",
+        "Ideal für Reverse Engineering und Produktentwicklung",
+        "Scanning von Objekten verschiedener Größen"
+      ],
+      "applications": [
+        {
+          "name": "Reverse Engineering",
+          "description": "Scanning zur Rekonstruktion und Verbesserung bestehender Objekte."
+        },
+        {
+          "name": "Konservierung",
+          "description": "Digitale Erhaltung historischer oder wertvoller Objekte."
+        }
+      ]
+    },
+    "prototyping": {
+      "title": "Prototyping",
+      "description": "Kompletter Rapid-Prototyping-Service von Ideen zu realen Objekten mit vollständiger technischer Unterstützung und personalisierter Beratung.",
+      "features": [
+        "Rapid Prototyping in 24-48 Stunden",
+        "Vollständige technische Unterstützung vom Konzept zur Produktion",
+        "Beratung für Design-Optimierung und Materialauswahl",
+        "Test und funktionale sowie ästhetische Validierung"
+      ],
+      "process": [
+        {
+          "step": 1,
+          "title": "Konzeptanalyse",
+          "description": "Definition technischer und funktionaler Anforderungen."
+        },
+        {
+          "step": 2,
+          "title": "CAD-Modellierung",
+          "description": "Erstellung von für Druck optimiertem 3D-Modell."
+        },
+        {
+          "step": 3,
+          "title": "Prototyp",
+          "description": "Druck des Prototyps mit geeigneten Technologien."
+        },
+        {
+          "step": 4,
+          "title": "Test und Validierung",
+          "description": "Funktionale und ästhetische Validierung des Prototyps."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Unsere Leidenschaft für Innovation und 3D-Technologie",
+    "heroSubtitle": "Ein Team leidenschaftlicher 3D-Druck-Experten, die sich der Verwandlung Ihrer Ideen in die Realität widmen.",
+    "description": "Wir sind ein Team von 3D-Druck-Spezialisten mit jahrelanger Erfahrung in der Branche. Unsere Mission ist es, Ihre Ideen durch fortschrittliche Technologien und erstklassigen Service in die Realität umzusetzen.",
+    "ourStory": "Unsere Geschichte",
+    "fromDreamToReality": "Vom Traum zur Realität",
+    "storyParagraph1": "3DMAKES entstand 2024 aus der Intuition von Marco Pagani, 20 Jahre alt mit einer starken Leidenschaft für Informatik, insbesondere 3D-Druck. Ausgehend von einem kleinen Raum mit zwei 3D-Druckern ist das Unternehmen gewachsen und zu einer etablierten Realität im Bereich der additiven Fertigung geworden.",
+    "storyParagraph2": "Unsere Mission war schon immer klar: 3D-Drucktechnologie für alle zugänglich zu machen, von großen Unternehmen bis zu kleinen Handwerkern, von Designern bis zu privaten Technologie-Enthusiasten.",
+    "storyParagraph3": "Heute bieten wir mit einem Team qualifizierter Fachkräfte und einem hochmodernen Maschinenpark einen kompletten Service für 3D-Druck, Scannen, Design und Beratung und halten dabei immer die Werte Qualität, Innovation und Kundenbetreuung im Zentrum.",
+    "ourValues": "Unsere Werte",
+    "whatGuidesUs": "Was uns jeden Tag leitet",
+    "valuesDescription": "Wir glauben fest an einige grundlegende Prinzipien, die jeden Aspekt unserer Arbeit und unsere Beziehung zu Kunden leiten.",
+    "sustainabilityTitle": "Nachhaltigkeit",
+    "sustainabilityDescription": "Wir verpflichten uns, die Umweltauswirkungen unserer Produktionsprozesse zu reduzieren. Wir verwenden wo möglich umweltfreundliche Materialien und optimieren unsere Produktionen, um Abfall zu minimieren.",
+    "ourTeam": "Unser Team",
+    "meetOurExperts": "Lernen Sie unsere Experten kennen",
+    "teamDescription": "Ein Team leidenschaftlicher und hochqualifizierter Fachkräfte, bereit, Ihre Ideen in konkrete Realität zu verwandeln.",
+    "whereWeAre": "Wo Wir Sind",
+    "howToReachUs": "Wie Sie Uns Erreichen",
+    "ourAddress": "Unsere Adresse",
+    "values": {
+      "innovation": "Innovation",
+      "innovationDescription": "Wir suchen ständig nach den innovativsten Lösungen, um unseren Kunden modernste Ergebnisse zu bieten. Wir investieren in neueste Technologien und aktualisieren kontinuierlich unsere Kompetenzen.",
+      "quality": "Qualität",
+      "qualityDescription": "Qualität steht im Mittelpunkt von allem, was wir tun. Wir verwenden nur ausgewählte Materialien und strenge Produktionsprozesse, um sicherzustellen, dass jedes von uns produzierte Stück den höchsten Qualitätsstandards entspricht.",
+      "precision": "Präzision",
+      "service": "Service"
+    }
+  },
+  "mission": {
+    "title": "Unsere Mission",
+    "subtitle": "3D-Drucktechnologie für alle zugänglich machen und ihre Adoption in jedem Sektor fördern.",
+    "description": "Unsere Mission ist es, 3D-Drucktechnologie für alle zugänglich zu machen und hochwertige Dienstleistungen zu wettbewerbsfähigen Preisen anzubieten.",
+    "ourGoal": "Unser Ziel",
+    "revolutionTitle": "Die Produktionswelt mit 3D-Druck revolutionieren",
+    "paragraph1": "Bei 3DMAKES glauben wir, dass 3D-Druck eine technologische Revolution darstellt, die die Art und Weise, wie wir Objekte konzipieren, entwerfen und produzieren, radikal verändern wird.",
+    "paragraph2": "Unsere Mission ist es, diese Revolution anzuführen und 3D-Drucktechnologie für so viele Menschen wie möglich zugänglich und verständlich zu machen: von Fachleuten bis zu Unternehmen, von Studenten bis zu einfachen Enthusiasten.",
+    "democratize": "Den Zugang zu 3D-Drucktechnologien demokratisieren",
+    "ourCommitments": "Unsere Verpflichtungen",
+    "howWeRealize": "Wie wir unsere Mission verwirklichen",
+    "commitmentDescription": "Wir engagieren uns täglich dafür, das Wissen und die Nutzung des 3D-Drucks durch verschiedene Initiativen und Ansätze zu verbreiten.",
+    "ourVision": "Unsere Vision",
+    "visionTitle": "Eine Zukunft, in der 3D-Druck Teil des täglichen Lebens ist",
+    "visionParagraph1": "Wir stellen uns eine Zukunft vor, in der 3D-Druck nicht mehr eine Nischentechnologie ist, sondern ein integraler Bestandteil der Produktionsprozesse jedes Unternehmens und des täglichen Lebens von uns allen.",
+    "visionParagraph2": "Eine Welt, in der Objekte auf Nachfrage produziert werden, Abfall und Umweltauswirkungen reduziert werden, wo Personalisierung die Norm und nicht die Ausnahme ist, wo geografische Entfernungen kein Hindernis mehr für die Produktion darstellen.",
+    "visionParagraph3": "Das ist die Vision, die uns jeden Tag leitet und uns dazu antreibt, ständig zu innovieren, neue Möglichkeiten zu erkunden und unser Wissen mit der Welt zu teilen.",
+    "discoverVision": "Entdecken Sie, wie wir diese Vision verwirklichen",
+    "eventsWorkshops": "Veranstaltungen und Workshops",
+    "learnWithUs": "Lernen Sie mit uns die Technologie der Zukunft"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Bereit für Ihr nächstes Projekt? Lassen Sie uns darüber sprechen",
+    "helpRealizeIdeas": "Wir sind hier, um Ihnen bei der Realisierung Ihrer Ideen zu helfen. Kontaktieren Sie uns, um Ihr Projekt zu besprechen oder weitere Informationen über unsere Dienstleistungen zu erhalten.",
+    "contactInfo": "Kontaktinformationen",
+    "fullAddress": "Via Cantonale 15\n6918 Figino, Schweiz",
+    "sendMessage": "Nachricht senden",
+    "form": {
+      "name": "Name",
+      "surname": "Vorname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "description": "Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden",
+      "namePlaceholder": "Ihr Name",
+      "surnamePlaceholder": "Ihr Vorname",
+      "emailPlaceholder": "ihre-email@beispiel.com",
+      "phonePlaceholder": "+41 XX XXX XX XX",
+      "subjectPlaceholder": "Worüber möchten Sie sprechen?",
+      "messagePlaceholder": "Beschreiben Sie Ihr Projekt oder Ihre Anfrage...",
+      "services": {
+        "fdm": "FDM 3D-Druck",
+        "sla": "SLA 3D-Druck",
+        "laser": "Laserschneiden",
+        "largePrint": "3D-Drucker Reparatur",
+        "scanning": "3D-Scanning",
+        "prototyping": "Prototyping",
+        "other": "Andere"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Bleiben Sie auf dem Laufenden mit den neuesten Innovationen und Fallstudien in der Welt des 3D-Drucks und industriellen Prototypings.",
+    "readMore": "Mehr lesen",
+    "publishedOn": "Veröffentlicht am",
+    "by": "von",
+    "projectInMind": "Haben Sie ein Projekt im Kopf?",
+    "contactDescription": "Kontaktieren Sie uns für eine kostenlose Beratung und entdecken Sie, wie wir Ihre Ideen zum Leben erwecken können.",
+    "categories": {
+      "innovation": "Innovation",
+      "technology": "Technologie",
+      "casestudy": "Fallstudie",
+      "tutorial": "Tutorial"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen",
+    "fdmMaterials": "Welche Materialien bieten Sie für 3D-Druck an?",
+    "fdmMaterialsAnswer": "Wir bieten eine breite Palette von Materialien einschließlich PLA, PETG, ABS, TPU, Nylon und carbonfaserverstärkte Filamente. Für hochpräzise Anwendungen bieten wir auch Harz-Druckdienste.",
+    "deliveryTimes": "Wie lange dauert eine 3D-Druck-Bestellung?",
+    "deliveryTimesAnswer": "Lieferzeiten hängen von verschiedenen Faktoren wie Größe, Komplexität und Stückzahl ab. Standard-Bestellungen werden in 2-5 Werktagen fertiggestellt. Express-Services sind für prioritäre Projekte verfügbar.",
+    "maxSize": "Was ist die maximale Druckgröße?",
+    "maxSizeAnswer": "Unsere FDM-Drucker können Teile bis zu 350×350×400mm in einem Stück erstellen. Größere Objekte können in Abschnitten gedruckt und montiert werden.",
+    "scanningPrecision": "Wie präzise ist Ihr 3D-Scanning-Service?",
+    "scanningPrecisionAnswer": "Unsere professionellen Scanner erreichen Präzision bis zu 0,1mm basierend auf Objektgröße und Komplexität. Wir können sowohl Geometrie- als auch Texturinformationen erfassen.",
+    "priceCalculation": "Wie berechnen Sie die Preise?",
+    "priceCalculationAnswer": "Preise basieren auf Materialvolumen, Druckzeit und Komplexität. Faktoren umfassen Materialtyp, Qualitätseinstellungen und Nachbearbeitungsanforderungen. Nutzen Sie unseren Online-Rechner für sofortige Angebote."
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "discoverMore": "Mehr entdecken"
+  },
+  "footer": {
+    "description": "Wir verwandeln Ihre Ideen durch 3D-Drucktechnologie in reale Objekte.",
+    "quickLinks": "Schnelllinks",
+    "servicesTitle": "Dienstleistungen",
+    "contactTitle": "Kontakt",
+    "calculateQuote": "Angebot berechnen",
+    "copyright": "Alle Rechte vorbehalten"
+  }
+} 
