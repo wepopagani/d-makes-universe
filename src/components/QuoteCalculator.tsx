@@ -15,10 +15,10 @@ import { useTranslation } from 'react-i18next';
 // Costanti per i limiti e configurazioni
 const MIN_DIM = 2;
 const MAX_DIM = 300;
-const MIN_PRICE = 15; // Prezzo minimo per un preventivo
-const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
+const MIN_PRICE = 50; // Prezzo minimo per un preventivo
+const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
 const API_URL = 'https://slice.3dmakes.ch/api/slice';
-const USER_PANEL_URL = "/dashboard"; // URL base della dashboard
+const USER_PANEL_URL = "/dashboard"; // URL base della dashboardcat
 const LOGIN_URL = "/login"; // URL della pagina di login
 const REGISTER_URL = "/register"; // URL della pagina di registrazione
 const ORDERS_URL = "/dashboard/ordini"; // URL specifico della pagina ordini
@@ -50,10 +50,10 @@ const QuoteCalculator = () => {
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   
-  // Parametri
-  const [quality, setQuality] = useState<string>("0.2");
-  const [material, setMaterial] = useState<string>("pla");
-  const [infill, setInfill] = useState<string>("20"); // Percentuale di riempimento
+  // Parametri fissi - nessuna scelta per l'utente
+  const quality = "0.2"; // Default
+  const material = "pla"; // Fisso a PLA
+  const infill = "20"; // Fisso a 20%
   
   // Costo per 1 pezzo
   const [singlePrice, setSinglePrice] = useState<number | null>(null);
@@ -71,8 +71,6 @@ const QuoteCalculator = () => {
   // Dimensioni
   const [modelDims, setModelDims] = useState<{ x: number; y: number; z: number } | null>(null);
   
-  // Quantità
-  const [quantity, setQuantity] = useState<number>(1);
   
   // Stato per drag and drop
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -89,79 +87,11 @@ const QuoteCalculator = () => {
   const [preventivoDone, setPreventivoDone] = useState<boolean>(false);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false);
 
-  // Solo FDM per ora
-  const PRINT_TYPES = [
-    { id: "fdm", label: t('calculator.printTypes.fdm') }
-  ];
-  
-  // Solo materiali FDM
-  const MATERIALS = [
-    { id: "pla", label: t('calculator.materials.pla.label'), desc: t('calculator.materials.pla.desc') },
-    { id: "petg", label: t('calculator.materials.petg.label'), desc: t('calculator.materials.petg.desc') },
-    { id: "abs", label: t('calculator.materials.abs.label'), desc: t('calculator.materials.abs.desc') },
-    { id: "tpu", label: t('calculator.materials.tpu.label'), desc: t('calculator.materials.tpu.desc') },
-    { id: "petg_cf", label: t('calculator.materials.petg_cf.label'), desc: t('calculator.materials.petg_cf.desc') },
-    { id: "pc", label: t('calculator.materials.pc.label'), desc: t('calculator.materials.pc.desc') },
-    { id: "nylon", label: t('calculator.materials.nylon.label'), desc: t('calculator.materials.nylon.desc') }
-  ];
-  
-  // Solo qualità FDM
-  const QUALITY_OPTIONS = [
-    { id: "0.3", label: t('calculator.qualities.fdm.0.3.label'), desc: t('calculator.qualities.fdm.0.3.desc') },
-    { id: "0.2", label: t('calculator.qualities.fdm.0.2.label'), desc: t('calculator.qualities.fdm.0.2.desc') },
-    { id: "0.1", label: t('calculator.qualities.fdm.0.1.label'), desc: t('calculator.qualities.fdm.0.1.desc') },
-    { id: "0.05", label: t('calculator.qualities.fdm.0.05.label'), desc: t('calculator.qualities.fdm.0.05.desc') }
-  ];
+  // Parametri fissi - nessuna configurazione per l'utente
 
-  // Materiali filtrati per processo laser
-  const getFilteredLaserMaterials = () => {
-    const cuttingMaterials = [
-      "wood_1mm", "wood_2mm", "wood_3mm", "wood_4mm", "wood_5mm", 
-      "wood_6mm", "wood_7mm", "wood_8mm", "wood_9mm", "wood_10mm",
-      "mdf_1mm", "mdf_2mm", "mdf_3mm", "mdf_4mm", "mdf_5mm",
-      "mdf_6mm", "mdf_7mm", "mdf_8mm", "mdf_9mm", "mdf_10mm",
-      "acrylic_opaque", "cardboard", "leather", "fabric"
-    ];
-    
-    const engravingMaterials = [
-      "wood_3mm", "wood_6mm", "mdf_3mm", "mdf_6mm", 
-      "acrylic_transparent", "acrylic_opaque", "cork", "slate",
-      "cardboard", "leather", "fabric"
-    ];
-
-    if (quality === "cutting") {
-      return MATERIALS.laser.filter(mat => cuttingMaterials.includes(mat.id));
-    } else if (quality.includes("engraving")) {
-      return MATERIALS.laser.filter(mat => engravingMaterials.includes(mat.id));
-    } else {
-      return MATERIALS.laser; // cutting_engraving mostra tutti
-    }
-  };
   
-  // Opzioni di riempimento (infill)
-  const INFILL_OPTIONS = [
-    { id: "10", label: "10%" },
-    { id: "20", label: "20%" },
-    { id: "30", label: "30%" },
-    { id: "40", label: "40%" },
-    { id: "50", label: "50%" },
-    { id: "60", label: "60%" },
-    { id: "70", label: "70%" },
-    { id: "80", label: "80%" },
-    { id: "90", label: "90%" },
-    { id: "100", label: "100%" }
-  ];
-  
-  // Opzioni di quantità
-  const QUANTITY_OPTIONS = [
-    { id: "1", label: "1" },
-    { id: "2", label: "2" },
-    { id: "5", label: "5" },
-    { id: "10", label: "10" },
-    { id: "20", label: "20" },
-    { id: "50", label: "50" },
-    { id: "100", label: "100" }
-  ];
+  // Quantità fissa
+  const quantity = 1;
 
   // Al caricamento, verifica se l'utente è loggato usando currentUser
   useEffect(() => {
@@ -191,21 +121,15 @@ const QuoteCalculator = () => {
     setIsLoading(true);
     
     if (f.size > MAX_FILE_SIZE) {
-      setError(t('calculator.fileTooBig', { maxSize: Math.round(MAX_FILE_SIZE/1024/1024) }));
+      setError(`File troppo grande (max ${Math.round(MAX_FILE_SIZE/1024/1024)}MB). Per file più grandi, contattaci.`);
         setIsLoading(false);
         return;
       }
       
     const ext = f.name.split(".").pop()?.toLowerCase() ?? "";
     
-    // Solo formati FDM supportati
-    const supportedFormats = ["stl", "obj", "3mf"];
-    
-    if (!supportedFormats.includes(ext)) {
-      setError(t('calculator.unsupportedFormat', { formats: "STL, OBJ, 3MF" }));
-      setIsLoading(false);
-      return;
-    }
+    // Accetta tutti i formati di file
+    console.log("File caricato:", f.name, "Tipo:", ext, "Dimensione:", f.size);
     
     setFileType(ext);
     setFile(f);
@@ -421,8 +345,7 @@ const QuoteCalculator = () => {
   // Quando cambia il tipo di stampa, aggiorna materiale e qualità con opzioni compatibili
   useEffect(() => {
     if (printType === "fdm") {
-      setQuality("0.2");  // Default per FDM
-      setMaterial("pla");  // Default per FDM
+      // Parametri fissi - nessuna modifica necessaria
     }
   }, [printType]);
 
@@ -518,7 +441,7 @@ const QuoteCalculator = () => {
           
           toast({
             title: "Preventivo calcolato!",
-            description: `Prezzo per pezzo: ${sp.toFixed(2)} CHF | Totale ${quantity} pezzi: ${detailedCalc.prezzoFinaleTotale.toFixed(2)} CHF | Sconto: ${detailedCalc.scontoApplicabile}%`,
+            description: `Prezzo per pezzo: ${sp.toFixed(2)} CHF | Totale ${quantity} pezzi: ${detailedCalc.prezzoFinaleTotale.toFixed(2)} CHF | Ordine minimo: 50 CHF`,
             variant: "default",
           });
 
@@ -611,13 +534,19 @@ const QuoteCalculator = () => {
     if (!singlePrice) return null;
 
     const discount = calculateDiscount(quantity, singlePrice);
-    const totalPrice = (singlePrice * quantity) - discount;
+    const calculatedPrice = (singlePrice * quantity) - discount;
 
-    // Assicurati che il totale non scenda sotto il prezzo minimo
-    if (totalPrice < MIN_PRICE) {
-      return MIN_PRICE;
-    }
-    return totalPrice;
+    // Restituisci sempre il prezzo calcolato, anche se sotto il minimo
+    return calculatedPrice;
+  };
+
+  // Prezzo finale da pagare (con minimo applicato)
+  const getFinalPrice = () => {
+    const calculatedTotal = getTotal();
+    if (!calculatedTotal) return null;
+    
+    // Applica il minimo d'ordine
+    return Math.max(calculatedTotal, MIN_PRICE);
   };
 
   // Messaggio: se singlePrice < 15 e singlePrice * quantity < 15 => avviso
@@ -628,7 +557,8 @@ const QuoteCalculator = () => {
     return sub < MIN_PRICE;
   };
 
-  const totalPrice = getTotal();
+  const calculatedPrice = getTotal();
+  const totalPrice = getFinalPrice();
 
   const triggerFileInput = () => {
     if (fileInputRef.current) {
@@ -643,7 +573,7 @@ const QuoteCalculator = () => {
         <div className="p-4 md:p-6 lg:p-8">
           <h3 className="text-2xl font-semibold mb-6">{t('calculator.title')}</h3>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="space-y-8">
             {/* Model Viewer Section - sempre visibile */}
             <div className="space-y-4">
               <Card 
@@ -703,11 +633,7 @@ const QuoteCalculator = () => {
                         {t('calculator.dragDrop')}
                         <br />
                         <span className="text-xs text-brand-accent">
-                          Formati supportati: {
-                            printType === 'laser' 
-                              ? 'SVG, DXF, AI, PDF' 
-                              : 'STL, OBJ, 3MF'
-                          }
+                          Accettiamo tutti i formati di file
                         </span>
                       </p>
                       <Button onClick={triggerFileInput}>{t('calculator.uploadFile')}</Button>
@@ -745,135 +671,79 @@ const QuoteCalculator = () => {
                 type="file"
                 ref={fileInputRef}
                 onChange={handleFileChange}
-                accept={printType === 'laser' ? '.svg,.dxf,.ai,.pdf' : '.stl,.obj,.3mf'}
+                accept="*"
                 className="hidden"
               />
             </div>
             
-            {/* Print Settings Section con tab sempre visibili */}
-            <div>
-              <div className="space-y-6">
-                {/* Qualità di stampa */}
-                <div>
-                  <Label className="block mb-2">{t('calculator.selectQuality')}</Label>
-                  <Select 
-                    value={quality} 
-                    onValueChange={setQuality}
-                  >
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder={t('calculator.selectQuality')} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {QUALITY_OPTIONS.map(option => (
-                        <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <p className="text-sm text-gray-500 mt-2">
-                    {QUALITY_OPTIONS.find(q => q.id === quality)?.desc}
-                  </p>
-                </div>
-                  
-                  {/* Materiale */}
-                      <div>
-                    <Label className="block mb-2">{t('calculator.material')}</Label>
-                    <Select 
-                      value={material} 
-                      onValueChange={setMaterial}
-                    >
-                      <SelectTrigger className="w-full">
-                            <SelectValue placeholder={t('calculator.material')} />
-                          </SelectTrigger>
-                          <SelectContent>
-                        {MATERIALS.map(mat => (
-                          <SelectItem key={mat.id} value={mat.id}>{mat.label}</SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                    <p className="text-sm text-gray-500 mt-2">
-                      {MATERIALS.find(m => m.id === material)?.desc}
-                    </p>
-                    </div>
-                    
-                    {/* Infill */}
-                    <div>
-                      <Label className="block mb-2">{t('calculator.infill')}</Label>
-                      <Select 
-                        value={infill} 
-                        onValueChange={setInfill}
-                      >
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder={t('calculator.infill')} />
-                            </SelectTrigger>
-                            <SelectContent>
-                          {INFILL_OPTIONS.map(option => (
-                            <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                      <p className="text-sm text-gray-500 mt-2">
-                        Percentuale di riempimento interno del modello
+            {/* Controlli sotto il viewer */}
+            <div className="space-y-4">
+              {/* Messaggio informativo */}
+              <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-blue-800">
+                      Preventivo automatico
+                    </h3>
+                    <div className="mt-2 text-sm text-blue-700">
+                      <p>
+                        Questo è un preventivo automatico indicativo. 
+                        <strong> Contattaci sempre per un preventivo affidabile e personalizzato</strong> 
+                        basato sulle tue esigenze specifiche.
+                      </p>
+                      <p className="mt-1">
+                        <strong>Ordine minimo: 50 CHF</strong>
                       </p>
                     </div>
-
-                  {/* Quantità */}
-                  <div>
-                    <Label className="block mb-2">{t('calculator.quantity')}</Label>
-                    <Select 
-                      value={quantity.toString()} 
-                      onValueChange={(val) => setQuantity(parseInt(val))}
-                    >
-                      <SelectTrigger className="w-full">
-                            <SelectValue placeholder={t('calculator.quantity')} />
-                          </SelectTrigger>
-                          <SelectContent>
-                        {QUANTITY_OPTIONS.map(option => (
-                          <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                    </div>
-                    
-                  {/* Bottone calcola preventivo solo se non c'è già un preventivo calcolato */}
-                  {!preventivoDone && (
-                    <Button 
-                      onClick={handleCalculate}
-                      disabled={!file || isProcessing}
-                      className="w-full relative overflow-hidden"
-                    >
-                      {isProcessing && (
-                        <>
-                          <div 
-                            className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-400 to-blue-500 transition-all" 
-                            style={{ width: `${uploadProgress}%` }}
-                          />
-                          <div className="absolute inset-0 bg-white/10 animate-pulse"></div>
-                        </>
-                      )}
-                      <span className="relative z-10 flex items-center justify-center">
-                        {isProcessing ? (
-                          <>
-                            <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            {t('calculator.processing')} {Math.floor(uploadProgress)}%
-                          </>
-                        ) : t('calculator.calculate')}
-                      </span>
-                    </Button>
-                  )}
+                  </div>
                 </div>
+              </div>
+
+              {/* Bottone calcola preventivo */}
+              {!preventivoDone && (
+                <Button 
+                  onClick={handleCalculate}
+                  disabled={!file || isProcessing}
+                  className="w-full relative overflow-hidden"
+                  size="lg"
+                >
+                  {isProcessing && (
+                    <>
+                      <div 
+                        className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-400 to-blue-500 transition-all" 
+                        style={{ width: `${uploadProgress}%` }}
+                      />
+                      <div className="absolute inset-0 bg-white/10 animate-pulse"></div>
+                    </>
+                  )}
+                  <span className="relative z-10 flex items-center justify-center">
+                    {isProcessing ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        {t('calculator.processing')} {Math.floor(uploadProgress)}%
+                      </>
+                    ) : t('calculator.calculate')}
+                  </span>
+                </Button>
+              )}
               
               {/* Errore */}
               {error && (
                 <div className="mt-4 p-4 bg-red-50 rounded-lg border border-red-100">
                   <p className="text-red-700">
                     <span className="font-semibold">{t('common.error')}:</span> {error}
-                        </p>
-                      </div>
-                    )}
-                  </div>
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
           
           {/* Banner preventivo a larghezza piena quando è stato calcolato - posizionato FUORI dalle colonne */}
@@ -882,11 +752,29 @@ const QuoteCalculator = () => {
               {/* Visualizzazione risultato */}
               <div className="p-8 bg-slate-100 rounded-lg text-center">
                 <p className="text-xl font-semibold mb-2">{t('calculator.estimatedQuote')}</p>
-                <p className="text-5xl font-bold text-brand-accent mb-4">{totalPrice.toFixed(2)} CHF</p>
                 
-                {isBelowMin() && (
-                  <p className="text-sm text-yellow-600 mt-3">
-                    {t('calculator.singlePieceCost', { minPrice: MIN_PRICE })}
+                {/* Nome del file */}
+                <div className="mb-4">
+                  <p className="text-sm text-gray-500 mb-1">File:</p>
+                  <p className="text-lg font-medium text-gray-700">{file?.name}</p>
+                </div>
+                
+                {/* Mostra sempre il prezzo calcolato del modello */}
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600 mb-1">Prezzo del modello:</p>
+                  <p className="text-3xl font-bold text-gray-700">{calculatedPrice?.toFixed(2)} CHF</p>
+                </div>
+                
+                {/* Mostra il prezzo finale da pagare */}
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600 mb-1">Prezzo finale:</p>
+                  <p className="text-5xl font-bold text-brand-accent">{totalPrice.toFixed(2)} CHF</p>
+                </div>
+                
+                {/* Messaggio esplicativo se applicato il minimo */}
+                {calculatedPrice && calculatedPrice < MIN_PRICE && (
+                  <p className="text-sm text-blue-600 mt-3 bg-blue-50 p-3 rounded">
+                    Il costo per pezzo singolo è inferiore, ma si applica un minimo di {MIN_PRICE} CHF per ordine.
                   </p>
                 )}
               </div>
