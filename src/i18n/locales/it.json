@@ -38,61 +38,165 @@
     "ourProcess": "Il nostro processo",
     "requestQuote": "Richiedi un preventivo",
     "fdm": {
-      "title": "Stampa 3D FDM",
-      "description": "La tecnologia Fused Deposition Modeling (FDM) è ideale per la produzione di prototipi funzionali e parti resistenti. Utilizziamo stampanti 3D professionali per garantire la massima qualità e precisione.",
+      "title": "Stampa 3D FDM – Stratasys",
+      "description": "La tecnologia Fused Deposition Modeling (FDM) Stratasys è ideale per la produzione di prototipi funzionali e parti resistenti. Utilizziamo macchine professionali Fortus per garantire la massima qualità e precisione industriale.",
+      "machines": [
+        "Fortus 900",
+        "Fortus 450", 
+        "Fortus 370"
+      ],
       "features": [
-        "Ampia gamma di materiali disponibili (PLA, ABS, PETG, TPU, Nylon, ecc.)",
-        "Dimensioni di stampa fino a 300x300x300mm",
+        "Tecnologia Stratasys professionale per applicazioni industriali",
+        "Dimensioni di stampa fino a 914x610x914mm (Fortus 900)",
         "Risoluzione fino a 100 micron per strato",
-        "Ideale per prototipi funzionali, parti meccaniche e piccole serie produttive",
-        "Tempi di consegna rapidi e costi competitivi"
+        "Ideale per prototipi funzionali, parti meccaniche e produzione industriale",
+        "Materiali certificati per applicazioni critiche"
       ],
       "materials": [
         {
-          "name": "PLA",
-          "features": "Ecologico, facile da stampare, rigido",
-          "applications": "Prototipi, oggetti decorativi, attrezzature"
+          "name": "PLA / PETG / TPU",
+          "features": "Materiali standard per prototipazione",
+          "applications": "Prototipi, oggetti decorativi, parti flessibili"
         },
         {
-          "name": "ABS",
+          "name": "ABS M30 / ABS M30i / ABS / ABSi",
           "features": "Resistente al calore, robusto, lavorabile",
-          "applications": "Parti meccaniche, componenti funzionali"
+          "applications": "Parti meccaniche, componenti funzionali industriali"
         },
         {
-          "name": "PETG",
-          "features": "Resistente, flessibile, impermeabile",
-          "applications": "Contenitori, parti esposte a sollecitazioni"
+          "name": "ESD7 / ASA / Nylon 12 / Nylon 12 CF",
+          "features": "Materiali specializzati per applicazioni specifiche",
+          "applications": "Componenti elettronici, parti esposte, rinforzate"
         },
         {
-          "name": "PETG-CF",
-          "features": "Resistente, leggero, durevole",
-          "applications": "Parti meccaniche, componenti funzionali con fibre di carbonio"
-        },
-        {
-          "name": "TPU",
-          "features": "Flessibile, elastico, resistente all'usura",
-          "applications": "Guarnizioni, impugnature, parti flessibili"
-        },
-        {
-          "name": "Nylon",
-          "features": "Resistente, flessibile, impermeabile",
-          "applications": "Contenitori, parti esposte a sollecitazioni"
-        },
-        {
-          "name": "Policarbonato",
+          "name": "PC-ABS / PC-ISO / PC",
           "features": "Resistente, durevole, leggero",
           "applications": "Parti meccaniche, componenti funzionali"
         },
         {
-          "name": "Nylon-CF",
-          "features": "Durevole, resistente, leggero",
-          "applications": "Parti meccaniche, componenti funzionali con fibre di carbonio"
+          "name": "Ultem®️ 9085 / Ultem®️ 1010",
+          "features": "Materiali ad alte prestazioni, resistenti al calore",
+          "applications": "Applicazioni aerospaziali, automotive, medicali"
+        },
+        {
+          "name": "PPSF / PEEK / PEK / Anthero",
+          "features": "Materiali super-ingegnerizzati per applicazioni estreme",
+          "applications": "Aerospaziale, medicale, automotive ad alte prestazioni"
+        }
+      ]
+    },
+    "cff": {
+      "title": "Stampa 3D CFF – Markforged",
+      "description": "La tecnologia Continuous Fiber Fabrication (CFF) di Markforged rivoluziona la stampa 3D con fibre continue di carbonio, kevlar e vetro per parti strutturali ad alte prestazioni.",
+      "machines": [
+        "Mark II",
+        "X7"
+      ],
+      "features": [
+        "Fibre continue di carbonio, kevlar e vetro",
+        "Resistenza meccanica superiore ai metalli",
+        "Peso ridotto con massima resistenza",
+        "Geometrie complesse impossibili con lavorazioni tradizionali",
+        "Materiali compositi avanzati"
+      ],
+      "materials": [
+        {
+          "name": "Onyx",
+          "features": "Base in nylon rinforzato",
+          "applications": "Parti strutturali, componenti meccanici"
+        },
+        {
+          "name": "Nylon",
+          "features": "Materiale base resistente",
+          "applications": "Prototipi funzionali, parti meccaniche"
+        },
+        {
+          "name": "Continuous Carbon Fiber",
+          "features": "Fibra di carbonio continua",
+          "applications": "Parti strutturali ad alte prestazioni"
+        },
+        {
+          "name": "Kevlar",
+          "features": "Fibra aramidica resistente",
+          "applications": "Applicazioni che richiedono resistenza agli urti"
+        },
+        {
+          "name": "Glass reinforced",
+          "features": "Rinforzo in fibra di vetro",
+          "applications": "Parti strutturali, isolamento elettrico"
+        }
+      ]
+    },
+    "lsam": {
+      "title": "Stampa 3D LSAM – Caracol",
+      "description": "La tecnologia Large Scale Additive Manufacturing (LSAM) di Caracol permette la produzione di parti di grandi dimensioni con materiali compositi e polimeri, anche in formato pellet.",
+      "machines": [
+        "Heron 300"
+      ],
+      "features": [
+        "Produzione di parti di grandi dimensioni",
+        "Materiali compositi e polimeri in pellet",
+        "Versatilità per applicazioni industriali",
+        "Efficienza nella produzione di serie",
+        "Qualità costante su grandi volumi"
+      ],
+      "materials": [
+        {
+          "name": "Polimeri standard",
+          "features": "Materiali termoplastici base",
+          "applications": "Prototipi grandi, parti strutturali"
+        },
+        {
+          "name": "Materiali compositi",
+          "features": "Rinforzati con fibre",
+          "applications": "Parti strutturali ad alte prestazioni"
+        },
+        {
+          "name": "Materiali in pellet",
+          "features": "Formato pellet per produzione continua",
+          "applications": "Produzione industriale, parti grandi"
+        }
+      ]
+    },
+    "mjf": {
+      "title": "Stampa 3D MJF – HP",
+      "description": "La tecnologia Multi Jet Fusion (MJF) di HP offre produzione ad alta velocità con qualità costante, ideale per piccole e medie serie produttive.",
+      "machines": [
+        "5210",
+        "4200"
+      ],
+      "features": [
+        "Produzione ad alta velocità",
+        "Qualità costante e riproducibile",
+        "Nessun supporto necessario",
+        "Ideale per piccole e medie serie",
+        "Efficienza energetica ottimizzata"
+      ],
+      "materials": [
+        {
+          "name": "PA 12",
+          "features": "Nylon ad alte prestazioni",
+          "applications": "Parti funzionali, componenti meccanici"
+        },
+        {
+          "name": "PA 11",
+          "features": "Nylon biocompatibile",
+          "applications": "Dispositivi medicali, automotive"
+        },
+        {
+          "name": "TPU",
+          "features": "Elastico, flessibile",
+          "applications": "Guarnizioni, parti flessibili"
         }
       ]
     },
     "sla": {
-      "title": "Stampa 3D SLA", 
+      "title": "Stampa 3D SLA – Photocentric / Anycubic", 
       "description": "La tecnologia Stereolithography (SLA) utilizza la fotopolimerizzazione per creare oggetti con dettagli incredibilmente precisi e superfici lisce. Perfetta per modelli dettagliati, gioielleria e applicazioni mediche.",
+      "machines": [
+        "LC Magna",
+        "M3 Max"
+      ],
       "features": [
         "Risoluzione ultra-fine fino a 10 micron per dettagli incredibilmente precisi",
         "Superfici lisce che richiedono minima post-produzione",
@@ -102,24 +206,65 @@
       ],
       "materials": [
         {
-          "name": "Resina standard",
-          "features": "Dettagli precisi, superficie liscia",
-          "applications": "Prototipi estetici, modelli di presentazione"
+          "name": "Hard Resin",
+          "features": "Resina dura per parti resistenti",
+          "applications": "Prototipi funzionali, componenti meccanici"
         },
         {
-          "name": "Resina resistente",
-          "features": "Durabile, resistente agli urti",
-          "applications": "Parti funzionali, componenti meccanici"
+          "name": "Flexible",
+          "features": "Resina flessibile ed elastica",
+          "applications": "Parti flessibili, guarnizioni"
         },
         {
-          "name": "Resina trasparente",
-          "features": "Elevata trasparenza, lucidabile",
+          "name": "HighTemp",
+          "features": "Resistente alle alte temperature",
+          "applications": "Applicazioni ad alta temperatura"
+        },
+        {
+          "name": "Precision Firm",
+          "features": "Alta precisione dimensionale",
+          "applications": "Componenti di precisione"
+        },
+        {
+          "name": "Castable",
+          "features": "Resina per fusione",
+          "applications": "Gioielleria, fusione metallica"
+        },
+        {
+          "name": "Dental Model",
+          "features": "Biocompatibile per applicazioni dentali",
+          "applications": "Modelli dentali, guide chirurgiche"
+        },
+        {
+          "name": "High Tensile",
+          "features": "Alta resistenza alla trazione",
+          "applications": "Parti strutturali, componenti resistenti"
+        }
+      ]
+    },
+    "polyjet": {
+      "title": "Stampa 3D POLYJET – Stratasys",
+      "description": "La tecnologia PolyJet di Stratasys utilizza la fotopolimerizzazione a getto per creare parti con dettagli incredibilmente precisi e superfici lisce, ideale per prototipi estetici e modelli di presentazione.",
+      "machines": [
+        "J55"
+      ],
+      "features": [
+        "Risoluzione ultra-fine per dettagli precisi",
+        "Superfici lisce senza post-produzione",
+        "Materiali multicolore in una singola stampa",
+        "Ideale per prototipi estetici e modelli di presentazione",
+        "Qualità fotografica per applicazioni visive"
+      ],
+      "materials": [
+        {
+          "name": "Traslucid",
+          "features": "Resina trasparente",
           "applications": "Prototipi trasparenti, componenti ottici"
         },
         {
-          "name": "Resina dentale",
-          "features": "Biocompatibile, certificata",
-          "applications": "Modelli dentali, guide chirurgiche"
+          "name": "Coloured Resins",
+          "features": "Resine colorate",
+          "applications": "Prototipi colorati, modelli di presentazione"
         }
       ]
     },
@@ -263,30 +408,41 @@
       "description": "Confrontiamo il pezzo prodotto con il modello CAD originale."
     },
     "slm": {
-      "title": "Stampa 3D SLM",
+      "title": "Stampa 3D SLM – SLM Solutions / Renishaw",
       "description": "Tecnologia di stampa 3D professionale con fusione laser selettiva per metalli. Ideale per componenti ad alta precisione e resistenza meccanica superiore.",
+      "machines": [
+        "SLM 800 + Hub",
+        "SLM 500",
+        "SLM 280",
+        "AM400"
+      ],
       "features": [
         "Fusione laser selettiva di polveri metalliche",
         "Precisione dimensionale elevata (±0.1mm)",
         "Resistenza meccanica superiore ai metalli tradizionali",
         "Geometrie complesse impossibili con lavorazioni tradizionali",
-        "Materiali: Acciaio inossidabile, Titanio, Alluminio, Inconel"
+        "Tecnologia SLM Solutions e Renishaw all'avanguardia"
       ],
       "materials": [
         {
-          "name": "Acciaio Inossidabile 316L",
-          "features": "Resistente alla corrosione, biocompatibile",
+          "name": "AlSi10Mg",
+          "features": "Alluminio-silicio-magnesio, leggero",
+          "applications": "Automotive, aerospaziale, dissipatori"
+        },
+        {
+          "name": "Acciaio 316L",
+          "features": "Acciaio inossidabile, resistente alla corrosione",
           "applications": "Componenti medicali, parti marine, industria alimentare"
         },
         {
-          "name": "Titanio Ti6Al4V",
-          "features": "Leggero, resistente, biocompatibile",
-          "applications": "Aerospaziale, medicale, automotive"
+          "name": "Inconel 625–718",
+          "features": "Superlega resistente al calore",
+          "applications": "Aerospaziale, turbine, applicazioni ad alta temperatura"
         },
         {
-          "name": "Alluminio AlSi10Mg",
-          "features": "Leggero, buona conducibilità termica",
-          "applications": "Automotive, aerospaziale, dissipatori"
+          "name": "Titanio Ti6Al4V",
+          "features": "Titanio grado 5, leggero e resistente",
+          "applications": "Aerospaziale, medicale, automotive"
         }
       ]
     },
@@ -466,14 +622,18 @@
       "subjectPlaceholder": "Di cosa vorresti parlare?",
       "messagePlaceholder": "Descrivi il tuo progetto o la tua richiesta...",
       "services": {
-        "fdm": "Stampa 3D FDM",
-        "sla": "Stampa 3D SLA",
+        "fdm": "Stampa 3D FDM – Stratasys",
+        "cff": "Stampa 3D CFF – Markforged",
+        "lsam": "Stampa 3D LSAM – Caracol",
+        "mjf": "Stampa 3D MJF – HP",
+        "sla": "Stampa 3D SLA – Photocentric/Anycubic",
+        "polyjet": "Stampa 3D POLYJET – Stratasys",
+        "slm": "Stampa 3D SLM – SLM Solutions/Renishaw",
+        "sls": "Stampa 3D SLS",
         "laser": "Taglio Laser",
         "largePrint": "Riparazione Stampanti 3D",
         "scanning": "Scansione 3D",
         "prototyping": "Prototipazione",
-        "slm": "Stampa 3D SLM",
-        "sls": "Stampa 3D SLS",
         "other": "Altro"
       }
     },

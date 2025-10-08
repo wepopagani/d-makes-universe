@@ -18,6 +18,17 @@ const ServicesSection = () => {
       link: "/services#fdm"
     },
     {
+      title: t('services.cff.title'),
+      description: t('services.cff.description'),
+      imageUrl: "/stampa 3d logo.png",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      link: "/services#cff"
+    },
+    {
       title: t('services.sla.title'),
       description: t('services.sla.description'),
       imageUrl: "/stampa 3d resina logo.png",
@@ -27,6 +38,17 @@ const ServicesSection = () => {
         </svg>
       ),
       link: "/services#sla"
+    },
+    {
+      title: t('services.polyjet.title'),
+      description: t('services.polyjet.description'),
+      imageUrl: "/stampa 3d resina logo.png",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+        </svg>
+      ),
+      link: "/services#polyjet"
     },
     {
       title: t('services.laser.title'),
@@ -71,6 +93,28 @@ const ServicesSection = () => {
         </svg>
       ),
       link: "/services#prototipazione"
+    },
+    {
+      title: t('services.lsam.title'),
+      description: t('services.lsam.description'),
+      imageUrl: "/stampa 3d logo.png",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      link: "/services#lsam"
+    },
+    {
+      title: t('services.mjf.title'),
+      description: t('services.mjf.description'),
+      imageUrl: "/stampa 3d logo.png",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      link: "/services#mjf"
     },
     {
       title: t('services.slm.title'),
@@ -127,20 +171,9 @@ const ServicesSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {services.slice(0, 6).map((service, index) => (
+          {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
-        </div>
-        
-        {/* Riquadri SLM e SLS centrati */}
-        <div className="flex justify-center items-center mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-4xl mx-auto">
-            {services.slice(6).map((service, index) => (
-              <div key={index + 6} className="w-full max-w-sm mx-auto">
-                <ServiceCard {...service} />
-              </div>
-            ))}
-          </div>
         </div>
         
         <div className="text-center mt-12">

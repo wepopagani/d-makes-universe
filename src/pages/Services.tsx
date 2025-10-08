@@ -64,6 +64,18 @@ const Services = () => {
         : []
     },
     {
+      id: "cff",
+      title: t('services.cff.title'),
+      description: t('services.cff.description'),
+      image: "/stampa 3d logo.png",
+      features: Array.isArray(t('services.cff.features', { returnObjects: true })) 
+        ? t('services.cff.features', { returnObjects: true }) as string[]
+        : [],
+      materials: Array.isArray(t('services.cff.materials', { returnObjects: true }))
+        ? t('services.cff.materials', { returnObjects: true }) as Material[]
+        : []
+    },
+    {
       id: "sla",
       title: t('services.sla.title'),
       description: t('services.sla.description'),
@@ -73,6 +85,18 @@ const Services = () => {
         : [],
       materials: Array.isArray(t('services.sla.materials', { returnObjects: true }))
         ? t('services.sla.materials', { returnObjects: true }) as Material[]
+        : []
+    },
+    {
+      id: "polyjet",
+      title: t('services.polyjet.title'),
+      description: t('services.polyjet.description'),
+      image: "/stampa 3d resina logo.png",
+      features: Array.isArray(t('services.polyjet.features', { returnObjects: true }))
+        ? t('services.polyjet.features', { returnObjects: true }) as string[]
+        : [],
+      materials: Array.isArray(t('services.polyjet.materials', { returnObjects: true }))
+        ? t('services.polyjet.materials', { returnObjects: true }) as Material[]
         : []
     },
     {
@@ -121,6 +145,30 @@ const Services = () => {
         : [],
       process: Array.isArray(t('services.prototyping.process', { returnObjects: true }))
         ? t('services.prototyping.process', { returnObjects: true }) as ProcessStep[]
+        : []
+    },
+    {
+      id: "lsam",
+      title: t('services.lsam.title'),
+      description: t('services.lsam.description'),
+      image: "/stampa 3d logo.png",
+      features: Array.isArray(t('services.lsam.features', { returnObjects: true }))
+        ? t('services.lsam.features', { returnObjects: true }) as string[]
+        : [],
+      materials: Array.isArray(t('services.lsam.materials', { returnObjects: true }))
+        ? t('services.lsam.materials', { returnObjects: true }) as Material[]
+        : []
+    },
+    {
+      id: "mjf",
+      title: t('services.mjf.title'),
+      description: t('services.mjf.description'),
+      image: "/stampa 3d logo.png",
+      features: Array.isArray(t('services.mjf.features', { returnObjects: true }))
+        ? t('services.mjf.features', { returnObjects: true }) as string[]
+        : [],
+      materials: Array.isArray(t('services.mjf.materials', { returnObjects: true }))
+        ? t('services.mjf.materials', { returnObjects: true }) as Material[]
         : []
     },
     {

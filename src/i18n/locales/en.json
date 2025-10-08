@@ -38,88 +38,233 @@
     "ourProcess": "Our process",
     "requestQuote": "Request a quote",
     "fdm": {
-      "title": "FDM 3D Printing",
-      "description": "Fused Deposition Modeling (FDM) technology is ideal for producing functional prototypes and resistant parts. We use professional 3D printers to ensure maximum quality and precision.",
+      "title": "FDM 3D Printing – Stratasys",
+      "description": "Stratasys Fused Deposition Modeling (FDM) technology is ideal for producing functional prototypes and resistant parts. We use professional Fortus machines to ensure maximum quality and industrial precision.",
+      "machines": [
+        "Fortus 900",
+        "Fortus 450", 
+        "Fortus 370"
+      ],
       "features": [
-        "Wide range of available materials (PLA, ABS, PETG, TPU, Nylon, etc.)",
-        "Print dimensions up to 300x300x300mm",
+        "Professional Stratasys technology for industrial applications",
+        "Print dimensions up to 914x610x914mm (Fortus 900)",
         "Resolution up to 100 microns per layer",
-        "Ideal for functional prototypes, mechanical parts and small production series",
-        "Fast delivery times and competitive costs"
+        "Ideal for functional prototypes, mechanical parts and industrial production",
+        "Certified materials for critical applications"
       ],
       "materials": [
         {
-          "name": "PLA",
-          "features": "Eco-friendly, easy to print, rigid",
-          "applications": "Prototypes, decorative objects, equipment"
+          "name": "PLA / PETG / TPU",
+          "features": "Standard materials for prototyping",
+          "applications": "Prototypes, decorative objects, flexible parts"
         },
         {
-          "name": "ABS", 
-          "features": "Resistente al calore, robusto, lavorabile",
-          "applications": "Parti meccaniche, componenti funzionali"
+          "name": "ABS M30 / ABS M30i / ABS / ABSi",
+          "features": "Heat resistant, robust, machinable",
+          "applications": "Mechanical parts, industrial functional components"
         },
         {
-          "name": "PETG",
-          "features": "Resistente, flessibile, impermeabile",
-          "applications": "Contenitori, parti esposte a sollecitazioni"
+          "name": "ESD7 / ASA / Nylon 12 / Nylon 12 CF",
+          "features": "Specialized materials for specific applications",
+          "applications": "Electronic components, exposed parts, reinforced"
         },
         {
-          "name": "PETG-CF",
-          "features": "Resistente, leggero, durevole",
-          "applications": "Parti meccaniche, componenti funzionali con fibre di carbonio"
+          "name": "PC-ABS / PC-ISO / PC",
+          "features": "Resistant, durable, lightweight",
+          "applications": "Mechanical parts, functional components"
         },
         {
-          "name": "TPU",
-          "features": "Flessibile, elastico, resistente all'usura",
-          "applications": "Guarnizioni, impugnature, parti flessibili"
+          "name": "Ultem®️ 9085 / Ultem®️ 1010",
+          "features": "High-performance materials, heat resistant",
+          "applications": "Aerospace, automotive, medical applications"
+        },
+        {
+          "name": "PPSF / PEEK / PEK / Anthero",
+          "features": "Super-engineered materials for extreme applications",
+          "applications": "Aerospace, medical, high-performance automotive"
+        }
+      ]
+    },
+    "cff": {
+      "title": "CFF 3D Printing – Markforged",
+      "description": "Markforged's Continuous Fiber Fabrication (CFF) technology revolutionizes 3D printing with continuous carbon, kevlar and glass fibers for high-performance structural parts.",
+      "machines": [
+        "Mark II",
+        "X7"
+      ],
+      "features": [
+        "Continuous carbon, kevlar and glass fibers",
+        "Mechanical strength superior to metals",
+        "Reduced weight with maximum strength",
+        "Complex geometries impossible with traditional machining",
+        "Advanced composite materials"
+      ],
+      "materials": [
+        {
+          "name": "Onyx",
+          "features": "Carbon fiber reinforced nylon base",
+          "applications": "Structural parts, mechanical components"
         },
         {
           "name": "Nylon",
-          "features": "Resistente, flessibile, impermeabile",
-          "applications": "Contenitori, parti esposte a sollecitazioni"
+          "features": "Resistant base material",
+          "applications": "Functional prototypes, mechanical parts"
         },
         {
-          "name": "Policarbonato",
-          "features": "Resistente, durevole, leggero",
-          "applications": "Parti meccaniche, componenti funzionali"
+          "name": "Continuous Carbon Fiber",
+          "features": "Continuous carbon fiber",
+          "applications": "High-performance structural parts"
         },
         {
-          "name": "Nylon-CF", 
-          "features": "Durevole, resistente, leggero",
-          "applications": "Parti meccaniche, componenti funzionali con fibre di carbonio"
+          "name": "Kevlar",
+          "features": "Aramid fiber resistant",
+          "applications": "Applications requiring impact resistance"
+        },
+        {
+          "name": "Glass reinforced",
+          "features": "Glass fiber reinforcement",
+          "applications": "Structural parts, electrical insulation"
+        }
+      ]
+    },
+    "lsam": {
+      "title": "LSAM 3D Printing – Caracol",
+      "description": "Caracol's Large Scale Additive Manufacturing (LSAM) technology enables the production of large parts with composite materials and polymers, also in pellet format.",
+      "machines": [
+        "Heron 300"
+      ],
+      "features": [
+        "Production of large dimension parts",
+        "Composite materials and polymers in pellets",
+        "Versatility for industrial applications",
+        "Efficiency in series production",
+        "Consistent quality on large volumes"
+      ],
+      "materials": [
+        {
+          "name": "Standard polymers",
+          "features": "Base thermoplastic materials",
+          "applications": "Large prototypes, structural parts"
+        },
+        {
+          "name": "Composite materials",
+          "features": "Fiber reinforced",
+          "applications": "High-performance structural parts"
+        },
+        {
+          "name": "Pellet materials",
+          "features": "Pellet format for continuous production",
+          "applications": "Industrial production, large parts"
+        }
+      ]
+    },
+    "mjf": {
+      "title": "MJF 3D Printing – HP",
+      "description": "HP's Multi Jet Fusion (MJF) technology offers high-speed production with consistent quality, ideal for small and medium production series.",
+      "machines": [
+        "5210",
+        "4200"
+      ],
+      "features": [
+        "High-speed production",
+        "Consistent and reproducible quality",
+        "No support required",
+        "Ideal for small and medium series",
+        "Optimized energy efficiency"
+      ],
+      "materials": [
+        {
+          "name": "PA 12",
+          "features": "High-performance nylon",
+          "applications": "Functional parts, mechanical components"
+        },
+        {
+          "name": "PA 11",
+          "features": "Biocompatible nylon",
+          "applications": "Medical devices, automotive"
+        },
+        {
+          "name": "TPU",
+          "features": "Elastic, flexible",
+          "applications": "Gaskets, flexible parts"
         }
       ]
     },
     "sla": {
-      "title": "SLA 3D Printing", 
+      "title": "SLA 3D Printing – Photocentric / Anycubic", 
       "description": "Stereolithography (SLA) technology uses photopolymerization to create objects with incredibly precise details and smooth surfaces. Perfect for detailed models, jewelry and medical applications.",
+      "machines": [
+        "LC Magna",
+        "M3 Max"
+      ],
       "features": [
-        "Risoluzione ultra-fine fino a 10 micron per dettagli incredibilmente precisi",
-        "Superfici lisce che richiedono minima post-produzione",
-        "Varietà di resine speciali per applicazioni specifiche",
-        "Ideale per prototipi estetici, modelli di presentazione e componenti di precisione",
-        "Eccellente per la produzione di parti trasparenti o con dettagli minuti"
+        "Ultra-fine resolution up to 10 microns for incredibly precise details",
+        "Smooth surfaces requiring minimal post-production",
+        "Variety of special resins for specific applications",
+        "Ideal for aesthetic prototypes, presentation models and precision components",
+        "Excellent for producing transparent parts or with minute details"
       ],
       "materials": [
         {
-          "name": "Resina standard",
-          "features": "Dettagli precisi, superficie liscia",
-          "applications": "Prototipi estetici, modelli di presentazione"
+          "name": "Hard Resin",
+          "features": "Hard resin for resistant parts",
+          "applications": "Functional prototypes, mechanical components"
         },
         {
-          "name": "Resina resistente",
-          "features": "Durabile, resistente agli urti",
-          "applications": "Parti funzionali, componenti meccanici"
+          "name": "Flexible",
+          "features": "Flexible and elastic resin",
+          "applications": "Flexible parts, gaskets"
         },
         {
-          "name": "Resina trasparente",
-          "features": "Elevata trasparenza, lucidabile",
-          "applications": "Prototipi trasparenti, componenti ottici"
+          "name": "HighTemp",
+          "features": "High temperature resistant",
+          "applications": "High temperature applications"
         },
         {
-          "name": "Resina dentale",
-          "features": "Biocompatibile, certificata",
-          "applications": "Modelli dentali, guide chirurgiche"
+          "name": "Precision Firm",
+          "features": "High dimensional precision",
+          "applications": "Precision components"
+        },
+        {
+          "name": "Castable",
+          "features": "Resin for casting",
+          "applications": "Jewelry, metal casting"
+        },
+        {
+          "name": "Dental Model",
+          "features": "Biocompatible for dental applications",
+          "applications": "Dental models, surgical guides"
+        },
+        {
+          "name": "High Tensile",
+          "features": "High tensile strength",
+          "applications": "Structural parts, resistant components"
+        }
+      ]
+    },
+    "polyjet": {
+      "title": "POLYJET 3D Printing – Stratasys",
+      "description": "Stratasys PolyJet technology uses jet photopolymerization to create parts with incredibly precise details and smooth surfaces, ideal for aesthetic prototypes and presentation models.",
+      "machines": [
+        "J55"
+      ],
+      "features": [
+        "Ultra-fine resolution for precise details",
+        "Smooth surfaces without post-production",
+        "Multi-color materials in a single print",
+        "Ideal for aesthetic prototypes and presentation models",
+        "Photographic quality for visual applications"
+      ],
+      "materials": [
+        {
+          "name": "Transparent",
+          "features": "Transparent resin",
+          "applications": "Transparent prototypes, optical components"
+        },
+        {
+          "name": "Colored Resins",
+          "features": "Colored resins",
+          "applications": "Colored prototypes, presentation models"
         }
       ]
     },
@@ -250,9 +395,76 @@
         }
       ]
     },
+    "slm": {
+      "title": "SLM 3D Printing – SLM Solutions / Renishaw",
+      "description": "Professional 3D printing technology with selective laser melting for metals. Ideal for high-precision components and superior mechanical strength.",
+      "machines": [
+        "SLM 800 + Hub",
+        "SLM 500",
+        "SLM 280",
+        "AM400"
+      ],
+      "features": [
+        "Selective laser melting of metal powders",
+        "High dimensional precision (±0.1mm)",
+        "Mechanical strength superior to traditional metals",
+        "Complex geometries impossible with traditional machining",
+        "Cutting-edge SLM Solutions and Renishaw technology"
+      ],
+      "materials": [
+        {
+          "name": "AlSi10Mg",
+          "features": "Aluminum-silicon-magnesium, lightweight",
+          "applications": "Automotive, aerospace, heat sinks"
+        },
+        {
+          "name": "Stainless Steel 316L",
+          "features": "Stainless steel, corrosion resistant",
+          "applications": "Medical components, marine parts, food industry"
+        },
+        {
+          "name": "Inconel 625–718",
+          "features": "Heat-resistant superalloy",
+          "applications": "Aerospace, turbines, high-temperature applications"
+        },
+        {
+          "name": "Titanium Ti6Al4V",
+          "features": "Grade 5 titanium, lightweight and resistant",
+          "applications": "Aerospace, medical, automotive"
+        }
+      ]
+    },
+    "sls": {
+      "title": "SLS 3D Printing",
+      "description": "Selective laser sintering for the production of complex parts in plastic and composite materials. Perfect for functional prototypes and small series.",
+      "features": [
+        "Selective laser sintering of plastic powders",
+        "No support required during printing",
+        "Complex geometries and moving parts in a single print",
+        "Excellent surface finish",
+        "Materials: Nylon PA12, PA11, TPU, composite materials"
+      ],
+      "materials": [
+        {
+          "name": "Nylon PA12",
+          "features": "Resistant, flexible, durable",
+          "applications": "Functional prototypes, mechanical parts, hinges"
+        },
+        {
+          "name": "Nylon PA11",
+          "features": "Biocompatible, chemical resistant",
+          "applications": "Medical devices, automotive, aerospace"
+        },
+        {
+          "name": "TPU",
+          "features": "Elastic, flexible, abrasion resistant",
+          "applications": "Gaskets, shock absorbers, flexible parts"
+        }
+      ]
+    },
     "design": {
-      "title": "Progettazione",
-      "description": "Servizi di progettazione CAD per ottimizzare i tuoi modelli per la stampa 3D."
+      "title": "Design",
+      "description": "CAD design services to optimize your models for 3D printing."
     },
     "postProcessing": {
       "title": "Post-elaborazione",
@@ -410,13 +622,19 @@
       "subjectPlaceholder": "Di cosa vorresti parlare?",
       "messagePlaceholder": "Descrivi il tuo progetto o la tua richiesta...",
       "services": {
-        "fdm": "Stampa 3D FDM",
-        "sla": "Stampa 3D SLA",
-        "laser": "Taglio Laser",
-        "largePrint": "Riparazione Stampanti 3D",
-        "scanning": "Scansione 3D",
-        "prototyping": "Prototipazione",
-        "other": "Altro"
+        "fdm": "FDM 3D Printing – Stratasys",
+        "cff": "CFF 3D Printing – Markforged",
+        "lsam": "LSAM 3D Printing – Caracol",
+        "mjf": "MJF 3D Printing – HP",
+        "sla": "SLA 3D Printing – Photocentric/Anycubic",
+        "polyjet": "POLYJET 3D Printing – Stratasys",
+        "slm": "SLM 3D Printing – SLM Solutions/Renishaw",
+        "sls": "SLS 3D Printing",
+        "laser": "Laser Cutting",
+        "largePrint": "3D Printer Repair",
+        "scanning": "3D Scanning",
+        "prototyping": "Prototyping",
+        "other": "Other"
       }
     },
     "info": {

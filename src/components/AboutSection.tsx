@@ -114,7 +114,9 @@ const AboutSection = () => {
                   whiteSpace: 'nowrap'
                 }}
               >
-                {name}
+                <div className="flex flex-col">
+                  <div>{name}</div>
+                </div>
               </div>
             );
           })}
