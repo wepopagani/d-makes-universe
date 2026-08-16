@@ -1,6 +1,6 @@
 # 3DMAKES
 
-> Servizi di stampa 3D professionale, prototipazione rapida, scansione 3D e taglio laser a Figino (Ticino), Svizzera.
+> Tecnologie di stampa 3D professionale, prototipazione rapida, scansione 3D e taglio laser a Figino (Ticino), Svizzera.
 
 ## Contatti
 
@@ -11,6 +11,7 @@
 
 - https://3dmakes.ch/
 - https://3dmakes.ch/services/
+- https://3dmakes.ch/faq/
 - https://3dmakes.ch/calculator/
 - https://3dmakes.ch/blog/
 - https://3dmakes.ch/about/

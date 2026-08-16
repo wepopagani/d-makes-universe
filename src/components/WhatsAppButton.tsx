@@ -1,7 +1,7 @@
 import { SHOP_PRIMARY_WA_DIGITS } from '@/constants/shopPhones';
 
 const WhatsAppButton = () => {
-  const message = "Ciao! Sono interessato ai vostri servizi di stampa 3D.";
+  const message = "Ciao! Sono interessato alle vostre tecnologie di stampa 3D.";
   
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${SHOP_PRIMARY_WA_DIGITS}?text=${encodeURIComponent(message)}`;

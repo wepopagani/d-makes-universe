@@ -2,7 +2,7 @@
   "nav": {
     "about": "Über uns",
     "mission": "Mission",
-    "services": "Dienstleistungen",
+    "services": "Technologien",
     "shop": "Shop",
     "drones": "Drohnen",
     "blog": "Blog",
@@ -10,27 +10,28 @@
     "contact": "Kontakt",
     "requestQuote": "Angebot anfordern",
     "clientArea": "Kundenbereich",
-    "admin": "Admin"
+    "admin": "Admin",
+    "faq": "FAQ"
   },
   "seo": {
     "titleSuffix": "| 3DMAKES",
     "homeTitle": "Professioneller 3D-Druck | Lugano & Tessin | 3DMAKES",
-    "homeDescription": "Hochwertiger 3D-Druck in Lugano, Tessin und Lombardei. Rapid Prototyping, 3D-Modellierung und FDM-/SLA-Produktion.",
+    "homeDescription": "Hochwertige 3D-Druck-Technologien in Lugano, Tessin und Lombardei. Rapid Prototyping, 3D-Modellierung und Produktion mit FDM, SLA und mehr.",
     "aboutTitle": "Über uns | Team, Werte & Geschichte | 3DMAKES Lugano",
     "aboutDescription": "Lernen Sie 3DMAKES kennen: Team, Mission und Expertise im professionellen 3D-Druck, Rapid Prototyping und Qualitätsproduktion.",
     "blogIndexTitle": "3D-Druck-Blog | Ratgeber, Fallstudien & News | 3DMAKES",
-    "servicesIndexTitle": "3D-Druck-Services | FDM, SLA, Laser | 3DMAKES",
-    "servicesIndexDescription": "Professioneller 3D-Druck: FDM, SLA, 3D-Scanning, Laserschneiden und Rapid Prototyping in Lugano (Tessin) und Lombardei.",
+    "servicesIndexTitle": "3D-Druck-Technologien | FDM, SLA, SLM, Laser | 3DMAKES",
+    "servicesIndexDescription": "Die Additive-Manufacturing-Technologien von 3DMAKES in Lugano: FDM, SLA, SLS, MJF, SLM, 3D-Scan, Laser und Rapid Prototyping für Tessin und Lombardei.",
     "missionTitle": "Unsere Mission | 3D-Druck für alle | 3DMAKES",
     "missionDescription": "3D-Druck für alle zugänglich machen – mit Qualitätsservice in Lugano und im Tessin.",
     "calculatorTitle": "3D-Druck-Kalkulator | Angebot | 3DMAKES",
     "calculatorDescription": "Sofortangebot für 3D-Druck: STL hochladen, Material und Qualität wählen. Schnelle Kostenschätzung in Lugano und Tessin.",
     "contactSuccessTitle": "Nachricht Gesendet | Danke | 3DMAKES",
-    "contactSuccessDescription": "Wir haben Ihre Nachricht erhalten und melden uns innerhalb eines Werktags. 3DMAKES Kontakt und Services in Lugano.",
+    "contactSuccessDescription": "Wir haben Ihre Nachricht erhalten und antworten innerhalb eines Werktags. Kontakt und Technologien von 3DMAKES in Lugano.",
     "coursesTitle": "3D-Druck-Grundkurs | Anmeldung | 3DMAKES",
     "coursesDescription": "3D-Druck-Grundkurs in Lugano: kleine Gruppen, 2 Abende, Praxis FDM und SLA. Online-Anmeldung.",
     "notFoundTitle": "Seite nicht gefunden | 3DMAKES",
-    "notFoundDescription": "Diese Seite existiert nicht. Zur Startseite oder zu unseren 3D-Druck-Services in Lugano.",
+    "notFoundDescription": "Diese Seite existiert nicht. Zurück zur Startseite oder unsere 3D-Druck-Technologien in Lugano entdecken.",
     "loginTitle": "Anmelden | Kundenbereich | 3DMAKES",
     "loginDescription": "Zugang zum 3DMAKES-Kundenbereich: Angebote, Bestellungen und Projekte.",
     "registerTitle": "Registrieren | 3DMAKES",
@@ -38,19 +39,21 @@
     "forgotPasswordTitle": "Passwort zurücksetzen | 3DMAKES",
     "forgotPasswordDescription": "Passwort für Ihr 3DMAKES-Konto zurücksetzen.",
     "homeFaqQ1": "Wo befindet sich das 3DMAKES-Labor?",
-    "homeFaqA1": "In Figino (Tessin), Schweiz; wir betreuen Kunden in Lugano, im ganzen Kanton und in der Lombardei.",
+    "homeFaqA1": "Wir sind in Figino (Tessin), Schweiz. Wir betreuen Kunden im gesamten Tessin, in der ganzen Schweiz und in Norditalien.",
     "homeFaqQ2": "Welche 3D-Druck-Technologien bieten Sie?",
-    "homeFaqA2": "FDM- und SLA-3D-Druck, 3D-Scanning, Laser schneiden und gravieren, Rapid Prototyping und Datei-Support.",
+    "homeFaqA2": "Wir bieten 3D-Druck FDM, SLA, SLS, SLM, MJF und weitere Technologien sowie 3D-Scan, Laserschneiden und -gravur, Rapid Prototyping und Datei-Support.",
     "homeFaqQ3": "Wie kann ich ein Angebot anfordern?",
     "homeFaqA3": "Nutzen Sie den Online-Kalkulator oder das Kontaktformular: wir antworten mit Richtzeiten und Kosten.",
     "homeFaqQ4": "Arbeiten Sie auch jenseits der Schweiz–Italien-Grenze?",
-    "homeFaqA4": "Ja: wir sind im Tessin und in der Schweiz aktiv und arbeiten mit Kunden in der Lombardei und Norditalien."
+    "homeFaqA4": "Ja, klar: Wir arbeiten über die Grenze hinweg und betreuen Kunden im Tessin, in der ganzen Schweiz und in Norditalien.",
+    "faqTitle": "FAQ | Häufige Fragen zum 3D-Druck | 3DMAKES",
+    "faqDescription": "Klare Antworten zu Materialien, Lieferzeiten, Offerten, 3D-Scan und Qualität der 3DMAKES-Technologien in Lugano, Tessin und Lombardei."
   },
   "hero": {
     "title": "Wir verwandeln Ihre Ideen in",
     "titleHighlight": "reale Objekte",
     "subtitle": "3D-Druck-Spezialisten bieten wir Rapid-Prototyping-Lösungen und hochwertige Produktion mit FDM- und SLA-Technologien.",
-    "discoverServices": "Dienstleistungen entdecken",
+    "discoverServices": "Technologien entdecken",
     "requestQuote": "Angebot anfordern",
     "stats": {
       "experience": "Jahre Erfahrung",
@@ -69,15 +72,15 @@
     "haiIdeaFallbackText": "Hast du eine Idee?"
   },
   "services": {
-    "title": "Unsere Dienstleistungen",
+    "title": "Unsere Technologien",
     "subtitle": "Unsere 3D-Lösungen",
-    "description": "Wir bieten ein komplettes Spektrum an 3D-Druck-, Scan- und Prototyping-Dienstleistungen, um Ihre Ideen mit Präzision und professioneller Qualität in reale Objekte zu verwandeln.",
-    "seeAll": "Alle unsere Dienstleistungen entdecken",
+    "description": "Eine komplette Bandbreite an 3D-Druck-Technologien, Scan und Prototyping, um Ideen mit professioneller Präzision in reale Objekte zu verwandeln.",
+    "seeAll": "Alle Technologien entdecken",
     "readyToRealize": "Bereit, Ihr Projekt zu realisieren?",
     "contactToday": "Kontaktieren Sie uns heute, um Ihr 3D-Druck-Projekt zu besprechen und ein personalisiertes Angebot zu erhalten.",
     "calculateQuote": "Angebot berechnen",
-    "heroTitle": "Unsere Dienstleistungen",
-    "heroSubtitle": "Komplette 3D-Druck-, Scan- und Prototyping-Lösungen, um Ihre Ideen in die Realität umzusetzen.",
+    "heroTitle": "Unsere Technologien",
+    "heroSubtitle": "Ein komplettes Labor für additive Fertigung: Polymere, Metall, 3D-Scan und digitale Prozesse, um Ideen in echte Teile zu verwandeln.",
     "characteristics": "Eigenschaften",
     "availableMaterials": "Verfügbare Materialien",
     "applications": "Anwendungen",
@@ -97,7 +100,7 @@
       ],
       "features": [
         "Breite Palette verfügbarer Materialien (PLA, ABS, PETG, TPU, Nylon, etc.)",
-        "Druckdimensionen bis zu 300x300x300mm",
+        "Druckdimensionen bis zu 800×800×1000 mm",
         "Auflösung bis zu 100 Mikron pro Schicht",
         "Ideal für funktionale Prototypen, mechanische Teile und kleine Produktionsserien",
         "Schnelle Lieferzeiten und wettbewerbsfähige Preise"
@@ -500,6 +503,28 @@
           "applications": "Dichtungen, Stoßdämpfer, flexible Teile"
         }
       ]
+    },
+    "heroEyebrow": "Technologien",
+    "introTitle": "Ein Technologie-Hub, kein generischer Katalog",
+    "introText": "Wir wählen das passende Verfahren für jedes Projekt — vom Rapid Prototyping bis zur industriellen Kleinserie — mit professionellen Maschinen und technischem Support aus Figino (Lugano).",
+    "catalogTitle": "Technologien entdecken",
+    "catalogSubtitle": "Nach Technologie-Familie filtern und die Detailseite mit Materialien, Anwendungen und FAQ öffnen.",
+    "faqTeaserTitle": "Fragen zu Zeiten, Materialien oder Offerten?",
+    "faqTeaserText": "Die häufigsten Antworten haben wir auf einer klaren FAQ-Seite gesammelt — hilfreich vor einer Offertenanfrage.",
+    "faqTeaserCta": "Zur FAQ",
+    "groups": {
+      "all": "Alle",
+      "polymer": "Polymere",
+      "metal": "Metall",
+      "digital": "Digital & Services"
+    },
+    "pillars": {
+      "rangeTitle": "Volle Bandbreite",
+      "rangeText": "FDM, SLA, SLS, MJF, SLM, PolyJet, CFF, LSAM und mehr: eine breite Plattform für ästhetische, funktionale oder strukturelle Teile.",
+      "qualityTitle": "Industrielle Qualität",
+      "qualityText": "Kontrollierte Prozesse, ausgewählte Materialien und Teileprüfung vor der Lieferung — Standards für Unternehmen und Profis.",
+      "supportTitle": "Technischer Support",
+      "supportText": "Wir helfen bei Technologie- und Materialwahl, File-Optimierung und realistischen Lieferzeiten."
     }
   },
   "about": {
@@ -1045,21 +1070,21 @@
         }
       },
       "sla": {
-        "100": {
-          "label": "Schnell (100 μm)",
-          "desc": "Schneller Druck, gute Gesamtqualität."
-        },
-        "50": {
-          "label": "Standard (50μm)",
-          "desc": "Standardqualität für die meisten Anwendungen."
+        "10": {
+          "label": "Ultra (10μm)",
+          "desc": "Höchste Qualität möglich, perfekt für kleine Details."
         },
         "25": {
           "label": "Hoch (25μm)",
           "desc": "Hohe Qualität mit feineren Details."
         },
-        "10": {
-          "label": "Ultra (10μm)",
-          "desc": "Höchste Qualität möglich, perfekt für kleine Details."
+        "50": {
+          "label": "Standard (50μm)",
+          "desc": "Standardqualität für die meisten Anwendungen."
+        },
+        "100": {
+          "label": "Schnell (100 μm)",
+          "desc": "Schneller Druck, gute Gesamtqualität."
         }
       },
       "laser": {
@@ -1210,38 +1235,71 @@
   "footer": {
     "description": "Wir verwandeln Ihre Ideen durch 3D-Drucktechnologie in reale Objekte.",
     "quickLinks": "Schnelllinks",
-    "servicesTitle": "Dienstleistungen",
+    "servicesTitle": "Technologien",
     "contactTitle": "Kontakt",
     "calculateQuote": "Angebot berechnen",
     "copyright": "Alle Rechte vorbehalten"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen",
+    "subtitle": "Antworten auf die häufigsten Fragen zu 3D-Druck, Offerten und Lieferung",
+    "pageTitle": "Häufig gestellte Fragen",
+    "pageSubtitle": "Alles Wichtige zu 3D-Druck, Scan, Offerten und Lieferung — klare Antworten aus dem 3DMAKES-Labor.",
+    "filterAll": "Alle",
+    "viewAll": "Alle FAQ ansehen",
+    "titleSpecific": "Spezifische Fragen",
+    "stillHaveQuestions": "Keine passende Antwort gefunden?",
+    "stillHaveQuestionsText": "Schreiben Sie uns oder berechnen Sie eine Offerte: Wir helfen bei der Wahl der richtigen Technologie.",
+    "ctaQuote": "Offerte berechnen",
+    "ctaTechnologies": "Technologien entdecken",
     "howItWorks": "Wie funktioniert der Rechner?",
-    "accuracy": "Wie genau ist das erstellte Angebot?",
+    "howItWorksAnswer": "Sie laden eine 3D-Datei (STL o. ä.) hoch, wählen Technologie, Material und Qualität: Das System schätzt Volumen, Zeit und indikativen Preis. Die endgültige Offerte bestätigt immer unser Team.",
+    "accuracy": "Wie genau ist die generierte Offerte?",
+    "accuracyAnswer": "Der Rechner liefert eine verlässliche Schätzung basierend auf Volumen und Druckparametern. Supports, Nachbearbeitung oder Spezialfinishes können den Endpreis ändern — wir bestätigen alles vor der Produktion.",
     "fileFormats": "Welche Dateiformate akzeptieren Sie für den 3D-Druck?",
+    "fileFormatsAnswer": "Wir akzeptieren vor allem STL, OBJ und STEP. Andere Formate (3MF, IGES, SolidWorks usw.) können wir oft konvertieren oder für den Druck optimieren.",
     "deliveryTimes": "Wie lange dauert eine 3D-Druck-Bestellung?",
-    "modelModification": "Ist es möglich, mein 3D-Modell vor dem Drucken zu bearbeiten?",
+    "modelModification": "Kann mein 3D-Modell vor dem Druck angepasst werden?",
+    "modelModificationAnswer": "Ja. Wir können Wandstärken, Toleranzen, Orientierung und Supports optimieren oder auf Wunsch kleine Modelländerungen vor der Produktion vornehmen.",
     "pricing": "Preise",
     "quality": "Qualität",
-    "fdmMaterials": "Welche Materialien bieten Sie für 3D-Druck an?",
-    "fdmMaterialsAnswer": "Wir bieten eine breite Palette von Materialien einschließlich PLA, PETG, ABS, TPU, Nylon und carbonfaserverstärkte Filamente. Für hochpräzise Anwendungen bieten wir auch Harz-Druckdienste.",
-    "deliveryTimesAnswer": "Lieferzeiten hängen von verschiedenen Faktoren wie Größe, Komplexität und Stückzahl ab. Standard-Bestellungen werden in 2-5 Werktagen fertiggestellt. Express-Services sind für prioritäre Projekte verfügbar.",
+    "categories": {
+      "general": "Allgemein",
+      "printing": "3D-Druck",
+      "scanning": "3D-Scan",
+      "pricing": "Offerten & Preise",
+      "quality": "Qualität & Design",
+      "orders": "Bestellungen & Lieferung"
+    },
+    "fdmMaterials": "Welche Materialien bieten Sie für den 3D-Druck an?",
+    "fdmMaterialsAnswer": "Wir bieten u. a. PLA, PETG, ABS, TPU, Nylon und carbonfaserverstärkte Filamente. Für hohe Detailtreue auch Harzdruck (SLA/PolyJet), Pulververfahren (SLS, MJF) und SLM für Metall.",
+    "deliveryTimesAnswer": "Lieferzeiten hängen von Größe, Technologie, Komplexität und Stückzahl ab. Standardaufträge sind oft in 2–5 Werktagen fertig; Eilaufträge oder Kleinserien brauchen eine eigene Planung.",
     "maxSize": "Was ist die maximale Druckgröße?",
-    "maxSizeAnswer": "Unsere FDM-Drucker können Teile bis zu 350×350×400mm in einem Stück erstellen. Größere Objekte können in Abschnitten gedruckt und montiert werden.",
+    "maxSizeAnswer": "Mit FDM erreichen wir bis zu 800×800×1000 mm (80×80×100 cm) in einem Stück. Größere Objekte können sektioniert gedruckt und montiert werden.",
     "scanningPrecision": "Wie präzise ist Ihr 3D-Scanning-Service?",
-    "scanningPrecisionAnswer": "Unsere professionellen Scanner erreichen Präzision bis zu 0,1mm basierend auf Objektgröße und Komplexität. Wir können sowohl Geometrie- als auch Texturinformationen erfassen.",
+    "scanningPrecisionAnswer": "Unsere professionellen Scanner erreichen eine Präzision von bis zu ca. 0,1 mm je nach Größe und Komplexität. Wir erfassen Geometrie und bei Bedarf Texturinformationen.",
     "largeObjects": "Können Sie große Objekte scannen?",
-    "largeObjectsAnswer": "Ja, wir können Objekte unterschiedlicher Größe scannen. Bei großen Objekten verwenden wir mehrere Scans, die dann zu einem einzigen 3D-Modell kombiniert werden.",
+    "largeObjectsAnswer": "Ja: Wir können große Objekte bis ca. 2×2×2 Meter scannen und mehrere Scans zu einem kohärenten 3D-Modell zusammenführen.",
+    "scanOutput": "Was erhalte ich nach einem 3D-Scan?",
+    "scanOutputAnswer": "Sie erhalten ein digitales Modell für CAD, Reverse Engineering oder 3D-Druck (typisch STL/OBJ-Meshes oder auf Wunsch aufbereitete Design-Dateien).",
     "priceCalculation": "Wie berechnen Sie die Preise?",
-    "priceCalculationAnswer": "Preise basieren auf Materialvolumen, Druckzeit und Komplexität. Faktoren umfassen Materialtyp, Qualitätseinstellungen und Nachbearbeitungsanforderungen. Nutzen Sie unseren Online-Rechner für sofortige Angebote.",
-    "bulkDiscounts": "Bieten Sie Rabatte für Großbestellungen an?",
-    "bulkDiscountsAnswer": "Ja, wir bieten Rabatte für Großbestellungen an. Ab 5 Stück erhalten Sie 10 % Rabatt und ab 10 Stück erhalten Sie 15 % Rabatt. Kontaktieren Sie uns für individuelle Angebote für Großaufträge.",
-    "qualityControl": "Welche Qualitätskontrollmaßnahmen ergreifen Sie?",
-    "qualityControlAnswer": "Jeder Druck wird strengen Qualitätsprüfungen unterzogen, einschließlich Maßprüfung und Sichtprüfung. Wir erstellen Probedrucke für kritische Anwendungen und halten strenge Qualitätskontrollstandards ein.",
+    "priceCalculationAnswer": "Der Preis berücksichtigt Materialvolumen, Maschinenzeit, Technologie, Qualität und ggf. Nachbearbeitung. Nutzen Sie den Online-Rechner für eine Sofortschätzung oder kontaktieren Sie uns für eine individuelle Offerte.",
+    "bulkDiscounts": "Bieten Sie Mengenrabatte an?",
+    "bulkDiscountsAnswer": "Ja: typisch ca. −10 % ab 5 Teilen und ca. −15 % ab 10 Teilen, Bedingungen fallweise für Kleinserien.",
+    "qualityControl": "Welche Qualitätskontrollen führen Sie durch?",
+    "qualityControlAnswer": "Jedes Teil durchläuft Maßprüfung und visuelle Kontrolle. Für kritische Anwendungen können wir Probedrucke und dokumentierte Prozessparameter vorsehen.",
     "designAssistance": "Bieten Sie Designunterstützung?",
-    "designAssistanceAnswer": "Ja, unser Team kann bei der Optimierung von Designs für den 3D-Druck helfen, geeignete Materialien vorschlagen und während des gesamten Projekts technische Beratung leisten."
+    "designAssistanceAnswer": "Ja. Wir helfen bei der Optimierung für den 3D-Druck, Material- und Technologieauswahl und technischer Beratung über das ganze Projekt.",
+    "whichTechnology": "Wie wähle ich die richtige Technologie?",
+    "whichTechnologyAnswer": "Wir beraten Sie anhand von Budget, Festigkeit, Präzision, Optik und Stückzahl. Zum Beispiel FDM für günstige Funktionsteile, SLA für Feindetails, SLS/MJF für Serien und komplexe Geometrien, SLM für Metall.",
+    "postProcessing": "Bieten Sie auch Finishing und Nachbearbeitung?",
+    "postProcessingAnswer": "Ja: Supportentfernung, Sandstrahlen, Schleifen, Lackieren und weitere Finishes je nach Technologie und Material. Wir weisen sie in der Offerte aus, wenn nötig.",
+    "pickupShipping": "Kann ich abholen oder liefern Sie?",
+    "pickupShippingAnswer": "Ja. Abholung in Figino (Lugano) oder Versand in Tessin, Schweiz und Norditalien. Wir koordinieren Abholung und Lieferung je nach Dringlichkeit.",
+    "urgentOrders": "Bearbeiten Sie Eilaufträge?",
+    "urgentOrdersAnswer": "Wenn die Kapazität es erlaubt, aktivieren wir beschleunigte Priorität. Nennen Sie den Termin in der Offerte oder im Kontaktformular: Wir bestätigen realistische Zeiten innert weniger Arbeitsstunden.",
+    "confidentiality": "Bleiben meine Dateien und Projekte vertraulich?",
+    "confidentialityAnswer": "Ja. Dateien nutzen wir nur für Offerte und Produktion. Auf Wunsch formalisieren wir Vertraulichkeitsvereinbarungen (NDA) für sensible Projekte."
   },
   "search": {
     "title": "Suchen Sie nach 3D-Modellen",
@@ -1266,8 +1324,8 @@
     "allArticles": "Alle Artikel",
     "noArticlesFound": "Keine Artikel gefunden",
     "articlesCategory": "Artikel in {{category}}",
-    "moreServicesTitle": "Erfahren Sie mehr über unsere Leistungen",
-    "moreServicesDescription": "Möchten Sie mehr wissen? Entdecken Sie unsere Dienstleistungen oder kontaktieren Sie uns für eine persönliche Beratung.",
+    "moreServicesTitle": "Unsere Technologien entdecken",
+    "moreServicesDescription": "Mehr erfahren? Technologien ansehen, FAQ lesen oder uns für eine persönliche Beratung kontaktieren.",
     "categories": {
       "innovation": "Innovation",
       "technology": "Technologie",
@@ -1328,7 +1386,7 @@
       "excerpt": "Eine ausführliche Erläuterung der Funktionsprinzipien des 3D-Drucks, von den gängigsten Technologien bis hin zu den verwendbaren Materialien."
     },
     "materials": {
-      "title": "Die besten Materialien für den 3D-Druck im Jahr 2023",
+      "title": "Die besten Materialien für den 3D-Druck im Jahr 2026",
       "excerpt": "Vergleich zwischen PLA, ABS, PETG und Harzen: Eigenschaften, Vorteile und ideale Anwendungen für jedes Druckmaterial."
     },
     "rapidPrototyping": {
@@ -1342,6 +1400,30 @@
     "printerComparison": {
       "title": "Die besten 3D-Drucker für den professionellen Einsatz",
       "excerpt": "Vergleichende Analyse der derzeit besten professionellen 3D-Drucker auf dem Markt: Spezifikationen, Preise und Leistung."
+    },
+    "fdmVsSla": {
+      "title": "FDM vs SLA: welche 3D-Druck-Technologie wählen",
+      "excerpt": "Praktischer Vergleich FDM/SLA: Kosten, Detail, Festigkeit, Zeiten und Anwendungsfälle für die richtige Wahl."
+    },
+    "scanningGuide": {
+      "title": "3D-Scan und Reverse Engineering: wann es sich lohnt",
+      "excerpt": "Reale Teile bis ca. 2×2×2 m digitalisieren: Ersatzteile, Maßprüfung und Replik im 3D-Druck."
+    },
+    "laserMetal": {
+      "title": "Laserschneiden und -gravur auf Metall: reale Anwendungen",
+      "excerpt": "Schilder, Seriennummern, QR und Bauteile: Faserlaser auf Stahl, Aluminium, Messing und Kupfer."
+    },
+    "slmMetal": {
+      "title": "Metall-3D-Druck (SLM): strukturelle Teile ohne Werkzeug",
+      "excerpt": "Wann SLM-Metalldruck für Funktionsteile, komplexe Geometrien und Kleinserien ohne Form sinnvoll ist."
+    },
+    "fileChecklist": {
+      "title": "STL- oder STEP-Datei für den 3D-Druck vorbereiten",
+      "excerpt": "Häufige Fehler, Mindestwandstärken, Passungen und Formate: Checkliste vor der Offerte."
+    },
+    "slsMjfSeries": {
+      "title": "Kleinserien mit SLS/MJF: wann besser als Spritzguss",
+      "excerpt": "Bridge Manufacturing von 10 bis einigen hundert Teilen: Zeiten, Kosten und Vorteile von SLS/MJF vs Werkzeug."
     }
   },
   "userFiles": {
@@ -1374,7 +1456,7 @@
   "contactSuccess": {
     "thankYouDetailed": "Vielen Dank für Ihre Kontaktaufnahme! Wir haben Ihre Nachricht erhalten und werden Ihnen innerhalb von 24 Arbeitsstunden antworten.",
     "backToHome": "Zurück zur Homepage",
-    "discoverServices": "Entdecken Sie die Dienste",
+    "discoverServices": "Technologien entdecken",
     "howToFindUs": "In der Zwischenzeit erfahren Sie hier, wie Sie uns finden können",
     "urgentContact": "Wenn Sie einen Notfall haben oder uns lieber direkt kontaktieren möchten, finden Sie hier alle unsere Kontaktdaten.",
     "contacts": "Kontakte",

@@ -54,22 +54,22 @@ const BlogPostPage = () => {
     const pageUrl = `${CANONICAL_BASE_URL}/blog/${post.id}/`;
 
     const monthMap: Record<string, number> = {
-      Jan: 0,
+      Jan: 0, Gen: 0,
       Feb: 1,
       Mar: 2,
       Apr: 3,
-      May: 4,
-      Jun: 5,
-      Jul: 6,
-      Aug: 7,
-      Sep: 8,
-      Oct: 9,
+      May: 4, Mag: 4,
+      Jun: 5, Giu: 5,
+      Jul: 6, Lug: 6,
+      Aug: 7, Ago: 7,
+      Sep: 8, Set: 8,
+      Oct: 9, Ott: 9,
       Nov: 10,
-      Dec: 11,
+      Dec: 11, Dic: 11,
     };
 
     const parseBlogDate = (dateStr: string) => {
-      // formato atteso: "20 Apr 2023"
+      // formati: "20 Apr 2023" oppure "16 Ago 2026"
       const parts = dateStr.split(" ");
       if (parts.length !== 3) return null;
       const day = Number(parts[0]);
@@ -341,9 +341,15 @@ const BlogPostPage = () => {
               <p className="text-lg text-gray-300 mb-8">
                 {t('blog.contactDescription')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
                 <Button asChild className="bg-brand-accent hover:bg-brand-accent/90">
                   <Link to="/calculator">{t('footer.calculateQuote')}</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-white text-white bg-white/10 hover:bg-white/20">
+                  <Link to="/services">{t('nav.services')}</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-white text-white bg-white/10 hover:bg-white/20">
+                  <Link to="/faq">{t('nav.faq')}</Link>
                 </Button>
                 <Button asChild className="bg-gray-600 hover:bg-gray-700 text-white">
                   <a href="mailto:info@3dmakes.ch">{t('contact.title')}</a>

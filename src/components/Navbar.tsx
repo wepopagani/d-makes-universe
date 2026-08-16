@@ -50,10 +50,20 @@ const Navbar = () => {
     }
   };
   
-  const navItems = [
+  // Desktop: voci essenziali. Mission e Corsi restano in menu mobile + footer.
+  const desktopNavItems = [
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.services'), path: '/services' },
+    { name: t('nav.faq'), path: '/faq' },
+    { name: t('nav.blog'), path: '/blog' },
+    { name: t('nav.contact'), path: '/#contact', isContact: true },
+  ];
+
+  const mobileNavItems = [
     { name: t('nav.about'), path: '/about' },
     { name: t('nav.mission'), path: '/mission' },
     { name: t('nav.services'), path: '/services' },
+    { name: t('nav.faq'), path: '/faq' },
     { name: t('nav.blog'), path: '/blog' },
     { name: t('nav.courses'), path: '/iscrizione-corsi' },
     { name: t('nav.contact'), path: '/#contact', isContact: true },
@@ -66,7 +76,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
             <img 
               src="/logo.png" 
-              alt="Logo 3DMAKES — servizi stampa 3D Lugano" 
+              alt="Logo 3DMAKES — stampa 3D professionale Lugano" 
               className="h-7 md:h-9 max-w-[150px] md:max-w-[190px] w-auto object-contain"
               onError={(e) => {
                 // Fallback al logo testuale se l'immagine non carica
@@ -78,8 +88,8 @@ const Navbar = () => {
         </div>
         
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center justify-center space-x-6">
-          {navItems.map((item) => (
+        <nav className="hidden md:flex items-center justify-center gap-x-4 lg:gap-x-5 text-sm lg:text-[0.95rem]">
+          {desktopNavItems.map((item) => (
             item.isContact ? (
               <button
                 key={item.path}
@@ -152,7 +162,7 @@ const Navbar = () => {
       {isOpen && !shouldHideHamburger && (
         <div className="md:hidden bg-background border-b border-border">
           <div className="container-custom py-4 space-y-4">
-            {navItems.map((item) => (
+            {mobileNavItems.map((item) => (
               item.isContact ? (
                 <button
                   key={item.path}

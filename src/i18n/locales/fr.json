@@ -2,7 +2,7 @@
   "nav": {
     "about": "À propos",
     "mission": "Mission",
-    "services": "Services",
+    "services": "Technologies",
     "shop": "Boutique",
     "drones": "Drones",
     "blog": "Blog",
@@ -10,27 +10,28 @@
     "contact": "Contact",
     "requestQuote": "Demander devis",
     "clientArea": "Espace client",
-    "admin": "Admin"
+    "admin": "Admin",
+    "faq": "FAQ"
   },
   "seo": {
     "titleSuffix": "| 3DMAKES",
     "homeTitle": "Impression 3D Pro | Lugano & Tessin | 3DMAKES",
-    "homeDescription": "Impression 3D haute qualité à Lugano, Tessin et Lombardie. Prototypage rapide, modélisation 3D et production FDM/SLA.",
+    "homeDescription": "Technologies d’impression 3D de haute qualité à Lugano, Tessin et Lombardie. Prototypage rapide, modélisation 3D et production avec FDM, SLA et plus.",
     "aboutTitle": "À propos | Équipe, valeurs & histoire | 3DMAKES Lugano",
     "aboutDescription": "Découvrez 3DMAKES : équipe, mission et expertise en impression 3D professionnelle, prototypage rapide et production de qualité.",
     "blogIndexTitle": "Blog Impression 3D | Guides, cas clients & actus | 3DMAKES",
-    "servicesIndexTitle": "Services Impression 3D | FDM, SLA, Laser | 3DMAKES",
-    "servicesIndexDescription": "Services d’impression 3D : FDM, SLA, scan 3D, découpe laser et prototypage rapide à Lugano (Tessin) et Lombardie.",
+    "servicesIndexTitle": "Technologies d’impression 3D | FDM, SLA, SLM, Laser | 3DMAKES",
+    "servicesIndexDescription": "Les technologies de fabrication additive 3DMAKES à Lugano : FDM, SLA, SLS, MJF, SLM, scan 3D, laser et prototypage rapide pour le Tessin et la Lombardie.",
     "missionTitle": "Notre Mission | Impression 3D pour tous | 3DMAKES",
     "missionDescription": "Rendre l’impression 3D accessible à tous, avec des services de qualité à Lugano et dans le Tessin.",
     "calculatorTitle": "Calculateur Devis Impression 3D | 3DMAKES",
     "calculatorDescription": "Devis instantané : téléchargez un STL, choisissez matériau et qualité. Estimation rapide à Lugano et Tessin.",
     "contactSuccessTitle": "Message Envoyé | Merci | 3DMAKES",
-    "contactSuccessDescription": "Nous avons bien reçu votre message et répondrons sous 24 heures ouvrables. Contact 3DMAKES à Lugano.",
+    "contactSuccessDescription": "Nous avons reçu votre message et répondrons sous un jour ouvrable. Contacts et technologies 3DMAKES à Lugano.",
     "coursesTitle": "Cours Base Impression 3D | Inscription | 3DMAKES",
     "coursesDescription": "Cours d’initiation à l’impression 3D à Lugano : petits groupes, 2 soirées, pratique FDM et SLA. Inscription en ligne.",
     "notFoundTitle": "Page introuvable | 3DMAKES",
-    "notFoundDescription": "Cette page n’existe pas. Retour à l’accueil ou découvrez nos services d’impression 3D à Lugano.",
+    "notFoundDescription": "Cette page n’existe pas. Revenez à l’accueil ou explorez nos technologies d’impression 3D à Lugano.",
     "loginTitle": "Connexion | Espace client | 3DMAKES",
     "loginDescription": "Accès à l’espace client 3DMAKES : devis, commandes et projets.",
     "registerTitle": "Inscription | 3DMAKES",
@@ -38,19 +39,21 @@
     "forgotPasswordTitle": "Mot de passe oublié | 3DMAKES",
     "forgotPasswordDescription": "Réinitialisez le mot de passe de votre compte 3DMAKES.",
     "homeFaqQ1": "Où se trouve le laboratoire 3DMAKES ?",
-    "homeFaqA1": "À Figino (Tessin), Suisse ; nous desservons Lugano, tout le canton et la Lombardie.",
+    "homeFaqA1": "Nous sommes à Figino (Tessin), en Suisse. Nous servons des clients dans tout le Tessin, en Suisse entière et dans le nord de l’Italie.",
     "homeFaqQ2": "Quelles technologies d’impression 3D proposez-vous ?",
-    "homeFaqA2": "Impression 3D FDM et SLA, scan 3D, découpe et gravure laser, prototypage rapide et aide sur fichiers.",
+    "homeFaqA2": "Nous proposons l’impression 3D FDM, SLA, SLS, SLM, MJF et d’autres technologies, ainsi que le scan 3D, la découpe et gravure laser, le prototypage rapide et l’aide sur fichiers.",
     "homeFaqQ3": "Comment demander un devis ?",
     "homeFaqA3": "Utilisez le calculateur en ligne ou le formulaire de contact : nous répondons avec délais et coûts indicatifs.",
     "homeFaqQ4": "Travaillez-vous au-delà de la frontière italo-suisse ?",
-    "homeFaqA4": "Oui : nous opérons dans le Tessin et en Suisse et accompagnons des clients en Lombardie et dans le nord de l’Italie."
+    "homeFaqA4": "Oui, bien sûr : nous travaillons au-delà de la frontière et servons des clients au Tessin, en Suisse entière et dans le nord de l’Italie.",
+    "faqTitle": "FAQ | Questions fréquentes impression 3D | 3DMAKES",
+    "faqDescription": "Réponses claires sur matériaux, délais, devis, scan 3D et qualité des technologies 3DMAKES à Lugano, Tessin et Lombardie."
   },
   "hero": {
     "title": "Nous transformons vos idées en",
     "titleHighlight": "objets réels",
     "subtitle": "Spécialistes de l'impression 3D, nous offrons des solutions de prototypage rapide et de production de haute qualité avec les technologies FDM et SLA.",
-    "discoverServices": "Découvrir nos services",
+    "discoverServices": "Découvrir les technologies",
     "requestQuote": "Demander un devis",
     "stats": {
       "experience": "Années d'expérience",
@@ -69,15 +72,15 @@
     "haiIdeaFallbackText": "Vous avez une idee ?"
   },
   "services": {
-    "title": "Nos Services",
+    "title": "Nos technologies",
     "subtitle": "Nos solutions 3D",
-    "description": "Nous offrons une gamme complète de services d'impression 3D, de numérisation et de prototypage pour transformer vos idées en objets réels avec précision et qualité professionnelle.",
-    "seeAll": "Découvrir tous nos services",
+    "description": "Une gamme complète de technologies d’impression 3D, de scan et de prototypage pour transformer vos idées en objets réels avec précision professionnelle.",
+    "seeAll": "Découvrir toutes nos technologies",
     "readyToRealize": "Prêt à réaliser votre projet?",
     "contactToday": "Contactez-nous aujourd'hui pour discuter de votre projet d'impression 3D et recevoir un devis personnalisé.",
     "calculateQuote": "Calculer un devis",
-    "heroTitle": "Nos Services",
-    "heroSubtitle": "Solutions complètes d'impression 3D, numérisation et prototypage pour transformer vos idées en réalité.",
+    "heroTitle": "Nos technologies",
+    "heroSubtitle": "Un laboratoire complet de fabrication additive : polymères, métal, scan 3D et workflows numériques pour transformer vos idées en pièces réelles.",
     "characteristics": "Caractéristiques",
     "availableMaterials": "Matériaux disponibles",
     "applications": "Applications",
@@ -97,7 +100,7 @@
       ],
       "features": [
         "Large gamme de matériaux disponibles (PLA, ABS, PETG, TPU, Nylon, etc.)",
-        "Dimensions d'impression jusqu'à 300x300x300mm",
+        "Dimensions d’impression jusqu’à 800×800×1000 mm",
         "Résolution jusqu'à 100 microns par couche",
         "Idéal pour prototypes fonctionnels, pièces mécaniques et petites séries",
         "Délais de livraison rapides et prix compétitifs"
@@ -500,6 +503,28 @@
           "applications": "Joints, amortisseurs, pièces flexibles"
         }
       ]
+    },
+    "heroEyebrow": "Technologies",
+    "introTitle": "Un hub technologique, pas un catalogue générique",
+    "introText": "Nous choisissons le bon procédé pour chaque projet — du prototypage rapide à la petite série industrielle — avec des machines professionnelles et un support technique dédié depuis Figino (Lugano).",
+    "catalogTitle": "Explorer les technologies",
+    "catalogSubtitle": "Filtrez par famille technologique et ouvrez la fiche dédiée avec matériaux, applications et FAQ.",
+    "faqTeaserTitle": "Des questions sur les délais, matériaux ou devis ?",
+    "faqTeaserText": "Nous avons rassemblé les réponses les plus demandées dans une page FAQ claire — utile avant de demander un devis.",
+    "faqTeaserCta": "Voir la FAQ",
+    "groups": {
+      "all": "Toutes",
+      "polymer": "Polymères",
+      "metal": "Métal",
+      "digital": "Digital & services"
+    },
+    "pillars": {
+      "rangeTitle": "Gamme complète",
+      "rangeText": "FDM, SLA, SLS, MJF, SLM, PolyJet, CFF, LSAM et plus : une plateforme large pour pièces esthétiques, fonctionnelles ou structurelles.",
+      "qualityTitle": "Qualité industrielle",
+      "qualityText": "Processus contrôlés, matériaux sélectionnés et vérification des pièces avant livraison — standards adaptés aux entreprises et professionnels.",
+      "supportTitle": "Support technique",
+      "supportText": "Nous vous aidons à choisir technologie et matériau, optimiser le fichier et planifier des délais réalistes."
     }
   },
   "about": {
@@ -1210,38 +1235,71 @@
   "footer": {
     "description": "Nous transformons vos idées en objets réels grâce à la technologie d'impression 3D.",
     "quickLinks": "Liens rapides",
-    "servicesTitle": "Services",
+    "servicesTitle": "Technologies",
     "contactTitle": "Nous contacter",
     "calculateQuote": "Calculer devis",
     "copyright": "Tous droits réservés"
   },
   "faq": {
-    "title": "Questions Fréquentes",
-    "subtitle": "Réponses aux questions les plus courantes sur nos services",
-    "howItWorks": "Comment fonctionne la calculatrice ?",
-    "accuracy": "Quelle est la précision du devis généré ?",
+    "title": "Questions fréquentes",
+    "subtitle": "Réponses aux questions les plus courantes sur l’impression 3D, les devis et les livraisons",
+    "pageTitle": "Questions fréquentes",
+    "pageSubtitle": "Tout ce qu’il faut savoir sur l’impression 3D, le scan, les devis et les livraisons — réponses claires du laboratoire 3DMAKES.",
+    "filterAll": "Toutes",
+    "viewAll": "Voir toutes les FAQ",
+    "titleSpecific": "Questions spécifiques",
+    "stillHaveQuestions": "Vous n’avez pas trouvé la réponse ?",
+    "stillHaveQuestionsText": "Écrivez-nous ou calculez un devis : nous vous aidons à choisir la bonne technologie pour votre projet.",
+    "ctaQuote": "Calculer un devis",
+    "ctaTechnologies": "Découvrir les technologies",
+    "howItWorks": "Comment fonctionne le calculateur ?",
+    "howItWorksAnswer": "Vous chargez un fichier 3D (STL ou similaire), choisissez technologie, matériau et qualité : le système estime volume, temps et coût indicatif. Le devis définitif est toujours confirmé par notre équipe.",
+    "accuracy": "Quelle est la précision du devis généré ?",
+    "accuracyAnswer": "Le calculateur fournit une estimation fiable basée sur le volume et les paramètres d’impression. Supports, post-traitement ou finitions spéciales peuvent modifier le prix final — nous confirmons tout avant production.",
     "fileFormats": "Quels formats de fichiers acceptez-vous pour l’impression 3D ?",
-    "deliveryTimes": "Combien de temps prend une commande d'impression 3D?",
-    "modelModification": "Est-il possible de modifier mon modèle 3D avant de l'imprimer ?",
+    "fileFormatsAnswer": "Nous acceptons principalement STL, OBJ et STEP. Si vous avez un autre format (3MF, IGES, SolidWorks, etc.), contactez-nous : nous pouvons souvent le convertir ou l’optimiser.",
+    "deliveryTimes": "Combien de temps prend une commande d’impression 3D ?",
+    "modelModification": "Est-il possible de modifier mon modèle 3D avant impression ?",
+    "modelModificationAnswer": "Oui. Nous pouvons optimiser épaisseurs, tolérances, orientation et supports, ou appliquer de petites modifications sur demande avant production.",
     "pricing": "Tarifs",
     "quality": "Qualité",
-    "fdmMaterials": "Quels matériaux offrez-vous pour l'impression 3D?",
-    "fdmMaterialsAnswer": "Nous offrons une large gamme de matériaux incluant PLA, PETG, ABS, TPU, Nylon et filaments renforcés fibre de carbone. Pour applications haute précision, nous offrons aussi services d'impression résine.",
-    "deliveryTimesAnswer": "Les délais dépendent de divers facteurs comme taille, complexité et quantité des pièces. Commandes standard complétées en 2-5 jours ouvrables. Services urgents disponibles pour projets prioritaires.",
-    "maxSize": "Quelle est la taille maximum d'impression?",
-    "maxSizeAnswer": "Nos imprimantes FDM peuvent réaliser pièces jusqu'à 350×350×400mm en une pièce. Objets plus grands peuvent être imprimés en sections et assemblés.",
-    "scanningPrecision": "Quelle est la précision de votre service de numérisation 3D?",
-    "scanningPrecisionAnswer": "Nos scanners professionnels atteignent précision jusqu'à 0,1mm selon taille et complexité de l'objet. Nous pouvons capturer géométrie et informations texture.",
-    "largeObjects": "Pouvez-vous numériser des objets volumineux ?",
-    "largeObjectsAnswer": "Oui, nous pouvons numériser des objets de différentes tailles. Pour les objets volumineux, nous utilisons plusieurs scans qui sont ensuite combinés en un seul modèle 3D.",
-    "priceCalculation": "Comment calculez-vous les prix?",
-    "priceCalculationAnswer": "Prix basés sur volume matériau, temps impression et complexité. Facteurs incluent type matériau, paramètres qualité et exigences post-traitement. Utilisez notre calculateur en ligne pour devis instantanés.",
-    "bulkDiscounts": "Offrez-vous des réductions pour les commandes groupées ?",
-    "bulkDiscountsAnswer": "Oui, nous offrons des réductions pour les commandes groupées. Plus de 5 pièces bénéficient d'une réduction de 10 % et plus de 10 pièces bénéficient d'une réduction de 15 %. Contactez-nous pour des devis personnalisés sur les grosses commandes.",
-    "qualityControl": "Quelles mesures de contrôle qualité prenez-vous ?",
-    "qualityControlAnswer": "Chaque impression est soumise à des contrôles de qualité rigoureux, y compris une vérification dimensionnelle et une inspection visuelle. Nous fournissons des épreuves pour les applications critiques et maintenons des normes de contrôle de qualité rigoureuses.",
-    "designAssistance": "Fournissez-vous une aide à la conception ?",
-    "designAssistanceAnswer": "Oui, notre équipe peut vous aider à optimiser les conceptions pour l’impression 3D, suggérer des matériaux appropriés et fournir des conseils techniques tout au long du projet."
+    "categories": {
+      "general": "Général",
+      "printing": "Impression 3D",
+      "scanning": "Scan 3D",
+      "pricing": "Devis et prix",
+      "quality": "Qualité et design",
+      "orders": "Commandes et livraisons"
+    },
+    "fdmMaterials": "Quels matériaux offrez-vous pour l’impression 3D ?",
+    "fdmMaterialsAnswer": "Nous proposons une large gamme : PLA, PETG, ABS, TPU, Nylon et filaments renforcés fibre de carbone. Pour la haute précision, aussi résine (SLA/PolyJet), poudre (SLS, MJF) et SLM pour le métal.",
+    "deliveryTimesAnswer": "Les délais dépendent de la taille, de la technologie, de la complexité et de la quantité. Les commandes standard se terminent souvent en 2–5 jours ouvrables ; les urgences ou petites séries nécessitent une planification dédiée.",
+    "maxSize": "Quelle est la taille maximale d’impression ?",
+    "maxSizeAnswer": "En FDM nous atteignons jusqu’à 800×800×1000 mm (80×80×100 cm) en une seule pièce. Les objets plus grands peuvent être imprimés en sections puis assemblés.",
+    "scanningPrecision": "Quelle est la précision de votre service de scan 3D ?",
+    "scanningPrecisionAnswer": "Nos scanners professionnels atteignent une précision jusqu’à environ 0,1 mm selon la taille et la complexité. Nous capturons la géométrie et, si utile, la texture.",
+    "largeObjects": "Pouvez-vous scanner de grands objets ?",
+    "largeObjectsAnswer": "Oui : nous pouvons numériser de grands objets jusqu’à environ 2×2×2 mètres, en fusionnant plusieurs scans en un seul modèle 3D cohérent.",
+    "scanOutput": "Que reçois-je après un scan 3D ?",
+    "scanOutputAnswer": "Vous recevez un modèle numérique prêt pour CAD, reverse engineering ou impression 3D (généralement mesh STL/OBJ ou, sur demande, fichiers préparés pour la conception).",
+    "priceCalculation": "Comment calculez-vous les prix ?",
+    "priceCalculationAnswer": "Le prix tient compte du volume matière, du temps machine, de la technologie, de la qualité et du post-traitement éventuel. Utilisez le calculateur en ligne pour une estimation immédiate, ou contactez-nous pour un devis sur mesure.",
+    "bulkDiscounts": "Offrez-vous des remises pour commandes groupées ?",
+    "bulkDiscountsAnswer": "Oui : typiquement environ −10 % dès 5 pièces et environ −15 % dès 10 pièces, avec conditions évaluées au cas par cas pour les petites séries.",
+    "qualityControl": "Quelles mesures de contrôle qualité appliquez-vous ?",
+    "qualityControlAnswer": "Chaque pièce passe des contrôles dimensionnels et une inspection visuelle. Pour les applications critiques, nous pouvons prévoir des impressions d’essai et des paramètres de process documentés.",
+    "designAssistance": "Fournissez-vous une aide au design ?",
+    "designAssistanceAnswer": "Oui. Nous aidons à optimiser les designs pour l’impression 3D, choisir matériaux et technologies, et conseiller techniquement tout au long du projet.",
+    "whichTechnology": "Comment choisir la bonne technologie ?",
+    "whichTechnologyAnswer": "Nous vous guidons selon le budget, la résistance, la précision, l’esthétique et la quantité. Par exemple FDM pour pièces fonctionnelles économiques, SLA pour le détail fin, SLS/MJF pour séries et géométries complexes, SLM pour le métal.",
+    "postProcessing": "Faites-vous aussi les finitions et le post-traitement ?",
+    "postProcessingAnswer": "Oui : retrait des supports, sablage, ponçage, peinture et autres finitions selon technologie et matériau. Nous les indiquons dans le devis si nécessaires.",
+    "pickupShipping": "Puis-je retirer sur place ou faites-vous des envois ?",
+    "pickupShippingAnswer": "Oui. Retrait à Figino (Lugano) ou envoi au Tessin, en Suisse et en Italie du Nord. Nous coordonnons retrait et livraison selon l’urgence.",
+    "urgentOrders": "Gérez-vous les commandes urgentes ?",
+    "urgentOrdersAnswer": "Lorsque la capacité le permet, nous activons une priorité accélérée. Indiquez l’échéance dans le devis ou le formulaire : nous confirmons des délais réalistes sous quelques heures ouvrables.",
+    "confidentiality": "Mes fichiers et projets restent-ils confidentiels ?",
+    "confidentialityAnswer": "Oui. Les fichiers ne sont utilisés que pour devis et production. Sur demande, nous pouvons formaliser un accord de confidentialité (NDA) pour projets sensibles."
   },
   "search": {
     "title": "Rechercher des modèles 3D",
@@ -1266,8 +1324,8 @@
     "allArticles": "Tous les articles",
     "noArticlesFound": "Aucun article trouvé",
     "articlesCategory": "Articles dans {{category}}",
-    "moreServicesTitle": "En savoir plus sur nos services",
-    "moreServicesDescription": "Voulez-vous en savoir plus? Découvrez nos services ou contactez-nous pour une consultation personnalisée.",
+    "moreServicesTitle": "Découvrir nos technologies",
+    "moreServicesDescription": "Envie d’en savoir plus ? Explorez les technologies, consultez la FAQ ou contactez-nous pour un conseil personnalisé.",
     "categories": {
       "innovation": "Innovation",
       "technology": "Technologie",
@@ -1328,7 +1386,7 @@
       "excerpt": "Une explication détaillée des principes de fonctionnement de l'impression 3D, des technologies les plus courantes aux matériaux pouvant être utilisés."
     },
     "materials": {
-      "title": "Les meilleurs matériaux pour l'impression 3D en 2023",
+      "title": "Les meilleurs matériaux pour l'impression 3D en 2026",
       "excerpt": "Comparaison entre PLA, ABS, PETG et résines : caractéristiques, avantages et applications idéales pour chaque matériau d'impression."
     },
     "rapidPrototyping": {
@@ -1342,6 +1400,30 @@
     "printerComparison": {
       "title": "Les meilleures imprimantes 3D pour un usage professionnel",
       "excerpt": "Analyse comparative des meilleures imprimantes 3D professionnelles actuellement sur le marché : spécifications, prix et performances."
+    },
+    "fdmVsSla": {
+      "title": "FDM vs SLA : quelle technologie d’impression 3D choisir",
+      "excerpt": "Comparaison pratique FDM/SLA : coûts, détail, résistance, délais et cas d’usage pour choisir le bon procédé."
+    },
+    "scanningGuide": {
+      "title": "Scan 3D et reverse engineering : quand c’est utile",
+      "excerpt": "Numériser des pièces réelles jusqu’à environ 2×2×2 m : pièces détachées, contrôle dimensionnel et réplique en impression 3D."
+    },
+    "laserMetal": {
+      "title": "Découpe et gravure laser sur métal : applications concrètes",
+      "excerpt": "Plaques, numéros de série, QR et pièces : marquage et découpe laser fibre sur acier, aluminium, laiton et cuivre."
+    },
+    "slmMetal": {
+      "title": "Impression 3D métal (SLM) : pièces structurelles sans outillage",
+      "excerpt": "Quand le SLM métal est pertinent pour pièces fonctionnelles, géométries complexes et petites séries sans moule."
+    },
+    "fileChecklist": {
+      "title": "Préparer un fichier STL ou STEP pour l’impression 3D",
+      "excerpt": "Erreurs fréquentes, épaisseurs mini, tolérances et formats acceptés : checklist avant de demander un devis."
+    },
+    "slsMjfSeries": {
+      "title": "Petites séries SLS/MJF : quand c’est mieux qu’un moule",
+      "excerpt": "Bridge manufacturing de 10 à quelques centaines de pièces : délais, coûts et avantages SLS/MJF vs injection."
     }
   },
   "userFiles": {
@@ -1374,7 +1456,7 @@
   "contactSuccess": {
     "thankYouDetailed": "Merci de nous avoir contactés ! Nous avons reçu votre message et vous répondrons dans les 24 heures ouvrables.",
     "backToHome": "Retour à la page d'accueil",
-    "discoverServices": "Découvrez les prestations",
+    "discoverServices": "Découvrir les technologies",
     "howToFindUs": "En attendant, voici comment nous trouver",
     "urgentContact": "Si vous avez une urgence ou préférez nous contacter directement, voici toutes nos coordonnées.",
     "contacts": "Contacts",

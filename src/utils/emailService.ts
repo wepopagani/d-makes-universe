@@ -45,7 +45,7 @@ export const sendWelcomeEmail = async (userData: {
         <p>Ciao <strong>${userData.nome}</strong>, grazie per esserti registrato su 3DMAKES.</p>
         <p>Da ora puoi gestire i tuoi progetti 3D, richiedere preventivi e monitorare i tuoi ordini in un unico posto.</p>
       `,
-      'Esplora i Servizi',
+      'Esplora le Tecnologie',
       'https://3dmakes.ch/services'
     );
 

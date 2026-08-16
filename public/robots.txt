@@ -21,6 +21,7 @@ Crawl-delay: 1
 
 # Allow access to all resources
 Allow: /services
+Allow: /faq
 Allow: /calculator
 Allow: /about
 Allow: /mission

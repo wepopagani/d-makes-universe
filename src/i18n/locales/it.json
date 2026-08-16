@@ -2,7 +2,7 @@
   "nav": {
     "about": "Chi Siamo",
     "mission": "Mission",
-    "services": "Servizi",
+    "services": "Tecnologie",
     "shop": "Shop",
     "drones": "Droni",
     "blog": "Blog",
@@ -10,27 +10,28 @@
     "contact": "Contatti",
     "requestQuote": "Richiedi Preventivo",
     "clientArea": "Area Clienti",
-    "admin": "Admin"
+    "admin": "Admin",
+    "faq": "FAQ"
   },
   "seo": {
     "titleSuffix": "| 3DMAKES",
     "homeTitle": "Stampa 3D Professionale | Lugano & Ticino | 3DMAKES",
-    "homeDescription": "Servizi di stampa 3D di alta qualità a Lugano, Ticino e Lombardia. Prototipazione rapida, modellazione 3D e produzione con tecnologie FDM e SLA.",
+    "homeDescription": "Tecnologie di stampa 3D di alta qualità a Lugano, Ticino e Lombardia. Prototipazione rapida, modellazione 3D e produzione con FDM, SLA e altro.",
     "aboutTitle": "Chi Siamo | Team, Valori e Storia | 3DMAKES Lugano",
     "aboutDescription": "Scopri 3DMAKES: il team, la mission e l’esperienza nella stampa 3D professionale, prototipazione rapida e produzione di qualità.",
     "blogIndexTitle": "Blog Stampa 3D | Guide, Casi Studio e Novità | 3DMAKES",
-    "servicesIndexTitle": "Servizi Stampa 3D | FDM, SLA, Laser | 3DMAKES",
-    "servicesIndexDescription": "Servizi di stampa 3D professionale: FDM, SLA, scansione 3D, taglio e incisione laser, prototipazione rapida a Lugano (Ticino) e Lombardia.",
+    "servicesIndexTitle": "Tecnologie Stampa 3D | FDM, SLA, SLM, Laser | 3DMAKES",
+    "servicesIndexDescription": "Le tecnologie di produzione additiva 3DMAKES a Lugano: FDM, SLA, SLS, MJF, SLM, scansione 3D, laser e prototipazione rapida per Ticino e Lombardia.",
     "missionTitle": "Mission | Stampa 3D per tutti | 3DMAKES",
     "missionDescription": "Rendere la stampa 3D accessibile a tutti, con servizi di qualità a Lugano e in Ticino.",
     "calculatorTitle": "Calcolatore Preventivo Stampa 3D | 3DMAKES",
     "calculatorDescription": "Preventivo istantaneo per stampa 3D: carica STL, scegli materiale e qualità. Stima rapida dei costi a Lugano e Ticino.",
     "contactSuccessTitle": "Messaggio Inviato | Grazie | 3DMAKES",
-    "contactSuccessDescription": "Abbiamo ricevuto il tuo messaggio e ti risponderemo entro 24 ore lavorative. Contatti e servizi 3DMAKES a Lugano.",
+    "contactSuccessDescription": "Abbiamo ricevuto il tuo messaggio e ti risponderemo entro 24 ore lavorative. Contatti e tecnologie 3DMAKES a Lugano.",
     "coursesTitle": "Corso Base Stampa 3D | Iscrizione | 3DMAKES",
     "coursesDescription": "Corso base di stampa 3D a Lugano: piccoli gruppi, 2 serate, pratica FDM e SLA. Iscrizione online.",
     "notFoundTitle": "Pagina non trovata | 3DMAKES",
-    "notFoundDescription": "La pagina richiesta non esiste. Torna alla home o esplora i servizi di stampa 3D a Lugano.",
+    "notFoundDescription": "La pagina richiesta non esiste. Torna alla home o esplora le tecnologie di stampa 3D a Lugano.",
     "loginTitle": "Accedi | Area Clienti | 3DMAKES",
     "loginDescription": "Accesso all’area clienti 3DMAKES: preventivi, ordini e progetti.",
     "registerTitle": "Registrati | 3DMAKES",
@@ -38,19 +39,21 @@
     "forgotPasswordTitle": "Recupera password | 3DMAKES",
     "forgotPasswordDescription": "Reimposta la password del tuo account 3DMAKES.",
     "homeFaqQ1": "Dove si trova il laboratorio 3DMAKES?",
-    "homeFaqA1": "Siamo a Figino (Ticino), Svizzera; serviamo clienti a Lugano, in tutto il Cantone e in Lombardia.",
+    "homeFaqA1": "Siamo a Figino (Ticino), in Svizzera. Serviamo clienti in tutto il Ticino, in tutta la Svizzera e nel Nord Italia.",
     "homeFaqQ2": "Quali tecnologie di stampa 3D e lavorazioni offrite?",
-    "homeFaqA2": "Stampa 3D FDM e SLA, scansione 3D, taglio e incisione laser, prototipazione rapida e supporto su file.",
+    "homeFaqA2": "Offriamo stampa 3D FDM, SLA, SLS, SLM, MJF e altre tecnologie, oltre a scansione 3D, taglio e incisione laser, prototipazione rapida e supporto sui file.",
     "homeFaqQ3": "Come posso richiedere un preventivo?",
     "homeFaqA3": "Usa il calcolatore preventivo sul sito oppure il modulo contatti: ti rispondiamo con tempi e costi indicativi.",
     "homeFaqQ4": "Lavorate anche oltre il confine italo-svizzero?",
-    "homeFaqA4": "Sì: operiamo in Ticino e Svizzera e collaboriamo con clienti in Lombardia e Nord Italia."
+    "homeFaqA4": "Sì, certo: lavoriamo oltre confine e serviamo clienti in Ticino, in tutta la Svizzera e nel Nord Italia.",
+    "faqTitle": "Domande Frequenti | FAQ Stampa 3D | 3DMAKES",
+    "faqDescription": "Risposte chiare su materiali, tempi, preventivi, scansione 3D e qualità delle tecnologie 3DMAKES a Lugano, Ticino e Lombardia."
   },
   "hero": {
     "title": "Stampa 3D Professionale",
     "titleHighlight": "a Lugano, Ticino e Lombardia",
     "subtitle": "Specialisti nella stampa 3D, offriamo soluzioni di prototipazione rapida e produzione di alta qualità con tecnologie FDM e SLA.",
-    "discoverServices": "Scopri i Servizi",
+    "discoverServices": "Scopri le tecnologie",
     "requestQuote": "Richiedi Preventivo",
     "stats": {
       "experience": "Anni di esperienza",
@@ -69,15 +72,15 @@
     "haiIdeaFallbackText": "Hai Idea"
   },
   "services": {
-    "title": "I Nostri Servizi",
-    "subtitle": "Le nostre soluzioni 3D",
-    "description": "Offriamo una gamma completa di servizi di stampa 3D, scansione e prototipazione per trasformare le tue idee in oggetti reali con precisione e qualità professionale.",
-    "seeAll": "Scopri tutti i nostri servizi",
+    "title": "Le nostre tecnologie",
+    "subtitle": "Soluzioni e tecnologie 3D",
+    "description": "Offriamo una gamma completa di tecnologie di stampa 3D, scansione e prototipazione per trasformare le tue idee in oggetti reali con precisione e qualità professionale.",
+    "seeAll": "Scopri tutte le nostre tecnologie",
     "readyToRealize": "Pronto a realizzare il tuo progetto?",
     "contactToday": "Contattaci oggi stesso per discutere del tuo progetto di stampa 3D e ricevere un preventivo personalizzato.",
     "calculateQuote": "Calcola un preventivo",
-    "heroTitle": "I Nostri Servizi",
-    "heroSubtitle": "Soluzioni complete di stampa 3D, scansione e prototipazione per trasformare le tue idee in realtà.",
+    "heroTitle": "Le nostre tecnologie",
+    "heroSubtitle": "Un laboratorio completo di produzione additiva: polimeri, metallo, scansione 3D e lavorazioni digitali per trasformare le tue idee in pezzi reali.",
     "characteristics": "Caratteristiche",
     "availableMaterials": "Materiali disponibili",
     "applications": "Applicazioni",
@@ -92,12 +95,12 @@
       "description": "La tecnologia Fused Deposition Modeling (FDM) Stratasys è ideale per la produzione di prototipi funzionali e parti resistenti. Utilizziamo macchine professionali Fortus per garantire la massima qualità e precisione industriale.",
       "machines": [
         "Fortus 900",
-        "Fortus 450", 
+        "Fortus 450",
         "Fortus 370"
       ],
       "features": [
         "Tecnologia Stratasys professionale per applicazioni industriali",
-        "Dimensioni di stampa fino a 914x610x914mm (Fortus 900)",
+        "Dimensioni di stampa fino a 800×800×1000 mm",
         "Risoluzione fino a 100 micron per strato",
         "Ideale per prototipi funzionali, parti meccaniche e produzione industriale",
         "Materiali certificati per applicazioni critiche"
@@ -546,6 +549,28 @@
           "applications": "Guarnizioni, ammortizzatori, parti flessibili e consumer"
         }
       ]
+    },
+    "heroEyebrow": "Tecnologie",
+    "introTitle": "Un hub tecnologico, non un catalogo generico",
+    "introText": "Scegliamo la tecnologia giusta per ogni progetto — dalla prototipazione rapida alla piccola serie industriale — con macchinari professionali e supporto tecnico dedicato da Figino (Lugano).",
+    "catalogTitle": "Esplora le tecnologie",
+    "catalogSubtitle": "Filtra per famiglia tecnologica e apri la scheda dedicata con materiali, applicazioni e FAQ.",
+    "faqTeaserTitle": "Hai dubbi su tempi, materiali o preventivi?",
+    "faqTeaserText": "Abbiamo raccolto le risposte più richieste in una pagina FAQ chiara e aggiornata — utile prima di richiedere un preventivo.",
+    "faqTeaserCta": "Vai alle FAQ",
+    "groups": {
+      "all": "Tutte",
+      "polymer": "Polimeri",
+      "metal": "Metallo",
+      "digital": "Digitale & servizi"
+    },
+    "pillars": {
+      "rangeTitle": "Gamma completa",
+      "rangeText": "FDM, SLA, SLS, MJF, SLM, PolyJet, CFF, LSAM e altro: una piattaforma ampia per pezzi estetici, funzionali o strutturali.",
+      "qualityTitle": "Qualità industriale",
+      "qualityText": "Processi controllati, materiali selezionati e verifica del pezzo prima della consegna — standard adatti ad aziende e professionisti.",
+      "supportTitle": "Supporto tecnico",
+      "supportText": "Ti aiutiamo a scegliere tecnologia e materiale, ottimizzare il file e pianificare tempi di consegna realistici."
     }
   },
   "about": {
@@ -1043,17 +1068,17 @@
         }
       },
       "sla": {
-        "100": {
-          "label": "Veloce (100μm)",
-          "desc": "Stampa rapida, buona qualità generale."
+        "25": {
+          "label": "Alta (25μm)",
+          "desc": "Massima qualità con dettagli fini."
         },
         "50": {
           "label": "Standard (50μm)",
           "desc": "Qualità standard per la maggior parte delle applicazioni."
         },
-        "25": {
-          "label": "Alta (25μm)",
-          "desc": "Massima qualità con dettagli fini."
+        "100": {
+          "label": "Veloce (100μm)",
+          "desc": "Stampa rapida, buona qualità generale."
         }
       },
       "laser": {
@@ -1092,14 +1117,6 @@
     "processing": "Elaborazione...",
     "infill": "Riempimento",
     "selectProcessType": "Seleziona tipo di lavorazione",
-    "laserInfo": {
-      "title": "Informazioni Laser",
-      "workArea": "Area di lavoro: 250 × 250 mm",
-      "precision": "Precisione: 0,01 mm",
-      "fileFormats": "Formati: DXF, PDF",
-      "materials": "Materiali: acciaio inox, alluminio, ottone, rame, acrilico, pelle e altri",
-      "thickness": "Taglio metalli: alluminio fino a 1 mm, acciaio inox e ottone fino a 2 mm"
-    },
     "costBreakdown": "Ripartizione Costi",
     "materialCost": "Costo Materiale",
     "electricityCost": "Costo Elettricità",
@@ -1191,7 +1208,7 @@
   },
   "status": {
     "pending": "In attesa",
-    "processing": "In lavorazione", 
+    "processing": "In lavorazione",
     "inProgress": "In corso",
     "completed": "Completato",
     "cancelled": "Annullato",
@@ -1212,38 +1229,71 @@
   "footer": {
     "description": "Trasformiamo le tue idee in oggetti reali attraverso la tecnologia di stampa 3D.",
     "quickLinks": "Link Rapidi",
-    "servicesTitle": "Servizi",
+    "servicesTitle": "Tecnologie",
     "contactTitle": "Contattaci",
     "calculateQuote": "Calcola Preventivo",
     "copyright": "Tutti i diritti riservati"
   },
   "faq": {
     "title": "Domande Frequenti",
-    "subtitle": "Risposte alle domande più comuni sui nostri servizi",
+    "subtitle": "Risposte alle domande più comuni su stampa 3D, preventivi e consegne",
+    "pageTitle": "Domande frequenti",
+    "pageSubtitle": "Tutto quello che serve sapere su stampa 3D, scansione, preventivi e consegne — con risposte chiare dal laboratorio 3DMAKES.",
+    "filterAll": "Tutte",
+    "viewAll": "Vedi tutte le FAQ",
+    "titleSpecific": "Domande specifiche",
+    "stillHaveQuestions": "Non hai trovato la risposta?",
+    "stillHaveQuestionsText": "Scrivici o calcola un preventivo: ti aiutiamo a scegliere la tecnologia giusta per il tuo progetto.",
+    "ctaQuote": "Calcola un preventivo",
+    "ctaTechnologies": "Scopri le tecnologie",
     "howItWorks": "Come funziona il calcolatore?",
+    "howItWorksAnswer": "Carichi il file 3D (STL o simili), selezioni tecnologia, materiale e qualità: il sistema stima volume, tempo e costo indicativo. Il preventivo definitivo viene sempre confermato dal nostro team.",
     "accuracy": "Quanto è accurato il preventivo generato?",
+    "accuracyAnswer": "Il calcolatore fornisce una stima affidabile basata su volume e parametri di stampa. Fattori come supporti, post-processing o finiture speciali possono variare il prezzo finale — te lo comunichiamo prima di procedere.",
     "fileFormats": "Quali formati di file accettate per la stampa 3D?",
+    "fileFormatsAnswer": "Accettiamo principalmente STL, OBJ e STEP. Se hai un formato diverso (3MF, IGES, SolidWorks, ecc.), contattaci: spesso possiamo convertirlo o ottimizzarlo per la stampa.",
     "deliveryTimes": "Quanto tempo richiede un ordine di stampa 3D?",
     "modelModification": "È possibile modificare il mio modello 3D prima della stampa?",
+    "modelModificationAnswer": "Sì. Possiamo ottimizzare spessori, tolleranze, orientamento e supporti, oppure apportare piccole modifiche al modello su richiesta prima di avviare la produzione.",
     "pricing": "Prezzi",
     "quality": "Qualità",
+    "categories": {
+      "general": "Generale",
+      "printing": "Stampa 3D",
+      "scanning": "Scansione 3D",
+      "pricing": "Preventivi e prezzi",
+      "quality": "Qualità e design",
+      "orders": "Ordini e consegne"
+    },
     "fdmMaterials": "Quali materiali offrite per la stampa 3D?",
-    "fdmMaterialsAnswer": "Offriamo un'ampia gamma di materiali tra cui PLA, PETG, ABS, TPU, Nylon e filamenti rinforzati con fibra di carbonio. Per applicazioni ad alta precisione, offriamo anche servizi di stampa in resina.",
-    "deliveryTimesAnswer": "I tempi di consegna dipendono da diversi fattori come dimensioni, complessità e quantità dei pezzi. Gli ordini standard vengono completati in 2-5 giorni lavorativi. Sono disponibili servizi urgenti per progetti prioritari.",
+    "fdmMaterialsAnswer": "Offriamo un’ampia gamma di materiali tra cui PLA, PETG, ABS, TPU, Nylon e filamenti rinforzati con fibra di carbonio. Per applicazioni ad alta precisione offriamo anche stampa in resina (SLA/PolyJet) e tecnologie a polvere (SLS, MJF) oltre allo SLM per metallo.",
+    "deliveryTimesAnswer": "I tempi dipendono da dimensioni, tecnologia, complessità e quantità. Gli ordini standard spesso si chiudono in 2–5 giorni lavorativi; progetti urgenti o piccole serie possono richiedere pianificazione dedicata.",
     "maxSize": "Qual è la dimensione massima di stampa?",
-    "maxSizeAnswer": "Le nostre stampanti FDM possono realizzare pezzi fino a 350×350×400mm in un unico pezzo. Oggetti più grandi possono essere stampati in sezioni e assemblati.",
+    "maxSizeAnswer": "Con FDM arriviamo fino a 800×800×1000 mm (80×80×100 cm) in un unico pezzo. Oggetti più grandi possono essere stampati a sezioni e assemblati.",
     "scanningPrecision": "Qual è la precisione del vostro servizio di scansione 3D?",
-    "scanningPrecisionAnswer": "I nostri scanner professionali raggiungono una precisione fino a 0,1mm in base alle dimensioni e alla complessità dell'oggetto. Possiamo acquisire sia la geometria che le informazioni sulla texture.",
+    "scanningPrecisionAnswer": "I nostri scanner professionali raggiungono una precisione fino a circa 0,1 mm in base a dimensioni e complessità dell’oggetto. Possiamo acquisire geometria e, dove utile, informazioni di texture.",
     "largeObjects": "Potete scansionare oggetti grandi?",
-    "largeObjectsAnswer": "Sì, possiamo scansionare oggetti di varie dimensioni. Per oggetti grandi, utilizziamo scansioni multiple che vengono poi combinate in un unico modello 3D.",
+    "largeObjectsAnswer": "Sì: possiamo scansionare oggetti grandi fino a circa 2×2×2 metri, unendo più scansioni in un unico modello 3D coerente.",
+    "scanOutput": "Cosa ricevo dopo una scansione 3D?",
+    "scanOutputAnswer": "Ricevi un modello digitale pronto per uso CAD, reverse engineering o stampa 3D (tipicamente mesh STL/OBJ o, su richiesta, file elaborati per la progettazione).",
     "priceCalculation": "Come calcolate i prezzi?",
-    "priceCalculationAnswer": "I prezzi sono basati sul volume del materiale, tempo di stampa e complessità. I fattori includono tipo di materiale, impostazioni di qualità e requisiti di post-processing. Usa il nostro calcolatore online per preventivi istantanei.",
-    "bulkDiscounts": "Offrite sconti per ordini all'ingrosso?",
-    "bulkDiscountsAnswer": "Sì, offriamo sconti per ordini all'ingrosso. 5+ pezzi ricevono uno sconto del 10%, e 10+ pezzi ricevono uno sconto del 15%. Contattaci per preventivi personalizzati su grandi ordini.",
+    "priceCalculationAnswer": "Il prezzo considera volume di materiale, tempo macchina, tecnologia, qualità e eventuale post-processing. Usa il calcolatore online per una stima immediata, oppure contattaci per un preventivo su misura.",
+    "bulkDiscounts": "Offrite sconti per ordini all’ingrosso?",
+    "bulkDiscountsAnswer": "Sì: tipicamente 5+ pezzi circa −10% e 10+ pezzi circa −15%, con condizioni valutate caso per caso sulle piccole serie.",
     "qualityControl": "Quali misure di controllo qualità adottate?",
-    "qualityControlAnswer": "Ogni stampa viene sottoposta a rigorosi controlli di qualità, inclusa la verifica dimensionale e l'ispezione visiva. Forniamo stampe di prova per applicazioni critiche e manteniamo rigorosi standard di controllo qualità.",
+    "qualityControlAnswer": "Ogni pezzo passa controlli dimensionali e ispezione visiva. Per applicazioni critiche possiamo prevedere stampe di prova e parametri di processo documentati.",
     "designAssistance": "Fornite assistenza per il design?",
-    "designAssistanceAnswer": "Sì, il nostro team può aiutare a ottimizzare i design per la stampa 3D, suggerire materiali appropriati e fornire consulenza tecnica durante tutto il progetto."
+    "designAssistanceAnswer": "Sì. Aiutiamo a ottimizzare i design per la stampa 3D, scegliere materiali e tecnologie, e dare consulenza tecnica lungo tutto il progetto.",
+    "whichTechnology": "Come scelgo la tecnologia giusta?",
+    "whichTechnologyAnswer": "Ti guidiamo noi in base a budget, resistenza, precisione, estetica e quantità. Ad esempio FDM per pezzi funzionali convenienti, SLA per dettagli fini, SLS/MJF per serie e geometrie complesse, SLM per metallo.",
+    "postProcessing": "Fate anche finiture e post-processing?",
+    "postProcessingAnswer": "Sì: rimozione supporti, sabbiatura, levigatura, verniciatura e altre finiture in base a tecnologia e materiale. Le indichiamo nel preventivo quando necessarie.",
+    "pickupShipping": "Posso ritirare in sede o ricevete spedizioni?",
+    "pickupShippingAnswer": "Sì. Puoi ritirare a Figino (Lugano) oppure ricevere la spedizione in Ticino, Svizzera e Nord Italia. Coordinamo ritiri e consegne in base all’urgenza del progetto.",
+    "urgentOrders": "Gestite ordini urgenti?",
+    "urgentOrdersAnswer": "Quando la coda di produzione lo consente, attiviamo priorità accelerate. Segnala la scadenza nel preventivo o nel modulo contatti: ti confermiamo tempi reali entro poche ore lavorative.",
+    "confidentiality": "I miei file e progetti restano riservati?",
+    "confidentialityAnswer": "Sì. Trattiamo i file solo per produzione e preventivo. Su richiesta possiamo formalizzare accordi di riservatezza (NDA) per progetti aziendali o sensibili."
   },
   "search": {
     "title": "Cerca Modelli 3D",
@@ -1268,8 +1318,8 @@
     "allArticles": "Tutti gli articoli",
     "noArticlesFound": "Nessun articolo trovato",
     "articlesCategory": "Articoli in {{category}}",
-    "moreServicesTitle": "Scopri di più sui nostri servizi",
-    "moreServicesDescription": "Vuoi saperne di più? Esplora i nostri servizi o contattaci per una consulenza personalizzata.",
+    "moreServicesTitle": "Scopri le nostre tecnologie",
+    "moreServicesDescription": "Vuoi saperne di più? Esplora le tecnologie, consulta le FAQ o contattaci per una consulenza personalizzata.",
     "categories": {
       "innovation": "Innovazione",
       "technology": "Tecnologia",
@@ -1330,7 +1380,7 @@
       "excerpt": "Una spiegazione dettagliata dei principi di funzionamento della stampa 3D, dalle tecnologie più comuni ai materiali utilizzabili."
     },
     "materials": {
-      "title": "I migliori materiali per la stampa 3D nel 2023",
+      "title": "I migliori materiali per la stampa 3D nel 2026",
       "excerpt": "Confronto tra PLA, ABS, PETG e resine: caratteristiche, vantaggi e applicazioni ideali per ogni materiale di stampa."
     },
     "rapidPrototyping": {
@@ -1344,6 +1394,30 @@
     "printerComparison": {
       "title": "Le migliori stampanti 3D per uso professionale",
       "excerpt": "Analisi comparativa delle migliori stampanti 3D professionali attualmente sul mercato: specifiche, prezzi e prestazioni."
+    },
+    "fdmVsSla": {
+      "title": "FDM vs SLA: quale tecnologia di stampa 3D scegliere",
+      "excerpt": "Confronto pratico tra FDM e SLA: costi, dettaglio, resistenza, tempi e casi d’uso. Ti aiutiamo a scegliere la tecnologia giusta per il tuo progetto."
+    },
+    "scanningGuide": {
+      "title": "Scansione 3D e reverse engineering: quando serve (e quando no)",
+      "excerpt": "Come digitalizzare pezzi reali fino a 2×2×2 m: ricambi fuori produzione, ispezione dimensionale e replica in stampa 3D."
+    },
+    "laserMetal": {
+      "title": "Taglio e incisione laser su metallo: applicazioni reali",
+      "excerpt": "Targhe, seriali, QR e componenti: come usiamo il laser a fibra per lavorazioni precise su acciaio, alluminio, ottone e rame."
+    },
+    "slmMetal": {
+      "title": "Stampa 3D in metallo (SLM): pezzi strutturali senza utensili",
+      "excerpt": "Quando conviene la stampa SLM in metallo per pezzi funzionali, geometrie complesse e piccole serie senza stampi."
+    },
+    "fileChecklist": {
+      "title": "Come preparare un file STL o STEP per la stampa 3D (checklist)",
+      "excerpt": "Errori comuni, spessori minimi, tolleranze e formati accettati: una checklist pratica prima di richiedere un preventivo."
+    },
+    "slsMjfSeries": {
+      "title": "Piccole serie con SLS e MJF: quando conviene vs stampo",
+      "excerpt": "Bridge manufacturing da 10 a qualche centinaio di pezzi: tempi, costi e vantaggi di SLS/MJF rispetto allo stampo a iniezione."
     }
   },
   "userFiles": {
@@ -1376,7 +1450,7 @@
   "contactSuccess": {
     "thankYouDetailed": "Grazie per averci contattato! Abbiamo ricevuto il tuo messaggio e ti risponderemo entro 24 ore lavorative.",
     "backToHome": "Torna alla Homepage",
-    "discoverServices": "Scopri i Servizi",
+    "discoverServices": "Scopri le tecnologie",
     "howToFindUs": "Nel frattempo, ecco come puoi trovarci",
     "urgentContact": "Se hai urgenza o preferisci contattarci direttamente, ecco tutti i nostri recapiti.",
     "contacts": "Contatti",
@@ -1686,4 +1760,4 @@
     "orderDisclaimer": "Verrai contattato entro 24 ore per confermare disponibilità, prezzi e modalità di pagamento.",
     "waIntro": "Ciao 3DMAKES! Vorrei ordinare questa configurazione drone:"
   }
-} 
+}

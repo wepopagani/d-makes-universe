@@ -174,8 +174,11 @@ const Blog = () => {
                 <Button asChild className="bg-brand-accent hover:bg-brand-accent/90">
                   <Link to="/services">{t('nav.services')}</Link>
                 </Button>
+                <Button asChild variant="outline" className="border-white text-white bg-white/10 hover:bg-white/20">
+                  <Link to="/faq">{t('nav.faq')}</Link>
+                </Button>
                 <Button asChild className="bg-gray-600 hover:bg-gray-700 text-white">
-                  <Link to="/contact">{t('contact.title')}</Link>
+                  <Link to="/#contact">{t('contact.title')}</Link>
                 </Button>
               </div>
             </div>

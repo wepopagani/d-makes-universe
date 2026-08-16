@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Calculator = () => {
   const { t, i18n } = useTranslation();
@@ -114,8 +115,17 @@ const Calculator = () => {
               </div>
             </div>
             
-            <div className="text-center mt-12">
-              <p className="body-text mb-6">{t('contact.title')}?</p>
+            <div className="text-center mt-12 space-y-5">
+              <div>
+                <Link
+                  to="/faq"
+                  className="inline-flex items-center gap-2 text-brand-blue font-medium hover:text-brand-accent transition-colors"
+                >
+                  {t('faq.viewAll')}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              <p className="body-text mb-2">{t('contact.title')}?</p>
               <a href="mailto:info@3dmakes.ch" className="inline-flex items-center text-brand-accent font-medium hover:underline">
                 {t('contact.form.send')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

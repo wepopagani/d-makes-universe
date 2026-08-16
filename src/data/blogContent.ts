@@ -1,4 +1,5 @@
 import i18n from '@/i18n';
+import { newBlogPostsMeta, newBlogPostsContent } from '@/data/blogArticles2026';
 
 /** Autori ufficiali del blog 3DMAKES (E-E-A-T e schema.org). */
 export const BLOG_AUTHORS = ["Marco Pagani", "Matteo Verdicchio"] as const;
@@ -27,6 +28,16 @@ const t = (key: string, fallback?: string) => {
 };
 
 export const getBlogPosts = () => [
+  ...newBlogPostsMeta.map((post) => ({
+    id: post.id,
+    title: t(post.titleKey, post.titleFallback),
+    excerpt: t(post.excerptKey, post.excerptFallback),
+    imageSrc: post.imageSrc,
+    author: getAuthorForPost(post.id),
+    date: post.date,
+    category: t(post.categoryKey, post.categoryFallback),
+    featured: Boolean(post.featured),
+  })),
   {
     id: "drone-fpv-aether4-stampa-3d",
     title: t(
@@ -137,11 +148,11 @@ export const getBlogPosts = () => [
   },
   {
     id: "materiali-stampa-3d",
-    title: t('blogPosts.materials.title', 'I migliori materiali per la stampa 3D nel 2023'),
+    title: t('blogPosts.materials.title', 'I migliori materiali per la stampa 3D nel 2026'),
     excerpt: t('blogPosts.materials.excerpt', 'Confronto tra PLA, ABS, PETG e resine: caratteristiche, vantaggi e applicazioni.'),
     imageSrc: "https://images.unsplash.com/photo-1615286922420-c6b348ffbd62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     author: getAuthorForPost("materiali-stampa-3d"),
-    date: "23 Sep 2022",
+    date: "16 Aug 2026",
     category: t('blog.categories.tutorial', 'Tutorial')
   },
   {
@@ -178,6 +189,7 @@ export const blogPosts = getBlogPosts();
 
 // Blog content with full details - Expanded content for all posts
 export const blogPostsContent = {
+  ...newBlogPostsContent,
   "stampa-3d-odontotecnica": {
     title: "Stampa 3D in Odontotecnica",
     titleEn: "3D Printing in Dentistry",
@@ -1122,8 +1134,8 @@ The key takeaway: the best results come from a consistent chain of decisions—m
     ]
   },
   "materiali-stampa-3d": {
-    title: "I migliori materiali per la stampa 3D nel 2023",
-    titleEn: "Best 3D Printing Materials in 2023",
+    title: "I migliori materiali per la stampa 3D nel 2026",
+    titleEn: "Best 3D Printing Materials in 2026",
     content: `Scegliere il materiale giusto è una delle decisioni più importanti nella stampa 3D. Anche con una buona stampante e un modello perfetto, un materiale inadatto può portare a pezzi fragili, deformazioni, scarsa resistenza all’uso o finiture non all’altezza.
 
 In questa guida analizziamo i materiali più comuni e il modo pratico di scegliere in base all’applicazione: meccanica, calore, resistenza chimica, flessibilità, estetica o requisiti specifici.

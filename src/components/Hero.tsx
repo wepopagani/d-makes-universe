@@ -40,7 +40,7 @@ const Hero = () => {
               <div className="relative bg-slate-800/60 p-6 rounded-lg border border-white/10 shadow-xl">
                 <img 
                   src="/stampa corretta.gif" 
-                  alt="Stampante 3D professionale in azione — servizi 3DMAKES Lugano, Ticino e Lombardia"
+                  alt="Stampante 3D professionale in azione — tecnologie 3DMAKES Lugano, Ticino e Lombardia"
                   className="w-full h-auto rounded"
                   onError={(e) => {
                     e.currentTarget.src = "https://placehold.co/600x400/3d73dd/ffffff?text=Stampante+3D";

@@ -3,6 +3,7 @@ import Banner from "@/components/Banner";
 import BlogSection from "@/components/BlogSection";
 import CallToAction from "@/components/CallToAction";
 import ContactForm from "@/components/ContactForm";
+import FaqHomeTeaser from "@/components/FaqHomeTeaser";
 import Footer from "@/components/Footer";
 import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import Hero from "@/components/Hero";
@@ -31,6 +32,7 @@ const Index = () => {
         <AboutSection />
         <GoogleReviewsCarousel />
         <ServicesSection />
+        <FaqHomeTeaser />
         <MissionSection />
         <section className="bg-white py-16 md:py-24">
           <div className="container-custom">

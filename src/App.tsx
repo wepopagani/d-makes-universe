@@ -15,6 +15,7 @@ const About = lazy(() => import("./pages/About"));
 const Mission = lazy(() => import("./pages/Mission"));
 const Services = lazy(() => import("./pages/Services"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPostPage = lazy(() => import("./pages/BlogPost"));
 const Calculator = lazy(() => import("./pages/Calculator"));
@@ -67,6 +68,7 @@ const App = () => (
               <Route path="/mission" element={<Mission />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/:serviceId" element={<ServiceDetail />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPostPage />} />
               <Route path="/calculator" element={<Calculator />} />

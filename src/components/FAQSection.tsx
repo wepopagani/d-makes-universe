@@ -1,13 +1,7 @@
-import { useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-
-interface FAQCategory {
-  title: string;
-  faqs: {
-    question: string;
-    answer: string;
-  }[];
-}
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { buildCompactFaqCategories } from "@/data/faqCategories";
 
 interface FAQSectionProps {
   /**
@@ -24,81 +18,30 @@ interface FAQSectionProps {
    * Utile quando ServiceDetail ha già la sua sezione di FAQ specifiche.
    */
   hideExtraInUi?: boolean;
+  /** Nasconde il link “Vedi tutte le FAQ” (es. sulla pagina /faq stessa). */
+  hideViewAllLink?: boolean;
 }
 
 export default function FAQSection({
   extraCategoryTitle,
   extraFaqs,
   hideExtraInUi = false,
+  hideViewAllLink = false,
 }: FAQSectionProps = {}) {
   const { t, i18n } = useTranslation();
 
-  const faqCategories: FAQCategory[] = [
-    {
-      title: t('services.fdm.title'),
-      faqs: [
-        {
-          question: t('faq.fdmMaterials'),
-          answer: t('faq.fdmMaterialsAnswer')
-        },
-        {
-          question: t('faq.deliveryTimes'),
-          answer: t('faq.deliveryTimesAnswer')
-        },
-        {
-          question: t('faq.maxSize'),
-          answer: t('faq.maxSizeAnswer')
-        }
-      ]
-    },
-    {
-      title: t('services.scanning.title'),
-      faqs: [
-        {
-          question: t('faq.scanningPrecision'),
-          answer: t('faq.scanningPrecisionAnswer')
-        },
-        {
-          question: t('faq.largeObjects'),
-          answer: t('faq.largeObjectsAnswer')
-        }
-      ]
-    },
-    {
-      title: t('faq.pricing'),
-      faqs: [
-        {
-          question: t('faq.priceCalculation'),
-          answer: t('faq.priceCalculationAnswer')
-        },
-        {
-          question: t('faq.bulkDiscounts'),
-          answer: t('faq.bulkDiscountsAnswer')
-        }
-      ]
-    },
-    {
-      title: t('faq.quality'),
-      faqs: [
-        {
-          question: t('faq.qualityControl'),
-          answer: t('faq.qualityControlAnswer')
-        },
-        {
-          question: t('faq.designAssistance'),
-          answer: t('faq.designAssistanceAnswer')
-        }
-      ]
-    }
-  ];
+  const faqCategories = useMemo(
+    () => buildCompactFaqCategories(t),
+    [t, i18n.language]
+  );
 
-  // Categorie visibili nell'UI (può escludere quella "extra" se hideExtraInUi)
-  const visibleCategories: FAQCategory[] =
+  const visibleCategories =
     extraFaqs && extraFaqs.length > 0 && !hideExtraInUi
       ? [
           ...faqCategories,
           {
-            title: extraCategoryTitle ?? t('faq.titleSpecific', 'Domande specifiche'),
+            id: "extra",
+            title: extraCategoryTitle ?? t("faq.titleSpecific"),
             faqs: extraFaqs,
           },
         ]
@@ -117,9 +60,6 @@ export default function FAQSection({
   };
 
   const faqPageSchema = useMemo(() => {
-    // Unifichiamo FAQ generiche + FAQ specifiche della pagina (se fornite via prop)
-    // in un UNICO FAQPage JSON-LD per URL — raccomandato da Google per evitare
-    // conflitti con più schemi FAQPage sulla stessa pagina.
     const genericQuestions = faqCategories.flatMap((category) =>
       category.faqs.map((faq) => ({
         question: faq.question,
@@ -143,37 +83,31 @@ export default function FAQSection({
         },
       })),
     };
-    // faqCategories dipende da t() e quindi dalla lingua attiva
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [i18n.language, extraFaqs]);
+  }, [faqCategories, extraFaqs]);
 
   return (
-    <section className="py-16" style={{backgroundColor: '#E5DDD3'}}>
+    <section className="py-16" style={{ backgroundColor: "#E5DDD3" }}>
       <div className="container-custom">
         <script
           type="application/ld+json"
-          // Inseriamo lo schema direttamente nell'HTML renderizzato per supportare anche crawler senza JS.
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
         />
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-brand-accent/10 text-brand-accent mb-4">
             FAQ
           </div>
-          <h2 className="heading-2 mb-6">
-            {t('faq.title')}
-          </h2>
-          <p className="body-text">
-            {t('faq.subtitle')}
-          </p>
+          <h2 className="heading-2 mb-6">{t("faq.title")}</h2>
+          <p className="body-text">{t("faq.subtitle")}</p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6">
           {visibleCategories.map((category, categoryIndex) => (
             <div
-              key={categoryIndex}
+              key={category.id}
               className="bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-100"
             >
               <button
+                type="button"
                 className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
                 onClick={() => toggleCategory(categoryIndex)}
               >
@@ -182,11 +116,12 @@ export default function FAQSection({
                 </h3>
                 <svg
                   className={`w-5 h-5 text-brand-accent transform transition-transform ${
-                    openCategory === categoryIndex ? 'rotate-180' : ''
+                    openCategory === categoryIndex ? "rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -201,8 +136,12 @@ export default function FAQSection({
                 <div className="px-6 pb-4">
                   <div className="space-y-4">
                     {category.faqs.map((faq, faqIndex) => (
-                      <div key={faqIndex} className="border-b border-gray-200 last:border-0">
+                      <div
+                        key={faqIndex}
+                        className="border-b border-gray-200 last:border-0"
+                      >
                         <button
+                          type="button"
                           className="w-full py-4 flex items-center justify-between text-left focus:outline-none"
                           onClick={() => toggleFAQ(faqIndex)}
                         >
@@ -211,11 +150,12 @@ export default function FAQSection({
                           </h4>
                           <svg
                             className={`w-4 h-4 text-brand-accent transform transition-transform flex-shrink-0 ${
-                              openFAQ === faqIndex ? 'rotate-180' : ''
+                              openFAQ === faqIndex ? "rotate-180" : ""
                             }`}
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
+                            aria-hidden="true"
                           >
                             <path
                               strokeLinecap="round"
@@ -226,9 +166,7 @@ export default function FAQSection({
                           </svg>
                         </button>
                         {openFAQ === faqIndex && (
-                          <div className="pb-4 text-brand-gray">
-                            {faq.answer}
-                          </div>
+                          <div className="pb-4 text-brand-gray">{faq.answer}</div>
                         )}
                       </div>
                     ))}
@@ -238,7 +176,19 @@ export default function FAQSection({
             </div>
           ))}
         </div>
+
+        {!hideViewAllLink && (
+          <div className="text-center mt-10">
+            <Link
+              to="/faq"
+              className="inline-flex items-center gap-2 text-brand-blue font-medium hover:text-brand-accent transition-colors"
+            >
+              {t("faq.viewAll")}
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
-} 
+}

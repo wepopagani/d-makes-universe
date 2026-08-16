@@ -117,13 +117,31 @@ export default function SeoManager() {
       });
     };
 
-    const setAll = (title: string, description: string) => {
+    const setOgImage = (content: string) => {
+      setMetaContent('meta[property="og:image"]', content, () => {
+        const m = document.createElement("meta");
+        m.setAttribute("property", "og:image");
+        return m;
+      });
+      setMetaContent('meta[name="twitter:image"]', content, () => {
+        const m = document.createElement("meta");
+        m.name = "twitter:image";
+        return m;
+      });
+    };
+
+    const DEFAULT_OG_IMAGE = `${CANONICAL_BASE_URL}/logo.png`;
+    const FAQ_OG_IMAGE = `${CANONICAL_BASE_URL}/logo.png`;
+    const SERVICES_OG_IMAGE = `${CANONICAL_BASE_URL}/logo.png`;
+
+    const setAll = (title: string, description: string, ogImage?: string) => {
       document.title = title;
       setDescription(description);
       setOgTitle(title);
       setOgDescription(description);
       setTwitterTitle(title);
       setTwitterDescription(description);
+      setOgImage(ogImage ?? DEFAULT_OG_IMAGE);
     };
 
     const upsertJsonLd = (scriptId: string, json: unknown) => {
@@ -143,6 +161,29 @@ export default function SeoManager() {
     const removeJsonLd = (scriptId: string) => {
       const existing = document.getElementById(scriptId);
       existing?.remove();
+    };
+
+    const upsertBreadcrumbs = (
+      crumbs: Array<{ name: string; path: string }>
+    ) => {
+      upsertJsonLd("breadcrumb-jsonld", {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: crumbs.map((crumb, index) => {
+          const path =
+            crumb.path === "/"
+              ? "/"
+              : crumb.path.endsWith("/")
+                ? crumb.path
+                : `${crumb.path}/`;
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            name: crumb.name,
+            item: `${CANONICAL_BASE_URL}${path === "/" ? "/" : path}`,
+          };
+        }),
+      });
     };
 
     const isServicesRoute = pathNorm === "/services" || pathNorm.startsWith("/services/");
@@ -242,6 +283,42 @@ export default function SeoManager() {
       removeJsonLd("blog-index-itemlist-jsonld");
     }
 
+    // --- BreadcrumbList (hub + detail) ---
+    if (pathNorm === "/faq") {
+      upsertBreadcrumbs([
+        { name: "3DMAKES", path: "/" },
+        { name: t("nav.faq"), path: "/faq" },
+      ]);
+    } else if (pathNorm === "/services") {
+      upsertBreadcrumbs([
+        { name: "3DMAKES", path: "/" },
+        { name: t("nav.services"), path: "/services" },
+      ]);
+    } else if (pathNorm.startsWith("/services/")) {
+      const serviceId = pathNorm.split("/")[2] ?? "";
+      const resolveServiceKey = () => {
+        if (serviceId === "laser" || serviceId === "incisione-laser") return "laser";
+        if (serviceId === "riparazione-stampanti" || serviceId === "riparazione-stampanti-3d")
+          return "largePrint";
+        if (serviceId === "prototipazione") return "prototyping";
+        if (serviceId === "scansione") return "scanning";
+        return serviceId;
+      };
+      const serviceTitle = t(`services.${resolveServiceKey()}.title`);
+      upsertBreadcrumbs([
+        { name: "3DMAKES", path: "/" },
+        { name: t("nav.services"), path: "/services" },
+        { name: serviceTitle, path: `/services/${serviceId}` },
+      ]);
+    } else if (pathNorm === "/calculator") {
+      upsertBreadcrumbs([
+        { name: "3DMAKES", path: "/" },
+        { name: t("footer.calculateQuote"), path: "/calculator" },
+      ]);
+    } else {
+      removeJsonLd("breadcrumb-jsonld");
+    }
+
     // --- Route-based Title/Description ---
     if (pathNorm.startsWith("/services/")) {
       const serviceId = pathNorm.split("/")[2] ?? "";
@@ -265,13 +342,22 @@ export default function SeoManager() {
       const description = t(`services.${key}.description`);
 
       if (title && description) {
-        setAll(`${title} ${t("seo.titleSuffix")}`, description);
+        setAll(`${title} ${t("seo.titleSuffix")}`, description, SERVICES_OG_IMAGE);
         return;
       }
     }
 
     if (pathNorm === "/services") {
-      setAll(t("seo.servicesIndexTitle"), t("seo.servicesIndexDescription"));
+      setAll(
+        t("seo.servicesIndexTitle"),
+        t("seo.servicesIndexDescription"),
+        SERVICES_OG_IMAGE
+      );
+      return;
+    }
+
+    if (pathNorm === "/faq") {
+      setAll(t("seo.faqTitle"), t("seo.faqDescription"), FAQ_OG_IMAGE);
       return;
     }
 
