@@ -8,53 +8,26 @@ const MissionSection = () => {
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-brand-blue text-white">
       <div className="container-custom">
-        {/* Immagine Valori */}
         <div className="text-center mb-16 -mt-16">
-          <img
-            src="/valori.png"
-            alt="Valori 3DMAKES — qualità, innovazione e servizio clienti nella stampa 3D professionale"
-            className="w-full h-auto max-w-3xl mx-auto mb-8"
-            onError={(e) => {
-              e.currentTarget.src = "https://placehold.co/700x250/ffffff/333333?text=Valori";
-            }}
-          />
-          {/* Icone dei Valori Aziendali */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 max-w-4xl mx-auto px-4">
-            {/* Icona Affidabilità */}
-            <div className="flex flex-col items-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-accent/20 text-brand-accent mb-3 md:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <span className="text-xs md:text-sm font-semibold text-white text-center">AFFIDABILI</span>
+          <p className="text-sm font-medium tracking-[0.18em] uppercase text-brand-accent mb-4">
+            {t('about.ourValues')}
+          </p>
+          <h2 className="heading-2 mb-10">{t('about.humanFaceTitle')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto px-4">
+            <div className="flex flex-col items-center text-center">
+              <span className="text-sm font-semibold tracking-[0.16em] text-brand-accent mb-3">01</span>
+              <h3 className="text-lg font-semibold text-white mb-2">{t('about.values.reliable')}</h3>
+              <p className="text-sm text-gray-300">{t('about.values.reliableDescription')}</p>
             </div>
-            {/* Icona Flessibilità */}
-            <div className="flex flex-col items-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-accent/20 text-brand-accent mb-3 md:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <span className="text-xs md:text-sm font-semibold text-white text-center">FLESSIBILI</span>
+            <div className="flex flex-col items-center text-center">
+              <span className="text-sm font-semibold tracking-[0.16em] text-brand-accent mb-3">02</span>
+              <h3 className="text-lg font-semibold text-white mb-2">{t('about.values.flexible')}</h3>
+              <p className="text-sm text-gray-300">{t('about.values.flexibleDescription')}</p>
             </div>
-            {/* Icona Umanità */}
-            <div className="flex flex-col items-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-accent/20 text-brand-accent mb-3 md:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <span className="text-xs md:text-sm font-semibold text-white text-center">UMANI</span>
-            </div>
-            {/* Icona Accessibilità */}
-            <div className="flex flex-col items-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-brand-accent/20 text-brand-accent mb-3 md:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <span className="text-xs md:text-sm font-semibold text-white text-center">ACCESSIBILI</span>
+            <div className="flex flex-col items-center text-center">
+              <span className="text-sm font-semibold tracking-[0.16em] text-brand-accent mb-3">03</span>
+              <h3 className="text-lg font-semibold text-white mb-2">{t('about.values.close')}</h3>
+              <p className="text-sm text-gray-300">{t('about.values.closeDescription')}</p>
             </div>
           </div>
         </div>

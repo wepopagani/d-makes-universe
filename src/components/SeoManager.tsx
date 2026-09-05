@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getBlogPosts } from "@/data/blogContent";
+import { getServiceTranslationKey } from "@/data/servicesCatalog";
 
 const CANONICAL_BASE_URL = "https://3dmakes.ch";
 
@@ -205,7 +206,10 @@ export default function SeoManager() {
         { translationKey: "lsam", slug: "lsam", serviceType: "3D Printing" },
         { translationKey: "mjf", slug: "mjf", serviceType: "3D Printing" },
         { translationKey: "slm", slug: "slm", serviceType: "3D Printing" },
+        { translationKey: "cnc", slug: "cnc", serviceType: "CNC Milling" },
         { translationKey: "sls", slug: "sls", serviceType: "3D Printing" },
+        { translationKey: "design", slug: "progettazione", serviceType: "CAD Design & DfAM" },
+        { translationKey: "consulting", slug: "consulenza", serviceType: "Technology Consulting" },
       ];
 
       const serviceGraph = serviceDefs
@@ -296,15 +300,7 @@ export default function SeoManager() {
       ]);
     } else if (pathNorm.startsWith("/services/")) {
       const serviceId = pathNorm.split("/")[2] ?? "";
-      const resolveServiceKey = () => {
-        if (serviceId === "laser" || serviceId === "incisione-laser") return "laser";
-        if (serviceId === "riparazione-stampanti" || serviceId === "riparazione-stampanti-3d")
-          return "largePrint";
-        if (serviceId === "prototipazione") return "prototyping";
-        if (serviceId === "scansione") return "scanning";
-        return serviceId;
-      };
-      const serviceTitle = t(`services.${resolveServiceKey()}.title`);
+      const serviceTitle = t(`services.${getServiceTranslationKey(serviceId)}.title`);
       upsertBreadcrumbs([
         { name: "3DMAKES", path: "/" },
         { name: t("nav.services"), path: "/services" },
@@ -322,21 +318,7 @@ export default function SeoManager() {
     // --- Route-based Title/Description ---
     if (pathNorm.startsWith("/services/")) {
       const serviceId = pathNorm.split("/")[2] ?? "";
-
-      const resolveServiceKey = () => {
-        // Alias per supportare gli URL “puliti” usati nelle nuove pagine:
-        // /services/laser => services.laser.*
-        // /services/riparazione-stampanti => services.largePrint.*
-        if (serviceId === "laser") return "laser";
-        if (serviceId === "incisione-laser") return "laser";
-        if (serviceId === "riparazione-stampanti") return "largePrint";
-        if (serviceId === "riparazione-stampanti-3d") return "largePrint";
-        if (serviceId === "prototipazione") return "prototyping";
-        if (serviceId === "scansione") return "scanning";
-        return serviceId;
-      };
-
-      const key = resolveServiceKey();
+      const key = getServiceTranslationKey(serviceId);
 
       const title = t(`services.${key}.title`);
       const description = t(`services.${key}.description`);

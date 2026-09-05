@@ -58,15 +58,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.servicesTitle')}</h3>
             <ul className="space-y-3">
+              <li><Link to="/services/progettazione" className="text-gray-300 hover:text-white">{t('services.design.title')}</Link></li>
               <li><Link to="/services/fdm" className="text-gray-300 hover:text-white">{t('services.fdm.title')}</Link></li>
               <li><Link to="/services/sla" className="text-gray-300 hover:text-white">{t('services.sla.title')}</Link></li>
               <li><Link to="/services/laser" className="text-gray-300 hover:text-white">{t('services.laser.title')}</Link></li>
-              <li><Link to="/services/riparazione-stampanti" className="text-gray-300 hover:text-white">{t('services.largePrint.title')}</Link></li>
+              <li><Link to="/services/cnc" className="text-gray-300 hover:text-white">{t('services.cnc.title')}</Link></li>
               <li><Link to="/services/scansione" className="text-gray-300 hover:text-white">{t('services.scanning.title')}</Link></li>
               <li><Link to="/services/prototipazione" className="text-gray-300 hover:text-white">{t('services.prototyping.title')}</Link></li>
-              <li><Link to="/services/sls" className="text-gray-300 hover:text-white">{t('services.sls.title')}</Link></li>
-              <li><Link to="/services/slm" className="text-gray-300 hover:text-white">{t('services.slm.title')}</Link></li>
-              <li><Link to="/services/mjf" className="text-gray-300 hover:text-white">{t('services.mjf.title')}</Link></li>
+              <li><Link to="/services/riparazione-stampanti" className="text-gray-300 hover:text-white">{t('services.largePrint.title')}</Link></li>
+              <li><Link to="/services/consulenza" className="text-gray-300 hover:text-white">{t('services.consulting.title')}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white">{t('services.seeAll')}</Link></li>
               <li><Link to="/calculator" className="text-gray-300 hover:text-white">{t('footer.calculateQuote')}</Link></li>
             </ul>
           </div>

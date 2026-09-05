@@ -12,6 +12,7 @@ import Navbar from "@/components/Navbar";
 import PartnersLogos from "@/components/PartnersLogos";
 import SearchSection from "@/components/SearchSection";
 import ServicesSection from "@/components/ServicesSection";
+import HowWeHelpSection from "@/components/HowWeHelpSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
@@ -21,7 +22,6 @@ const Index = () => {
   const { t } = useTranslation();
   const tonyVideoFallbackText = encodeURIComponent(t("index.tonyVideoFallbackText"));
   const iniziamoFallbackText = encodeURIComponent(t("index.iniziamoFallbackText"));
-  const haiIdeaFallbackText = encodeURIComponent(t("index.haiIdeaFallbackText"));
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -32,6 +32,7 @@ const Index = () => {
         <AboutSection />
         <GoogleReviewsCarousel />
         <ServicesSection />
+        <HowWeHelpSection />
         <FaqHomeTeaser />
         <MissionSection />
         <section className="bg-white py-16 md:py-24">
@@ -75,20 +76,12 @@ const Index = () => {
           </div>
         </section>
         <SearchSection />
-        <section className="py-16 md:py-24" style={{backgroundColor: '#E5DDD3'}}>
+        <section className="py-16 md:py-20" style={{backgroundColor: '#E5DDD3'}}>
           <div className="container-custom">
-            <div className="text-center">
-              <div className="mb-8 -mt-8">
-                <img 
-                  src="/hai idea.png" 
-                  alt={t("index.haiIdeaAlt")}
-                  className="w-full h-auto max-w-3xl mx-auto scale-75 md:scale-100"
-                  onError={(e) => {
-                    e.currentTarget.src = `https://placehold.co/1000x400/d1d5db/333333?text=${haiIdeaFallbackText}`;
-                  }}
-                />
-              </div>
-              <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 font-semibold px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl scale-100 md:scale-140">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="heading-2 mb-4">{t("services.readyToRealize")}</h2>
+              <p className="body-text mb-8">{t("services.contactToday")}</p>
+              <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 font-semibold px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl">
                 <Link to="/calculator">{t("nav.requestQuote")}</Link>
               </Button>
             </div>

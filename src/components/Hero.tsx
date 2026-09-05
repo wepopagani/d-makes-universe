@@ -39,12 +39,9 @@ const Hero = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-accent to-brand-blue rounded-lg blur opacity-30"></div>
               <div className="relative bg-slate-800/60 p-6 rounded-lg border border-white/10 shadow-xl">
                 <img 
-                  src="/stampa corretta.gif" 
-                  alt="Stampante 3D professionale in azione — tecnologie 3DMAKES Lugano, Ticino e Lombardia"
-                  className="w-full h-auto rounded"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://placehold.co/600x400/3d73dd/ffffff?text=Stampante+3D";
-                  }}
+                  src="/images/brochure/workshop.jpg" 
+                  alt="Laboratorio 3DMAKES — progettazione, stampa 3D e produzione di componenti"
+                  className="w-full h-auto rounded object-cover"
                 />
               </div>
             </div>

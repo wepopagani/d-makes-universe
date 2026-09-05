@@ -297,12 +297,15 @@ const ContactForm = () => {
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent"
                     >
                       <option value="">{t('contact.form.selectService')}</option>
+                      <option value="progettazione">{t('contact.form.services.design')}</option>
                       <option value="stampa-3d-fdm">{t('contact.form.services.fdm')}</option>
                       <option value="stampa-3d-sla">{t('contact.form.services.sla')}</option>
                       <option value="taglio-laser">{t('contact.form.services.laser')}</option>
-                      <option value="riparazione-stampanti-3d">{t('contact.form.services.largePrint')}</option>
+                      <option value="fresatura-cnc">{t('contact.form.services.cnc')}</option>
                       <option value="scansione-3d">{t('contact.form.services.scanning')}</option>
                       <option value="prototipazione">{t('contact.form.services.prototyping')}</option>
+                      <option value="riparazione-stampanti-3d">{t('contact.form.services.largePrint')}</option>
+                      <option value="consulenza">{t('contact.form.services.consulting')}</option>
                       <option value="altro">{t('contact.form.services.other')}</option>
                     </select>
                   </div>

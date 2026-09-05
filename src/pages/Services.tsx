@@ -1,178 +1,97 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useMemo } from "react";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import HowWeHelpSection from "@/components/HowWeHelpSection";
 import { Button } from "@/components/ui/button";
+import {
+  SERVICE_CATALOG,
+  SERVICE_FAMILIES,
+  isServiceFamilyId,
+  resolveServiceSlug,
+  type ServiceGroupId,
+} from "@/data/servicesCatalog";
 
-type TechnologyGroupId = "polymer" | "metal" | "digital";
-
-interface Technology {
-  id: string;
-  slug: string;
-  group: TechnologyGroupId;
-  badge: string;
-  title: string;
-  description: string;
-}
-
-const resolveSlug = (id: string) => {
-  if (id === "incisione-laser") return "laser";
-  if (id === "riparazione-stampanti-3d") return "riparazione-stampanti";
-  return id;
-};
+const CATALOG_HASH = "catalog";
 
 const Services = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [activeGroup, setActiveGroup] = useState<TechnologyGroupId | "all">("all");
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const familyParam = searchParams.get("family");
+  const groupParam = searchParams.get("group");
+  const activeFamily = isServiceFamilyId(familyParam) ? familyParam : null;
+  const activeGroup: ServiceGroupId | "all" | null = activeFamily
+    ? null
+    : groupParam === "polymer" || groupParam === "metal" || groupParam === "digital"
+      ? groupParam
+      : "all";
 
-  const technologies: Technology[] = useMemo(
-    () => [
-      {
-        id: "fdm",
-        slug: "fdm",
-        group: "polymer",
-        badge: "FDM",
-        title: t("services.fdm.title"),
-        description: t("services.fdm.description"),
-      },
-      {
-        id: "cff",
-        slug: "cff",
-        group: "polymer",
-        badge: "CFF",
-        title: t("services.cff.title"),
-        description: t("services.cff.description"),
-      },
-      {
-        id: "sla",
-        slug: "sla",
-        group: "polymer",
-        badge: "SLA",
-        title: t("services.sla.title"),
-        description: t("services.sla.description"),
-      },
-      {
-        id: "polyjet",
-        slug: "polyjet",
-        group: "polymer",
-        badge: "PolyJet",
-        title: t("services.polyjet.title"),
-        description: t("services.polyjet.description"),
-      },
-      {
-        id: "sls",
-        slug: "sls",
-        group: "polymer",
-        badge: "SLS",
-        title: t("services.sls.title"),
-        description: t("services.sls.description"),
-      },
-      {
-        id: "mjf",
-        slug: "mjf",
-        group: "polymer",
-        badge: "MJF",
-        title: t("services.mjf.title"),
-        description: t("services.mjf.description"),
-      },
-      {
-        id: "lsam",
-        slug: "lsam",
-        group: "polymer",
-        badge: "LSAM",
-        title: t("services.lsam.title"),
-        description: t("services.lsam.description"),
-      },
-      {
-        id: "slm",
-        slug: "slm",
-        group: "metal",
-        badge: "SLM",
-        title: t("services.slm.title"),
-        description: t("services.slm.description"),
-      },
-      {
-        id: "scansione",
-        slug: "scansione",
-        group: "digital",
-        badge: "3D Scan",
-        title: t("services.scanning.title"),
-        description: t("services.scanning.description"),
-      },
-      {
-        id: "prototipazione",
-        slug: "prototipazione",
-        group: "digital",
-        badge: "R&D",
-        title: t("services.prototyping.title"),
-        description: t("services.prototyping.description"),
-      },
-      {
-        id: "incisione-laser",
-        slug: "laser",
-        group: "digital",
-        badge: "Laser",
-        title: t("services.laser.title"),
-        description: t("services.laser.description"),
-      },
-      {
-        id: "riparazione-stampanti-3d",
-        slug: "riparazione-stampanti",
-        group: "digital",
-        badge: "Service",
-        title: t("services.largePrint.title"),
-        description: t("services.largePrint.description"),
-      },
-    ],
+  const technologies = useMemo(
+    () =>
+      SERVICE_CATALOG.map((tech) => ({
+        ...tech,
+        title: t(`services.${tech.translationKey}.title`),
+        description: t(`services.${tech.translationKey}.description`),
+      })),
     [t]
   );
 
-  const groups: { id: TechnologyGroupId | "all"; label: string }[] = [
+  const groups: { id: ServiceGroupId | "all"; label: string }[] = [
     { id: "all", label: t("services.groups.all") },
     { id: "polymer", label: t("services.groups.polymer") },
     { id: "metal", label: t("services.groups.metal") },
     { id: "digital", label: t("services.groups.digital") },
   ];
 
-  const visibleTechnologies =
-    activeGroup === "all"
-      ? technologies
-      : technologies.filter((tech) => tech.group === activeGroup);
+  const visibleTechnologies = activeFamily
+    ? technologies.filter((tech) => tech.family === activeFamily)
+    : activeGroup && activeGroup !== "all"
+      ? technologies.filter((tech) => tech.group === activeGroup)
+      : technologies;
 
-  const pillars = [
+  const scrollToCatalog = (behavior: ScrollBehavior = "smooth") => {
+    document.getElementById(CATALOG_HASH)?.scrollIntoView({ behavior, block: "start" });
+  };
+
+  const capabilities = [
     {
-      title: t("services.pillars.rangeTitle"),
-      text: t("services.pillars.rangeText"),
+      n: "01",
+      title: t("services.capabilities.designTitle"),
+      text: t("services.capabilities.designText"),
     },
     {
-      title: t("services.pillars.qualityTitle"),
-      text: t("services.pillars.qualityText"),
+      n: "02",
+      title: t("services.capabilities.makeTitle"),
+      text: t("services.capabilities.makeText"),
     },
     {
-      title: t("services.pillars.supportTitle"),
-      text: t("services.pillars.supportText"),
+      n: "03",
+      title: t("services.capabilities.supportTitle"),
+      text: t("services.capabilities.supportText"),
     },
   ];
 
-  // Compatibility: vecchi link tipo "/services#fdm" => redirect alla nuova pagina servizio.
   useEffect(() => {
-    const hash = window.location.hash;
-    if (!hash) return;
+    const hash = location.hash.replace("#", "");
+    if (!hash || hash === CATALOG_HASH) return;
+    if (location.pathname !== "/services") return;
 
-    const rawServiceId = hash.substring(1);
-    if (!rawServiceId) return;
-
-    const canonicalServiceId = resolveSlug(rawServiceId);
-    if (window.location.pathname !== "/services") return;
-
-    navigate(`/services/${canonicalServiceId}`, { replace: true });
-  }, [navigate]);
+    navigate(`/services/${resolveServiceSlug(hash)}`, { replace: true });
+  }, [location.hash, location.pathname, navigate]);
 
   useEffect(() => {
+    if (location.hash.replace("#", "") === CATALOG_HASH) return;
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (location.hash.replace("#", "") !== CATALOG_HASH) return;
+    const frame = window.requestAnimationFrame(() => scrollToCatalog());
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.hash, location.search]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -206,24 +125,75 @@ const Services = () => {
               <p className="body-text">{t("services.introText")}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-              {pillars.map((pillar) => (
-                <div key={pillar.title} className="md:border-l md:border-gray-200 md:pl-8 first:md:border-l-0 first:md:pl-0">
+              {capabilities.map((item) => (
+                <div
+                  key={item.n}
+                  className="md:border-l md:border-gray-200 md:pl-8 first:md:border-l-0 first:md:pl-0"
+                >
+                  <p className="text-sm font-semibold tracking-[0.16em] text-brand-accent mb-3">
+                    {item.n}
+                  </p>
                   <h3 className="text-lg font-semibold text-brand-blue mb-3">
-                    {pillar.title}
+                    {item.title}
                   </h3>
-                  <p className="text-brand-gray leading-relaxed">{pillar.text}</p>
+                  <p className="text-brand-gray leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-14 md:py-20" style={{ backgroundColor: "#E5DDD3" }}>
+        <section className="py-14 md:py-16 bg-white">
+          <div className="container-custom">
+            <div className="max-w-3xl mb-10">
+              <h2 className="heading-2 mb-3">{t("services.familiesTitle")}</h2>
+              <p className="body-text">{t("services.familiesSubtitle")}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SERVICE_FAMILIES.map((family) => (
+                <Link
+                  key={family.id}
+                  to={family.href}
+                  aria-current={activeFamily === family.id ? "page" : undefined}
+                  className={`group overflow-hidden bg-brand-blue text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 ${
+                    activeFamily === family.id ? "ring-2 ring-brand-accent" : ""
+                  }`}
+                >
+                  <div className="relative h-44">
+                    <img
+                      src={family.image}
+                      alt={t(`services.${family.translationKey}.title`)}
+                      className="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-4 top-4 text-xs font-semibold tracking-[0.18em]">
+                      {family.badge}
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-brand-accent transition-colors">
+                      {t(`services.${family.translationKey}.title`)}
+                    </h3>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {t(`services.${family.translationKey}.tags`)}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id={CATALOG_HASH} className="py-14 md:py-20 scroll-mt-24" style={{ backgroundColor: "#E5DDD3" }}>
           <div className="container-custom">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div className="max-w-2xl">
                 <h2 className="heading-2 mb-3">{t("services.catalogTitle")}</h2>
                 <p className="body-text">{t("services.catalogSubtitle")}</p>
+                {activeFamily && (
+                  <p className="mt-3 text-sm font-semibold tracking-wide text-brand-blue">
+                    {t(`services.families.${activeFamily}.title`)}
+                  </p>
+                )}
               </div>
               <div className="overflow-x-auto -mx-1 px-1">
                 <div className="flex gap-2 w-max md:w-auto md:flex-wrap">
@@ -231,7 +201,10 @@ const Services = () => {
                     <button
                       key={group.id}
                       type="button"
-                      onClick={() => setActiveGroup(group.id)}
+                      onClick={() => {
+                        setSearchParams(group.id === "all" ? {} : { group: group.id });
+                        scrollToCatalog();
+                      }}
                       className={`shrink-0 px-4 py-2 text-sm font-medium transition-colors border ${
                         activeGroup === group.id
                           ? "bg-brand-blue text-white border-brand-blue"
@@ -250,31 +223,46 @@ const Services = () => {
                 <Link
                   key={tech.id}
                   to={`/services/${tech.slug}`}
-                  className="group flex flex-col bg-white border border-gray-100 p-6 transition-all duration-300 hover:border-brand-accent/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+                  className="group flex flex-col bg-white border border-gray-100 overflow-hidden transition-all duration-300 hover:border-brand-accent/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
                 >
-                  <span className="mb-4 inline-flex self-start px-2.5 py-1 text-xs font-semibold tracking-wide uppercase bg-brand-blue text-white">
-                    {tech.badge}
-                  </span>
-                  <h3 className="text-xl font-semibold text-brand-blue mb-3 group-hover:text-brand-accent transition-colors">
-                    {tech.title}
-                  </h3>
-                  <p className="text-brand-gray mb-5 line-clamp-3 leading-relaxed flex-grow">
-                    {tech.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-brand-blue group-hover:text-brand-accent transition-colors mt-auto">
-                    {t("common.discoverMore")}
-                    <span
-                      aria-hidden="true"
-                      className="transition-transform group-hover:translate-x-0.5"
-                    >
-                      →
+                  <div className="relative h-44 bg-brand-blue">
+                    <img
+                      src={tech.image}
+                      alt={tech.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-4 top-4 inline-flex px-2.5 py-1 text-xs font-semibold tracking-wide uppercase bg-brand-blue text-white">
+                      {tech.badge}
                     </span>
-                  </span>
+                  </div>
+                  <div className="flex flex-col flex-grow p-6">
+                    <h3 className="text-xl font-semibold text-brand-blue mb-3 group-hover:text-brand-accent transition-colors">
+                      {tech.title}
+                    </h3>
+                    <p className="text-brand-gray mb-5 line-clamp-3 leading-relaxed flex-grow">
+                      {tech.description}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-brand-blue group-hover:text-brand-accent transition-colors mt-auto">
+                      {t("common.discoverMore")}
+                      <span
+                        aria-hidden="true"
+                        className="transition-transform group-hover:translate-x-0.5"
+                      >
+                        →
+                      </span>
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
+
+            <p className="text-center text-brand-gray mt-10 max-w-3xl mx-auto leading-relaxed">
+              {t("services.partnerNetwork")}
+            </p>
           </div>
         </section>
+
+        <HowWeHelpSection />
 
         <section className="py-16 md:py-20 bg-white">
           <div className="container-custom">
@@ -291,10 +279,7 @@ const Services = () => {
               </div>
               <div className="space-y-4">
                 {[1, 2, 3].map((n) => (
-                  <div
-                    key={n}
-                    className="border-l-2 border-brand-accent pl-5 py-1"
-                  >
+                  <div key={n} className="border-l-2 border-brand-accent pl-5 py-1">
                     <p className="font-medium text-brand-blue mb-1">
                       {t(`seo.homeFaqQ${n}`)}
                     </p>
@@ -316,11 +301,7 @@ const Services = () => {
                 {t("services.contactToday")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-brand-accent hover:bg-brand-accent/90"
-                >
+                <Button asChild size="lg" className="bg-brand-accent hover:bg-brand-accent/90">
                   <Link to="/calculator">{t("services.calculateQuote")}</Link>
                 </Button>
                 <Button

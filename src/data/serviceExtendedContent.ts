@@ -100,7 +100,7 @@ export const serviceExtendedContent: Record<string, ExtendedServiceContent> = {
       {
         question: "Qual è la dimensione massima stampabile in FDM?",
         answer:
-          "Sulle nostre macchine singole fino a 300 × 300 × 400 mm. Per pezzi più grandi possiamo stampare in più parti e assemblare, oppure passare alla tecnologia LSAM dedicata al grande formato.",
+          "Sulle macchine FDM Stratasys arriviamo fino a 800 × 800 × 1000 mm in un unico pezzo. Per dimensioni superiori valutiamo stampa a sezioni e assemblaggio, oppure la tecnologia LSAM per il grande formato.",
       },
       {
         question: "Consegnate in Lombardia e in Italia?",
@@ -202,7 +202,7 @@ export const serviceExtendedContent: Record<string, ExtendedServiceContent> = {
 
   "incisione-laser": {
     overview:
-      "Il nostro servizio di incisione, marcatura e taglio laser su metalli utilizza tecnologia laser a fibra MOPA da 60 W, ideale per lavorazioni precise su acciaio inossidabile, alluminio, ottone e rame. Realizziamo targhe industriali, marcature seriali, codici QR, componenti meccanici tagliati e personalizzazioni su metallo con area di lavoro di 250 × 250 mm e precisione di 0,01 mm. Lavoriamo su file DXF e PDF e serviamo clienti in Canton Ticino e Lombardia.",
+      "Il nostro servizio di incisione, marcatura e taglio laser su metalli utilizza tecnologia laser a fibra MOPA da 60 W, ideale per lavorazioni precise su acciaio inossidabile, alluminio, ottone e rame. Realizziamo targhe industriali, marcature seriali, codici QR, componenti meccanici tagliati e personalizzazioni su metallo con area di lavoro di 250 × 250 mm e precisione di 0,1 mm. Lavoriamo su file DXF e PDF e serviamo clienti in Canton Ticino e Lombardia.",
     applications: [
       {
         title: "Marcatura industriale",
@@ -996,6 +996,207 @@ export const serviceExtendedContent: Record<string, ExtendedServiceContent> = {
         question: "Tempi di produzione?",
         answer:
           "Variabili: da 1 a 3 settimane a seconda di dimensione, materiale e finitura post-stampa richiesta.",
+      },
+    ],
+  },
+
+  progettazione: {
+    overview:
+      "La progettazione CAD e il Design for Additive Manufacturing (DfAM) sono il primo passo quando un'idea deve diventare un file e poi un pezzo. In 3DMAKES uniamo modellazione, ottimizzazione e sviluppo prodotto: se il componente esiste lo digitalizziamo e lo miglioriamo; se non esiste ancora lo progettiamo da schizzo, brief o vincoli tecnici. Dalla sede di Figino (Lugano) affianchiamo aziende, professionisti e privati in Ticino e Nord Italia con un unico interlocutore.",
+    applications: [
+      {
+        title: "Modellazione CAD da idea o pezzo",
+        description:
+          "Partiamo da uno schizzo, un disegno 2D o un oggetto fisico (anche scansionato) e costruiamo un modello 3D pronto per stampa, laser o archivio.",
+      },
+      {
+        title: "Ottimizzazione DfAM",
+        description:
+          "Adattiamo geometrie, spessori, raccordi e orientamento alla tecnologia scelta — FDM, SLA, SLS, MJF, CFF, SLM o laser — per ridurre scarti e rischi di stampa.",
+      },
+      {
+        title: "Sviluppo prodotto",
+        description:
+          "Iteriamo concept, prototipo e preserie nello stesso laboratorio, accorciando i cicli di validazione.",
+      },
+      {
+        title: "Revisione file esistenti",
+        description:
+          "Correggiamo mesh, tolleranze e feature non stampabili su STL, STEP e altri formati industriali.",
+      },
+    ],
+    sectors: [
+      {
+        name: "Manifatturiero e PMI",
+        description: "Attrezzaggi, ricambi e componenti da industrializzare senza partire da zero.",
+      },
+      {
+        name: "Design e product development",
+        description: "Studi e startup che hanno bisogno di un partner tecnico, non solo di un service di stampa.",
+      },
+      {
+        name: "Professionisti e privati",
+        description: "Progetti unici, replica di pezzi e supporto quando manca il file CAD.",
+      },
+    ],
+    whenToChoose:
+      "Scegli la progettazione & DfAM quando non hai ancora un file pronto, quando il pezzo esiste ma va migliorato, o quando vuoi capire quale geometria è sostenibile per la tecnologia scelta. Se hai già un STL verificato e sai esattamente cosa stampare, puoi partire dal catalogo tecnologie.",
+    whyUs:
+      "Non separiamo il disegno dalla produzione: chi progetta conosce macchine, materiali e limiti reali del laboratorio. Resta un solo referente dal primo confronto al pezzo consegnato.",
+    faqs: [
+      {
+        question: "Posso arrivare solo con uno schizzo o una foto?",
+        answer:
+          "Sì. Valutiamo il brief, definiamo vincoli e costruiamo il modello CAD. Se serve, integriamo una scansione 3D del pezzo esistente.",
+      },
+      {
+        question: "Cosa significa DfAM in pratica?",
+        answer:
+          "Significa progettare il pezzo per la stampa 3D o il laser: meno materiale dove non serve, raccordi stampabili, orientamento intelligente e scelta della tecnologia prima di congelare il design.",
+      },
+      {
+        question: "Firmate un NDA sui progetti in sviluppo?",
+        answer:
+          "Sì, firmiamo accordi di riservatezza prima di ricevere file, brief o prototipi. Per i progetti aziendali è prassi.",
+      },
+    ],
+  },
+
+  consulenza: {
+    overview:
+      "La consulenza 3DMAKES serve a scegliere il processo giusto e, quando serve, a portare la produzione additiva in azienda. Non partiamo da un catalogo: partiamo dal risultato. Technology transfer, valutazione make-or-buy e coordinamento di una rete di partner restano sotto un unico interlocutore, dal laboratorio di Figino.",
+    applications: [
+      {
+        title: "Scelta di processo e materiale",
+        description:
+          "Confrontiamo FDM, CFF, SLA, PolyJet, SLS, MJF, LSAM, SLM e laser su costi, tempi, finitura e prestazioni meccaniche.",
+      },
+      {
+        title: "Technology transfer",
+        description:
+          "Affianchiamo team interni su macchine, materiali, slicing e organizzazione del flusso, senza vincolare il cliente a un brand.",
+      },
+      {
+        title: "Make or buy",
+        description:
+          "Decidiamo insieme cosa ha senso produrre in sede e cosa conviene esternalizzare al laboratorio o alla rete partner.",
+      },
+      {
+        title: "Interlocutore unico",
+        description:
+          "Quando serve una capacità extra, coordinamo partner qualificati mantenendo un solo punto di contatto per te.",
+      },
+    ],
+    sectors: [
+      {
+        name: "Aziende in fase di adozione 3D",
+        description: "PMI che vogliono introdurre la stampa 3D senza comprare la macchina sbagliata.",
+      },
+      {
+        name: "R&D e uffici tecnici",
+        description: "Team che hanno già un file o un pezzo e devono scegliere il percorso più efficace.",
+      },
+      {
+        name: "Partner e committenti B2B",
+        description: "Realtà che cercano un referente unico per più tecnologie, anche oltre il parco macchine interno.",
+      },
+    ],
+    whenToChoose:
+      "La consulenza è utile quando non è chiaro quale tecnologia usare, quando stai valutando un investimento in macchina, o quando il progetto attraversa più processi. Se hai già deciso FDM o SLA e hai il file, il calcolatore preventivo è il passo più rapido.",
+    whyUs:
+      "Siamo contemporaneamente laboratorio e consulenti: conosciamo i limiti reali di ogni processo e non vendiamo una sola tecnologia. La rete partner amplia le capacità, ma il confronto resta con 3DMAKES.",
+    faqs: [
+      {
+        question: "La consulenza è a pagamento?",
+        answer:
+          "Il primo confronto sul progetto è incluso nella richiesta di preventivo. Percorsi di technology transfer o audit di processo si quotano a parte, in modo trasparente.",
+      },
+      {
+        question: "Potete consigliare anche macchine da acquistare?",
+        answer:
+          "Sì. Aiutiamo a scegliere classe di macchina, materiali e organizzazione, in modo indipendente dal brand quando possibile.",
+      },
+      {
+        question: "Lavorate solo con tecnologie interne?",
+        answer:
+          "No. Una rete di partner qualificati amplia le capacità; 3DMAKES resta l'interlocutore unico fino alla consegna.",
+      },
+    ],
+  },
+
+  cnc: {
+    overview:
+      "La fresatura CNC 3 e 4 assi di 3DMAKES serve a realizzare componenti tecnici, prototipi, dime e piccole serie in metallo, plastica, legno e compositi, direttamente dal file CAD. L'area utile è 200 × 200 × 100 mm in 3 assi; con il 4° asse eseguiamo lavorazioni cilindriche e su più lati fino a Ø80 × 150 mm. Tra i metalli lavoriamo alluminio, ottone e rame; acciaio inox e acciaio solo per lavorazioni leggere, dopo verifica di fattibilità. Dalla sede di Figino gestiamo analisi file, CAM, produzione e controllo dimensionale, con un solo interlocutore.",
+    applications: [
+      {
+        title: "Prototipi funzionali",
+        description:
+          "Parti da montare e provare sul macchinario o sul prodotto, senza attendere uno stampo.",
+      },
+      {
+        title: "Componenti e attrezzature",
+        description:
+          "Staffe, supporti, flange, piastre, dime, gusci e carter per officina e linee di assemblaggio.",
+      },
+      {
+        title: "Piccole serie",
+        description:
+          "Lotti contenuti con ripetibilità, quando la stampa 3D non dà la finitura o il materiale richiesto.",
+      },
+      {
+        title: "Lavorazioni cilindriche e su più lati",
+        description:
+          "Il 4° asse serve a fresare pezzi rotanti e più facce nello stesso setup, entro Ø80 × 150 mm — non è un optional di catalogo.",
+      },
+      {
+        title: "Dal disegno al pezzo",
+        description:
+          "Se manca il CAD, progettiamo il componente da misure, disegni o campioni e poi lo fresiamo.",
+      },
+    ],
+    sectors: [
+      {
+        name: "Officine e PMI manifatturiere",
+        description: "Ricambi, attrezzaggi e particolari che servono in tempi brevi.",
+      },
+      {
+        name: "R&D e product development",
+        description: "Validazione di geometrie e accoppiamenti prima della produzione in serie.",
+      },
+      {
+        name: "Ticino e Nord Italia",
+        description: "Ritiro in sede a Figino o spedizione, con lo stesso referente del resto dei servizi 3DMAKES.",
+      },
+    ],
+    whenToChoose:
+      "Scegli la fresatura CNC quando il pezzo sta in 200 × 200 × 100 mm, oppure è un particolare cilindrico entro Ø80 × 150 mm, e ti servono superfici e forature da officina. Acciaio inox e acciaio li valutiamo solo per lavorazioni leggere. Per geometrie interne complesse o lotti in polimero, FDM, SLS o MJF possono restare più efficienti. Per lastre piane e marcature, il laser è spesso la via più diretta.",
+    whyUs:
+      "CNC, stampa 3D, scansione e progettazione stanno nello stesso laboratorio: ti diciamo se conviene fresare, stampare o combinare i due, senza farti scegliere a catalogo. Per il preventivo bastano file, quantità, materiale e le quote che contano.",
+    faqs: [
+      {
+        question: "Che file mi serve per un preventivo CNC?",
+        answer:
+          "STEP o STP sono l'ideale. Accettiamo anche IGES, DXF e STL. Insieme al file servono quantità, materiale e eventuali tolleranze o finiture.",
+      },
+      {
+        question: "Quali materiali fresate?",
+        answer:
+          "Alluminio, ottone, rame, plastiche tecniche (POM, PA, PC, ABS, HDPE, PMMA, PVC e altri), legno, MDF, compensato, fibra di carbonio e FR4. Acciaio inox e acciaio solo per lavorazioni leggere, dopo verifica di fattibilità.",
+      },
+      {
+        question: "Quali sono le dimensioni massime?",
+        answer:
+          "In 3 assi fino a 200 × 200 × 100 mm. Con il 4° asse fino a Ø80 × 150 mm per lavorazioni cilindriche e su più lati.",
+      },
+      {
+        question: "Non ho il modello 3D: potete partire da un pezzo o da un disegno?",
+        answer:
+          "Sì. Possiamo modellare il componente e poi fresarlo. Se serve, partiamo da una scansione 3D del campione.",
+      },
+      {
+        question: "A cosa serve il 4° asse?",
+        answer:
+          "A fresare pezzi cilindrici e più facce nello stesso setup, entro Ø80 × 150 mm. Se il particolare sta in queste quote, lo proponiamo sul serio — non come voce di catalogo.",
       },
     ],
   },

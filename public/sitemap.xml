@@ -239,6 +239,27 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://3dmakes.ch/services/progettazione/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://3dmakes.ch/services/consulenza/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://3dmakes.ch/services/cnc/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Post del blog principali -->
   <url>
     <loc>https://3dmakes.ch/blog/fdm-vs-sla-confronto/</loc>

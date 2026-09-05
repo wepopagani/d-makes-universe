@@ -2,7 +2,7 @@
   "nav": {
     "about": "Chi Siamo",
     "mission": "Mission",
-    "services": "Tecnologie",
+    "services": "Servizi",
     "shop": "Shop",
     "drones": "Droni",
     "blog": "Blog",
@@ -15,13 +15,13 @@
   },
   "seo": {
     "titleSuffix": "| 3DMAKES",
-    "homeTitle": "Stampa 3D Professionale | Lugano & Ticino | 3DMAKES",
-    "homeDescription": "Tecnologie di stampa 3D di alta qualità a Lugano, Ticino e Lombardia. Prototipazione rapida, modellazione 3D e produzione con FDM, SLA e altro.",
+    "homeTitle": "Molto più della stampa 3D | Lugano & Ticino | 3DMAKES",
+    "homeDescription": "Tecnologie e competenze per trasformare i tuoi progetti in realtà. Progettazione, stampa 3D, scansione, laser e consulenza a Lugano, Ticino e Nord Italia.",
     "aboutTitle": "Chi Siamo | Team, Valori e Storia | 3DMAKES Lugano",
     "aboutDescription": "Scopri 3DMAKES: il team, la mission e l’esperienza nella stampa 3D professionale, prototipazione rapida e produzione di qualità.",
     "blogIndexTitle": "Blog Stampa 3D | Guide, Casi Studio e Novità | 3DMAKES",
-    "servicesIndexTitle": "Tecnologie Stampa 3D | FDM, SLA, SLM, Laser | 3DMAKES",
-    "servicesIndexDescription": "Le tecnologie di produzione additiva 3DMAKES a Lugano: FDM, SLA, SLS, MJF, SLM, scansione 3D, laser e prototipazione rapida per Ticino e Lombardia.",
+    "servicesIndexTitle": "Servizi 3D | Progettazione, Stampa, Scansione, Laser | 3DMAKES",
+    "servicesIndexDescription": "Cosa possiamo fare: progettazione e DfAM, stampa 3D e produzione, scansione 3D, laser, servizi tecnici e consulenza. Laboratorio a Figino, Lugano.",
     "missionTitle": "Mission | Stampa 3D per tutti | 3DMAKES",
     "missionDescription": "Rendere la stampa 3D accessibile a tutti, con servizi di qualità a Lugano e in Ticino.",
     "calculatorTitle": "Calcolatore Preventivo Stampa 3D | 3DMAKES",
@@ -41,7 +41,7 @@
     "homeFaqQ1": "Dove si trova il laboratorio 3DMAKES?",
     "homeFaqA1": "Siamo a Figino (Ticino), in Svizzera. Serviamo clienti in tutto il Ticino, in tutta la Svizzera e nel Nord Italia.",
     "homeFaqQ2": "Quali tecnologie di stampa 3D e lavorazioni offrite?",
-    "homeFaqA2": "Offriamo stampa 3D FDM, SLA, SLS, SLM, MJF e altre tecnologie, oltre a scansione 3D, taglio e incisione laser, prototipazione rapida e supporto sui file.",
+    "homeFaqA2": "Progettazione e DfAM, stampa 3D (FDM, CFF, SLA, PolyJet, SLS, MJF, LSAM, SLM), fresatura CNC, scansione 3D, incisione e taglio laser, servizi tecnici e consulenza, con 3DMAKES come interlocutore unico.",
     "homeFaqQ3": "Come posso richiedere un preventivo?",
     "homeFaqA3": "Usa il calcolatore preventivo sul sito oppure il modulo contatti: ti rispondiamo con tempi e costi indicativi.",
     "homeFaqQ4": "Lavorate anche oltre il confine italo-svizzero?",
@@ -50,10 +50,10 @@
     "faqDescription": "Risposte chiare su materiali, tempi, preventivi, scansione 3D e qualità delle tecnologie 3DMAKES a Lugano, Ticino e Lombardia."
   },
   "hero": {
-    "title": "Stampa 3D Professionale",
-    "titleHighlight": "a Lugano, Ticino e Lombardia",
-    "subtitle": "Specialisti nella stampa 3D, offriamo soluzioni di prototipazione rapida e produzione di alta qualità con tecnologie FDM e SLA.",
-    "discoverServices": "Scopri le tecnologie",
+    "title": "Molto più della stampa 3D",
+    "titleHighlight": "Dall'idea al risultato",
+    "subtitle": "Tecnologie e competenze per trasformare i tuoi progetti in realtà. Competenza concreta, dialogo diretto, soluzioni su misura.",
+    "discoverServices": "Scopri i servizi",
     "requestQuote": "Richiedi Preventivo",
     "stats": {
       "experience": "Anni di esperienza",
@@ -72,18 +72,19 @@
     "haiIdeaFallbackText": "Hai Idea"
   },
   "services": {
-    "title": "Le nostre tecnologie",
-    "subtitle": "Soluzioni e tecnologie 3D",
-    "description": "Offriamo una gamma completa di tecnologie di stampa 3D, scansione e prototipazione per trasformare le tue idee in oggetti reali con precisione e qualità professionale.",
-    "seeAll": "Scopri tutte le nostre tecnologie",
-    "readyToRealize": "Pronto a realizzare il tuo progetto?",
-    "contactToday": "Contattaci oggi stesso per discutere del tuo progetto di stampa 3D e ricevere un preventivo personalizzato.",
+    "title": "Cosa possiamo fare",
+    "subtitle": "Non una sola tecnologia. La soluzione più adatta.",
+    "description": "Partiamo dal risultato che ti serve e scegliamo il percorso produttivo più efficace: dalla progettazione al pezzo finito, con un solo interlocutore.",
+    "seeAll": "Scopri tutte le tecnologie",
+    "readyToRealize": "Hai un progetto? Parliamone.",
+    "contactToday": "Raccontaci cosa vuoi realizzare. Troveremo insieme il percorso più efficace per arrivare al risultato.",
     "calculateQuote": "Calcola un preventivo",
-    "heroTitle": "Le nostre tecnologie",
-    "heroSubtitle": "Un laboratorio completo di produzione additiva: polimeri, metallo, scansione 3D e lavorazioni digitali per trasformare le tue idee in pezzi reali.",
+    "heroTitle": "Cosa possiamo fare",
+    "heroSubtitle": "Dall'idea al pezzo finito: progettazione, stampa 3D, scansione, laser, servizi tecnici e consulenza. Un partner, non un catalogo.",
     "characteristics": "Caratteristiche",
     "availableMaterials": "Materiali disponibili",
     "applications": "Applicazioni",
+    "quoteNeedsTitle": "Cosa ci serve dal cliente",
     "ourProcess": "Il nostro processo",
     "requestQuote": "Richiedi un preventivo",
     "fdmBasic": {
@@ -323,7 +324,7 @@
       "features": [
         "Tecnologia laser a fibra MOPA, 60 W",
         "Area di lavoro: 250 × 250 mm",
-        "Precisione: 0,01 mm",
+        "Precisione: 0,1 mm",
         "Materiali: acciaio inossidabile, alluminio, ottone, rame",
         "Incisione e marcatura permanente su metalli",
         "Taglio di lamiere e componenti metallici",
@@ -459,8 +460,62 @@
       ]
     },
     "design": {
-      "title": "Progettazione CAD",
-      "description": "Modellazione e ottimizzazione dei file per stampa 3D, laser e produzione additiva."
+      "title": "Progettazione & DfAM",
+      "description": "Modellazione CAD, ottimizzazione per la produzione additiva e sviluppo prodotto. Se il pezzo esiste, lo ottimizziamo. Se non esiste ancora, lo progettiamo.",
+      "features": [
+        "Modellazione CAD da schizzo, pezzo o file esistente",
+        "DfAM — Design for Additive Manufacturing",
+        "Ottimizzazione geometrie, spessori e orientamento di stampa",
+        "Sviluppo prodotto dallo concept al prototipo",
+        "Un unico interlocutore dal primo confronto al file pronto"
+      ],
+      "applications": [
+        {
+          "name": "Modellazione CAD",
+          "description": "Trasformiamo un'idea, un disegno o un pezzo fisico in un modello 3D pronto per produzione, modifica o archivio."
+        },
+        {
+          "name": "DfAM",
+          "description": "Progettiamo e ottimizziamo i componenti per la tecnologia scelta, riducendo tempi, materiale e criticità di stampa."
+        },
+        {
+          "name": "Sviluppo prodotto",
+          "description": "Ti affianchiamo nelle iterazioni di design, dalla prima ipotesi al prototipo funzionale."
+        },
+        {
+          "name": "Ottimizzazione file",
+          "description": "Revisioniamo STL, STEP e modelli esistenti per renderli stampabili, più robusti o più economici."
+        }
+      ]
+    },
+    "consulting": {
+      "title": "Consulenza e Technology Transfer",
+      "description": "Ti aiutiamo a scegliere il processo più adatto e a portare la produzione additiva in azienda, con 3DMAKES come interlocutore unico.",
+      "features": [
+        "Scelta del processo e del materiale in base al risultato",
+        "Technology transfer per introdurre la stampa 3D in azienda",
+        "Valutazione make-or-buy e piano di industrializzazione",
+        "Rete di partner tecnologici qualificati, un solo referente",
+        "Supporto dal confronto tecnico alla produzione"
+      ],
+      "applications": [
+        {
+          "name": "Scelta del processo",
+          "description": "Confrontiamo FDM, CFF, SLA, PolyJet, SLS, MJF, LSAM, SLM e laser in base a costi, tempi e prestazioni."
+        },
+        {
+          "name": "Technology transfer",
+          "description": "Affianchiamo team interni nell'adozione di macchine, materiali e workflow additivi."
+        },
+        {
+          "name": "Make or buy",
+          "description": "Valutiamo cosa produrre internamente e cosa affidare al laboratorio, senza vincoli di catalogo."
+        },
+        {
+          "name": "Interlocutore unico",
+          "description": "Coordiniamo partner e tecnologie extra quando serve, mantenendo un solo punto di contatto."
+        }
+      ]
     },
     "postProcessing": {
       "title": "Post-elaborazione",
@@ -527,6 +582,92 @@
         }
       ]
     },
+    "cnc": {
+      "title": "Fresatura CNC 3 e 4 assi",
+      "description": "Realizzazione di componenti tecnici, prototipi, dime e piccole serie in metallo, plastica, legno e materiali compositi. Lavorazioni su 3 assi fino a 200 × 200 × 100 mm e lavorazioni rotative con 4° asse fino a Ø80 × 150 mm.",
+      "materialsSummary": "Materiali: alluminio, ottone, rame, acciaio inox*, acciaio*, plastiche tecniche, legno, MDF, compensato, fibra di carbonio, FR4 e altri materiali lavorabili.",
+      "featuresTitle": "Servizio completo",
+      "applicationsTitle": "Cosa possiamo realizzare",
+      "features": [
+        "Analisi del file CAD e fattibilità",
+        "Preparazione CAM e programmazione macchina",
+        "Fresatura 3 assi fino a 200 × 200 × 100 mm",
+        "4° asse per lavorazioni cilindriche e su più lati, fino a Ø80 × 150 mm",
+        "Foratura, svasatura e filettatura",
+        "Controllo dimensionale del pezzo"
+      ],
+      "applications": [
+        {
+          "name": "Prototipi funzionali",
+          "description": "Parti pronte da montare e testare, ricavate dal file CAD senza passare da uno stampo."
+        },
+        {
+          "name": "Componenti meccanici",
+          "description": "Particolari tecnici per assemblaggi, macchinari e attrezzature di officina."
+        },
+        {
+          "name": "Staffe, dime e piccole serie",
+          "description": "Supporti, flange, piastre, gusci, carter e lotti contenuti, con ripetibilità sul pezzo successivo."
+        },
+        {
+          "name": "Lavorazioni cilindriche e su più lati",
+          "description": "Con il 4° asse fresiamo pezzi rotanti e più facce nello stesso setup, entro Ø80 × 150 mm."
+        }
+      ],
+      "materialGroups": [
+        {
+          "name": "Metalli",
+          "items": [
+            "Alluminio",
+            "Ottone",
+            "Rame",
+            "Acciaio inox*",
+            "Acciaio*"
+          ]
+        },
+        {
+          "name": "Plastiche tecniche",
+          "items": [
+            "POM / Delrin",
+            "Nylon / PA",
+            "PC",
+            "ABS",
+            "HDPE",
+            "Acrilico / PMMA",
+            "PVC",
+            "Altri tecnopolimeri"
+          ]
+        },
+        {
+          "name": "Compositi",
+          "items": [
+            "Fibra di carbonio",
+            "FR4"
+          ]
+        },
+        {
+          "name": "Legno",
+          "items": [
+            "Legni teneri",
+            "Legni duri",
+            "Compensato",
+            "MDF"
+          ]
+        }
+      ],
+      "materialsNote": "*Lavorazioni leggere e soggette a verifica di fattibilità. Valutiamo anche altri materiali lavorabili.",
+      "quoteNeedsTitle": "Cosa ci serve dal cliente",
+      "quoteNeedsIntro": "Per un preventivo sono sufficienti:",
+      "quoteNeeds": [
+        "File STEP / STP, IGES, DXF o STL",
+        "Quantità richiesta",
+        "Materiale desiderato",
+        "Eventuali tolleranze o quote critiche",
+        "Eventuali finiture richieste"
+      ],
+      "noCadTitle": "Non hai un file CAD?",
+      "noCadText": "Possiamo occuparci anche della modellazione 3D e della progettazione del componente a partire da disegni, misure o campioni."
+    },
     "sls": {
       "title": "Stampa 3D SLS",
       "description": "Sinterizzazione laser selettiva per la produzione di parti complesse in polveri termoplastiche. Ideale per prototipi funzionali, componenti meccanici e piccole serie senza supporti.",
@@ -550,19 +691,76 @@
         }
       ]
     },
-    "heroEyebrow": "Tecnologie",
-    "introTitle": "Un hub tecnologico, non un catalogo generico",
-    "introText": "Scegliamo la tecnologia giusta per ogni progetto — dalla prototipazione rapida alla piccola serie industriale — con macchinari professionali e supporto tecnico dedicato da Figino (Lugano).",
-    "catalogTitle": "Esplora le tecnologie",
-    "catalogSubtitle": "Filtra per famiglia tecnologica e apri la scheda dedicata con materiali, applicazioni e FAQ.",
+    "heroEyebrow": "Servizi",
+    "offerEyebrow": "Cosa possiamo fare",
+    "introTitle": "Dall'idea al pezzo finito",
+    "introText": "Ogni progetto parte dall'ascolto. Se il pezzo esiste, lo ottimizziamo. Se non esiste ancora, lo progettiamo. Poi scegliamo la tecnologia più adatta.",
+    "familiesTitle": "Sei modi per entrare nel progetto",
+    "familiesSubtitle": "Progettazione, produzione, digitalizzazione, laser, servizi tecnici e consulenza: entriamo dal punto in cui ti serve.",
+    "catalogTitle": "Tecnologie di stampa e lavorazione",
+    "catalogSubtitle": "Filtra per famiglia e apri la scheda con materiali, applicazioni e FAQ.",
     "faqTeaserTitle": "Hai dubbi su tempi, materiali o preventivi?",
     "faqTeaserText": "Abbiamo raccolto le risposte più richieste in una pagina FAQ chiara e aggiornata — utile prima di richiedere un preventivo.",
     "faqTeaserCta": "Vai alle FAQ",
+    "partnerNetwork": "Una rete di partner tecnologici qualificati amplia le capacità disponibili, mantenendo 3DMAKES come interlocutore unico.",
     "groups": {
       "all": "Tutte",
       "polymer": "Polimeri",
-      "metal": "Metallo",
+      "metal": "Metallo & CNC",
       "digital": "Digitale & servizi"
+    },
+    "capabilities": {
+      "designTitle": "Progettare",
+      "designText": "Modellazione CAD, DfAM e prototipazione rapida per arrivare a un file e a un pezzo che funzionano.",
+      "makeTitle": "Realizzare",
+      "makeText": "FDM, CFF, SLA, PolyJet, SLS, MJF, SLM, LSAM, laser, fresatura CNC, post-elaborazione e controllo qualità.",
+      "supportTitle": "Misurare e supportare",
+      "supportText": "Scansione 3D, riparazione e manutenzione stampanti, consulenza e technology transfer."
+    },
+    "families": {
+      "design": {
+        "title": "Progettazione & DfAM",
+        "description": "CAD, ottimizzazione e sviluppo prodotto: dal primo confronto al file pronto per la produzione.",
+        "tags": "CAD · ottimizzazione · sviluppo prodotto"
+      },
+      "print": {
+        "title": "Stampa 3D & Produzione",
+        "description": "Prototipi, componenti e serie con stampa 3D — la tecnologia più adatta al risultato.",
+        "tags": "prototipi · componenti · serie"
+      },
+      "scan": {
+        "title": "Scansione 3D",
+        "description": "Digitalizziamo oggetti fisici con precisione millimetrica, pronti per modifica, archivio o stampa.",
+        "tags": "digitalizzazione · file · sviluppo"
+      },
+      "laser": {
+        "title": "Laser, CNC & Personalizzazione",
+        "description": "Incisione, marcatura e taglio laser, più fresatura CNC 3 e 4 assi: dal singolo pezzo alle piccole serie.",
+        "tags": "incisione · marcatura · taglio · CNC"
+      },
+      "technical": {
+        "title": "Servizi tecnici",
+        "description": "Finitura, controllo qualità e riparazione stampanti 3D, con diagnosi in 24 ore.",
+        "tags": "finitura · controllo qualità · riparazioni"
+      },
+      "consulting": {
+        "title": "Consulenza",
+        "description": "Technology transfer e scelta del processo: entriamo nel progetto dal punto in cui ti serve.",
+        "tags": "technology transfer · scelta processo"
+      }
+    },
+    "howWeHelp": {
+      "eyebrow": "Come possiamo aiutarti",
+      "title": "Entriamo nel progetto dal punto in cui ti serve",
+      "subtitle": "Un solo interlocutore, dal confronto alla consegna.",
+      "item1Title": "Hai un'idea?",
+      "item1Text": "La analizziamo e la trasformiamo in progetto.",
+      "item2Title": "Hai un pezzo?",
+      "item2Text": "Lo scansioniamo, modifichiamo o replichiamo.",
+      "item3Title": "Hai un file?",
+      "item3Text": "Lo verifichiamo e scegliamo la tecnologia.",
+      "item4Title": "Hai un prodotto?",
+      "item4Text": "Lo personalizziamo, prototipiamo o produciamo."
     },
     "pillars": {
       "rangeTitle": "Gamma completa",
@@ -575,17 +773,20 @@
   },
   "about": {
     "title": "Chi Siamo",
-    "subtitle": "La nostra passione per l'innovazione e la tecnologia 3D",
-    "description": "Siamo un team di specialisti nella stampa 3D con anni di esperienza nel settore. La nostra missione è trasformare le vostre idee in realtà attraverso tecnologie avanzate e un servizio di qualità superiore.",
-    "heroSubtitle": "Un team di appassionati esperti di stampa 3D, dedicati a trasformare le tue idee in realtà.",
+    "eyebrow": "01 Chi siamo",
+    "subtitle": "Un partner per trasformare una necessità in realtà",
+    "description": "3DMAKES unisce progettazione, tecnologie 3D e attenzione al risultato. Lavoriamo con aziende, professionisti e privati per portare un'idea dal primo confronto al componente, al prototipo o alla produzione finale.",
+    "heroSubtitle": "Un partner per trasformare una necessità in realtà",
+    "humanFaceTitle": "Tecnologia, ma con un volto umano",
+    "humanFace": "Ogni progetto parte dall'ascolto. Se il pezzo esiste, lo ottimizziamo. Se non esiste ancora, lo progettiamo.",
     "ourStory": "La Nostra Storia",
     "fromDreamToReality": "Dal sogno alla realtà",
     "storyParagraph1": "3DMAKES nasce nel 2022 dall'intuizione di Marco Pagani, 20 anni e una forte passione per l'informatica, in particolare per la stampa 3D. Partendo da una piccola stanza con due stampanti 3D, l'azienda è cresciuta fino a diventare una realtà affermata nel settore della produzione additiva.",
     "storyParagraph2": "La nostra mission è sempre stata chiara: rendere la tecnologia di stampa 3D accessibile a tutti, dalle grandi aziende ai piccoli artigiani, dai designer ai privati appassionati di tecnologia.",
     "storyParagraph3": "Oggi, con un team di professionisti qualificati e un parco macchine all'avanguardia, offriamo un servizio completo di stampa 3D, scansione, progettazione e consulenza, mantenendo sempre al centro i valori di qualità, innovazione e attenzione al cliente.",
     "ourValues": "I Nostri Valori",
-    "whatGuidesUs": "Cosa ci guida ogni giorno",
-    "valuesDescription": "Crediamo fermamente in alcuni principi fondamentali che guidano ogni aspetto del nostro lavoro e del rapporto con i clienti.",
+    "whatGuidesUs": "Tecnologia, ma con un volto umano",
+    "valuesDescription": "Competenza concreta. Dialogo diretto. Soluzioni su misura.",
     "sustainabilityTitle": "Sostenibilità",
     "sustainabilityDescription": "Ci impegniamo a ridurre l'impatto ambientale dei nostri processi produttivi. Utilizziamo materiali ecosostenibili dove possibile e ottimizziamo le nostre produzioni per minimizzare gli scarti.",
     "ourTeam": "Il Nostro Team",
@@ -595,6 +796,12 @@
     "howToReachUs": "Come Raggiungerci",
     "ourAddress": "Il Nostro Indirizzo",
     "values": {
+      "reliable": "Affidabili",
+      "reliableDescription": "Qualità e cura per ogni dettaglio.",
+      "flexible": "Flessibili",
+      "flexibleDescription": "Dal singolo pezzo alle produzioni in serie.",
+      "close": "Vicini",
+      "closeDescription": "Laboratorio in Svizzera, contatto diretto.",
       "innovation": "Innovazione",
       "innovationDescription": "Ricerchiamo costantemente le soluzioni più innovative per offrire ai nostri clienti risultati all'avanguardia. Investiamo in tecnologie di ultima generazione e aggiorniamo continuamente le nostre competenze.",
       "quality": "Qualità",
@@ -732,6 +939,9 @@
         "largePrint": "Riparazione Stampanti 3D",
         "scanning": "Scansione 3D",
         "prototyping": "Prototipazione",
+        "design": "Progettazione & DfAM",
+        "consulting": "Consulenza e Technology Transfer",
+        "cnc": "Fresatura CNC",
         "other": "Altro"
       }
     },
@@ -932,7 +1142,7 @@
     "laserInfo": {
       "title": "Informazioni Laser",
       "workArea": "Area di lavoro: 250 × 250 mm",
-      "precision": "Precisione: 0,01 mm",
+      "precision": "Precisione: 0,1 mm",
       "fileFormats": "Formati: DXF, PDF",
       "materials": "Materiali: acciaio inox, alluminio, ottone, rame, acrilico, pelle e altri",
       "thickness": "Taglio metalli: alluminio fino a 1 mm, acciaio inox e ottone fino a 2 mm"
@@ -1227,9 +1437,9 @@
     "sla": "SLA"
   },
   "footer": {
-    "description": "Trasformiamo le tue idee in oggetti reali attraverso la tecnologia di stampa 3D.",
+    "description": "Molto più della stampa 3D: tecnologie e competenze per trasformare i tuoi progetti in realtà.",
     "quickLinks": "Link Rapidi",
-    "servicesTitle": "Tecnologie",
+    "servicesTitle": "Servizi",
     "contactTitle": "Contattaci",
     "calculateQuote": "Calcola Preventivo",
     "copyright": "Tutti i diritti riservati"

@@ -2,7 +2,7 @@
   "nav": {
     "about": "À propos",
     "mission": "Mission",
-    "services": "Technologies",
+    "services": "Services",
     "shop": "Boutique",
     "drones": "Drones",
     "blog": "Blog",
@@ -15,13 +15,13 @@
   },
   "seo": {
     "titleSuffix": "| 3DMAKES",
-    "homeTitle": "Impression 3D Pro | Lugano & Tessin | 3DMAKES",
-    "homeDescription": "Technologies d’impression 3D de haute qualité à Lugano, Tessin et Lombardie. Prototypage rapide, modélisation 3D et production avec FDM, SLA et plus.",
+    "homeTitle": "Bien plus que l’impression 3D | Lugano & Tessin | 3DMAKES",
+    "homeDescription": "Technologies et compétences pour transformer vos projets en réalité. Conception, impression 3D, scan, laser et conseil à Lugano, au Tessin et en Italie du Nord.",
     "aboutTitle": "À propos | Équipe, valeurs & histoire | 3DMAKES Lugano",
     "aboutDescription": "Découvrez 3DMAKES : équipe, mission et expertise en impression 3D professionnelle, prototypage rapide et production de qualité.",
     "blogIndexTitle": "Blog Impression 3D | Guides, cas clients & actus | 3DMAKES",
-    "servicesIndexTitle": "Technologies d’impression 3D | FDM, SLA, SLM, Laser | 3DMAKES",
-    "servicesIndexDescription": "Les technologies de fabrication additive 3DMAKES à Lugano : FDM, SLA, SLS, MJF, SLM, scan 3D, laser et prototypage rapide pour le Tessin et la Lombardie.",
+    "servicesIndexTitle": "Services 3D | Conception, Impression, Scan, Laser | 3DMAKES",
+    "servicesIndexDescription": "Ce que nous pouvons faire : conception DfAM, impression 3D, scan 3D, laser, services techniques et conseil. Laboratoire à Figino, Lugano.",
     "missionTitle": "Notre Mission | Impression 3D pour tous | 3DMAKES",
     "missionDescription": "Rendre l’impression 3D accessible à tous, avec des services de qualité à Lugano et dans le Tessin.",
     "calculatorTitle": "Calculateur Devis Impression 3D | 3DMAKES",
@@ -41,7 +41,7 @@
     "homeFaqQ1": "Où se trouve le laboratoire 3DMAKES ?",
     "homeFaqA1": "Nous sommes à Figino (Tessin), en Suisse. Nous servons des clients dans tout le Tessin, en Suisse entière et dans le nord de l’Italie.",
     "homeFaqQ2": "Quelles technologies d’impression 3D proposez-vous ?",
-    "homeFaqA2": "Nous proposons l’impression 3D FDM, SLA, SLS, SLM, MJF et d’autres technologies, ainsi que le scan 3D, la découpe et gravure laser, le prototypage rapide et l’aide sur fichiers.",
+    "homeFaqA2": "Conception DfAM, impression 3D (FDM, CFF, SLA, PolyJet, SLS, MJF, LSAM, SLM), fraisage CNC, scan 3D, gravure et découpe laser, services techniques et conseil — avec 3DMAKES comme interlocuteur unique.",
     "homeFaqQ3": "Comment demander un devis ?",
     "homeFaqA3": "Utilisez le calculateur en ligne ou le formulaire de contact : nous répondons avec délais et coûts indicatifs.",
     "homeFaqQ4": "Travaillez-vous au-delà de la frontière italo-suisse ?",
@@ -50,10 +50,10 @@
     "faqDescription": "Réponses claires sur matériaux, délais, devis, scan 3D et qualité des technologies 3DMAKES à Lugano, Tessin et Lombardie."
   },
   "hero": {
-    "title": "Nous transformons vos idées en",
-    "titleHighlight": "objets réels",
-    "subtitle": "Spécialistes de l'impression 3D, nous offrons des solutions de prototypage rapide et de production de haute qualité avec les technologies FDM et SLA.",
-    "discoverServices": "Découvrir les technologies",
+    "title": "Bien plus que l’impression 3D",
+    "titleHighlight": "De l’idée au résultat",
+    "subtitle": "Technologies et compétences pour transformer vos projets en réalité. Expertise concrète, dialogue direct, solutions sur mesure.",
+    "discoverServices": "Découvrir les services",
     "requestQuote": "Demander un devis",
     "stats": {
       "experience": "Années d'expérience",
@@ -72,15 +72,15 @@
     "haiIdeaFallbackText": "Vous avez une idee ?"
   },
   "services": {
-    "title": "Nos technologies",
-    "subtitle": "Nos solutions 3D",
-    "description": "Une gamme complète de technologies d’impression 3D, de scan et de prototypage pour transformer vos idées en objets réels avec précision professionnelle.",
-    "seeAll": "Découvrir toutes nos technologies",
-    "readyToRealize": "Prêt à réaliser votre projet?",
-    "contactToday": "Contactez-nous aujourd'hui pour discuter de votre projet d'impression 3D et recevoir un devis personnalisé.",
+    "title": "Ce que nous pouvons faire",
+    "subtitle": "Pas une seule technologie. La solution adaptée.",
+    "description": "Nous partons du résultat dont vous avez besoin et choisissons le parcours de production le plus efficace : de la conception à la pièce finie, avec un seul interlocuteur.",
+    "seeAll": "Toutes les technologies",
+    "readyToRealize": "Vous avez un projet ? Parlons-en.",
+    "contactToday": "Racontez-nous ce que vous voulez réaliser. Nous trouverons ensemble le parcours le plus efficace.",
     "calculateQuote": "Calculer un devis",
-    "heroTitle": "Nos technologies",
-    "heroSubtitle": "Un laboratoire complet de fabrication additive : polymères, métal, scan 3D et workflows numériques pour transformer vos idées en pièces réelles.",
+    "heroTitle": "Ce que nous pouvons faire",
+    "heroSubtitle": "De l’idée à la pièce finie : conception, impression 3D, scan, laser, services techniques et conseil. Un partenaire, pas un catalogue.",
     "characteristics": "Caractéristiques",
     "availableMaterials": "Matériaux disponibles",
     "applications": "Applications",
@@ -297,7 +297,7 @@
       "features": [
         "Technologie laser fibre MOPA, 60 W",
         "Zone de travail : 250 × 250 mm",
-        "Précision : 0,01 mm",
+        "Précision : 0,1 mm",
         "Matériaux : acier inoxydable, aluminium, laiton, cuivre",
         "Gravure et marquage permanent sur métaux",
         "Découpe de tôles et composants métalliques",
@@ -408,8 +408,33 @@
       ]
     },
     "design": {
-      "title": "Conception",
-      "description": "Services de conception CAO pour optimiser vos modèles pour l'impression 3D."
+      "title": "Conception & DfAM",
+      "description": "Modélisation CAO, optimisation pour la fabrication additive et développement produit. Si la pièce existe, nous l’optimisons. Si elle n’existe pas encore, nous la concevons.",
+      "features": [
+        "Modélisation CAO à partir d’un croquis, d’une pièce ou d’un fichier",
+        "DfAM — Design for Additive Manufacturing",
+        "Optimisation des géométries, des épaisseurs et de l’orientation d’impression",
+        "Développement produit du concept au prototype",
+        "Un seul interlocuteur du premier échange au fichier prêt à produire"
+      ],
+      "applications": [
+        {
+          "name": "Modélisation CAO",
+          "description": "Nous transformons une idée, un dessin ou une pièce physique en modèle 3D prêt pour la production, la modification ou l’archivage."
+        },
+        {
+          "name": "DfAM",
+          "description": "Nous concevons et optimisons les pièces pour le procédé choisi, en réduisant temps, matière et risques d’impression."
+        },
+        {
+          "name": "Développement produit",
+          "description": "Nous vous accompagnons dans les itérations de design, de la première hypothèse au prototype fonctionnel."
+        },
+        {
+          "name": "Optimisation de fichiers",
+          "description": "Nous révisons STL, STEP et modèles existants pour les rendre imprimables, plus robustes ou plus économiques."
+        }
+      ]
     },
     "postProcessing": {
       "title": "Post-traitement",
@@ -504,18 +529,18 @@
         }
       ]
     },
-    "heroEyebrow": "Technologies",
-    "introTitle": "Un hub technologique, pas un catalogue générique",
-    "introText": "Nous choisissons le bon procédé pour chaque projet — du prototypage rapide à la petite série industrielle — avec des machines professionnelles et un support technique dédié depuis Figino (Lugano).",
-    "catalogTitle": "Explorer les technologies",
-    "catalogSubtitle": "Filtrez par famille technologique et ouvrez la fiche dédiée avec matériaux, applications et FAQ.",
+    "heroEyebrow": "Services",
+    "introTitle": "De l’idée à la pièce finie",
+    "introText": "Chaque projet commence par l’écoute. Si la pièce existe, nous l’optimisons. Si elle n’existe pas encore, nous la concevons. Puis nous choisissons la technologie adaptée.",
+    "catalogTitle": "Technologies d’impression et de finition",
+    "catalogSubtitle": "Filtrez par famille et ouvrez la fiche avec matériaux, applications et FAQ.",
     "faqTeaserTitle": "Des questions sur les délais, matériaux ou devis ?",
     "faqTeaserText": "Nous avons rassemblé les réponses les plus demandées dans une page FAQ claire — utile avant de demander un devis.",
     "faqTeaserCta": "Voir la FAQ",
     "groups": {
       "all": "Toutes",
       "polymer": "Polymères",
-      "metal": "Métal",
+      "metal": "Métal & CNC",
       "digital": "Digital & services"
     },
     "pillars": {
@@ -525,21 +550,194 @@
       "qualityText": "Processus contrôlés, matériaux sélectionnés et vérification des pièces avant livraison — standards adaptés aux entreprises et professionnels.",
       "supportTitle": "Support technique",
       "supportText": "Nous vous aidons à choisir technologie et matériau, optimiser le fichier et planifier des délais réalistes."
-    }
+    },
+    "offerEyebrow": "Ce que nous pouvons faire",
+    "familiesTitle": "Six façons d’entrer dans le projet",
+    "familiesSubtitle": "Conception, production, numérisation, laser, services techniques et conseil : nous intervenons là où vous en avez besoin.",
+    "partnerNetwork": "Un réseau de partenaires technologiques qualifiés élargit les capacités disponibles, tout en gardant 3DMAKES comme interlocuteur unique.",
+    "consulting": {
+      "title": "Conseil et transfert technologique",
+      "description": "Nous vous aidons à choisir le procédé le plus adapté et à intégrer la fabrication additive en entreprise, avec 3DMAKES comme interlocuteur unique.",
+      "features": [
+        "Choix du procédé et du matériau selon le résultat visé",
+        "Transfert technologique pour introduire l’impression 3D en interne",
+        "Évaluation make-or-buy et plan d’industrialisation",
+        "Réseau de partenaires qualifiés, un seul référent",
+        "Accompagnement du briefing technique à la production"
+      ],
+      "applications": [
+        {
+          "name": "Choix du procédé",
+          "description": "Nous comparons FDM, CFF, SLA, PolyJet, SLS, MJF, LSAM, SLM et laser selon coûts, délais et performances."
+        },
+        {
+          "name": "Transfert technologique",
+          "description": "Nous accompagnons les équipes internes dans l’adoption de machines, matériaux et workflows additifs."
+        },
+        {
+          "name": "Make or buy",
+          "description": "Nous évaluons ce qu’il faut produire en interne et ce qu’il faut confier au laboratoire."
+        },
+        {
+          "name": "Interlocuteur unique",
+          "description": "Nous coordonnons partenaires et technologies supplémentaires si besoin, avec un seul point de contact."
+        }
+      ]
+    },
+    "capabilities": {
+      "designTitle": "Concevoir",
+      "designText": "Modélisation CAO, DfAM et prototypage rapide pour un fichier et une pièce qui fonctionnent.",
+      "makeTitle": "Réaliser",
+      "makeText": "FDM, CFF, SLA, PolyJet, SLS, MJF, SLM, LSAM, laser, fraisage CNC, post-traitement et contrôle qualité.",
+      "supportTitle": "Mesurer et accompagner",
+      "supportText": "Scan 3D, réparation et maintenance d’imprimantes, conseil et transfert technologique."
+    },
+    "families": {
+      "design": {
+        "title": "Conception & DfAM",
+        "description": "CAO, optimisation et développement produit : du premier échange au fichier prêt à produire.",
+        "tags": "CAO · optimisation · développement produit"
+      },
+      "print": {
+        "title": "Impression 3D & production",
+        "description": "Prototypes, pièces et séries en impression 3D — le procédé adapté au résultat.",
+        "tags": "prototypes · composants · séries"
+      },
+      "scan": {
+        "title": "Scan 3D",
+        "description": "Nous numérisons des objets physiques avec une précision millimétrique, prêts à modifier, archiver ou imprimer.",
+        "tags": "numérisation · fichiers · développement"
+      },
+      "laser": {
+        "title": "Laser, CNC & personnalisation",
+        "description": "Gravure, marquage et découpe laser, plus fraisage CNC 3 et 4 axes : de la pièce unique aux petites séries.",
+        "tags": "gravure · marquage · découpe · CNC"
+      },
+      "technical": {
+        "title": "Services techniques",
+        "description": "Finition, contrôle qualité et réparation d’imprimantes 3D, avec diagnostic en 24 heures.",
+        "tags": "finition · contrôle qualité · réparations"
+      },
+      "consulting": {
+        "title": "Conseil",
+        "description": "Transfert technologique et choix du procédé : nous intervenons là où vous en avez besoin.",
+        "tags": "transfert technologique · choix du procédé"
+      }
+    },
+    "howWeHelp": {
+      "eyebrow": "Comment nous pouvons vous aider",
+      "title": "Nous intervenons là où vous en avez besoin",
+      "subtitle": "Un seul interlocuteur, de l’échange à la livraison.",
+      "item1Title": "Vous avez une idée ?",
+      "item1Text": "Nous l’analysons et la transformons en projet.",
+      "item2Title": "Vous avez une pièce ?",
+      "item2Text": "Nous la scannons, la modifions ou la répliquons.",
+      "item3Title": "Vous avez un fichier ?",
+      "item3Text": "Nous le vérifions et choisissons la technologie.",
+      "item4Title": "Vous avez un produit ?",
+      "item4Text": "Nous le personnalisons, le prototypons ou le produisons."
+    },
+    "cnc": {
+      "title": "Fraisage CNC 3 et 4 axes",
+      "description": "Pièces techniques, prototypes, montages et petites séries en métal, plastique, bois et composites. Usinage 3 axes jusqu’à 200 × 200 × 100 mm, et travail rotatif 4e axe jusqu’à Ø80 × 150 mm.",
+      "materialsSummary": "Matériaux : aluminium, laiton, cuivre, acier inox*, acier*, plastiques techniques, bois, MDF, contreplaqué, fibre de carbone, FR4 et autres matériaux usinables.",
+      "featuresTitle": "Un service complet",
+      "applicationsTitle": "Ce que nous pouvons réaliser",
+      "features": [
+        "Analyse du fichier CAO et faisabilité",
+        "Préparation FAO et programmation machine",
+        "Fraisage 3 axes jusqu’à 200 × 200 × 100 mm",
+        "4e axe pour usinage cylindrique et multi-faces, jusqu’à Ø80 × 150 mm",
+        "Perçage, lamage et taraudage",
+        "Contrôle dimensionnel de la pièce"
+      ],
+      "applications": [
+        {
+          "name": "Prototypes fonctionnels",
+          "description": "Pièces prêtes à monter et tester, usinées depuis la CAO sans moule."
+        },
+        {
+          "name": "Composants mécaniques",
+          "description": "Pièces techniques pour assemblages, machines et outillage d’atelier."
+        },
+        {
+          "name": "Équerres, montages et petites séries",
+          "description": "Supports, brides, plaques, carters et lots contenus, avec un résultat répétable."
+        },
+        {
+          "name": "Usinage cylindrique et multi-faces",
+          "description": "Le 4e axe usine des pièces rotatives et plusieurs faces dans le même setup, jusqu’à Ø80 × 150 mm."
+        }
+      ],
+      "materialGroups": [
+        {
+          "name": "Métaux",
+          "items": [
+            "Aluminium",
+            "Laiton",
+            "Cuivre",
+            "Acier inox*",
+            "Acier*"
+          ]
+        },
+        {
+          "name": "Plastiques techniques",
+          "items": [
+            "POM / Delrin",
+            "Nylon / PA",
+            "PC",
+            "ABS",
+            "HDPE",
+            "Acrylique / PMMA",
+            "PVC",
+            "Autres technopolymères"
+          ]
+        },
+        {
+          "name": "Composites",
+          "items": [
+            "Fibre de carbone",
+            "FR4"
+          ]
+        },
+        {
+          "name": "Bois",
+          "items": [
+            "Bois tendres",
+            "Bois durs",
+            "Contreplaqué",
+            "MDF"
+          ]
+        }
+      ],
+      "materialsNote": "*Usinages légers uniquement, sous réserve de faisabilité. D’autres matériaux usinables peuvent être évalués.",
+      "quoteNeedsTitle": "Ce dont nous avons besoin",
+      "quoteNeedsIntro": "Pour un devis, il suffit de :",
+      "quoteNeeds": [
+        "Fichier STEP / STP, IGES, DXF ou STL",
+        "Quantité souhaitée",
+        "Matériau souhaité",
+        "Tolérances ou cotes critiques éventuelles",
+        "Finitions éventuelles"
+      ],
+      "noCadTitle": "Vous n’avez pas de fichier CAO ?",
+      "noCadText": "Nous pouvons aussi modéliser et concevoir la pièce à partir de plans, de cotes ou d’un échantillon."
+    },
+    "quoteNeedsTitle": "Ce dont nous avons besoin"
   },
   "about": {
     "title": "À propos",
-    "subtitle": "Notre passion pour l'innovation et la technologie 3D",
-    "description": "Nous sommes une équipe de spécialistes de l'impression 3D avec des années d'expérience dans le secteur. Notre mission est de transformer vos idées en réalité grâce à des technologies avancées et un service de qualité supérieure.",
-    "heroSubtitle": "Une équipe d'experts passionnés en impression 3D, dédiée à transformer vos idées en réalité.",
+    "subtitle": "Un partenaire pour transformer un besoin en réalité",
+    "description": "3DMAKES réunit conception, technologies 3D et exigence de résultat. Nous travaillons avec des entreprises, des professionnels et des particuliers pour mener une idée du premier échange au composant, au prototype ou à la production finale.",
+    "heroSubtitle": "Un partenaire pour transformer un besoin en réalité",
     "ourStory": "Notre Histoire",
     "fromDreamToReality": "Du rêve à la réalité",
     "storyParagraph1": "3DMAKES est née en 2022 de l'intuition de Marco Pagani, 20 ans avec une forte passion pour l'informatique, particulièrement l'impression 3D. Partant d'une petite pièce avec deux imprimantes 3D, l'entreprise a grandi pour devenir une réalité établie dans le secteur de la fabrication additive.",
     "storyParagraph2": "Notre mission a toujours été claire : rendre la technologie d'impression 3D accessible à tous, des grandes entreprises aux petits artisans, des designers aux particuliers passionnés de technologie.",
     "storyParagraph3": "Aujourd'hui, avec une équipe de professionnels qualifiés et un parc de machines de pointe, nous offrons un service complet d'impression 3D, numérisation, conception et conseil, en gardant toujours au centre les valeurs de qualité, innovation et attention au client.",
     "ourValues": "Nos Valeurs",
-    "whatGuidesUs": "Ce qui nous guide chaque jour",
-    "valuesDescription": "Nous croyons fermement en quelques principes fondamentaux qui guident chaque aspect de notre travail et notre relation avec les clients.",
+    "whatGuidesUs": "La technologie, avec un visage humain",
+    "valuesDescription": "Expertise concrète. Dialogue direct. Solutions sur mesure.",
     "sustainabilityTitle": "Durabilité",
     "sustainabilityDescription": "Nous nous engageons à réduire l'impact environnemental de nos processus de production. Nous utilisons des matériaux éco-durables quand possible et optimisons nos productions pour minimiser les déchets.",
     "ourTeam": "Notre Équipe",
@@ -554,7 +752,13 @@
       "quality": "Qualité",
       "qualityDescription": "La qualité est au centre de tout ce que nous faisons. Nous utilisons uniquement des matériaux sélectionnés et des processus de production rigoureux pour garantir que chaque pièce que nous produisons répond aux plus hauts standards de qualité.",
       "precision": "Précision",
-      "service": "Service"
+      "service": "Service",
+      "reliable": "Fiables",
+      "reliableDescription": "Qualité et soin pour chaque détail.",
+      "flexible": "Flexibles",
+      "flexibleDescription": "De la pièce unique aux productions en série.",
+      "close": "Proches",
+      "closeDescription": "Laboratoire en Suisse, contact direct."
     },
     "team": {
       "marco": {
@@ -582,7 +786,10 @@
         "role": "Commercial",
         "bio": "Spécialisé en conseil commercial et support client"
       }
-    }
+    },
+    "eyebrow": "01 Qui sommes-nous",
+    "humanFaceTitle": "La technologie, avec un visage humain",
+    "humanFace": "Chaque projet commence par l’écoute. Si la pièce existe, nous l’optimisons. Si elle n’existe pas encore, nous la concevons."
   },
   "mission": {
     "title": "Notre Mission",
@@ -686,7 +893,10 @@
         "largePrint": "Réparation Imprimantes 3D",
         "scanning": "Numérisation 3D",
         "prototyping": "Prototypage",
-        "other": "Autre"
+        "other": "Autre",
+        "design": "Conception & DfAM",
+        "consulting": "Conseil et transfert technologique",
+        "cnc": "Fraisage CNC"
       }
     },
     "info": {
@@ -886,7 +1096,7 @@
     "laserInfo": {
       "title": "Informations sur les lasers",
       "workArea": "Zone de travail : 250 × 250 mm",
-      "precision": "Précision : 0,01 mm",
+      "precision": "Précision : 0,1 mm",
       "fileFormats": "Formats : DXF, PDF",
       "materials": "Matériaux : acier inox, aluminium, laiton, cuivre, acrylique, cuir et plus",
       "thickness": "Découpe métaux : aluminium jusqu'à 1 mm, acier inox et laiton jusqu'à 2 mm"
@@ -1233,9 +1443,9 @@
     "sla": "SLA"
   },
   "footer": {
-    "description": "Nous transformons vos idées en objets réels grâce à la technologie d'impression 3D.",
+    "description": "Bien plus que l’impression 3D : technologies et compétences pour transformer vos projets en réalité.",
     "quickLinks": "Liens rapides",
-    "servicesTitle": "Technologies",
+    "servicesTitle": "Services",
     "contactTitle": "Nous contacter",
     "calculateQuote": "Calculer devis",
     "copyright": "Tous droits réservés"
