@@ -40,6 +40,7 @@ import { Label } from "@/components/ui/label";
 import ModelViewer from "./ModelViewer";
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { db } from '@/firebase/config';
+import { notifyGestionale } from '@/lib/gestionaleLead';
 
 // File size limit in bytes (50MB)
 const MAX_FILE_SIZE = 50 * 1024 * 1024;
@@ -62,7 +63,7 @@ const MessageChat: React.FC<MessageChatProps> = ({
   participants,
   subject
 }) => {
-  const { currentUser } = useAuth();
+  const { currentUser, userData } = useAuth();
   const { toast } = useToast();
   const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState("");
@@ -215,6 +216,20 @@ const MessageChat: React.FC<MessageChatProps> = ({
         subject || "Assistenza cliente", 
         attachments
       );
+
+      if (currentUser.email !== "info@3dmakes.ch") {
+        void notifyGestionale({
+          kind: "message",
+          firstName: userData?.nome || "",
+          lastName: userData?.cognome || "",
+          email: currentUser.email || "",
+          phone: userData?.telefono || "",
+          subject: subject || "Messaggio Area Clienti",
+          message: newMessage.trim() || "(allegato)",
+          service: "messaggi",
+          extra: `Conversazione: ${conversationId}`,
+        });
+      }
       
       setNewMessage("");
       setAttachments([]);

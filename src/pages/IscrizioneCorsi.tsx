@@ -11,33 +11,16 @@ import { ShopPhoneLinks } from "@/components/ShopPhoneLinks";
 import { addCourseRegistration } from "@/services/courseRegistrationService";
 import { useToast } from "@/components/ui/use-toast";
 import { sendAdminNotificationEmail, sendCourseRegistrationConfirmationEmail } from "@/utils/emailService";
+import { sendWebsiteLead } from "@/lib/gestionaleLead";
+import { openCourseSlots } from "@/data/courseSlots";
 
 const IscrizioneCorsi = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Keep stable values for backend while localizing labels.
-  const timeSlots = [
-    { value: "16-17-aprile", label: t("courseRegistration.timeSlots.slot1") },
-    { value: "23-24-aprile", label: t("courseRegistration.timeSlots.slot2") },
-    { value: "30-1-maggio", label: t("courseRegistration.timeSlots.slot3") },
-    { value: "7-8-maggio", label: t("courseRegistration.timeSlots.slot4") },
-    { value: "14-15-maggio", label: t("courseRegistration.timeSlots.slot5") },
-    { value: "21-22-maggio", label: t("courseRegistration.timeSlots.slot6") },
-    { value: "28-29-maggio", label: t("courseRegistration.timeSlots.slot7") },
-    { value: "4-5-giugno", label: t("courseRegistration.timeSlots.slot8") },
-    { value: "11-12-giugno", label: t("courseRegistration.timeSlots.slot9") },
-    { value: "18-19-giugno", label: t("courseRegistration.timeSlots.slot10") },
-    { value: "25-26-giugno", label: t("courseRegistration.timeSlots.slot11") },
-    { value: "2-3-luglio", label: t("courseRegistration.timeSlots.slot12") },
-    { value: "9-10-luglio", label: t("courseRegistration.timeSlots.slot13") },
-    { value: "16-17-luglio", label: t("courseRegistration.timeSlots.slot14") },
-    { value: "23-24-luglio", label: t("courseRegistration.timeSlots.slot15") },
-    { value: "30-31-luglio", label: t("courseRegistration.timeSlots.slot16") },
-  ];
+  const timeSlots = openCourseSlots(i18n.language);
   if (isSubmitted) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -334,6 +317,23 @@ const IscrizioneCorsi = () => {
                       const registrationId = await addCourseRegistration(registrationData);
                       
                       console.log('✅ Salvato in Firestore con ID:', registrationId);
+
+                      try {
+                        await sendWebsiteLead({
+                          kind: "course",
+                          firstName,
+                          lastName,
+                          email,
+                          phone,
+                          subject: "Iscrizione corso base stampa 3D",
+                          message: message?.trim() || "Iscrizione al corso base stampa 3D",
+                          service: "corso",
+                          extra: `SlotId: ${timeSlot}\nSlot: ${timeSlots.find((slot) => slot.value === timeSlot)?.label || timeSlot}\nPagamento: ${paymentMethod}\nID: ${registrationId}`,
+                          botField: String(formData.get("bot-field") || ""),
+                        });
+                      } catch (leadError) {
+                        console.error("Iscrizione non arrivata al gestionale:", leadError);
+                      }
 
                       // Invia in automatico email al cliente + notifica admin
                       const selectedSlotLabel = timeSlots.find((slot) => slot.value === timeSlot)?.label || timeSlot;

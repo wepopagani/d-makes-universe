@@ -24,6 +24,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Project, FileInfo, Order } from '@/types/user';
+import { notifyGestionale } from '@/lib/gestionaleLead';
 import { Eye, FileText, Search, Calendar, Mail, Clock, FileImage, Package, Plus, Upload, X, RefreshCw } from 'lucide-react';
 import {
   Dialog,
@@ -388,7 +389,16 @@ const UserProjectsManager = () => {
         isRead: false,
         isAdmin: false
       });
-      
+
+      void notifyGestionale({
+        kind: "message",
+        email: currentUser.email || "",
+        subject: `Messaggio su ${contactProject.name}`,
+        message: messageText,
+        service: "messaggi",
+        extra: `Progetto: ${contactProject.name}`,
+      });
+
       toast({
         title: "Messaggio inviato",
         description: "Il tuo messaggio è stato inviato con successo. Ti risponderemo al più presto.",

@@ -18,9 +18,10 @@ import { CheckCircle, Upload, Eye, EyeOff, X, FileText } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useNavigate } from "react-router-dom";
 import { sendAdminNotificationEmail } from "@/utils/emailService";
+import { sendWebsiteLead } from "@/lib/gestionaleLead";
 
 const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB per file
-const MAX_FILES = 10;
+const MAX_FILES = 50;
 const PREVIEWABLE_TYPES = new Set(["stl", "obj", "3mf", "gltf", "glb"]);
 
 type QuoteFileItem = {
@@ -325,6 +326,31 @@ const QuoteCalculator = () => {
           .map((f, i) => {
             const dims = f.dimensions
               ? ` (${f.dimensions.x.toFixed(1)}×${f.dimensions.y.toFixed(1)}×${f.dimensions.z.toFixed(1)} mm)`
+              : "";
+            return `${i + 1}. ${f.name}${dims}\n   ${f.url}`;
+          })
+          .join("\n");
+        await sendWebsiteLead({
+          kind: "quote",
+          firstName: formData.nome,
+          lastName: formData.cognome,
+          email: formData.email,
+          phone: formData.telefono,
+          subject: "Richiesta preventivo dal calcolatore",
+          message: formData.notes || "Richiesta preventivo con file dal calcolatore 3dmakes.ch",
+          service: "preventivo",
+          extra: `Quantità: ${formData.quantity}\nFile:\n${filesSummary}`,
+          files: uploadedFiles.map((f) => ({ name: f.name, url: f.url, type: f.type })),
+        });
+      } catch (leadError) {
+        console.error("Richiesta non arrivata al gestionale:", leadError);
+      }
+
+      try {
+        const filesSummary = uploadedFiles
+          .map((f, i) => {
+            const dims = f.dimensions
+              ? ` (${f.dimensions.x.toFixed(1)}×${f.dimensions.y.toFixed(1)}×${f.dimensions.z.toFixed(1)} mm)`
               : '';
             return `${i + 1}. ${f.name}${dims}\n   ${f.url}`;
           })
@@ -343,7 +369,7 @@ const QuoteCalculator = () => {
             Quantità richiesta: ${formData.quantity}
             ${formData.notes ? `Note: ${formData.notes}` : ''}
             ${userId ? 'Utente con account registrato' : 'Utente senza account'}
-            Pannello admin: https://3dmakes.ch/admin
+            Gestionale: richieste dal sito
           `
         });
         if (emailSent) {

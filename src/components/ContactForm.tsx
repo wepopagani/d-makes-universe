@@ -8,6 +8,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import { ShopPhoneLinks } from '@/components/ShopPhoneLinks';
 import { SHOP_PRIMARY_WA_DIGITS } from '@/constants/shopPhones';
+import { sendWebsiteLead } from '@/lib/gestionaleLead';
 
 // Dichiarazione gtag per Google Ads tracking
 declare global {
@@ -20,6 +21,8 @@ const gtag = typeof window !== 'undefined' ? window.gtag : undefined;
 const ContactForm = () => {
   const { t } = useTranslation();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [sendError, setSendError] = useState("");
   
   // Stato per espandere il form
   const [firstName, setFirstName] = useState('');
@@ -173,32 +176,42 @@ const ContactForm = () => {
                 data-netlify="true" 
                 data-netlify-honeypot="bot-field"
                 className="space-y-6"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  
-                  // Track conversion
-                  if (gtag) {
+                  if (isSending) return;
+                  setIsSending(true);
+                  setSendError("");
+
+                  const form = e.target as HTMLFormElement;
+                  const formData = new FormData(form);
+
+                  try {
+                    await sendWebsiteLead({
+                      kind: "contact",
+                      firstName: String(formData.get("firstName") || ""),
+                      lastName: String(formData.get("lastName") || ""),
+                      email: String(formData.get("email") || ""),
+                      phone: String(formData.get("phone") || ""),
+                      subject: String(formData.get("subject") || ""),
+                      message: String(formData.get("message") || ""),
+                      service: String(formData.get("service") || ""),
+                      botField: String(formData.get("bot-field") || ""),
+                    });
+
+                    if (gtag) {
                     gtag('event', 'ads_conversion_Modulo_1', {
                       'send_to': 'AW-758841456/Modulo_1',
                       'value': 40.0,
                       'currency': 'CHF'
                     });
+                    }
+
+                    window.location.href = '/contact-success';
+                  } catch {
+                    setSendError(t('contact.form.sendError'));
+                  } finally {
+                    setIsSending(false);
                   }
-                  
-                  // Submit form data to Netlify
-                  const formData = new FormData(e.target as HTMLFormElement);
-                  fetch("/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData as any).toString()
-                  }).then(() => {
-                    // Redirect to React route after successful submission
-                    window.location.href = '/contact-success';
-                  }).catch((error) => {
-                    console.error('Error:', error);
-                    // Fallback - still redirect to success page
-                    window.location.href = '/contact-success';
-                  });
                 }}
               >
                 {/* Campo nascosto per Netlify */}
@@ -310,12 +323,16 @@ const ContactForm = () => {
                     </select>
                   </div>
 
+                  {sendError ? (
+                    <p className="text-sm text-red-600">{sendError}</p>
+                  ) : null}
                   <Button 
                     type="submit" 
+                    disabled={isSending}
                     className="w-full bg-brand-accent hover:bg-brand-accent/90"
                   >
                     <Send className="w-4 h-4 mr-2" />
-                    {t('contact.form.send')}
+                    {isSending ? t('contact.form.sending') : t('contact.form.send')}
                   </Button>
                 </div>
               </form>

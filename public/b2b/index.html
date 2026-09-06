@@ -855,7 +855,7 @@
             <textarea id="lead-descrizione" name="descrizione" placeholder="Descrivete il vostro problema o la vostra esigenza. Non è necessario avere un file tecnico — basterebbe una foto o una descrizione."></textarea>
           </div>
           <button type="submit" class="form-submit">Invia richiesta</button>
-          <p class="form-note">Invio tramite Netlify Forms (server sicuro). Le richieste compaiono nel pannello Netlify → Forms; da lì potete inviare notifiche a info@3dmakes.ch. DSG / GDPR.</p>
+          <p class="form-note">La richiesta arriva nel gestionale 3DMAKES. Risposta entro 2 ore lavorative. DSG / GDPR.</p>
         </form>
         </div>
       </div>
@@ -915,16 +915,32 @@
     btn.disabled = true;
     btn.textContent = "Invio in corso…";
 
-    var action = form.getAttribute("action") || "/b2b/";
     var params = new URLSearchParams(new FormData(form));
+    var gestionale = "https://lugano-lab-flow.lovable.app/api/public/website-lead";
 
-    fetch(action, {
+    fetch(gestionale, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: params.toString()
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        kind: "b2b",
+        firstName: params.get("nome") || "",
+        lastName: params.get("cognome") || "",
+        email: params.get("email") || "",
+        phone: "",
+        subject: params.get("tipo") || "Richiesta B2B",
+        message: params.get("descrizione") || "Richiesta preventivo B2B",
+        service: params.get("tipo") || "b2b",
+        extra: params.get("azienda") ? "Azienda: " + params.get("azienda") : "",
+        botField: params.get("bot-field") || ""
+      })
     })
       .then(function (res) {
-        if (!res.ok) throw new Error("http " + res.status);
+        if (!res.ok) throw new Error("gestionale " + res.status);
+        fetch("/b2b/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: params.toString()
+        }).catch(function () {});
         root.innerHTML =
           '<div class="form-success" role="status">' +
           "<strong>Richiesta inviata.</strong>" +
@@ -936,14 +952,9 @@
         btn.textContent = prevLabel;
         var p = document.createElement("p");
         p.className = "form-error";
-        var isLocal =
-          location.hostname === "localhost" ||
-          location.hostname === "127.0.0.1" ||
-          location.hostname === "";
-        p.innerHTML = isLocal
-          ? "<strong>Netlify Forms</strong> funziona solo sul sito pubblicato su Netlify (non su localhost). Per provare: fai un deploy o apri un Deploy preview, oppure scrivi a <a href=\"mailto:info@3dmakes.ch\">info@3dmakes.ch</a>."
-          : "Invio non riuscito. Riprovate tra poco o scrivete a " +
-            '<a href="mailto:info@3dmakes.ch">info@3dmakes.ch</a>.';
+        p.innerHTML =
+          "Invio non riuscito. Riprovate tra poco o scrivete a " +
+          '<a href="mailto:info@3dmakes.ch">info@3dmakes.ch</a>.';
         form.appendChild(p);
       });
   });
