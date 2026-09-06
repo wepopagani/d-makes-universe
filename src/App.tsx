@@ -106,11 +106,7 @@ const App = () => (
               />
               <Route
                 path="/dashboard/messaggi"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/dashboard/profilo"

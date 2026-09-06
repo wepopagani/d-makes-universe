@@ -30,8 +30,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { FileInfo } from "@/types/user";
 import { ModelViewerPreventivo } from "@/components/ModelViewer";
-import MessagesContainer from "@/components/MessagesContainer";
-import { LogOut, File, MessageSquare, User, Menu, ChevronDown, Home } from "lucide-react";
+import { LogOut, File, User, Menu, ChevronDown, Home } from "lucide-react";
 import AutoScrollText from "@/components/AutoScrollText";
 
 const Dashboard = () => {
@@ -40,7 +39,6 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [files, setFiles] = useState<FileInfo[]>([]);
-  const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("files");
   
@@ -87,7 +85,7 @@ const Dashboard = () => {
     } else if (path.includes("/dashboard/ordini")) {
       navigate("/dashboard/file", { replace: true });
     } else if (path.includes("/dashboard/messaggi")) {
-      setActiveTab("messages");
+      navigate("/dashboard/file", { replace: true });
     } else if (path.includes("/dashboard/profilo")) {
       setActiveTab("profile");
     } else if (path === "/dashboard") {
@@ -102,7 +100,7 @@ const Dashboard = () => {
   }, [location.pathname, navigate]);
   
   // Only render Footer when not on Messages tab
-  const shouldRenderFooter = activeTab !== "messages";
+  const shouldRenderFooter = true;
   
   // Fetch user projects and files from Firestore
   useEffect(() => {
@@ -626,15 +624,6 @@ const Dashboard = () => {
               I miei file
             </Button>
             <Button 
-              variant={activeTab === "messages" ? "default" : "ghost"} 
-              size="sm" 
-              onClick={() => navigate("/dashboard/messaggi")}
-              className="flex items-center gap-2"
-            >
-              <MessageSquare className="h-4 w-4 mr-1" />
-              Messaggi
-            </Button>
-            <Button 
               variant={activeTab === "profile" ? "default" : "ghost"} 
               size="sm" 
               onClick={() => navigate("/dashboard/profilo")}
@@ -652,7 +641,6 @@ const Dashboard = () => {
                 <Button variant="outline" size="sm" className="flex items-center gap-2">
                   <Menu className="h-4 w-4" />
                   {activeTab === "files" && "I miei file"}
-                  {activeTab === "messages" && "Messaggi"}
                   {activeTab === "profile" && "Profilo"}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
@@ -671,13 +659,6 @@ const Dashboard = () => {
                 >
                   <File className="h-4 w-4" />
                   I miei file
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => navigate("/dashboard/messaggi")}
-                  className="flex items-center gap-2"
-                >
-                  <MessageSquare className="h-4 w-4" />
-                  Messaggi
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => navigate("/dashboard/profilo")}
@@ -711,14 +692,13 @@ const Dashboard = () => {
       <main className="flex-1">
         <h1 className="sr-only">Area cliente — 3DMAKES</h1>
         {/* Dashboard Content */}
-        <section className={`${activeTab === "messages" ? "" : "py-8 md:py-10"}`} style={activeTab !== "messages" ? {backgroundColor: '#E4DDD4'} : {}}>
+        <section className="py-8 md:py-10" style={{backgroundColor: '#E4DDD4'}}>
           <div className="container-custom">
             {/* Hidden TabsList - we're using our custom navigation instead */}
             <div className="hidden">
               <Tabs defaultValue={activeTab} value={activeTab} onValueChange={setActiveTab}>
                 <TabsList>
                   <TabsTrigger value="files">I miei file</TabsTrigger>
-                  <TabsTrigger value="messages">Messaggi</TabsTrigger>
                   <TabsTrigger value="profile">Profilo</TabsTrigger>
                 </TabsList>
               </Tabs>
@@ -834,13 +814,6 @@ const Dashboard = () => {
                     </div>
                   )}
                 </div>
-              </div>
-            )}
-            
-            {/* Messages Tab */}
-            {activeTab === "messages" && (
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden h-[calc(100vh-8rem)]">
-                <MessagesContainer />
               </div>
             )}
             
