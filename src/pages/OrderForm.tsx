@@ -539,19 +539,31 @@ const OrderForm = () => {
       // Genera numero d'ordine numerico corto
       const orderNumber = generateOrderNumber();
 
-      // Aggiungi l'ordine a Firestore
+      const projectRef = await addDoc(collection(db, 'projects'), {
+        name: orderName,
+        description: `Quantità: ${quantity}, Materiale: ${material}${color ? `, Colore: ${color}` : ''}`,
+        status: 'pending',
+        userId: currentUser.uid,
+        files: fileInfo.id ? [fileInfo.id] : [],
+        createdAt: Timestamp.now(),
+        updatedAt: Timestamp.now(),
+        notes: notes || '',
+        paymentStatus: 'da_pagare',
+      });
+
       const orderData = {
         orderName: orderName,
-        orderNumber: orderNumber, // Numero d'ordine personalizzato
+        orderNumber: orderNumber,
+        projectId: projectRef.id,
         userId: currentUser.uid,
         userEmail: currentUser.email || "",
         status: 'pending',
         createdAt: Timestamp.now(),
         updatedAt: Timestamp.now(),
         items: [orderItem],
-        totalAmount: 0, // Il prezzo sarà impostato dall'admin
+        totalAmount: 0,
         paymentStatus: 'da_pagare',
-        preferredPaymentMethod: paymentMethod, // Metodo di pagamento preferito
+        preferredPaymentMethod: paymentMethod,
         shippingAddress: {
           nome: shippingAddress.nome || "",
           cognome: shippingAddress.cognome || "",
@@ -562,8 +574,12 @@ const OrderForm = () => {
           deliveryMethod: shippingAddress.deliveryMethod
         }
       };
-      
-      const docRef = await addDoc(collection(db, 'orders'), orderData);
+
+      try {
+        await addDoc(collection(db, 'orders'), orderData);
+      } catch (orderError) {
+        console.error('Ordine salvato come progetto, scrittura orders non riuscita:', orderError);
+      }
       
       // Invia solo notifica admin del nuovo ordine (non email al cliente)
       try {

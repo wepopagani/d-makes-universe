@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { collection, query, getDocs, doc, getDoc, Timestamp, where, addDoc, updateDoc, onSnapshot } from 'firebase/firestore';
+import { collection, query, getDocs, doc, getDoc, Timestamp, where, addDoc, updateDoc, onSnapshot, QuerySnapshot } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { db, storage, getCustomDownloadURL } from '@/firebase/config';
 import { useAuth } from '@/firebase/AuthContext';
@@ -43,6 +43,7 @@ const UserProjectsManager = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [projects, setProjects] = useState<Project[]>([]);
+  const [standaloneOrders, setStandaloneOrders] = useState<Project[]>([]);
   const [projectOrders, setProjectOrders] = useState<{[projectId: string]: Order[]}>({});
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
@@ -105,69 +106,62 @@ const UserProjectsManager = () => {
       setLoading(false);
     });
     
-    // Set up real-time listener for orders
-          const ordersQuery = query(
-            collection(db, "orders"),
-      where("userEmail", "==", currentUser.email)
-          );
-          
-    const ordersUnsubscribe = onSnapshot(ordersQuery, (ordersSnapshot) => {
-      console.log("Orders updated from Firestore");
+    let ordersByUserId: QuerySnapshot | null = null;
+    let ordersByEmail: QuerySnapshot | null = null;
+
+    const applyMergedOrders = () => {
+      const mergedOrderDocs = new Map<string, { id: string; data: () => Record<string, any> }>();
+      ordersByUserId?.forEach((d) => mergedOrderDocs.set(d.id, d));
+      ordersByEmail?.forEach((d) => mergedOrderDocs.set(d.id, d));
+
       const ordersData: {[projectId: string]: Order[]} = {};
       const standaloneProjects: Project[] = [];
-          
-          ordersSnapshot.forEach((orderDoc) => {
-            const orderData = orderDoc.data();
+
+      mergedOrderDocs.forEach((orderDoc) => {
+        const orderData = orderDoc.data();
         const orderId = orderDoc.id;
-        
+
         const order: Order = {
           id: orderId,
-              userId: orderData.userId,
-              status: orderData.status,
-              createdAt: orderData.createdAt instanceof Timestamp ? orderData.createdAt.toDate() : new Date(),
-              updatedAt: orderData.updatedAt instanceof Timestamp ? orderData.updatedAt.toDate() : new Date(),
-              items: orderData.items,
-              totalAmount: orderData.totalAmount,
-              paymentStatus: orderData.paymentStatus,
-              shippingAddress: orderData.shippingAddress,
+          userId: orderData.userId,
+          status: orderData.status,
+          createdAt: orderData.createdAt instanceof Timestamp ? orderData.createdAt.toDate() : new Date(),
+          updatedAt: orderData.updatedAt instanceof Timestamp ? orderData.updatedAt.toDate() : new Date(),
+          items: orderData.items,
+          totalAmount: orderData.totalAmount,
+          paymentStatus: orderData.paymentStatus,
+          shippingAddress: orderData.shippingAddress,
           productionStatus: orderData.productionStatus,
         };
-        
+
         if (orderData.projectId) {
-          // Group orders by projectId
           if (!ordersData[orderData.projectId]) {
             ordersData[orderData.projectId] = [];
-        }
+          }
           ordersData[orderData.projectId].push(order);
         } else {
-          // Handle standalone orders as projects
           let orderName = "Ordine";
           let orderDescription = "";
-          
-          // Use custom order name if available
+
           if (orderData.orderName) {
             orderName = orderData.orderName;
-          } else if (orderData.items && orderData.items.length > 0) {
-            if (orderData.items[0].fileName) {
-              orderName = `Ordine - ${orderData.items[0].fileName}`;
-            }
+          } else if (orderData.items?.[0]?.fileName) {
+            orderName = `Ordine - ${orderData.items[0].fileName}`;
           }
-          
-          if (orderData.items && orderData.items.length > 0) {
+
+          if (orderData.items?.[0]) {
             orderDescription = `Quantità: ${orderData.items[0].quantity}, Materiale: ${orderData.items[0].material}${orderData.items[0].color ? `, Colore: ${orderData.items[0].color}` : ''}`;
-            
-            // Add price info if available
             if (orderData.totalAmount > 0) {
               orderDescription += ` - Prezzo: ${orderData.totalAmount.toFixed(2)} CHF`;
             }
           }
-          
-          const orderAsProject: Project = {
+
+          standaloneProjects.push({
             id: `order_${orderId}`,
             name: orderName,
             description: orderDescription,
-            status: orderData.status === 'completed' ? 'completed' : 
-                   orderData.status === 'cancelled' ? 'cancelled' : 
+            status: orderData.status === 'completed' ? 'completed' :
+                   orderData.status === 'cancelled' ? 'cancelled' :
                    orderData.status === 'rejected' ? 'rejected' :
                    orderData.status === 'accepted' ? 'accepted' :
                    orderData.status === 'processing' ? 'processing' : 'pending',
@@ -178,36 +172,51 @@ const UserProjectsManager = () => {
             paymentStatus: orderData.paymentStatus || 'da_pagare',
             isOrder: true,
             productionStatus: orderData.productionStatus
-          };
-          
-          standaloneProjects.push(orderAsProject);
+          });
           ordersData[`order_${orderId}`] = [order];
         }
       });
-      
+
       setProjectOrders(ordersData);
-      
-      // Update projects list to include standalone orders
-      setProjects(prev => {
-        const regularProjects = prev.filter(p => !p.isOrder);
-        return [...regularProjects, ...standaloneProjects];
-      });
-    }, (error) => {
-      console.error("Error listening to orders:", error);
-    });
-    
-    // Cleanup function
+      setStandaloneOrders(standaloneProjects);
+    };
+
+    const ordersUnsubById = onSnapshot(
+      query(collection(db, "orders"), where("userId", "==", currentUser.uid)),
+      (snap) => {
+        ordersByUserId = snap;
+        applyMergedOrders();
+      },
+      (error) => {
+        console.error("Error listening to orders by userId:", error);
+      },
+    );
+
+    const ordersUnsubByEmail = currentUser.email
+      ? onSnapshot(
+          query(collection(db, "orders"), where("userEmail", "==", currentUser.email)),
+          (snap) => {
+            ordersByEmail = snap;
+            applyMergedOrders();
+          },
+          (error) => {
+            console.error("Error listening to orders by userEmail:", error);
+          },
+        )
+      : () => {};
+
+    const ordersUnsubs = [ordersUnsubById, ordersUnsubByEmail];
+
     return () => {
-      console.log("Unsubscribing from projects and orders listeners");
       projectsUnsubscribe();
-      ordersUnsubscribe();
+      ordersUnsubs.forEach((stop) => stop());
     };
   }, [currentUser]);
   
   // Filter projects based on search query
-  const filteredProjects = projects.filter((project) => 
-    project.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-    project.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProjects = [...projects, ...standaloneOrders].filter((project) =>
+    (project.name || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (project.description || "").toLowerCase().includes(searchQuery.toLowerCase())
   );
   
   // Format date for display
