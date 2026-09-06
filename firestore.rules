@@ -64,6 +64,24 @@ service cloud.firestore {
       allow update, delete: if isAdmin();
     }
     
+    // Ordini Area Clienti
+    match /orders/{orderId} {
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow read: if isAdmin() ||
+        (request.auth != null && resource.data.userId == request.auth.uid);
+      allow update: if isAdmin() ||
+        (request.auth != null && resource.data.userId == request.auth.uid);
+      allow delete: if isAdmin();
+    }
+
+    match /conversations/{conversationId} {
+      allow create: if request.auth != null;
+      allow read, update: if isAdmin() ||
+        (request.auth != null && request.auth.uid in resource.data.participants);
+      allow delete: if isAdmin();
+    }
+
     // Accesso agli ordini shop
     match /shopOrders/{orderId} {
       // Chiunque può creare un ordine (anche senza account - guest checkout)
