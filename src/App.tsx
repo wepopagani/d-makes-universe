@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "@/firebase/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import AdminRoute from "@/components/AdminRoute";
@@ -28,14 +28,9 @@ const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const FirebaseTest = lazy(() => import("./pages/FirebaseTest"));
-const OrderForm = lazy(() => import("./pages/OrderForm"));
 const AuthTest = lazy(() => import("./components/AuthTest"));
-const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
-const UserProjectDetails = lazy(() => import("./pages/UserProjectDetails"));
 const UserFiles = lazy(() => import("./pages/UserFiles"));
 const DatabaseSeeding = lazy(() => import("./pages/DatabaseSeeding"));
-const OrderDetails = lazy(() => import("./pages/OrderDetails"));
-const AdminOrders = lazy(() => import("./pages/AdminOrders"));
 const AdminClients = lazy(() => import("./pages/AdminClients"));
 const AdminQuotes = lazy(() => import("./pages/AdminQuotes"));
 const AdminRevenue = lazy(() => import("./pages/AdminRevenue"));
@@ -99,27 +94,15 @@ const App = () => (
               />
               <Route
                 path="/dashboard/ordini"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/dashboard/ordini/nuovo"
-                element={
-                  <ProtectedRoute>
-                    <OrderForm />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/dashboard/ordini/:orderId"
-                element={
-                  <ProtectedRoute>
-                    <OrderDetails />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/dashboard/messaggi"
@@ -155,27 +138,15 @@ const App = () => (
               />
               <Route
                 path="/project/:id"
-                element={
-                  <AdminRoute>
-                    <ProjectDetails />
-                  </AdminRoute>
-                }
+                element={<Navigate to="/admin" replace />}
               />
               <Route
                 path="/user-project/:id"
-                element={
-                  <ProtectedRoute>
-                    <UserProjectDetails />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/new-order"
-                element={
-                  <ProtectedRoute>
-                    <OrderForm />
-                  </ProtectedRoute>
-                }
+                element={<Navigate to="/dashboard/file" replace />}
               />
               <Route
                 path="/user-files/:userId"
@@ -195,11 +166,7 @@ const App = () => (
               />
               <Route
                 path="/admin/orders"
-                element={
-                  <AdminRoute>
-                    <AdminOrders />
-                  </AdminRoute>
-                }
+                element={<Navigate to="/admin" replace />}
               />
               <Route
                 path="/admin/clients"

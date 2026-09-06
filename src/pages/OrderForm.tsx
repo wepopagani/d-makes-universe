@@ -20,7 +20,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/components/ui/use-toast";
 import { FileInfo, OrderItem, ShippingAddress } from '@/types/user';
 import { sendAdminNotificationEmail } from '@/utils/emailService';
-import { notifyGestionale } from '@/lib/gestionaleLead';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ShopPhoneLinks } from '@/components/ShopPhoneLinks';
@@ -582,26 +581,6 @@ const OrderForm = () => {
         console.error('Ordine salvato come progetto, scrittura orders non riuscita:', orderError);
       }
 
-      void notifyGestionale({
-        kind: "order",
-        firstName: userData?.nome || shippingAddress.nome,
-        lastName: userData?.cognome || shippingAddress.cognome,
-        email: currentUser.email || "",
-        phone: shippingAddress.telefono || userData?.telefono || "",
-        subject: `Nuovo ordine: ${orderName}`,
-        message: notes?.trim() || `Ordine ${orderName}`,
-        service: "ordine",
-        extra: [
-          `Ordine: ${orderName}`,
-          `Numero: ${orderNumber}`,
-          `File: ${fileInfo.name}`,
-          `Quantità: ${quantity}`,
-          `Materiale: ${material}`,
-          color ? `Colore: ${color}` : "",
-          `Pagamento: ${paymentMethod}`,
-        ].filter(Boolean).join("\n"),
-      });
-      
       // Invia solo notifica admin del nuovo ordine (non email al cliente)
       try {
         await sendAdminNotificationEmail({

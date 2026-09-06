@@ -31,8 +31,7 @@ import { Label } from "@/components/ui/label";
 import { FileInfo } from "@/types/user";
 import { ModelViewerPreventivo } from "@/components/ModelViewer";
 import MessagesContainer from "@/components/MessagesContainer";
-import { LogOut, File, MessageSquare, User, FolderOpen, Menu, ChevronDown, Home } from "lucide-react";
-import UserProjectsManager from "@/components/UserProjectsManager";
+import { LogOut, File, MessageSquare, User, Menu, ChevronDown, Home } from "lucide-react";
 import AutoScrollText from "@/components/AutoScrollText";
 
 const Dashboard = () => {
@@ -86,7 +85,7 @@ const Dashboard = () => {
     if (path.includes("/dashboard/file")) {
       setActiveTab("files");
     } else if (path.includes("/dashboard/ordini")) {
-      setActiveTab("projects");
+      navigate("/dashboard/file", { replace: true });
     } else if (path.includes("/dashboard/messaggi")) {
       setActiveTab("messages");
     } else if (path.includes("/dashboard/profilo")) {
@@ -627,15 +626,6 @@ const Dashboard = () => {
               I miei file
             </Button>
             <Button 
-              variant={activeTab === "projects" ? "default" : "ghost"} 
-              size="sm" 
-              onClick={() => navigate("/dashboard/ordini")}
-              className="flex items-center gap-2"
-            >
-              <FolderOpen className="h-4 w-4 mr-1" />
-              Ordini
-            </Button>
-            <Button 
               variant={activeTab === "messages" ? "default" : "ghost"} 
               size="sm" 
               onClick={() => navigate("/dashboard/messaggi")}
@@ -662,7 +652,6 @@ const Dashboard = () => {
                 <Button variant="outline" size="sm" className="flex items-center gap-2">
                   <Menu className="h-4 w-4" />
                   {activeTab === "files" && "I miei file"}
-                  {activeTab === "projects" && "Ordini"}
                   {activeTab === "messages" && "Messaggi"}
                   {activeTab === "profile" && "Profilo"}
                   <ChevronDown className="h-4 w-4" />
@@ -682,13 +671,6 @@ const Dashboard = () => {
                 >
                   <File className="h-4 w-4" />
                   I miei file
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => navigate("/dashboard/ordini")}
-                  className="flex items-center gap-2"
-                >
-                  <FolderOpen className="h-4 w-4" />
-                  Ordini
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => navigate("/dashboard/messaggi")}
@@ -736,7 +718,6 @@ const Dashboard = () => {
               <Tabs defaultValue={activeTab} value={activeTab} onValueChange={setActiveTab}>
                 <TabsList>
                   <TabsTrigger value="files">I miei file</TabsTrigger>
-                  <TabsTrigger value="projects">Ordini</TabsTrigger>
                   <TabsTrigger value="messages">Messaggi</TabsTrigger>
                   <TabsTrigger value="profile">Profilo</TabsTrigger>
                 </TabsList>
@@ -856,19 +837,6 @@ const Dashboard = () => {
               </div>
             )}
             
-            {/* Projects Tab */}
-            {activeTab === "projects" && (
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-                <div className="p-6 flex justify-between items-center">
-                  <h2 className="text-xl font-semibold">I tuoi ordini</h2>
-                  <Button size="sm" onClick={() => navigate("/dashboard/ordini/nuovo")}>
-                    Nuovo ordine
-                  </Button>
-                </div>
-                <UserProjectsManager />
-              </div>
-            )}
-            
             {/* Messages Tab */}
             {activeTab === "messages" && (
               <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden h-[calc(100vh-8rem)]">
@@ -892,7 +860,7 @@ const Dashboard = () => {
           <DialogHeader>
             <DialogTitle>Carica file</DialogTitle>
             <DialogDescription>
-              Carica modelli 3D o immagini per i tuoi ordini
+              Carica modelli 3D o immagini
             </DialogDescription>
           </DialogHeader>
           

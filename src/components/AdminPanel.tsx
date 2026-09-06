@@ -55,9 +55,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
-import { Menu, ChevronDown, Home, Package, MessageSquare, FileText, BarChart3, Users, TrendingUp, GraduationCap } from "lucide-react";
+import { Menu, ChevronDown, Home, MessageSquare, FileText, BarChart3, Users, TrendingUp, GraduationCap } from "lucide-react";
 import AdminMessagesContainer from "./AdminMessagesContainer";
-import AdminProjectsManager from "./AdminProjectsManager";
 import AdminQuoteRequests from "./AdminQuoteRequests";
 import AdminCourseRegistrations from "./AdminCourseRegistrations";
 
@@ -441,7 +440,6 @@ const AdminPanel = () => {
               <Button variant="outline" size="sm" className="flex items-center gap-2">
                 <Menu className="h-4 w-4" />
                 {activeTab === "dashboard" && "Dashboard"}
-                {activeTab === "projects" && "Ordini"}
                 {activeTab === "shopOrders" && "Ordini Shop"}
                 {activeTab === "quoteRequests" && "Preventivi"}
                 {activeTab === "messages" && "Messaggi"}
@@ -462,13 +460,6 @@ const AdminPanel = () => {
               >
                 <BarChart3 className="h-4 w-4" />
                 Dashboard
-              </DropdownMenuItem>
-              <DropdownMenuItem 
-                onClick={() => setActiveTab("projects")}
-                className="flex items-center gap-2"
-              >
-                <Package className="h-4 w-4" />
-                Ordini
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={() => setActiveTab("quoteRequests")}
@@ -499,7 +490,6 @@ const AdminPanel = () => {
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
         <TabsList className="mb-4 hidden md:flex">
           <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-          <TabsTrigger value="projects">Ordini</TabsTrigger>
           <TabsTrigger value="quoteRequests">Richieste Preventivo</TabsTrigger>
           <TabsTrigger value="courses">Corsi</TabsTrigger>
           <TabsTrigger value="messages">Messaggi</TabsTrigger>
@@ -530,26 +520,10 @@ const AdminPanel = () => {
             ) : (
               <>
                 {/* Statistiche principali */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   <Card 
                     className="cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105 hover:bg-blue-50"
-                    onClick={() => navigate('/admin/orders')}
-                  >
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                      <CardTitle className="text-sm font-medium">Ordini Totali</CardTitle>
-                      <Package className="h-4 w-4 text-muted-foreground" />
-                    </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold">{dashboardStats.totalOrders}</div>
-                      <p className="text-xs text-muted-foreground">
-                        {dashboardStats.pendingOrders} in corso, {dashboardStats.completedOrders} completati
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card 
-                    className="cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105 hover:bg-blue-50"
-                    onClick={() => navigate('/admin/orders?tab=quotes')}
+                    onClick={() => setActiveTab("quoteRequests")}
                   >
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                       <CardTitle className="text-sm font-medium">Preventivi</CardTitle>
@@ -600,45 +574,7 @@ const AdminPanel = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <Card 
                     className="cursor-pointer transition-all duration-200 hover:shadow-lg hover:bg-gray-50"
-                    onClick={() => navigate('/admin/orders')}
-                  >
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Package className="h-5 w-5" />
-                        Stato Ordini
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">In corso</span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-20 bg-gray-200 rounded-full h-2">
-                            <div 
-                              className="bg-yellow-500 h-2 rounded-full" 
-                              style={{ width: `${dashboardStats.totalOrders > 0 ? (dashboardStats.pendingOrders / dashboardStats.totalOrders) * 100 : 0}%` }}
-                            ></div>
-                          </div>
-                          <span className="text-sm font-medium">{dashboardStats.pendingOrders}</span>
-                        </div>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">Completati</span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-20 bg-gray-200 rounded-full h-2">
-                            <div 
-                              className="bg-green-500 h-2 rounded-full" 
-                              style={{ width: `${dashboardStats.totalOrders > 0 ? (dashboardStats.completedOrders / dashboardStats.totalOrders) * 100 : 0}%` }}
-                            ></div>
-                          </div>
-                          <span className="text-sm font-medium">{dashboardStats.completedOrders}</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card 
-                    className="cursor-pointer transition-all duration-200 hover:shadow-lg hover:bg-gray-50"
-                    onClick={() => navigate('/admin/orders?tab=quotes')}
+                    onClick={() => setActiveTab("quoteRequests")}
                   >
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
@@ -687,18 +623,6 @@ const AdminPanel = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <Button 
                         variant="outline" 
-                        onClick={() => setActiveTab("projects")}
-                        className="flex items-center gap-2 h-auto py-4"
-                      >
-                        <Package className="h-5 w-5" />
-                        <div className="text-left">
-                          <div className="font-medium">Gestisci Ordini</div>
-                          <div className="text-xs text-muted-foreground">Visualizza e gestisci tutti gli ordini</div>
-                        </div>
-                      </Button>
-                      
-                      <Button 
-                        variant="outline" 
                         onClick={() => setActiveTab("messages")}
                         className="flex items-center gap-2 h-auto py-4"
                       >
@@ -726,11 +650,6 @@ const AdminPanel = () => {
               </>
             )}
           </div>
-        </TabsContent>
-        
-        <TabsContent value="projects">
-          {/* Contenuto per la scheda Ordini */}
-          <AdminProjectsManager />
         </TabsContent>
         
         <TabsContent value="quoteRequests">
