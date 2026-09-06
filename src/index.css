@@ -26,6 +26,15 @@
   opacity: 0;
 }
 
+@keyframes auto-scroll-name {
+  0%, 18% {
+    transform: translateX(0);
+  }
+  82%, 100% {
+    transform: translateX(calc(-1 * var(--scroll-x)));
+  }
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;

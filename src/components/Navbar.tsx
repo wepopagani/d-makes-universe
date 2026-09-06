@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { currentUser, isAdmin } = useAuth();
+  const { currentUser } = useAuth();
   const { t } = useTranslation();
   
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -120,21 +120,12 @@ const Navbar = () => {
           <Button asChild variant="outline">
             <Link to="/calculator">{t('nav.requestQuote')}</Link>
           </Button>
-          
-          {/* Mostra Area Clienti solo se non siamo nell'AdminPanel */}
           {!isAdminPanel && (
             <Button asChild>
               <Link to={currentUser ? "/dashboard" : "/login"}>
                 <User className="h-4 w-4 mr-2" />
                 {t('nav.clientArea')}
               </Link>
-            </Button>
-          )}
-          
-          {/* Mostra Admin solo se l'utente è admin e non siamo già nell'AdminPanel */}
-          {isAdmin && !isAdminPanel && (
-            <Button asChild variant="outline" className="border-brand-accent text-brand-accent hover:bg-brand-accent/10">
-              <Link to="/admin">{t('nav.admin')}</Link>
             </Button>
           )}
         </div>
@@ -188,23 +179,14 @@ const Navbar = () => {
             ))}
             <div className="pt-4 space-y-3">
               <Button asChild variant="outline" className="w-full">
-                <Link to="/calculator">{t('nav.requestQuote')}</Link>
+                <Link to="/calculator" onClick={closeMenu}>{t('nav.requestQuote')}</Link>
               </Button>
-              
-              {/* Mostra Area Clienti solo se non siamo nell'AdminPanel */}
               {!isAdminPanel && (
                 <Button asChild className="w-full">
                   <Link to={currentUser ? "/dashboard" : "/login"} onClick={closeMenu}>
                     <User className="h-4 w-4 mr-2" />
                     {t('nav.clientArea')}
                   </Link>
-                </Button>
-              )}
-              
-              {/* Mostra Admin solo se l'utente è admin e non siamo già nell'AdminPanel */}
-              {isAdmin && !isAdminPanel && (
-                <Button asChild variant="outline" className="w-full border-brand-accent text-brand-accent hover:bg-brand-accent/10">
-                  <Link to="/admin" onClick={closeMenu}>{t('nav.admin')}</Link>
                 </Button>
               )}
             </div>

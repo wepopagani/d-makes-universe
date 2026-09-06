@@ -33,6 +33,7 @@ import { ModelViewerPreventivo } from "@/components/ModelViewer";
 import MessagesContainer from "@/components/MessagesContainer";
 import { LogOut, File, MessageSquare, User, FolderOpen, Menu, ChevronDown, Home } from "lucide-react";
 import UserProjectsManager from "@/components/UserProjectsManager";
+import AutoScrollText from "@/components/AutoScrollText";
 
 const Dashboard = () => {
   const { toast } = useToast();
@@ -794,16 +795,14 @@ const Dashboard = () => {
                             )}
                           </div>
                           <div className="p-3">
-                            <div className="flex justify-between items-start">
-                              <div>
-                                <p className="font-medium text-sm truncate" title={file.name}>
-                                  {file.name}
-                                </p>
+                            <div className="flex items-start gap-1">
+                              <div className="min-w-0 flex-1">
+                                <AutoScrollText text={file.name} className="font-medium text-sm" />
                                 <p className="text-xs text-gray-500">
                                   {formatDate(file.uploadedAt)}
                                 </p>
                               </div>
-                              <div className="flex gap-1">
+                              <div className="flex shrink-0 gap-1">
                                 <Button 
                                   variant="ghost" 
                                   size="sm"
