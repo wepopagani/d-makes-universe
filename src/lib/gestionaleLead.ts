@@ -20,7 +20,7 @@ export type WebsiteLeadPayload = {
   botField?: string;
 };
 
-const DEFAULT_GESTIONALE = "https://lugano-lab-flow.lovable.app";
+const DEFAULT_GESTIONALE = "https://clienti.3dmakes.ch";
 const GESTIONALE_PROJECT = "gestionale-a0cb6";
 const GESTIONALE_WEB_KEY = "AIzaSyCBUMEwdWXnPKaMdkhtPSMwouMFeyDlsH0";
 
